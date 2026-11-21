@@ -22,7 +22,36 @@ BATCHES = {
         'evidence/62e194b-replayed.json',
         'evidence/combined-62e194b.json',
     ),
+    '1875a66': (
+        'c982b1668fafb6a127a19fa14f7d1c42418ab7a3',
+        'evidence/combined-62e194b.json',
+        'evidence/1875a66-replayed.json',
+        'evidence/combined-1875a66.json',
+    ),
 }
+
+
+def load_replay(path):
+    replay = json.loads(path.read_bytes())
+    if 'commit' not in replay:
+        return replay
+    # replay_increment.py checks every shard before recording a digest per decision.
+    revision = replay['commit']
+    assert sha(committed(revision, 'exact_helpers.cpp')) == replay['native_source_sha256']
+    rows = replay['rows']
+    assert len(rows) == replay['decisions'] == len({row['id'] for row in rows})
+    for row in rows:
+        name = f"proofs_ext/decisions.d/{row['id']}_h{row['helpers']}.json"
+        raw = committed(revision, name)
+        claim = json.loads(raw)
+        assert sha(raw) == row['receipt_sha256']
+        assert (claim['id'], claim['helpers'], claim['lower_bound']) == (row['id'], row['helpers'], row['lower'])
+        assert len(claim['shard_nodes']) == row['shards'] and sum(claim['shard_nodes']) == row['nodes']
+    assert sum(r['nodes'] for r in rows) == replay['nodes']
+    assert sum(r['shards'] for r in rows) == replay['shards']
+    return dict(upstream=revision, official_sha256=replay['puzzles_sha256'],
+                external_bounds_sha256=sha(committed(revision, 'proofs_ext/bounds.csv')),
+                rows={row['id']: row['lower'] for row in rows}, checked_digest_receipts=True)
 
 
 def verified_bounds(replay, prior):
@@ -38,6 +67,8 @@ def verified_bounds(replay, prior):
     assert previous.keys() == current.keys() and len(current) == 1000
     changed = {i: n for i, n in current.items() if n != previous[i]}
     assert changed == replay['rows'] and all(n > previous[i] for i, n in changed.items())
+    if replay.get('checked_digest_receipts'):
+        return previous, changed
     decisions = replay['decisions']
     assert set(r['id'] for r in decisions) == changed.keys()
     assert len(decisions) == replay['shards'] and sum(r['nodes'] for r in decisions) == replay['nodes']
@@ -53,10 +84,10 @@ def verified_bounds(replay, prior):
     return previous, changed
 
 
-def build(batch='62e194b'):
+def build(batch='1875a66'):
     base, parent, external, _ = BATCHES[batch]
     prior = json.loads((HERE/parent).read_bytes())
-    replay = json.loads((HERE/external).read_bytes())
+    replay = load_replay(HERE/external)
     assert replay['official_sha256'] == prior['official_sha256']
     raw = committed(base, 'collaboration/puzzle-bounds.csv')
     rows = parse(raw)
@@ -91,7 +122,7 @@ def build(batch='62e194b'):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--batch', choices=BATCHES, default='62e194b')
+    parser.add_argument('--batch', choices=BATCHES, default='1875a66')
     parser.add_argument('--write', action='store_true')
     args = parser.parse_args()
     proved, receipt = build(args.batch)
@@ -113,8 +144,11 @@ def main():
         table.write_bytes(buf.getvalue().encode())
         result.write_bytes((json.dumps(receipt, indent=2)+'\n').encode())
     else:
-        if args.batch == '8d4b4df' and projection(live) != receipt['lower_projection_sha256']:
-            live = parse(committed(BATCHES['62e194b'][0], 'collaboration/puzzle-bounds.csv'))
+        batches = list(BATCHES)
+        position = batches.index(args.batch)
+        if position + 1 < len(batches) and projection(live) != receipt['lower_projection_sha256']:
+            next_base = BATCHES[batches[position + 1]][0]
+            live = parse(committed(next_base, 'collaboration/puzzle-bounds.csv'))
         assert projection(live) == receipt['lower_projection_sha256']
         assert json.loads(result.read_bytes()) == receipt
     print(receipt['certified_lower'], receipt['external_claims'], receipt['gains'])

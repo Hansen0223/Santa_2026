@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from proofs_ext.audit_cache import ensure_audit, native_input
 from elf import read_puzzles, read_submission, score
 from prefix_bounds import available, lower
 from tiny import encode
@@ -105,14 +106,6 @@ def merge_receipts(puzzles_path, submission_path):
     )
 
 
-def native_input(puzzle, helpers, node_limit):
-    return (
-        f"{puzzle.limit} {len(puzzle.seeds)} {len(puzzle.targets)} {helpers} {node_limit}\n"
-        + " ".join(map(str, puzzle.seeds + puzzle.targets))
-        + "\n"
-    )
-
-
 def query(binary, puzzle, helpers, node_limit, shard, total):
     output = subprocess.run(
         [str(binary), str(shard), str(total)],
@@ -148,6 +141,8 @@ def main():
     ap.add_argument("--shards", type=int, default=0, help="0 = one per root helper option")
     ap.add_argument("--node-limit", type=int, default=2_000_000_000)
     ap.add_argument("--jobs", type=int, default=16)
+    ap.add_argument("--refresh-audit", action="store_true",
+                    help="rerun the pair-coverage audit even when a matching local audit exists")
     ap.add_argument("--puzzles", type=Path, default=ROOT / "data/puzzles.csv")
     ap.add_argument("--submission", type=Path, default=ROOT / "improve/submission.csv")
     args = ap.parse_args()
@@ -163,15 +158,7 @@ def main():
     p = next(q for q in puzzles if q.id == args.puzzle_id)
     missing = len(set(p.targets) - set(p.seeds))
 
-    audit = subprocess.run(
-        [str(args.binary), "--audit-pairs"],
-        input=native_input(p, 0, 0),
-        text=True,
-        capture_output=True,
-        check=True,
-    )
-    if audit.stdout.strip() != "OK":
-        raise ValueError("Pair coverage audit failed")
+    ensure_audit(args.binary, p, refresh=args.refresh_audit)
 
     shards = args.shards or max(1, len(available(p.seeds, set(p.targets), p.limit)))
     start = time.time()

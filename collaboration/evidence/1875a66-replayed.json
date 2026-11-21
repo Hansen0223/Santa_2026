@@ -1,0 +1,74 @@
+{
+  "commit": "1875a662b0df6e5f8a395245ff63d4161aeed79f",
+  "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
+  "binary_sha256": "46b025b49e16e06c24afe9a14b60dbfcd357d6a32d2d3f6fa992f4f3bdc6f59c",
+  "native_source_sha256": "97742f6843cbe13efe1dfa55bca55aba14429aba8b5c44cc0897da209b1496a5",
+  "exhaustive_operation_pair_audit": false,
+  "decisions": 6,
+  "shards": 182,
+  "nodes": 209576998,
+  "stronger": [
+    "scored_0050",
+    "scored_0515",
+    "scored_0583",
+    "scored_0773",
+    "scored_0777",
+    "scored_0913"
+  ],
+  "rows": [
+    {
+      "id": "scored_0050",
+      "helpers": 8,
+      "lower": 21,
+      "local_lower": 20,
+      "shards": 11,
+      "nodes": 46294966,
+      "receipt_sha256": "92008bc7eaa0891308e8e01c6185a197af031d7287e4192258cb772e117273ad"
+    },
+    {
+      "id": "scored_0515",
+      "helpers": 7,
+      "lower": 18,
+      "local_lower": 17,
+      "shards": 25,
+      "nodes": 16863153,
+      "receipt_sha256": "aac0f16d68ba61ab3e8268ddbd70f9d4d30861a511990db412d7f08d7ebecf13"
+    },
+    {
+      "id": "scored_0583",
+      "helpers": 7,
+      "lower": 19,
+      "local_lower": 18,
+      "shards": 31,
+      "nodes": 39177472,
+      "receipt_sha256": "7d55193e83967456d6206b985e8328ea20be6f2ad880fe1bcef0cffb5f6e4628"
+    },
+    {
+      "id": "scored_0773",
+      "helpers": 6,
+      "lower": 15,
+      "local_lower": 14,
+      "shards": 78,
+      "nodes": 16178191,
+      "receipt_sha256": "d5d34f84da1c5d1c3876a5e7329e48b8a71fcce5de04b6e59c60e74889b766d7"
+    },
+    {
+      "id": "scored_0777",
+      "helpers": 7,
+      "lower": 19,
+      "local_lower": 18,
+      "shards": 24,
+      "nodes": 17377455,
+      "receipt_sha256": "1043105036e797cd114df6bf3cc5c5897727141e7b1e1f8f6fb5666fe55cb66b"
+    },
+    {
+      "id": "scored_0913",
+      "helpers": 8,
+      "lower": 20,
+      "local_lower": 18,
+      "shards": 13,
+      "nodes": 73685761,
+      "receipt_sha256": "ac1c9a572a55e55f2996c7de17e2ec313ad461c97ff1b184dc382966f77fae09"
+    }
+  ]
+}

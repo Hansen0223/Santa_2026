@@ -4083,7 +4083,7 @@
     "proofs/local/proofs/helper-wave9.json": "53a624a2b7e0e7b6d796268167444ae3411fc481b9ae8e1863882b1a57f711c2",
     "proofs/local/proofs/conditioned-bounds.json": "d8b36d8b48df1bf120c81cf2787f84668491a5d829e7b958a29dc06516f23113"
   },
-  "combined_arithmetic_lower_bound": 37981,
+  "combined_arithmetic_lower_bound": 37987,
   "combined_exact_puzzles": 20,
   "combined_exact_steps": 128
 }

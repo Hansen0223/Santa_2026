@@ -1,8 +1,10 @@
 # 最短程序证明与分片协作
 
-1,000 题的已证总下界为 **37,981 条**，其中 **20 题**的可行程序达到下界，合计 128 条。第 149 题的可行程序为 16 条，第 882 题仍在 22 至 23 条之间。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+1,000 题的已证总下界为 **37,987 条**，其中 **20 题**的可行程序达到下界，合计 128 条。第 149 题的可行程序为 16 条，第 882 题仍在 22 至 23 条之间。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
 
-第 272 题的已证下界从 15 升到 16。独立重放全部 24 个分片，584,217,010 个节点的逐片计数与贡献者记录相同。复核最新合并表可运行 `python -B collaboration/merge_replayed_bounds.py`。[逐片结果](evidence/62e194b-replayed.json) · [本次合并回执](evidence/combined-62e194b.json)
+第 50、515、583、773、777、913 题的下界各提高 1 条。182 个分片全部返回无解，合计 209,576,998 个搜索节点。可运行 `python -B collaboration/merge_replayed_bounds.py` 重建本批下界。[来源与逐题结果](evidence/1875a66-replayed.json) · [合并回执](evidence/combined-1875a66.json)
+
+第 272 题的已证下界从 15 升到 16。独立重放全部 24 个分片，584,217,010 个节点的逐片计数与贡献者记录相同。复核该批合并表可运行 `python -B collaboration/merge_replayed_bounds.py --batch 62e194b`。[逐片结果](evidence/62e194b-replayed.json) · [本次合并回执](evidence/combined-62e194b.json)
 
 复核其他开发者在 8da47f6、8d4b4df 提交的 12 项证明后，每道的下界都比此前最强结论提高 1 条。399 个分片产生 621,599,566 个搜索节点，各片计数与原证明一致，合并后总下界为 37,980。[逐片复核](evidence/8d4b4df-replayed.json) · [12 道题的合并回执](evidence/combined-membership-8d4b4df.json)
 
