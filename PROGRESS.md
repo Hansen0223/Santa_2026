@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 21:04
+
+组合候选降到 **132,480 条**。Ishan、Pardheev 和 Asterios 的九道程序共省 15 条，其中第 791 题省 6 条。[逐题来源和重建方法](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 20:57
 
 对仓库领先公开参照的全部 15 道题集中搜索。第 893 题从 121 条缩至 120 条，组合候选降至 **132,495 条**。独立候选为 **139,433 条**。[逐题结果](collaboration/target-partition/local-leads-results.json.gz)

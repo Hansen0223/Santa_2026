@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132495,
-  "sha256": "9ac604d904a0e4dd7d08d3f21f196ce3f46f8603a02ca632f6ef4c6f63d7df4d",
+  "instructions": 132480,
+  "sha256": "9996f5feda0eb2716e7b6f1fa59e03405a8e44237b42e5e2c812b0f976c084d7",
   "sources": [
     {
       "name": "repository",
@@ -11,46 +11,95 @@
       "full": true
     },
     {
-      "name": "E-Max AI notebook 372191792",
-      "url": "https://www.kaggle.com/code/royalacecat/santa-2026-public-frontier-score-132-608?scriptVersionId=372191792",
-      "output_csv": "royalacecat-372191792.csv",
-      "output_name": "submission.csv",
-      "csv_sha256": "d9facfc02930a32925d6f463c71371ffb7bfd54287e1ddd839572b58ace95b10",
+      "name": "asteriospanoras-194",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/194",
+      "archive": "asteriospanoras-194.zip",
+      "archive_sha256": "e3b6c0b9cd2c12f0ebad90d5a512923483a01cf7a2721c7b64b112fd34e97be8",
+      "member": "best_programs.csv",
+      "csv_sha256": "77b95174b5cf8f74173f5770704c7305eb381df75ed4f8731eed8ffb31b4d30a",
+      "license": "Apache 2.0",
       "full": true,
-      "replayed_instructions": 132608,
-      "upstream_manifest": "https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-132608-lean/versions/1"
+      "replayed_instructions": 132592
     },
     {
-      "name": "pardheev notebook 372197498",
-      "url": "https://www.kaggle.com/code/pardheev/132-606-best-public-score-santa-2026?scriptVersionId=372197498",
-      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372197498/download",
-      "notebook": "pardheev-372197498.ipynb",
-      "notebook_sha256": "a722a54892da8d69e20b26ddcfdbe0ae1cb7f06c9e243ac64e22aa0d3d97a1dd",
+      "name": "pardheev-372201937",
+      "url": "https://www.kaggle.com/code/pardheev/132-590-best-public-score-santa-2026?scriptVersionId=372201937",
+      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372201937/download",
+      "notebook": "pardheev-372201937.ipynb",
+      "notebook_sha256": "36cb46e4d0592f8f585f7affe5171e47299afead6aba98b882b00dc2caac1d96",
       "cell": 3,
       "variable": "GIFT",
       "full": false,
       "encoding": "base64-zlib-json"
     },
     {
-      "name": "asteriospanoras notebook 372197665",
-      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372197665",
-      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372197665/download",
-      "notebook": "asteriospanoras-372197665.ipynb",
-      "notebook_sha256": "d67e8f65cb514baf7b2cac9dfdacf622a2cc48d82f0d2b1fb30b07f0b900ed1c",
+      "name": "asteriospanoras-372201982",
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372201982",
+      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372201982/download",
+      "notebook": "asteriospanoras-372201982.ipynb",
+      "notebook_sha256": "61428d80f6a445034ccadc9924de3451b392f3683a67a383f3945dbc8d500490",
       "cell": 7,
       "variable": "CHANGE",
       "full": false
     }
   ],
-  "previous_sha256": "a1af826e648e3f1a688cd571821394b465dc3600e37d9028eeed3d22fffdca61",
+  "previous_sha256": "9ac604d904a0e4dd7d08d3f21f196ce3f46f8603a02ca632f6ef4c6f63d7df4d",
   "improved": {
-    "scored_0893": [
-      121,
-      120,
-      "repository"
+    "scored_0071": [
+      111,
+      110,
+      "asteriospanoras-194"
+    ],
+    "scored_0169": [
+      97,
+      95,
+      "pardheev-372201937"
+    ],
+    "scored_0246": [
+      112,
+      111,
+      "asteriospanoras-194"
+    ],
+    "scored_0464": [
+      77,
+      76,
+      "asteriospanoras-194"
+    ],
+    "scored_0608": [
+      149,
+      148,
+      "asteriospanoras-194"
+    ],
+    "scored_0723": [
+      93,
+      92,
+      "asteriospanoras-194"
+    ],
+    "scored_0791": [
+      124,
+      118,
+      "asteriospanoras-194"
+    ],
+    "scored_0911": [
+      79,
+      78,
+      "asteriospanoras-372201982"
+    ],
+    "scored_0987": [
+      107,
+      106,
+      "asteriospanoras-194"
     ]
   },
   "improved_credits": {
-    "scored_0893": "Repository-assisted circuit, credited Hiyohane and Wang Jakie lineage, optimized locally with the E-Max AI / GoodPJW search."
+    "scored_0071": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0169": "Pardheev notebook 372201937",
+    "scored_0246": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0464": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0608": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0723": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0791": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
+    "scored_0911": "Asterios Panoras notebook 372201982",
+    "scored_0987": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594"
   }
 }
