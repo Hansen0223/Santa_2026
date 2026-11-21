@@ -1,0 +1,123 @@
+{
+  "base_commit": "0521078",
+  "method": "ultra virtual_search on both lines, published-record merge, cross-line transfer",
+  "settings": {
+    "leaves": 160,
+    "width": 10,
+    "scan": 2,
+    "joins": 16383,
+    "style": 5,
+    "tail": 6,
+    "seeds": "20261128 / 20261129"
+  },
+  "independent": {
+    "before": 139653,
+    "after": 139625,
+    "sha256": "2b38b9d68a00ecf1f200997db012f264c09e1e40ba39e6f5d3eb079692a572b8",
+    "wins": {
+      "scored_0076": [
+        145,
+        144
+      ],
+      "scored_0117": [
+        198,
+        197
+      ],
+      "scored_0170": [
+        225,
+        223
+      ],
+      "scored_0183": [
+        299,
+        297
+      ],
+      "scored_0321": [
+        292,
+        291
+      ],
+      "scored_0370": [
+        278,
+        277
+      ],
+      "scored_0428": [
+        204,
+        202
+      ],
+      "scored_0438": [
+        190,
+        188
+      ],
+      "scored_0441": [
+        190,
+        189
+      ],
+      "scored_0483": [
+        174,
+        173
+      ],
+      "scored_0514": [
+        223,
+        222
+      ],
+      "scored_0528": [
+        144,
+        143
+      ],
+      "scored_0580": [
+        219,
+        218
+      ],
+      "scored_0640": [
+        224,
+        223
+      ],
+      "scored_0725": [
+        215,
+        214
+      ],
+      "scored_0756": [
+        160,
+        159
+      ],
+      "scored_0786": [
+        258,
+        257
+      ],
+      "scored_0788": [
+        225,
+        224
+      ],
+      "scored_0829": [
+        180,
+        179
+      ],
+      "scored_0832": [
+        192,
+        191
+      ],
+      "scored_0857": [
+        220,
+        219
+      ],
+      "scored_0859": [
+        229,
+        228
+      ],
+      "scored_0875": [
+        170,
+        169
+      ],
+      "scored_0932": [
+        230,
+        229
+      ]
+    }
+  },
+  "public_assisted": {
+    "before": 133626,
+    "after": 133626,
+    "sha256": "570f9970f257fe1d4703f483b62d38dfd34d3ed5a8c95d4086a4e42793f96bfe",
+    "wins": {}
+  },
+  "verification": "python -B elf.py data/puzzles.csv <submission.csv | public-assisted/submission.csv>"
+}
