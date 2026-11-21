@@ -33,3 +33,9 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 ## 改变局部中间值的倍数或偏移
 
 在 40 道独立题和 48 道组合题上分别选择最多 8 处子图。局部求解比较原值、成倍缩放和加减已有的小整数。共检查 690 个子图，每种方式各试一次，三组均未找到更短程序。部分求解达到了搜索预算，记录中标为 UNKNOWN。[求解程序](lifted_cones.py) · [逐题记录](lifted-cones-results.json.gz)
+
+## 将两个短算式接到同一个目标
+
+对共享中间数或目标，暂时移除只服务于该处的旧运算。用保留的数构造两个短算式，再查找能用一次加、减、乘或整除得到所需值的组合。78 道独立题枚举 36,840,760 项，88 道组合题枚举 37,706,663 项，均未超过从父程序直接搜索的对照。第 298、468、791 题的对照各省 1 条，已合入独立解。[枚举器](product_join.cpp) · [运行入口](product_join.py) · [逐题记录](product-join-results.json.gz) · [三个独立程序](product-join-independent-wins.csv)
+
+父程序分别为 `87bfed4` 的独立程序和同版组合候选。用 `g++ -O3 -std=c++17 product_join.cpp -o product_join` 编译枚举器。运行入口接受 `--puzzles`、`--parent`、`--binary`、`--engine`、`--out` 和 `--count`。实验使用 6 处切口、最多 46 个可复用值、200 个二阶候选、450 轮后续搜索。[搜索引擎来源](../../generative/wang/NOTICE.md)

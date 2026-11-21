@@ -1,7 +1,7 @@
 {
-  "instructions": 133625,
+  "instructions": 133624,
   "puzzles": 1000,
-  "sha256": "2431a82d57dd7728a5822934faf799451663ef1f0b92001677a10cede778bb47",
+  "sha256": "04c0e390a94b6976eff7986923250ec5e3e3aaae0b11ac021cf866cf7d2a2631",
   "source": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/126",
   "source_version": 126,
   "source_version_evidence": "The SDK catalog identifies version 126, Apache 2.0, and the exact compressed size. The fixed-version download provides the immutable archive. The publisher version note gives 134,185, confirmed by two full replays. The internal history uses an earlier label.",
@@ -71,7 +71,7 @@
   "source_archive_sha256": "69b5f841beeeaffa105d5dd6d8ea4b8e74844e80485cbbe316c2e99256346a5a",
   "original_credited_csv_sha256": "12c2a4c0d7e65c1dfa4c2ead3c5dbcfe9a6b9f045abf1f98ca24a17245de530e",
   "source_file_sha256": "882bb2e85d42cd778e0bcb353fbac85f9954a0f24d6fe0698dacdd0a4b30c658",
-  "reduction_from_source": 560,
+  "reduction_from_source": 561,
   "row_origins": {
     "work/heritage/scale-hard.csv": 1,
     "work/creative/frontier-134285/matched-134115/wins.csv": 37,
@@ -90,7 +90,7 @@
     "WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383)": 5,
     "work/creative/frontier-134285/merge079/wins.csv": 7,
     "work/gpu/frontier-trusted.csv": 4,
-    "work/creative/resume-135077/four-source-134385-to-134325/shorter.csv": 18,
+    "work/creative/resume-135077/four-source-134385-to-134325/shorter.csv": 17,
     "work/creative/frontier-134285/retained-tests/public-shorter.csv": 1,
     "work/creative/paired-133808/public/wins.csv": 7,
     "work/creative/paired-133808/revision23/gift.csv": 1,
@@ -148,7 +148,8 @@
     "Asterios v118": 1,
     "work/gpu/graft-walk-trusted.csv": 1,
     "work/gpu/exchange-trusted.csv": 1,
-    "work/creative/resume-135077/accepted-134500/shorter.csv": 1
+    "work/creative/resume-135077/accepted-134500/shorter.csv": 1,
+    "collaboration/register-search/stitch-independent-wins.csv": 1
   },
   "independently_replayed": true,
   "submission_status": "local_only"

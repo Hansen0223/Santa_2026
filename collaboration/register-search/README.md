@@ -46,3 +46,11 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 独立组取 `f6aaa58` 中所有至少 45 条的程序，共 874 道。直接搜索省 13 条，两个截点逐题择短省 27 条，23 道的截点结果严格优于直接搜索。三组取短后 36 道省 39 条。另在 68 道独立题尝试用已算出、随后被覆盖的值替换闲置输入位置，合入其新增结果后，共有 38 道独立题省 41 条。组合候选上分别尝试 120 道和 84 道，均未缩短。[后半段求解](suffix_search.py) · [恢复旧值](recover_prefix.py) · [逐题结果、父程序及引擎指纹](suffix-results.json.gz) · [38 道改进](suffix-independent-wins.csv)
 
 例如运行 `python -B collaboration/register-search/suffix_search.py --puzzles data/puzzles.csv --parent submission.csv --binary /path/to/anneal_diverse --out scratch/suffix --count 1000 --rounds 520`。复现实验须使用上文固定版本的独立父程序。[Wang 引擎与署名](../../generative/wang/NOTICE.md)
+
+## 拼接两份不同程序的前段与后段
+
+在同一题的两份历史程序中选取截点。当前段缺少后段需要的值时，允许补最多三个输入，每个输入最多新增两次计算。把拼接结果重新分配到 48 个寄存器后，挑两份不同的候选分别继续搜索 430 轮，与同一随机种子下从原程序直接搜索 430 轮的结果比较。
+
+独立组覆盖所有符合此次父本筛选条件的 341 道题，320 道生成了可执行拼接。第 790 题直接拼出 228 条，比原程序短 1 条。拼接及其后续搜索在 9 道题上严格胜过直接搜索；三种起点逐题取短，19 道各省 1 条。第 985 题的直接搜索结果为 108 条，同时缩短了仓库的公开辅助解。组合组抽取 86 道，均产生了拼接，完整程序长度未缩短。[程序](stitch_programs.py) · [来源、分组及全部结果](stitch-results.json.gz) · [19 道改进](stitch-independent-wins.csv)
+
+运行入口接受 `--puzzles`、`--parent`、`--donors`、`--engine`、`--out` 及 `--count`。独立父本出自 `87bfed4`，组合父本由 `c191762` 中的清单生成。结果文件的 `donor_sources` 包含每个旧程序的 Git 版本或外部归档地址。公开归档中的 CSV 取出 id 和 program 两列后用本仓库的 write_submission 规范化。[Wang 搜索引擎来源](../../generative/wang/NOTICE.md)
