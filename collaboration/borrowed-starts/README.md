@@ -29,3 +29,11 @@ python -B collaboration/borrowed-starts/compare.py --phase development --lane ow
 把两个起始数做一次可逆四则运算，以所得的数替换其中一个起始数，再做第二次替换。临时题保留从新起点恢复原数的算式。回到正式题时按实际用到的初值重新构造，计入完整指令数。36 道计分题包含 20 道每目标用步数较多的题，两条路线均与同种子同轮数的直接搜索比较。[已分配题号](seed-basis-design.json) · [实现](seed_basis.py)
 
 36 道题中，改换初始数在独立路线省 8 条，在公开辅助路线省 5 条；两路的直接搜索分别省 7 条和 4 条。额外收益均来自第 995 题，当前组合已含同长结果。[搜索结果](seed-basis-results.json.gz)
+
+## 从目标沿原算式倒推
+
+在临时题中把一个目标当作已知数，同时要求求出原来用于构造它的某个中间数。把两至四个连续等式反向，分别从最多两个目标开始搜索。还原正式题时，把找到的新等式和反向等式与原程序放在一起选择，要求包括借入目标在内的全部结果都能从官方初值出发得到。
+
+独立组 64 道中有 54 道生成了反向程序，组合组 80 道中有 69 道。回到正式初值后两组均未由反向程序省步。独立第 418 题由直接搜索从 127 条缩至 126 条，已采用这份结果。[求解器](reverse_targets.py) · [逐题结果及父程序哈希](reverse-targets-results.json.gz) · [第 418 题](reverse-targets-independent-wins.csv)
+
+运行 `reverse_targets.py --puzzles data/puzzles.csv --parent FROZEN.csv --engine ANNEAL_DIVERSE --out results --count 64`，需 OR-Tools 与 Wang 搜索引擎。早先的等式选择器负责从正式初值检验接回去的算式。[等式选择器](../structure-controls/ruler/selector.py) · [Wang 引擎来源](../../generative/wang/NOTICE.md)

@@ -39,3 +39,11 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 对共享中间数或目标，暂时移除只服务于该处的旧运算。用保留的数构造两个短算式，再查找能用一次加、减、乘或整除得到所需值的组合。78 道独立题枚举 36,840,760 项，88 道组合题枚举 37,706,663 项，均未超过从父程序直接搜索的对照。第 298、468、791 题的对照各省 1 条，已合入独立解。[枚举器](product_join.cpp) · [运行入口](product_join.py) · [逐题记录](product-join-results.json.gz) · [三个独立程序](product-join-independent-wins.csv)
 
 父程序分别为 `87bfed4` 的独立程序和同版组合候选。用 `g++ -O3 -std=c++17 product_join.cpp -o product_join` 编译枚举器。运行入口接受 `--puzzles`、`--parent`、`--binary`、`--engine`、`--out` 和 `--count`。实验使用 6 处切口、最多 46 个可复用值、200 个二阶候选、450 轮后续搜索。[搜索引擎来源](../../generative/wang/NOTICE.md)
+
+## 换掉中间结果，沿后续指令重新计算
+
+把子图入口替换成已经能拿到的另一个数，再用相同的加减乘除向下推算。恢复子图被外部使用的旧值，经过完整题目重排的候选才进入下一轮。目标、整数上限和整除条件均沿用原题。每题考察至多 24 处子图，每处至多 64 个替换值，保留两份不同程序，各继续搜索 420 轮。同一种子下从原程序直接搜索 420 轮作为对照。
+
+独立解中所有长度至少 25 条的 955 道题一共尝试 1,367,776 次替换，553 道生成了可继续搜索的程序。直接替换未立即缩短整题。后续搜索在 12 道题比父程序短，其中 11 道优于直接搜索。将两组逐题取短，20 道各省 1 条。132,519 条的组合候选抽取 128 道，89 道产生了备选，均未缩短。另以本轮 21 道独立改进及 4 道公开改进为起点，在 132,514 条候选上合并多个来源并再次搜索，25 道均未再省步。[程序](propagate_values.py) · [配置、逐题记录和后续试验](propagation-results.json.gz) · [20 道独立改进](propagation-independent-wins.csv)
+
+使用 `propagate_values.py --puzzles data/puzzles.csv --parent FROZEN.csv --engine ANNEAL_DIVERSE --out results --count 1000` 可搜索全部符合筛选的题。两条路线的父程序及引擎哈希保存在结果中。[Wang Jakie 搜索引擎](../../generative/wang/NOTICE.md)

@@ -1,5 +1,13 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:01
+
+独立解降至 **139,515 条**。沿现有指令重算，在 955 道独立题上与直接搜索逐题取短，20 道共省 20 条。另在反向求解试验中，直接搜索使第 418 题再省 1 条。把这些新程序与最新公开程序重新组合，组合候选保持 **132,514 条**。[重算结果](collaboration/circuit-cuts/README.md) · [反向试验](collaboration/borrowed-starts/README.md)
+
+## 北京时间 11 月 21 日 19:59
+
+Asterios Panoras 的公开笔记本在代码中提供第 290 题的 147 条程序。合入后比上一版少 1 条，组合候选为 **132,514 条**。[还原方式和原始笔记本](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 19:52
 
 第 505 题少 2 条，第 778 和 933 题各少 1 条，组合候选降至 **132,515 条**。第 505、933 题由 GoodPJW 贡献，第 778 题在 Asterios 的归档中署名为 public merge。[逐题改进与还原方法](public-assisted/releases/portfolio.md)

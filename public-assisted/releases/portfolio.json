@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132515,
-  "sha256": "3de9c10837c7911378146c40962ae31038d9511330cd587c3fd5fd3a713c69d5",
+  "instructions": 132514,
+  "sha256": "095b8bca4878789ab1cd56c33ddb7a3e091792171e1afcb3ed1abd26b192149e",
   "sources": [
     {
       "name": "repository",
@@ -20,24 +20,24 @@
       "license": "Apache 2.0",
       "full": true,
       "replayed_instructions": 132618
+    },
+    {
+      "name": "Asterios Panoras notebook 372173182",
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372173182",
+      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372173182/download",
+      "notebook": "asterios-372173182.ipynb",
+      "notebook_sha256": "899672e5e6a88a616523c02399a3c1303712ff3bea3f04012c7ec4a3c4befa47",
+      "cell": 7,
+      "variable": "CHANGE",
+      "full": false
     }
   ],
-  "previous_sha256": "3929c08b2755c5b5721fadb320788d06dd47898e67af2402937b10311b9976ef",
+  "previous_sha256": "3de9c10837c7911378146c40962ae31038d9511330cd587c3fd5fd3a713c69d5",
   "improved": {
-    "scored_0505": [
-      109,
-      107,
-      "asteriospanoras-189"
-    ],
-    "scored_0778": [
-      128,
-      127,
-      "asteriospanoras-189"
-    ],
-    "scored_0933": [
-      112,
-      111,
-      "asteriospanoras-189"
+    "scored_0290": [
+      148,
+      147,
+      "Asterios Panoras notebook 372173182"
     ]
   }
 }

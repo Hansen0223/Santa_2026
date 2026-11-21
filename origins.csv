@@ -14,7 +14,7 @@ scored_0012,work/heritage/scale-own-wins.csv,193
 scored_0013,work/virtual/withheld-134079/block-02-own.csv,184
 scored_0014,work/creative/own-good/part3-wins.csv,25
 scored_0015,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),226
-scored_0016,collaboration/register-search/stitch-independent-wins.csv,125
+scored_0016,collaboration/circuit-cuts/propagation-independent-wins.csv,124
 scored_0017,work/creative/resume-135077/independent-final-140814/shorter.csv,109
 scored_0018,collaboration/register-search/suffix-independent-wins.csv,124
 scored_0019,work/gpu/bridge-36731/wide-first-release/wins.csv,23
@@ -26,7 +26,7 @@ scored_0024,work/virtual/whole-135358/sparse.csv,29
 scored_0025,collaboration/recipe-union/paired-splice-independent-wins.csv,118
 scored_0026,work/virtual/lifetimes-135161/own-pressure.csv,190
 scored_0027,git/59d8430580c1 (Hiyohane),103
-scored_0028,collaboration/register-search/stitch-independent-wins.csv,120
+scored_0028,collaboration/circuit-cuts/propagation-independent-wins.csv,119
 scored_0029,work/virtual/resume-135077/wang-second.csv,38
 scored_0030,work/virtual/resume-135077/wang-second.csv,195
 scored_0031,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),262
@@ -62,7 +62,7 @@ scored_0060,git/19e58dbdcc79 (Hiyohane),271
 scored_0061,original-172868,4
 scored_0062,work/creative/transfer-133825/borrowed/own-expand-12.csv,152
 scored_0063,work/virtual/good10-wang-269/results/batch-08/winners.csv,102
-scored_0064,work/virtual/resume-135077/wang-second.csv,112
+scored_0064,collaboration/circuit-cuts/propagation-independent-wins.csv,111
 scored_0065,work/virtual/withheld-134079/block-18-own.csv,37
 scored_0066,work/creative/resume-135077/anneal-independent-full35/shorter.csv,41
 scored_0067,work/virtual/carry-135348/own-full-deep.csv,280
@@ -169,7 +169,7 @@ scored_0167,work/heritage/deep-own-wins.csv,271
 scored_0168,work/heritage/blend-own-wins.csv,288
 scored_0169,work/creative/transfer-133825/borrowed/own-expand-12.csv,103
 scored_0170,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),223
-scored_0171,collaboration/register-search/stitch-independent-wins.csv,130
+scored_0171,collaboration/circuit-cuts/propagation-independent-wins.csv,129
 scored_0172,collaboration/register-search/stitch-independent-wins.csv,162
 scored_0173,work/gpu/coop-independent.csv,191
 scored_0174,work/virtual/withheld-134079/block-13-own.csv,141
@@ -272,7 +272,7 @@ scored_0270,work/creative/resume-135077/independent-final-140814/shorter.csv,124
 scored_0271,git/019a8fc58359 (Hiyohane),39
 scored_0272,work/creative/ladder/lns-local.csv,22
 scored_0273,work/creative/transfer-133825/borrowed/own-expand-15.csv,186
-scored_0274,work/creative/transfer-133825/borrowed/own-expand-04.csv,136
+scored_0274,collaboration/circuit-cuts/propagation-independent-wins.csv,135
 scored_0275,work/gpu/lineage-independent.csv,153
 scored_0276,work/creative/ladder/lns-local.csv,78
 scored_0277,work/virtual/good10-wang-269/results/batch-01/winners.csv,111
@@ -364,7 +364,7 @@ scored_0362,work/creative/joint-132841/siblings/own.csv,96
 scored_0363,work/virtual/portfolio-135289/own-post.csv,170
 scored_0364,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,118
 scored_0365,original-172868,4
-scored_0366,git/019a8fc58359 (Hiyohane),117
+scored_0366,collaboration/circuit-cuts/propagation-independent-wins.csv,116
 scored_0367,work/creative/resume-135077/anneal-independent-full35/shorter.csv,125
 scored_0368,work/gpu/orbit-extension/own-all.csv,28
 scored_0369,work/creative/own-good/part2-wins.csv,253
@@ -416,7 +416,7 @@ scored_0414,work/virtual/withheld-134079/holdout-own.csv,105
 scored_0415,work/virtual/lifetimes-135161/own-composition-gpu.csv,160
 scored_0416,work/virtual/withheld-134079/block-08-own.csv,128
 scored_0417,work/heritage/deep-own-wins.csv,181
-scored_0418,work/creative/transfer-133825/borrowed/own-expand-04.csv,127
+scored_0418,collaboration/borrowed-starts/reverse-targets-independent-wins.csv,126
 scored_0419,work/gen/atakan-frontier-full.csv,24
 scored_0420,work/creative/resume-135077/anneal-independent-full35/shorter.csv,123
 scored_0421,git/d33a49a9513d (Hiyohane),111
@@ -559,13 +559,13 @@ scored_0557,work/virtual/withheld-134079/block-16-own.csv,110
 scored_0558,work/creative/own-good/part4-wins.csv,129
 scored_0559,work/creative/own-good/cumulative-wins.csv,35
 scored_0560,work/gpu/orbit-extension/own-all.csv,31
-scored_0561,work/gpu/walk-independent.csv,102
+scored_0561,collaboration/circuit-cuts/propagation-independent-wins.csv,101
 scored_0562,work/gpu/walk-independent.csv,95
 scored_0563,work/creative/ladder/lns-local.csv,113
 scored_0564,work/creative/ladder/lns-local.csv,24
 scored_0565,work/gpu/forced-active-independent.csv,230
 scored_0566,work/gpu/901-independent/transfer/primary-wins.csv,22
-scored_0567,work/gpu/lineage-independent.csv,101
+scored_0567,collaboration/circuit-cuts/propagation-independent-wins.csv,100
 scored_0568,work/virtual/withheld-134079/block-11-own.csv,105
 scored_0569,work/creative/own-good/part4-wins.csv,112
 scored_0570,work/creative/resume-135077/anneal-independent-full35/shorter.csv,86
@@ -619,7 +619,7 @@ scored_0617,work/creative/transfer-133825/borrowed/own-expand-11.csv,92
 scored_0618,collaboration/circuit-cuts/transposed-independent-wins.csv,106
 scored_0619,work/creative/resume-135077/anneal-independent-full35/shorter.csv,118
 scored_0620,work/creative/own-good/cumulative-wins.csv,34
-scored_0621,work/virtual/portfolio-135289/own-wide-all.csv,179
+scored_0621,collaboration/circuit-cuts/propagation-independent-wins.csv,178
 scored_0622,work/creative/joint-132841/incoming.csv,171
 scored_0623,work/virtual/synthetic-134175/holdout-own.csv,78
 scored_0624,git/f9fbc7d9710c (Hiyohane),119
@@ -667,7 +667,7 @@ scored_0665,git/8487fae06496 (Hiyohane),94
 scored_0666,work/creative/transfer-133825/borrowed/own-expand-09.csv,153
 scored_0667,work/creative/resume-135077/anneal-independent-full35/shorter.csv,120
 scored_0668,collaboration/recipe-union/paired-splice-independent-wins.csv,101
-scored_0669,work/creative/transfer-133825/borrowed/own-expand-11.csv,109
+scored_0669,collaboration/circuit-cuts/propagation-independent-wins.csv,108
 scored_0670,work/creative/seed-basis-133773/shell/own.csv,187
 scored_0671,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),197
 scored_0672,work/virtual/portfolio-135289/own-wide-all.csv,57
@@ -684,7 +684,7 @@ scored_0682,work/gen/atlas-expanded.csv,281
 scored_0683,work/creative/transfer-133825/borrowed/own-expand-09.csv,123
 scored_0684,work/creative/transfer-133825/borrowed/own-expand-08.csv,96
 scored_0685,work/virtual/portfolio-135289/own-wide-all.csv,181
-scored_0686,work/creative/resume-135077/independent-final-140813/shorter.csv,102
+scored_0686,collaboration/circuit-cuts/propagation-independent-wins.csv,101
 scored_0687,work/heritage/deep-own-wins.csv,240
 scored_0688,work/creative/own-good/cumulative-wins.csv,170
 scored_0689,work/gpu/lineage-independent.csv,189
@@ -693,9 +693,9 @@ scored_0691,work/creative/transfer-133825/borrowed/own-expand-14.csv,143
 scored_0692,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),206
 scored_0693,work/creative/transfer-133825/borrowed/own-expand-07.csv,117
 scored_0694,work/virtual/resume-135077/wang-second.csv,162
-scored_0695,git/8487fae06496 (Hiyohane),103
+scored_0695,collaboration/circuit-cuts/propagation-independent-wins.csv,102
 scored_0696,work/virtual/withheld-134079/block-15-own.csv,81
-scored_0697,work/virtual/synthetic-134175/holdout-own.csv,99
+scored_0697,collaboration/circuit-cuts/propagation-independent-wins.csv,98
 scored_0698,git/63d4bfe6bcf2 (Hiyohane),227
 scored_0699,work/virtual/withheld-134079/block-11-own.csv,118
 scored_0700,work/virtual/repeated-135211/own-full.csv,178
@@ -730,7 +730,7 @@ scored_0728,work/gpu/frontier-independent.csv,274
 scored_0729,work/creative/macros/own-handwritten-recovery.csv,298
 scored_0730,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,107
 scored_0731,work/creative/paired-133808/nested/own.csv,122
-scored_0732,work/virtual/resume-135077/wang-second.csv,113
+scored_0732,collaboration/circuit-cuts/propagation-independent-wins.csv,112
 scored_0733,work/gpu/forced-active-independent.csv,98
 scored_0734,work/virtual/synthetic-134175/extension/extension-own.csv,148
 scored_0735,work/creative/resume-135077/anneal-independent-full35/shorter.csv,119
@@ -792,7 +792,7 @@ scored_0790,collaboration/register-search/stitch-independent-wins.csv,228
 scored_0791,collaboration/circuit-cuts/product-join-independent-wins.csv,156
 scored_0792,work/virtual/withheld-134079/block-12-own.csv,112
 scored_0793,work/gpu/lineage-independent.csv,208
-scored_0794,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,119
+scored_0794,collaboration/circuit-cuts/propagation-independent-wins.csv,118
 scored_0795,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),187
 scored_0796,work/virtual/lifetimes-135161/own-direct-all.csv,229
 scored_0797,work/gen/matrix-atlas.csv,78
@@ -864,7 +864,7 @@ scored_0862,work/creative/transfer-133825/borrowed/own-expand-00.csv,106
 scored_0863,work/gpu/bridge-36731/wide-first-release/wins.csv,32
 scored_0864,work/creative/joint-132841/incoming.csv,183
 scored_0865,collaboration/register-search/suffix-independent-wins.csv,243
-scored_0866,work/gpu/lineage-independent.csv,27
+scored_0866,collaboration/circuit-cuts/propagation-independent-wins.csv,26
 scored_0867,work/virtual/resume-135077/wang-second.csv,91
 scored_0868,work/creative/resume-135077/anneal-independent-full35/shorter.csv,28
 scored_0869,git/d33a49a9513d (Hiyohane),102
@@ -889,7 +889,7 @@ scored_0887,original-172868,3
 scored_0888,work/virtual/withheld-134079/block-07-own.csv,116
 scored_0889,git/65531669b923 (Hiyohane),114
 scored_0890,work/virtual/good10-wang-269/results/batch-02/winners.csv,96
-scored_0891,work/creative/transfer-133825/borrowed/own-expand-05.csv,115
+scored_0891,collaboration/circuit-cuts/propagation-independent-wins.csv,114
 scored_0892,work/virtual/whole-135358/guided.csv,16
 scored_0893,work/creative/seed-basis-133773/contributor-cross/own.csv,123
 scored_0894,work/virtual/temporary-targets-134182/holdout-own.csv,113
@@ -926,8 +926,8 @@ scored_0924,collaboration/circuit-cuts/transposed-independent-wins.csv,110
 scored_0925,work/creative/transfer-133825/borrowed/own-expand-10.csv,118
 scored_0926,work/gpu/offset-independent.csv,20
 scored_0927,work/virtual/temporary-targets-134182/development-own.csv,121
-scored_0928,work/gpu/offset-independent.csv,32
-scored_0929,work/creative/transfer-133825/borrowed/own-expand-02.csv,114
+scored_0928,collaboration/circuit-cuts/propagation-independent-wins.csv,31
+scored_0929,collaboration/circuit-cuts/propagation-independent-wins.csv,113
 scored_0930,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,87
 scored_0931,original-172868,2
 scored_0932,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),229
@@ -963,7 +963,7 @@ scored_0961,work/virtual/synthetic-134175/development-own.csv,108
 scored_0962,work/gpu/lineage-independent.csv,33
 scored_0963,work/creative/resume-135077/independent-final-140814/shorter.csv,129
 scored_0964,work/creative/resume-135077/anneal-own-port160/shorter.csv,214
-scored_0965,work/virtual/carry-135348/own-split.csv,196
+scored_0965,collaboration/circuit-cuts/propagation-independent-wins.csv,195
 scored_0966,git/59d8430580c1 (Hiyohane),84
 scored_0967,git/fb9fa8bfde72 (Hiyohane),110
 scored_0968,work/virtual/lifetimes-135161/polish/own-wins.csv,168

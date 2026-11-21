@@ -1,5 +1,6 @@
 """Apply credited, hash-pinned row improvements to an existing Santa 2026 submission."""
 import argparse
+import ast
 import csv
 import hashlib
 import io
@@ -16,6 +17,20 @@ from elf import read_puzzles, read_submission, sha256, write_submission
 
 
 def read_rows(source, archives):
+    if 'notebook' in source:
+        raw = (archives / source['notebook']).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != source['notebook_sha256']:
+            raise ValueError('Unexpected notebook source')
+        cell = json.loads(raw)['cells'][source['cell']]
+        if cell['cell_type'] != 'code':
+            raise ValueError('Expected a code cell containing program literals')
+        statements = ast.parse(''.join(cell['source'])).body
+        assignments = [stmt.value for stmt in statements if isinstance(stmt, ast.Assign)
+                       and any(isinstance(t, ast.Name) and t.id == source['variable'] for t in stmt.targets)]
+        if len(assignments) != 1:
+            raise ValueError('Expected one assignment of the program table')
+        values = ast.literal_eval(assignments[0])
+        return {i: tuple(map(tuple, tape)) for i, tape in values.items()}
     if 'archive' in source:
         path = archives / source['archive']
         if sha256(path) != source['archive_sha256']:
