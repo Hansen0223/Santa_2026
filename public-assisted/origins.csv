@@ -891,7 +891,7 @@ scored_0889,Asterios v99,"goodpjw2008, Santa 2026 | DAG LNS + Depth-5 Search | L
 scored_0890,work/creative/paired-133808/union780/wins.csv,"E-Max AI; Wang Jakie; baseline_v94_133788.csv; GoodPJW_1713_public, Our_v22_public, Sargis_signed_regions_133924",89
 scored_0891,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",110
 scored_0892,local from official inputs,Generated from official inputs,16
-scored_0893,work/creative/seed-basis-133773/contributors-second/public.csv,"Wang Jakie; Hiyohane; Hiyohane, 0b893d9; 95f3008/public Generated from official inputs; b49db2f/public goodpjw2008 DAG-LNS Programs dataset v12 and notebook session 371867712; uses Wang Jakie's search with seeded crossover credited to E-Max AI, and public inputs listed in GoodPJW-v12-public-sources.json.",121
+scored_0893,collaboration/target-partition/local-leads-assisted-wins.csv,"Wang Jakie; Hiyohane; Hiyohane, 0b893d9; 95f3008/public Generated from official inputs; b49db2f/public goodpjw2008 DAG-LNS Programs dataset v12 and notebook session 371867712; uses Wang Jakie's search with seeded crossover credited to E-Max AI, and public inputs listed in GoodPJW-v12-public-sources.json.; local search from 6088f1b:public-assisted/submission.csv.",120
 scored_0894,Asterios v99,"goodpjw2008, Santa 2026 | DAG LNS + Depth-5 Search | LB 136,121",112
 scored_0895,work/creative/paired-133808/union788/wins.csv,"E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents atakan, 10_prvsiyan, Sargis_signed_regions_133924",121
 scored_0896,Asterios v115,"E-Max AI, Santa 2026 | Public Frontier | Score 134,503",132

@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:57
+
+对仓库领先公开参照的全部 15 道题集中搜索。第 893 题 121 → 120。独立候选为 **139,433 条**。[逐题结果](collaboration/target-partition/local-leads-results.json.gz)
+
 ## 北京时间 11 月 21 日 20:53
 
 第 190 题的独立程序从 116 条降到 114 条，使组合候选达到 **132,496 条**。独立解本轮少用 **55 条**，降至 **139,434 条**，仓库直接提供的公开辅助解为 **133,614 条**。借用历史程序中的目标分组，与原搜索逐题取短后省 43 条。最小割混合两份程序的实验共省 10 条。各方法的个别改进落在同一道题，合并时只计最短程序。[目标分组](collaboration/target-partition/README.md) · [混合两份程序](collaboration/recipe-union/README.md) · [乘除改写](collaboration/circuit-cuts/README.md)

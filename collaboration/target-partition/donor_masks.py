@@ -55,11 +55,11 @@ def groups(p,tape):
     return Counter(bits[v] for v in graph if 2<=bits[v].bit_count()<=5)
 
 
-def search(exe,p,tape,masks,seconds):
+def search(exe,p,tape,masks,seconds,seed_offset=87533,helpers=False):
     header = ['P',p.id,len(p.seeds),*p.seeds,len(p.targets),*p.targets,p.limit,p.registers,len(tape)]
     lines = [' '.join(map(str,header)),*(' '.join(map(str,op)) for op in tape),' '.join(map(str,[len(masks),*masks]))]
-    proc = subprocess.run([str(exe),'--time',str(seconds),'--seed',str(87533+int(p.id[-4:])),
-                           '--kicks','1000','--kslack','2','--helpers','0','--group','5'],
+    proc = subprocess.run([str(exe),'--time',str(seconds),'--seed',str(seed_offset+int(p.id[-4:])),
+                           '--kicks','1000','--kslack','2','--helpers',str(int(helpers)),'--group','5'],
                           input='\n'.join(lines)+'\n',text=True,capture_output=True,check=True)
     if p.id not in proc.stderr:
         raise ValueError('Solver did not process '+p.id)

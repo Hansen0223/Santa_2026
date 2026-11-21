@@ -13,3 +13,7 @@
 独立组共 591 题，逐题取短后 39 题省 43 条，其中 5 题的借用分组方案严格优于对照。组合组 100 题，逐题共省 0 条。[逐题设置、来源和结果](donor-mask-results.json.gz) · [独立改进](donor-mask-independent-wins.csv)
 
 从 E-Max AI 固定的 132,608 重放数据集下载原始 ZIP。该版本使用 GoodPJW 的 Apache 2.0 搜索器，并在首次严格缩短时停止。运行 `python -B donor_masks.py build-source ARCHIVE.zip donor-masks.cpp` 后用 C++17 编译，再运行 `python -B donor_masks.py search --puzzles data/puzzles.csv --parent PARENT.csv --donors DONOR.csv --exe SOLVER --out OUTPUT`。[本地修改](donor_masks.py) · [固定原始归档与上游署名](https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-132608-lean/versions/1)
+
+## 集中搜索仓库已经领先的题
+
+用 E-Max AI 的 132,608 条输出作参照。在组合候选由仓库提供且比该参照严格更短的全部 15 道题上，选取合格独立父本及公开辅助父本，同一份物理程序只计算一次。每个起点使用两个随机种子，分别允许或关闭中间值搜索，每次最多 16 秒。共 20 个起点。独立组内共省 1 条，辅助组内共省 1 条。第 893 题 121 → 120。[逐题记录和来源](local-leads-results.json.gz) · [求解器](local_leads.py)
