@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 19:09
+
+第 793 题从 204 条缩至 203 条，候选总计 **132,521 条**，已按官方输入重放 1,000 题。独立搜索在 38 道题共省 41 条，独立主文件为 **139,558 条**。第 310 题也让仓库直接发布的公开辅助解省下一条，现为 **133,625 条**。[组合候选](public-assisted/releases/portfolio.md) · [独立结果](collaboration/register-search/README.md)
+
 ## 北京时间 11 月 21 日 18:53
 
 Ishan Karnick 第 5 版在七题各省一条，GoodPJW 第 41 版在第 930 题省一条，最好候选为 **132,522 条**。[还原方法与逐题来源](public-assisted/releases/portfolio.md)

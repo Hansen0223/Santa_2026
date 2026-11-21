@@ -1,77 +1,44 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132522,
-  "sha256": "241d5566e47ac6453371f567c6a61f1b620958cccde1fb3e6d71a4084da9750e",
+  "instructions": 132521,
+  "sha256": "90f8a2068c2a3ab8836a5fa4e9bb31941b59fef32483b325f035d3928fd80b75",
   "sources": [
     {
       "name": "repository",
-      "revision": "68eb82fc45bde27f542c89e2daceabe749a10c84",
+      "revision": "b999a8283275f79aea86d52401db5d20c2de29a4",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "570f9970f257fe1d4703f483b62d38dfd34d3ed5a8c95d4086a4e42793f96bfe",
+      "csv_sha256": "2431a82d57dd7728a5822934faf799451663ef1f0b92001677a10cede778bb47",
       "full": true
     },
     {
-      "name": "ishankarnick-v5",
-      "url": "https://www.kaggle.com/datasets/ishankarnick/santa-2026-frontier-programs/versions/5",
-      "license": "Apache 2.0",
-      "archive": "ishankarnick-5.zip",
-      "archive_sha256": "bdef41928e6f0984940f326551e2afdbd68c4f48b27491c75b9a8bab2dd3cdf4",
-      "member": "submission.csv",
-      "csv_sha256": "5ea463cf4a2d778656c2e62cf63b3ca5f7ad99c05bb5f3deeceab783c1eaef7f",
-      "full": true
+      "name": "alexchilton-v124",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/124",
+      "license": "CC0: Public Domain",
+      "archive": "alexchilton-124.zip",
+      "archive_sha256": "ae7fee9dfa8684886eec2b8f41c45247d5f60ff23ea84a8e1fee13cee4f6b1c1",
+      "member": "rudolph_programs.csv",
+      "csv_sha256": "c315bfd13ebe37c07e80511a780c3922b2ae06afe182eec4301f6fd168fc16e8",
+      "full": true,
+      "replayed_instructions": 132625
     },
     {
-      "name": "goodpjw2008-v41",
-      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/41",
+      "name": "asteriospanoras-v187",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/187",
       "license": "Apache 2.0",
-      "archive": "goodpjw2008-41.zip",
-      "archive_sha256": "9edf922cae10b4a53ab8089f33f260583d91ef9b74ab6304027a703154a82afd",
-      "member": "our_programs.csv",
-      "csv_sha256": "b1c8169a91e348985f46b803c6a9797b658a8819a864b8fbc055121a34805ab5",
-      "full": true
+      "archive": "asteriospanoras-187.zip",
+      "archive_sha256": "3bd992f4580eb626aef89762bc72f689388cec7b7b0745aabdc7a32a7cfb793f",
+      "member": "best_programs.csv",
+      "csv_sha256": "9a89e5a7a00f0901b79b801ca40804ab5d1a4c6fc480d622ac1ab490723b0c65",
+      "full": true,
+      "replayed_instructions": 132627
     }
   ],
-  "previous_sha256": "2c0c961d51b3333b3447fedcec644bd08ad3ebd8b1cd23173458b12afbb990ca",
+  "previous_sha256": "241d5566e47ac6453371f567c6a61f1b620958cccde1fb3e6d71a4084da9750e",
   "improved": {
-    "scored_0068": [
-      116,
-      115,
-      "ishankarnick-v5"
-    ],
-    "scored_0142": [
-      120,
-      119,
-      "ishankarnick-v5"
-    ],
-    "scored_0295": [
-      120,
-      119,
-      "ishankarnick-v5"
-    ],
-    "scored_0390": [
-      93,
-      92,
-      "ishankarnick-v5"
-    ],
-    "scored_0563": [
-      108,
-      107,
-      "ishankarnick-v5"
-    ],
-    "scored_0736": [
-      109,
-      108,
-      "ishankarnick-v5"
-    ],
-    "scored_0907": [
-      114,
-      113,
-      "ishankarnick-v5"
-    ],
-    "scored_0930": [
-      80,
-      79,
-      "goodpjw2008-v41"
+    "scored_0793": [
+      204,
+      203,
+      "asteriospanoras-v187"
     ]
   }
 }
