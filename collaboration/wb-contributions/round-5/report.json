@@ -1,0 +1,128 @@
+{
+  "base_commit": "e12c5f7",
+  "method": "ultra virtual_search on both lines, published-record merge, cross-line transfer",
+  "settings": {
+    "leaves": 160,
+    "width": 10,
+    "scan": 2,
+    "joins": 16383,
+    "style": 5,
+    "tail": 6,
+    "seeds": "20261128 / 20261129"
+  },
+  "independent": {
+    "before": 139699,
+    "after": 139673,
+    "sha256": "d1d40e849f5eb704a1c1381f38eff87fcffd38e1d0e29c9b4aabc3ce0b673cea",
+    "wins": {
+      "scored_0002": [
+        264,
+        263
+      ],
+      "scored_0015": [
+        227,
+        226
+      ],
+      "scored_0031": [
+        265,
+        262
+      ],
+      "scored_0110": [
+        169,
+        168
+      ],
+      "scored_0128": [
+        107,
+        106
+      ],
+      "scored_0171": [
+        133,
+        131
+      ],
+      "scored_0204": [
+        208,
+        207
+      ],
+      "scored_0258": [
+        291,
+        290
+      ],
+      "scored_0321": [
+        293,
+        292
+      ],
+      "scored_0370": [
+        280,
+        278
+      ],
+      "scored_0470": [
+        278,
+        276
+      ],
+      "scored_0481": [
+        186,
+        184
+      ],
+      "scored_0489": [
+        153,
+        152
+      ],
+      "scored_0494": [
+        215,
+        214
+      ],
+      "scored_0576": [
+        173,
+        172
+      ],
+      "scored_0640": [
+        225,
+        224
+      ],
+      "scored_0692": [
+        207,
+        206
+      ],
+      "scored_0704": [
+        134,
+        133
+      ],
+      "scored_0850": [
+        185,
+        184
+      ],
+      "scored_0939": [
+        246,
+        245
+      ]
+    }
+  },
+  "public_assisted": {
+    "before": 133633,
+    "after": 133629,
+    "sha256": "efc1e8b4d075f7c3d692487ca393724e28dba05f724aef4dbaaa1f9524fc8ac5",
+    "wins": {
+      "scored_0088": [
+        202,
+        201,
+        "ultra"
+      ],
+      "scored_0110": [
+        169,
+        168,
+        "independent"
+      ],
+      "scored_0505": [
+        111,
+        110,
+        "ultra"
+      ],
+      "scored_0756": [
+        151,
+        150,
+        "release"
+      ]
+    }
+  },
+  "verification": "python -B elf.py data/puzzles.csv <submission.csv | public-assisted/submission.csv>"
+}
