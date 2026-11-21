@@ -1,13 +1,13 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132496,
-  "sha256": "a1af826e648e3f1a688cd571821394b465dc3600e37d9028eeed3d22fffdca61",
+  "instructions": 132495,
+  "sha256": "9ac604d904a0e4dd7d08d3f21f196ce3f46f8603a02ca632f6ef4c6f63d7df4d",
   "sources": [
     {
       "name": "repository",
-      "revision": "6088f1b89a902b6910fa55fd227a8c024a34e911",
+      "revision": "48a4b5ec28aea7a8214376d0e7c14fdd30849fbe",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "bf94004bad4970ac2110bc61f449504c5e50d10ca82f01c5d2c66cafe4836689",
+      "csv_sha256": "fd49498a9c034d84a3924cdc0d0d0b743f37065ae33997b0cddcffb05f175abe",
       "full": true
     },
     {
@@ -42,15 +42,15 @@
       "full": false
     }
   ],
-  "previous_sha256": "bd6997a9c6aa1b21f9424d34fd84e8dc811c48689664e40a57c37bf772d58273",
+  "previous_sha256": "a1af826e648e3f1a688cd571821394b465dc3600e37d9028eeed3d22fffdca61",
   "improved": {
-    "scored_0190": [
-      116,
-      114,
+    "scored_0893": [
+      121,
+      120,
       "repository"
     ]
   },
   "improved_credits": {
-    "scored_0190": "Independent repository program, optimized with the control configuration of the GoodPJW / E-Max AI search."
+    "scored_0893": "Repository-assisted circuit, credited Hiyohane and Wang Jakie lineage, optimized locally with the E-Max AI / GoodPJW search."
   }
 }
