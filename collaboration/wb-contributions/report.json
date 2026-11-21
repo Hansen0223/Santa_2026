@@ -1,0 +1,30 @@
+{
+  "base_commit": "d33a49a",
+  "independent": {
+    "before": 139767,
+    "after": 139766,
+    "sha256": "0db6279e106917218dfbe8d51addc436dfcb21464df13598510ec826a39b4568",
+    "wins": {
+      "scored_0235": [
+        201,
+        200
+      ]
+    }
+  },
+  "public_assisted": {
+    "before": 133644,
+    "after": 133642,
+    "sha256": "108b871eea82c4d51ea8b64e80ee36bef919028639a1c379844d75967f98e34a",
+    "transfers": {
+      "scored_0246": [
+        114,
+        113
+      ],
+      "scored_0268": [
+        200,
+        199
+      ]
+    }
+  },
+  "verification": "python -B elf.py data/puzzles.csv <candidate>"
+}
