@@ -52,7 +52,7 @@ scored_0050,Asterios v99,"Hanif Noer Rofiq, Santa 2026 Elf Calculator - Verified
 scored_0051,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",277
 scored_0052,Asterios v99,"goodpjw2008, Santa 2026 | DAG LNS + Depth-5 Search | LB 136,121",108
 scored_0053,Asterios v119,"E-Max AI, Santa 2026 | Public Frontier | Score 134,439",109
-scored_0054,work/gpu/frontier-trusted.csv,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",194
+scored_0054,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),Repository-native constructive search: solvers/graphs/virtual_search.py with solvers/native/virtual.cpp; warm-started from the public-assisted incumbent. Upstream public credits are retained in the repository NOTICE files.,193
 scored_0055,Asterios v99,"suka, Verified Portfolio Programs dataset",80
 scored_0056,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: public merge",24
 scored_0057,work/creative/frontier-134285/matched-134115/wins.csv,"Exact tape in Roman Rozen's IceFire session 371861819 and bikrambasnet1's Arithmetic Graph Rewrites session 371860204. The latter credits konbu17, the public portfolios listed in Roman-Bikram-sources.json, earlier Wang Jakie search and other upstream authors. Exact origin before the published portfolio is not specified per row.",213
@@ -942,7 +942,7 @@ scored_0940,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, d
 scored_0941,work/creative/frontier-134285/matched-134115/wins.csv,"Exact tape in Roman Rozen's IceFire session 371861819 and bikrambasnet1's Arithmetic Graph Rewrites session 371860204. The latter credits konbu17, the public portfolios listed in Roman-Bikram-sources.json, earlier Wang Jakie search and other upstream authors. Exact origin before the published portfolio is not specified per row.",232
 scored_0942,work/creative/frontier-134285/new-134113/wins.csv,"E-Max AI (royalacecat), diverse graph-pool search session 371866321, including Wang Jakie's arithmetic graph search, Roman Rozen's public union and the credited public input banks.",111
 scored_0943,work/creative/resume-135077/four-source-134385-to-134325/shorter.csv,"goodpjw2008, Kaggle dataset release 10 (Apache-2.0), our_programs.csv. Dataset includes public frontier, local solver, Wang Jakie strategies and E-Max AI (RoyalAceCat) seeded crossover; see GoodPJW-v10-NOTICE.md and GoodPJW-v10-public-sources.json. No row-specific author is supplied.",88
-scored_0944,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: Ángel Jacinto Sánchez Ruiz, Public Merge",210
+scored_0944,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),Repository-native constructive search: solvers/graphs/virtual_search.py with solvers/native/virtual.cpp; warm-started from the public-assisted incumbent. Upstream public credits are retained in the repository NOTICE files.,209
 scored_0945,work/gpu/lineage-trusted.csv,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",28
 scored_0946,Asterios v99,"Ertuğrul Özer, Santa 2026 | Starter Notebook!",210
 scored_0947,work/creative/seed-basis-133773/emax772/wins.csv,"E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",88

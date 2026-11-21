@@ -1,0 +1,31 @@
+{
+  "base_commit": "9f90613",
+  "method": "solvers.graphs.virtual_search + solvers.native.virtual.cpp (ultra settings)",
+  "settings": {
+    "leaves": 160,
+    "width": 10,
+    "scan": 2,
+    "joins": 16383,
+    "style": 5,
+    "tail": 6,
+    "seeds": "20261125 / 20261126 / 20261127"
+  },
+  "public_assisted": {
+    "before": 133641,
+    "after": 133639,
+    "sha256": "22243279c78b9f1e02f89a7a42fea43b21141870f7c7e9302bbcf3aabb52e0da",
+    "wins": {
+      "scored_0054": [
+        194,
+        193,
+        "round3-wins.csv"
+      ],
+      "scored_0944": [
+        210,
+        209,
+        "round3-wins.csv"
+      ]
+    }
+  },
+  "verification": "python -B elf.py data/puzzles.csv public-assisted/submission.csv"
+}
