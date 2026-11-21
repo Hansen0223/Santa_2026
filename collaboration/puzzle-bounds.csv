@@ -738,7 +738,7 @@ scored_0736,40,37,40,conditioned-bounds.json,114,112,112,72,0
 scored_0737,40,37,41,distinct-diamond/claims.json.gz,113,113,113,72,0
 scored_0738,38,35,39,distinct-diamond/conditioned-claims.json.gz,99,98,98,59,0
 scored_0739,40,37,42,conditional-helper-membership/block-02.json.gz,158,149,149,107,0
-scored_0740,38,35,40,distinct-diamond/claims.json.gz,143,130,130,90,0
+scored_0740,38,35,40,distinct-diamond/claims.json.gz,142,130,130,90,0
 scored_0741,43,40,44,distinct-diamond/conditioned-claims.json.gz,117,116,116,72,0
 scored_0742,42,40,44,distinct-diamond/claims.json.gz,194,181,181,137,0
 scored_0743,42,40,43,distinct-diamond/claims.json.gz,108,102,102,59,0

@@ -2,7 +2,7 @@
 
 [当前分工、已完成的实验和正在搜索的题号](collaboration/STATUS.md) · [本轮进展](PROGRESS.md) · [第 649 题怎样少用一步](collaboration/exact-boundary/README.md)
 
-目前最短的本地候选为 **132,536 条**。北京时间 11 月 21 日 18:12，榜首为 127,543 条，相差 4,993 条，候选尚未提交。仓库可直接下载的公开辅助候选为 **133,628 条**，独立候选为 **139,655 条**。[还原当前最短候选](public-assisted/releases/evening-20261121.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
+目前最短的本地候选为 **132,536 条**。北京时间 11 月 21 日 18:12，榜首为 127,543 条，相差 4,993 条，候选尚未提交。仓库可直接下载的公开辅助候选为 **133,628 条**，独立候选为 **139,654 条**。[还原当前最短候选](public-assisted/releases/evening-20261121.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
 
 每道题从给定的初始值出发，在 48 个寄存器中使用加、减、乘和整除生成全部目标值。程序中的值必须始终为正整数并且不超过题目上限。提交文件包含 `id` 和 `program` 两列，每题最多 4,096 条指令。总分是全部程序的指令数之和，越低越好。合并各项证明的总下界为 37,987 条，当前共有 20 题已证最短，合计 128 条。[逐题证明与运行分工](collaboration/proof-status.md)
 
