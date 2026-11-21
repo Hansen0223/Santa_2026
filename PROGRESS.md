@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:26
+
+本地中段重写在第 374、681、944 题各省 1 条，组合候选从 132,510 条降至 **132,507 条**。这三道题从完整原程序直接搜索均未缩短。独立线上，中段重写和直接搜索逐题取短共省 25 条。跨题复用算式另为第 821 题省 1 条，合计 **139,489 条**。仓库直接提供的公开辅助版本为 **133,620 条**。[中段逐题结果](collaboration/register-search/interior-band-results.json.gz) · [跨题逐题结果](collaboration/cross-puzzle-templates/foreign-circuit-results.json.gz) · [重建最短候选](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 20:19
 
 组合候选降至 **132,510 条**。第 110、347、985 题各省一条。GoodPJW 和 Pardheev 提供了此次采用的程序，本地独立搜索也在第 110 题达到 167 条。[完整输入和逐题来源](public-assisted/releases/portfolio.md)

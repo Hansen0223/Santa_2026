@@ -1,13 +1,13 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132510,
-  "sha256": "b952abf6425ba01e49e96aeff0c56f5fcc316b2800964a6e86c3bcf939fe27a0",
+  "instructions": 132507,
+  "sha256": "8e11d3c084c63f97b9a2c07eae6bf1a5a9a25a6a836af9ae33599a9b6cf740a2",
   "sources": [
     {
       "name": "repository",
-      "revision": "cd776a45f7494a0323bdda57706bc4c4925728b7",
+      "revision": "f588765207f61cf7e780f6f97432eb7a112fa8f1",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "04c0e390a94b6976eff7986923250ec5e3e3aaae0b11ac021cf866cf7d2a2631",
+      "csv_sha256": "cfd9ff868dcd9219bb5b1ee9d664d20713dda35bd2f0cb64382008634cd73756",
       "full": true
     },
     {
@@ -43,22 +43,22 @@
       "full": false
     }
   ],
-  "previous_sha256": "22a840c409fdfc3d2e56001ea2a0137328e8ca4c5dececb826652a6555f81516",
+  "previous_sha256": "b952abf6425ba01e49e96aeff0c56f5fcc316b2800964a6e86c3bcf939fe27a0",
   "improved": {
-    "scored_0110": [
-      168,
-      167,
-      "goodpjw2008-43"
+    "scored_0374": [
+      211,
+      210,
+      "repository"
     ],
-    "scored_0347": [
-      95,
-      94,
-      "pardheev-13"
+    "scored_0681": [
+      193,
+      192,
+      "repository"
     ],
-    "scored_0985": [
-      107,
-      106,
-      "goodpjw2008-43"
+    "scored_0944": [
+      209,
+      208,
+      "repository"
     ]
   }
 }

@@ -1,6 +1,6 @@
-# 还原 132,510 条候选
+# 还原 132,507 条候选
 
-和 132,513 条的版本相比，第 110、347、985 题各省一条。此版本在第 110、985 题采用 GoodPJW，第 347 题来自 Pardheev 发布的文件。第 110 题的本地独立搜索也得到了另一份等长程序。第 290 题沿用 Asterios Panoras 的笔记本程序。[逐题改进及输入指纹](portfolio.json) · [上一版候选](https://github.com/Hansen0223/Santa_2026/blob/a8338d3/public-assisted/releases/portfolio.md)
+本地中段重写让第 374、681、944 题各省一条，分别由 211 降至 210、193 降至 192、209 降至 208。第 110 题选用独立生成的 167 条程序。第 347 题来自 Pardheev，第 985 题来自 GoodPJW，第 290 题来自 Asterios Panoras 的固定笔记本。[本轮逐题实验](../../collaboration/register-search/README.md) · [输入与逐题差额](portfolio.json) · [上一版候选](https://github.com/Hansen0223/Santa_2026/blob/cd705b4/public-assisted/releases/portfolio.md)
 
 将官方题目保存为 `data/puzzles.csv`，将以下三个文件放进 `archives/`。
 
@@ -16,4 +16,4 @@
 python -B public-assisted/releases/portfolio.py --puzzles data/puzzles.csv --archives archives --out combined
 ```
 
-生成的 `combined/submission.csv` 包含全部 1,000 题，SHA-256 为 `b952abf6425ba01e49e96aeff0c56f5fcc316b2800964a6e86c3bcf939fe27a0`。当长度相同时，保留清单中较早来源的程序。[仓库逐题署名](../origins.csv)
+生成的 `combined/submission.csv` 包含全部 1,000 题，SHA-256 为 `8e11d3c084c63f97b9a2c07eae6bf1a5a9a25a6a836af9ae33599a9b6cf740a2`。当长度相同时，保留清单中较早来源的程序。[仓库逐题署名](../origins.csv)
