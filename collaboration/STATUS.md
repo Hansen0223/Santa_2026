@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 用中心差值补充中间数 | 两条路线各 96 道已完成 | 两组均未缩短，停止扩大。[结果](circuit-cuts/reflection-results.json.gz) |
 | 同时替换两处共用算式 | 独立 370 道、组合 296 道完成 | 本轮独立主线 15 道省 18 条，组合第 268 题省 1 条。[逐题记录](recipe-union/paired-splice-results.json.gz) |
 | 共用一个新中间值重建多个出口 | 独立 96 道、组合 64 道完成 | 两路均未缩短，停止扩大。[逐题记录](circuit-cuts/fanout-results.json.gz) |
 | 986 道题的新旧程序混合搜索 | 已完成两种搜索 | 第 756 题省 1 条，总分 132,544。[逐题档案](../public-assisted/releases/v182-search-results.json.gz) |

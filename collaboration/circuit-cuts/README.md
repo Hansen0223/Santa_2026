@@ -17,3 +17,9 @@
 g++ -O3 -std=c++17 collaboration/circuit-cuts/synth.cpp -o synth.exe
 python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv --pure FROZEN_PURE.csv --assisted FROZEN_ASSISTED.csv --executable ./synth.exe --output work/circuit-cuts
 ```
+
+## 共用中间值与中心差值
+
+第一组试验同时改写一小块算式的所有下游出口。移除一至数个相连的中间值，尝试用一个共享数和仍可计算的操作数重建每个出口。独立组 96 道、组合组 64 道共检查 27,677 处切割，没有找到能严格缩短程序的改写。小例中，从初值 2、3、7 同时生成 17、13 时，用 10 作为中间值可将输入的 4 条程序缩至 3 条。[求解器](shared_fanout.py) · [逐题结果](fanout-results.json.gz)
+
+第二组按相加等于同一中心值的数对给中心排序，将已有数值关于该中心的正差加入候选，再在全部候选上重新选算式。初值、目标、寄存器都沿用原题。独立候选和 132,536 条组合候选各取 96 道，对每道至多尝试八个中心，两组均未缩短。每次与相同种子、相同中心预算的原算式选择作对照。[实现](reflection.cpp) · [试验入口](reflection_search.py) · [逐题数据](reflection-results.json.gz)
