@@ -25,7 +25,7 @@ scored_0023,work/virtual/carry-135348/release-target.csv,"Pratham Jain, Santa 20
 scored_0024,local from official inputs,Generated from official inputs,29
 scored_0025,work/creative/frontier-134285/good11/wins.csv,"goodpjw2008, Santa 2026 DAG-LNS Programs v11, our_programs.csv; Wang Jakie search, seeded crossover credited to E-Max AI, and public contributors in the released ladder. Published tape differs from the supplied public frontier.",117
 scored_0026,Asterios v99,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",181
-scored_0027,local from official inputs,Generated from official inputs,104
+scored_0027,git/e12c5f79825a (Hiyohane),Generated from official inputs,103
 scored_0028,work/creative/paired-133808/union788/wins.csv,"E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents goodpjw_cp_sat_0233, GoodPJW_1713_public",117
 scored_0029,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: public merge",35
 scored_0030,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: public merge",188
@@ -266,7 +266,7 @@ scored_0264,work/creative/transfer-133825/release/wins.csv,"Asterios Panoras, da
 scored_0265,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",190
 scored_0266,local from official inputs,Generated from official inputs,101
 scored_0267,local from official inputs,Generated from official inputs,114
-scored_0268,WorkBuddy per-puzzle transfer from independent submission.csv,Independent candidate origin: work/heritage/scale-own-wins.csv; upstream public credits retained in the independent line's NOTICE files.,199
+scored_0268,collaboration/recipe-union/paired-splice-public-wins.csv,"Wang Jakie, E-Max AI, Hanif Noer Rofiq, Alex Chilton, GoodPJW and repository contributors; see paired-splice-results.json.gz",198
 scored_0269,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: Ángel Jacinto Sánchez Ruiz, Public Merge",270
 scored_0270,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: E-Max AI, Santa 2026 | Public Frontier | Score 133,860",116
 scored_0271,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: public merge",37

@@ -1,0 +1,80 @@
+{
+  "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
+  "parent_sha256": "2ae6182bd428c3562bed7d708dd4e7a53e6047b7a982f9e1483ab28f004b4f44",
+  "instructions": 132536,
+  "sha256": "10453740e4a249eaaf4dd43349e9cf50a3cdc05f8d39128c024c6e5a62fbac67",
+  "sources": [
+    {
+      "url": "https://www.kaggle.com/datasets/hanifnoerrofiq/santa-2026-elf-calculator-peephole-programs/versions/32",
+      "license": "Apache 2.0",
+      "archive": "hanifnoerrofiq-32.zip",
+      "archive_sha256": "fb8b48bbe7e7bbd4bfb4f15e94a80d29717b0aa579f63bd951c27f13dc69bce9",
+      "member": "submission.csv",
+      "csv_sha256": "92c90ee044c919b9efaa7ec973817747715d58c304e880cccc17604575306549",
+      "improvements": {
+        "scored_0194": [
+          154,
+          153
+        ],
+        "scored_0236": [
+          107,
+          106
+        ],
+        "scored_0618": [
+          102,
+          101
+        ],
+        "scored_0939": [
+          231,
+          230
+        ]
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/121",
+      "license": "CC0: Public Domain",
+      "archive": "alexchilton-121.zip",
+      "archive_sha256": "ce71a852bc04320e4b2995a77bc5ba235051aab762e53777a27d468a3a8c3255",
+      "member": "rudolph_programs.csv",
+      "csv_sha256": "cd488a3d0587196a29b33f1e7553290c2ef9e45878a2e27a12e3670f96b9f850",
+      "improvements": {
+        "scored_0812": [
+          104,
+          103
+        ]
+      }
+    },
+    {
+      "revision": "dddab46260ccda29c43fdf894c584ba7f6df6edb",
+      "path": "submission.csv",
+      "csv_sha256": "d1d40e849f5eb704a1c1381f38eff87fcffd38e1d0e29c9b4aabc3ce0b673cea",
+      "improvements": {
+        "scored_0027": [
+          104,
+          103
+        ]
+      }
+    },
+    {
+      "revision": "dddab46260ccda29c43fdf894c584ba7f6df6edb",
+      "path": "public-assisted/submission.csv",
+      "csv_sha256": "efc1e8b4d075f7c3d692487ca393724e28dba05f724aef4dbaaa1f9524fc8ac5",
+      "improvements": {
+        "scored_0088": [
+          202,
+          201
+        ]
+      }
+    },
+    {
+      "path": "collaboration/recipe-union/paired-splice-public-wins.csv",
+      "csv_sha256": "209a0c7fdfe78dbf173c92ce17d63fcd6e509f927c4749859b906b02bbefd9ac",
+      "improvements": {
+        "scored_0268": [
+          199,
+          198
+        ]
+      }
+    }
+  ]
+}
