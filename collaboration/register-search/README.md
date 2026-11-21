@@ -38,3 +38,11 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 在实时占用寄存器较多的程序上，先用 72 个位置寻找更短的算术图，再把它排回正式比赛的 48 个寄存器。对同一父本也从 48 个寄存器直接搜索。两条路线各取 36 道。[输入和题号](relaxed-design.json) · [程序](relaxed_search.py)
 
 36 道独立题中 20 道探索到第 49 个或更高的位置；36 道公开辅助题中有 5 道。两组均未缩短完整程序，结束这一方向。[结果](relaxed-results.json.gz)
+
+## 从实际寄存器内容求解未完成的目标
+
+在原程序的 25% 和 55% 处切开。把此刻寄存器里的值作为新题的初值，运行 Wang Jakie 的 `anneal_diverse`。原题只需产生尚未完成的目标。把缩短的后半段接回原程序，再按需删去未被使用的运算。对照组直接从同一份完整父程序出发。每次单独搜索固定为 520 轮；两个截点各跑一次，对照跑一次。
+
+独立组取 `f6aaa58` 中所有至少 45 条的程序，共 874 道。直接搜索省 13 条，两个截点逐题择短省 27 条，23 道的截点结果严格优于直接搜索。三组取短后 36 道省 39 条。另在 68 道独立题尝试用已算出、随后被覆盖的值替换闲置输入位置，合入其新增结果后，共有 38 道独立题省 41 条。组合候选上分别尝试 120 道和 84 道，均未缩短。[后半段求解](suffix_search.py) · [恢复旧值](recover_prefix.py) · [逐题结果、父程序及引擎指纹](suffix-results.json.gz) · [38 道改进](suffix-independent-wins.csv)
+
+例如运行 `python -B collaboration/register-search/suffix_search.py --puzzles data/puzzles.csv --parent submission.csv --binary /path/to/anneal_diverse --out scratch/suffix --count 1000 --rounds 520`。复现实验须使用上文固定版本的独立父程序。[Wang 引擎与署名](../../generative/wang/NOTICE.md)

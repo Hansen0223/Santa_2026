@@ -29,3 +29,7 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 把局部加减程序写成输入到输出的有符号整数线性变换。在转置矩阵中复用相同的数对，再反向累加到原题的输入，得到另一份计算同一组输出的程序。在数值域中仍须满足正整数、数值上限和 48 个寄存器限制。直接改写 887 道组合题没有省下指令，因此把包含新中间值、长度在原程序 4 步以内的改写用作后续搜索的起点。
 
 410 道独立题中有 307 道生成了这种备选程序。与相同种子、相同 480 轮的直接搜索逐题取短，18 题共省 21 条，其中 5 题的备选组单独胜过直接搜索。150 道组合题中有 110 道具备备选程序，两组都未缩短。另把 11 道长度接近组合最短程序的独立结果当作新起点，每题比较三种输入顺序，均未再省步。[转置改写](transposed_sums.py) · [后续搜索](transpose_starts.py) · [逐题结果](transposed-sums-results.json.gz) · [18 个独立程序](transposed-independent-wins.csv) · [E-Max AI 的搜索源码](https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-132638-lean/versions/1)
+
+## 改变局部中间值的倍数或偏移
+
+在 40 道独立题和 48 道组合题上分别选择最多 8 处子图。局部求解比较原值、成倍缩放和加减已有的小整数。共检查 690 个子图，每种方式各试一次，三组均未找到更短程序。部分求解达到了搜索预算，记录中标为 UNKNOWN。[求解程序](lifted_cones.py) · [逐题记录](lifted-cones-results.json.gz)

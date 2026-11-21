@@ -8,6 +8,8 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 从实际寄存器内容重新求解后半段 | 独立路线 874 道已跑完 | 与复用旧中间值及直接搜索的结果合并，38 道独立题共省 41 条，其中第 310 题也缩短仓库的公开辅助解。[逐题结果](register-search/suffix-results.json.gz) |
+| 用目标余数推测有用的乘数 | 两组各 64 道，另各 36 道重新构造 | 独立和组合均未缩短，停止扩大。[结果](structure-controls/residue-bridges-results.json.gz) |
 | 改写加减程序后继续搜索 | 已完成 410 道独立题、150 道组合题 | 独立主线 18 题共省 21 条；组合未缩短。[逐题结果](circuit-cuts/transposed-sums-results.json.gz) |
 | 用中心差值补充中间数 | 两条路线各 96 道已完成 | 两组均未缩短，停止扩大。[结果](circuit-cuts/reflection-results.json.gz) |
 | 同时替换两处共用算式 | 独立 370 道、组合 296 道完成 | 本轮独立主线 15 道省 18 条，组合第 268 题省 1 条。[逐题记录](recipe-union/paired-splice-results.json.gz) |

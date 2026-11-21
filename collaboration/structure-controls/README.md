@@ -48,3 +48,9 @@ python -B ruler/ruler.py /path/to/puzzles.csv parent.csv scratch/ruler-holdout -
 ## 由目标附近的平方数提出乘积
 
 在 36 道目标接近整数倍平方的题上，分别从当前独立程序和公开辅助程序出发。把不同平方根两两相乘，在乘法前后补回偏差，再按可执行程序长度取短。共形成 10,737 条交叉乘积候选路径与 4,089 条平方路径，两条路线均未缩短，因此结束此方向。[搜索](square_products.py) · [逐题数据](square-products.json.gz)
+
+## 用重复出现的余数推测中间乘数
+
+用 Ishan Karnick 第 5 版的程序作为参考，对 Hiyohane 贡献的 25 个独立程序寻找参考程序里没有、却至少被用过三次的中间数。在前八个候选中，7 道题命中至少一个这类数。将目标作小幅随机扰动后，2 道命中。这 25 道来自已知有改进的程序，不能用来估计所有题的命中率。[可复验对照](scale_recovery.py) · [各题排名](scale-recovery-results.json.gz)
+
+从初值不大于 35、目标有 28–32 个的计分题中固定抽取 64 道。在独立和组合程序上，比较把目标写成另一个目标加减共同乘数的整数倍、再补余数的方案；分别构造 7,311 和 7,187 个候选片段，均未缩短。前 36 道又以保留的中间值为初值，分别用 Rudolph 从头生成八个目标，试验额外提供推测的乘数并将构造成本计回整题，两组仍无净改进。[算式候选](residue_bridges.py) · [重新生成](residue_groups.py) · [完整结果](residue-bridges-results.json.gz) · [Rudolph 来源](../../generative/NOTICE.md)
