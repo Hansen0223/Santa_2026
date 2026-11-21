@@ -1,105 +1,58 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132480,
-  "sha256": "9996f5feda0eb2716e7b6f1fa59e03405a8e44237b42e5e2c812b0f976c084d7",
+  "instructions": 132477,
+  "sha256": "208c1f7e839b893f103db0261bb06353fa5810b3a6544d18681a1e5ad7224be9",
   "sources": [
     {
       "name": "repository",
-      "revision": "48a4b5ec28aea7a8214376d0e7c14fdd30849fbe",
+      "revision": "98956924beb5b47b72308d61793aa1a0e5e4cb02",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "fd49498a9c034d84a3924cdc0d0d0b743f37065ae33997b0cddcffb05f175abe",
+      "csv_sha256": "b7964c329818eadc9fab3a75d5d9fcce813a9c15fe5f799dcc580619022a8f60",
       "full": true
     },
     {
-      "name": "asteriospanoras-194",
-      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/194",
-      "archive": "asteriospanoras-194.zip",
-      "archive_sha256": "e3b6c0b9cd2c12f0ebad90d5a512923483a01cf7a2721c7b64b112fd34e97be8",
+      "name": "asteriospanoras-196",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/196",
+      "archive": "asteriospanoras-196.zip",
+      "archive_sha256": "71d54c19f6e8d8f0b0b855b5e7f9280946b46c8b3db83beebcf0ddcbed097cc5",
       "member": "best_programs.csv",
-      "csv_sha256": "77b95174b5cf8f74173f5770704c7305eb381df75ed4f8731eed8ffb31b4d30a",
+      "csv_sha256": "cf4a0065ff5f2aa7b70734cb1ac36c49539c8213abc2593f6e816b674f328aea",
       "license": "Apache 2.0",
       "full": true,
-      "replayed_instructions": 132592
+      "replayed_instructions": 132584
     },
     {
-      "name": "pardheev-372201937",
-      "url": "https://www.kaggle.com/code/pardheev/132-590-best-public-score-santa-2026?scriptVersionId=372201937",
-      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372201937/download",
-      "notebook": "pardheev-372201937.ipynb",
-      "notebook_sha256": "36cb46e4d0592f8f585f7affe5171e47299afead6aba98b882b00dc2caac1d96",
-      "cell": 3,
-      "variable": "GIFT",
-      "full": false,
-      "encoding": "base64-zlib-json"
-    },
-    {
-      "name": "asteriospanoras-372201982",
-      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372201982",
-      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372201982/download",
-      "notebook": "asteriospanoras-372201982.ipynb",
-      "notebook_sha256": "61428d80f6a445034ccadc9924de3451b392f3683a67a383f3945dbc8d500490",
+      "name": "asteriospanoras-372207578",
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372207578",
+      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372207578/download",
+      "notebook": "asteriospanoras-372207578.ipynb",
+      "notebook_sha256": "35b44d732044e006f359d05e6f7c262cea1cb000522ce2ebabbed2f15acb5d52",
       "cell": 7,
       "variable": "CHANGE",
       "full": false
     }
   ],
-  "previous_sha256": "9ac604d904a0e4dd7d08d3f21f196ce3f46f8603a02ca632f6ef4c6f63d7df4d",
+  "previous_sha256": "9996f5feda0eb2716e7b6f1fa59e03405a8e44237b42e5e2c812b0f976c084d7",
   "improved": {
-    "scored_0071": [
-      111,
-      110,
-      "asteriospanoras-194"
+    "scored_0571": [
+      189,
+      188,
+      "repository"
     ],
-    "scored_0169": [
-      97,
-      95,
-      "pardheev-372201937"
-    ],
-    "scored_0246": [
-      112,
-      111,
-      "asteriospanoras-194"
-    ],
-    "scored_0464": [
-      77,
-      76,
-      "asteriospanoras-194"
-    ],
-    "scored_0608": [
-      149,
-      148,
-      "asteriospanoras-194"
-    ],
-    "scored_0723": [
-      93,
-      92,
-      "asteriospanoras-194"
-    ],
-    "scored_0791": [
-      124,
+    "scored_0927": [
+      119,
       118,
-      "asteriospanoras-194"
+      "asteriospanoras-196"
     ],
-    "scored_0911": [
-      79,
-      78,
-      "asteriospanoras-372201982"
-    ],
-    "scored_0987": [
-      107,
-      106,
-      "asteriospanoras-194"
+    "scored_0946": [
+      207,
+      206,
+      "asteriospanoras-372207578"
     ]
   },
   "improved_credits": {
-    "scored_0071": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0169": "Pardheev notebook 372201937",
-    "scored_0246": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0464": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0608": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0723": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0791": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594",
-    "scored_0911": "Asterios Panoras notebook 372201982",
-    "scored_0987": "Ishan Karnick, Santa 2026 | Frontier Programs | 132,594"
+    "scored_0571": "collaboration/register-search/spectral-regions-public-wins.csv; c42f416 portfolio: asteriospanoras-194 (Pardheev Krishna, Santa 2026 | 132997 validated programs). Search engines credited in the experiment notes.",
+    "scored_0927": "Sargis Khachatryan, Elf Calc | Backward Frontier Rewrite",
+    "scored_0946": "asteriospanoras-372207578"
   }
 }
