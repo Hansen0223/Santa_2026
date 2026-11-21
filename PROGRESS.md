@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:36
+
+在三道新公开程序及四道可重建的程序上取得改进，第 558 题在公开的 119 条基础上再省 1 条，达到 118 条。当前最好候选 **133,673 条**，比上一版少 8 条；独立候选 **139,954 条**。截至 11:28，官方榜首为 128,330 条，相差 5,343 条。[七道题及各自来源](public-assisted/releases/frontier-133772.json) · [已结束的旧程序试验](collaboration/recipe-union/alternate-pilot-results.json.gz)
+
 ## 北京时间 11 月 21 日 11:26
 
 Hiyohane 同时发布的 11 个独立程序全部较短，独立候选达到 **139,955 条**。当前最好候选为 **133,681 条**。[11 道题及贡献者提交](collaboration/evidence/hiyohane-88c64b6.json)

@@ -1,0 +1,263 @@
+{
+  "public": {
+    "sources": {
+      "asteriospanoras/santa-2026-elf-programs-and-experiments/158/best_programs.csv": {
+        "ref": "asteriospanoras/santa-2026-elf-programs-and-experiments",
+        "version": 158,
+        "license": "Apache 2.0",
+        "archive": "e508f5666409d088a66126e25d82c2972ab425c86f49f25845978c535c1141cb",
+        "file": "a706401ea4cedb0ba329829a30bd96006810b9afafb21724bf33ab40442a58c2",
+        "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/158",
+        "author": "Asterios Panoras"
+      },
+      "goodpjw2008/santa-2026-dag-lns-programs/25/our_programs.csv": {
+        "ref": "goodpjw2008/santa-2026-dag-lns-programs",
+        "version": 25,
+        "license": "Apache 2.0",
+        "archive": "ca74bc84078894b0a0b9b2f23da5a4b84dd87a3d0737f42c2056c3fa08f64d85",
+        "file": "7c2e771ac318c0037c253a917c60b27331faa191cc798e2f87bc473399ae91dd",
+        "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/25",
+        "author": "GoodPJW"
+      },
+      "goodpjw2008/santa-2026-dag-lns-programs/25/public_frontier.csv": {
+        "ref": "goodpjw2008/santa-2026-dag-lns-programs",
+        "version": 25,
+        "license": "Apache 2.0",
+        "archive": "ca74bc84078894b0a0b9b2f23da5a4b84dd87a3d0737f42c2056c3fa08f64d85",
+        "file": "c718157a3fee91c050610cc0ca33a64d6c8516e62764e5aac57fd4b01d5ef494",
+        "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/25",
+        "author": "GoodPJW"
+      },
+      "asteriospanoras/santa-2026-best-public-score-a-gift-per-run/65/gift": {
+        "ref": "asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+        "version": 65,
+        "source": "1e924173a9fcc3cb9cd91b078c33a8599ae80f527285cac0a4ad2e7fa1872377",
+        "author": "Asterios Panoras",
+        "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run"
+      }
+    },
+    "rows": {
+      "scored_0376": {
+        "before": 24,
+        "after": 23,
+        "credit": "Asterios Panoras v158; public merge",
+        "source": "asteriospanoras/santa-2026-elf-programs-and-experiments/158/best_programs.csv",
+        "sha256": "3d9d949ee56e1f579a2be4205d72092791dfb32cc4092d25971d52a1ec4c83da"
+      },
+      "scored_0032": {
+        "before": 100,
+        "after": 99,
+        "credit": "GoodPJW v25; goodpjw2008, Santa 2026 | LNS + CP-SAT Recombine | LB 134,203",
+        "source": "goodpjw2008/santa-2026-dag-lns-programs/25/our_programs.csv",
+        "sha256": "1240bafb30a46913fac658361c2c0c88a62854f05a7e4af41cf85e0f7e95d21b"
+      },
+      "scored_0097": {
+        "before": 95,
+        "after": 94,
+        "credit": "GoodPJW v25; goodpjw2008, Santa 2026 | DAG LNS + Depth-5 Search | LB 136,240",
+        "source": "goodpjw2008/santa-2026-dag-lns-programs/25/our_programs.csv",
+        "sha256": "047113133c2f534ecd02ea6dc24cc164a1dfdc9dab5b6c8b62269e22f59c9383"
+      }
+    }
+  },
+  "retained_search": {
+    "url": "https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-133772-lean/versions/1",
+    "sha256": "cf80dec6c88fd21b9c8d7c1e3e62e8f4f33cfe146a49ea8145f2ff2b077990f8",
+    "upstream": {
+      "wang": "https://www.kaggle.com/code/wangjakie/santa-2026-arithmetic-recipe-pool-and-milp",
+      "goodpjw": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs",
+      "asterios": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+      "previous_public_v95": "https://www.kaggle.com/code/royalacecat/santa-2026-public-frontier-score-133-780?scriptVersionId=372029926"
+    },
+    "rows": {
+      "scored_0558": {
+        "before": 120,
+        "after": 118,
+        "official": {
+          "mode": "anneal_diverse",
+          "seed": 494326,
+          "rounds": 3000,
+          "after": 119,
+          "parents": [
+            {
+              "source": "baseline_v95_133780.csv",
+              "sha256": "680d47da06b7e491f88473641dd70ae04ca101f51a963df77f5c5402979a54bd"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "6d4f1571526c3d9cae5dcd857cf55aa1fde105743eac0e778ae31181afb13188"
+            }
+          ]
+        },
+        "alternative": {
+          "mode": "incremental_diverse",
+          "seed": 863075,
+          "rounds": 1800,
+          "after": 118,
+          "parents": [
+            {
+              "source": "Roman Rozen, Santa 2026 | IceFire Strong Start",
+              "sha256": "680d47da06b7e491f88473641dd70ae04ca101f51a963df77f5c5402979a54bd"
+            },
+            {
+              "source": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",
+              "sha256": "5b759d5fe43eb82ccc97f86772da264188dd4f6ee3f9e6110164ef3f9f450a9d"
+            },
+            {
+              "source": "Generated from official inputs",
+              "sha256": "cf851b0e79c54fb84d587c50dccdd62dd0a9f37f2b89dcafe82e4d7511b4c916"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "6d4f1571526c3d9cae5dcd857cf55aa1fde105743eac0e778ae31181afb13188"
+            }
+          ]
+        },
+        "credit": "Wang Jakie; Roman Rozen, Santa 2026 | IceFire Strong Start; E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924; Generated from official inputs; Sargis_signed_regions_133924",
+        "sha256": "261360ff69cb7e9ba769aba79485263b0df582e47bb8ed792316ff91864086ca"
+      },
+      "scored_0529": {
+        "before": 116,
+        "after": 115,
+        "official": {
+          "mode": "incremental_diverse",
+          "seed": 494295,
+          "rounds": 2600,
+          "after": 115,
+          "parents": [
+            {
+              "source": "baseline_v95_133780.csv",
+              "sha256": "1b090184e5113060df9526519bda92d377a5e94b4aee74a832d40d9900db1d35"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "e3e3c0bf20a4e53444135b144172d5508e0a7a6667e3ce3bb22787a76d7e721c"
+            }
+          ]
+        },
+        "alternative": {
+          "mode": "anneal_diverse",
+          "seed": 863046,
+          "rounds": 1800,
+          "after": 115,
+          "parents": [
+            {
+              "source": "Ertuğrul Özer, Santa 2026 | Starter Notebook!",
+              "sha256": "1b090184e5113060df9526519bda92d377a5e94b4aee74a832d40d9900db1d35"
+            },
+            {
+              "source": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",
+              "sha256": "c0d3e4972adc07f20b04bf233d4c77aed36ff7aac97c6b69059d2d8bc769ea92"
+            },
+            {
+              "source": "Generated from official inputs",
+              "sha256": "5785e05c326de95d75279fa2d8d01507bd2a4726e5fccaed71fe993999d5c6e3"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "e3e3c0bf20a4e53444135b144172d5508e0a7a6667e3ce3bb22787a76d7e721c"
+            }
+          ]
+        },
+        "credit": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",
+        "sha256": "c0d3e4972adc07f20b04bf233d4c77aed36ff7aac97c6b69059d2d8bc769ea92"
+      },
+      "scored_0371": {
+        "before": 112,
+        "after": 111,
+        "official": {
+          "mode": "anneal_diverse",
+          "seed": 494141,
+          "rounds": 2200,
+          "after": 111,
+          "parents": [
+            {
+              "source": "baseline_v95_133780.csv",
+              "sha256": "9814ca267feeb8d69378faf5dabc7c30d1b806bdac3c8228269d4d38081545f1"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "fde047d9f8d68f7e61cc2f5f126e2d3d94f8226205d725b745289dbe6da574e0"
+            },
+            {
+              "source": "GoodPJW_1713_public",
+              "sha256": "c098d27c742f6e0775df565a19eef6460ece3cabe27d07ba4f6bb1287718d47d"
+            }
+          ]
+        },
+        "alternative": {
+          "mode": "incremental_diverse",
+          "seed": 862888,
+          "rounds": 1800,
+          "after": 111,
+          "parents": [
+            {
+              "source": "Generated from official inputs",
+              "sha256": "9814ca267feeb8d69378faf5dabc7c30d1b806bdac3c8228269d4d38081545f1"
+            },
+            {
+              "source": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924, GoodPJW_1713_public",
+              "sha256": "8545d130de9e1ef54bb096c9691a790d91866c4f08b6f6abebb688bc0fc423bd"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "fde047d9f8d68f7e61cc2f5f126e2d3d94f8226205d725b745289dbe6da574e0"
+            },
+            {
+              "source": "GoodPJW_1713_public",
+              "sha256": "c098d27c742f6e0775df565a19eef6460ece3cabe27d07ba4f6bb1287718d47d"
+            }
+          ]
+        },
+        "credit": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924, GoodPJW_1713_public",
+        "sha256": "8545d130de9e1ef54bb096c9691a790d91866c4f08b6f6abebb688bc0fc423bd"
+      },
+      "scored_0947": {
+        "before": 89,
+        "after": 88,
+        "official": {
+          "mode": "anneal_diverse",
+          "seed": 494718,
+          "rounds": 3000,
+          "after": 88,
+          "parents": [
+            {
+              "source": "baseline_v95_133780.csv",
+              "sha256": "b901ef9d3947dde685458b3a3aa94df96f760a2805faddda22e485bd82186141"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "1e5b05ea70fb293dba94d5afcfb144918db790eca20739f9cd14e423071a9ca9"
+            }
+          ]
+        },
+        "alternative": {
+          "mode": "incremental_diverse",
+          "seed": 863464,
+          "rounds": 1800,
+          "after": 88,
+          "parents": [
+            {
+              "source": "Ertuğrul Özer, Santa 2026 | Starter Notebook!",
+              "sha256": "b901ef9d3947dde685458b3a3aa94df96f760a2805faddda22e485bd82186141"
+            },
+            {
+              "source": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",
+              "sha256": "b75da1437548957857e38d3da15d0b7a3c35fcc6a130ba29e8a41451af52502a"
+            },
+            {
+              "source": "Generated from official inputs",
+              "sha256": "67b52161cacb9febba2d397052cbbae2941f6c08b8fdaa2d182d89160c560ae5"
+            },
+            {
+              "source": "Sargis_signed_regions_133924",
+              "sha256": "1e5b05ea70fb293dba94d5afcfb144918db790eca20739f9cd14e423071a9ca9"
+            }
+          ]
+        },
+        "credit": "E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924",
+        "sha256": "b75da1437548957857e38d3da15d0b7a3c35fcc6a130ba29e8a41451af52502a"
+      }
+    }
+  }
+}

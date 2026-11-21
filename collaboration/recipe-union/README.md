@@ -20,3 +20,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 在协作分支的新程序上重新搜索
 
 25 道题分别使用 Hiyohane 的独立程序、当前主线及不同历史版本的程序，先联合挑选算式，再用 Wang Jakie 的多父本搜索 680 轮。单独挑选算式未缩短完整程序。后续搜索在独立路线上缩短 21 道共 129 条，在公开辅助路线上缩短 8 道共 39 条。两条路线逐题择短后，最好候选共省 64 条。第 644 题只在独立方案上缩短。[搜索程序](contributor_circuits.py) · [各题输入与结果](contributor-results.json.gz)
+
+## 从其他独立旧程序重新起步
+
+17 份独立搜索历史中，有 890 道题具备长度相近且算式不同的候选。先取备选质量最高的 24 道，另按题号抽取 24 道。每个程序分别从当前最短解和不同结构的旧解开始，两路各 360 轮；独立候选只缩短 1 条，公开辅助候选没有缩短。把旧解放在首位未取得额外改进，本轮没有扩大到其余题目。[逐题结果](alternate-pilot-results.json.gz) · [48 道的历史候选](alternate-pilot-donors.json.gz) · [程序](alternate_starts.py)

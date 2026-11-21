@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-21T03:00:18.065989+00:00",
+  "checked_at": "2026-11-21T03:28:22.191007+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
   },
-  "teams": 1990,
+  "teams": 1992,
   "top": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
     },
     {
       "rank": 2,
-      "displayScore": "128793",
+      "displayScore": "128766",
       "teamId": 17395013
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "rank": 9,
-      "displayScore": "130302",
+      "displayScore": "130282",
       "teamId": 17385271
     },
     {
@@ -57,5 +57,5 @@
       "teamId": 17387205
     }
   ],
-  "full_response_file_sha256": "e3770676d40d7e9f081b70b32db30c2ee06bf153a6cb3523201bdf295462aeb8"
+  "full_response_file_sha256": "a4e7bfc0181493fff324e3ed27096a5e102ff9cc477106715878020fac49ef3f"
 }
