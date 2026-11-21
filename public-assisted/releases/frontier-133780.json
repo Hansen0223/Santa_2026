@@ -1,0 +1,229 @@
+{
+  "before": 133783,
+  "after": 133775,
+  "sources": {
+    "asterios156/best_programs.csv": {
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/156",
+      "license": "Apache 2.0",
+      "sha256": "e26a7eedf5300daa95802d4ac1c7b5fa9ce93a9d03d5a8c3f988aa5c85a99654"
+    },
+    "good24/our_programs.csv": {
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/24",
+      "license": "Apache 2.0",
+      "sha256": "2df9f73915937f120b763ab6b752c7f20a595225025aaf79b9aaa79410c6bd18"
+    },
+    "good24/public_frontier.csv": {
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/24",
+      "license": "Apache 2.0",
+      "sha256": "02ec7f64c86b6605b8082207c1e0d8c1b059d3761cefc257cd0d6fac17091d0a"
+    },
+    "rudy100/rudolph_programs.csv": {
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/100",
+      "license": "CC0: Public Domain",
+      "sha256": "1ef2cd22b9264ac2451ce616fc5afea700c1ffa43c8a8136a9d989d3796a789f"
+    },
+    "emax780": {
+      "url": "https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-133780-lean/versions/1",
+      "archive_sha256": "a62b6e8bc29a50c1e606f56fd911760a53eed6d490bcb795505dd5bf22c1306d",
+      "credits": {
+        "wang": "https://www.kaggle.com/code/wangjakie/santa-2026-arithmetic-recipe-pool-and-milp",
+        "goodpjw": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs",
+        "asterios": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+        "previous_public_v94": "https://www.kaggle.com/code/royalacecat/santa-2026-public-frontier-score-133-788?scriptVersionId=372025210",
+        "kindasomethin": "https://www.kaggle.com/code/kindasomethin/santa-2026-exact-portfolio-frontier-133813"
+      },
+      "source_files": {
+        "common.inc": "2b876924774e19a9ba1ba1ed52351eb5485895be6759e3720b0d5091a50a61d6",
+        "main.inc": "7e514496bf56d073908cf137ebc9a6290826a422486316ef8f66577915625b52",
+        "compact.inc": "4132404aca1128d1e6c47eac6977a7a1577932a4438697eebc9e162ada5f3238",
+        "cross.inc": "7a742c6c5faca1727c57ec092b80d6eb7bb616d2c1ab2bc747cfc0789ea246bb",
+        "neutral.inc": "37f0eb32fa83f0b7d3d0a5262fa96253e824a7467c125c3e219c66a8187d4027",
+        "recipe_lookup.inc": "6eab4d783e02989a2b6027bdfeeea0c1f55a2000d0b75fe3eee376fe20a323a3",
+        "fast_perturb.inc": "5a2154f2e18db8888dd1de10684fb409015b01627b5f7817fbe4856a1a050cb2",
+        "cache_lookup.inc": "37a48bf4043e7c408f7e24c6a0a4917e9acde6cd133c881aa63339d641b3b591",
+        "cache_perturb.inc": "8cb736e327b7cbfc6c94607a30aac11f17b54ff653c77d33d0ba207def02c392",
+        "anneal.cpp": "0e4ec5db401e7b0642c93d3499634e8790dd78efa02f6ab689cf8be23e6befbb",
+        "anneal_seeded.cpp": "a99a1cc464ff34b87afb6e4ac0d3fbf239dbbf1a07dd610533862bfb82989e8b",
+        "incremental.cpp": "7a0d5327d0883e04c80c42761d7ec53e6cc3fbc45b36e0700bf5b1900dc09e8f",
+        "incremental_seeded.cpp": "6b1f50e8576796f99b823664055bfc2c4f3f86f905c2e22d9eb615dc7fab0c83",
+        "compact_rotate.cpp": "d2507768fa70f83f9f3bdb69218ef8e4bcec91ca100e1319956c91b94012c4cb",
+        "compact_rotate_seeded.cpp": "57fbb1f663d64815d31cdc35645b8e12cd9599aef485a2ae7170ab83cc78a410",
+        "anneal_retained.cpp": "52d3f8ef11217fe62c7197ef6b320df272736a96f55e7fb4d605ecef790a877a",
+        "incremental_retained.cpp": "d6b33ccdc59373941f82242ff5eb1cba6de2db976b918645cd340c15516af5f4",
+        "anneal_retained_oldest5.cpp": "ec70bb63c02c38d6155d146b58bc9851145425960223edd24927bd9af3cde1e9",
+        "incremental_retained_oldest5.cpp": "e83fee8db664f86b4abdd9ef58c51d10bc90fd52e95165767bf0804f8d20104f",
+        "anneal_diverse.cpp": "b60c8feead2a2754888ca0b6f58f271c00e9f7a0fc2192534f7f0720a83e479d",
+        "incremental_diverse.cpp": "13876df874176ae9434ea4f9f0ad7a0e2b06bdc3d1874df8dc49bcda8716952f",
+        "anneal_diverse16.cpp": "2c5523bc9762304051b39b0c15471ee4d87d15be45d0057dcfaa6b1f454aa71b",
+        "incremental_diverse16.cpp": "a34e0d0ee6ea90efb6d2ca360bd70cb0f336a92022b2d5c64166b9528b0a3369",
+        "anneal_diverse_deep.cpp": "4b2b8cd9d0e7c9658d42fc5184abc300894ac72f0c3f127e206fb1612b9be1aa",
+        "incremental_diverse_deep.cpp": "7ff8a67757bc123cd9809fb1c6da695c56622e31d143a97413edefa4f6bea591",
+        "cross_more.inc": "558b67a43402c72cabc2e30b11f797489c32cfdad19b02e658ffee54137fe1b1",
+        "anneal_crossover14.cpp": "056585fb1980f1869544c7ad796406afb200c4240ebe82fa1e25d927bcec99c8",
+        "incremental_crossover14.cpp": "323a058e6dfbceea8a322f26eb1df53d03605fab749dacac2c70876a6f7e5a58"
+      },
+      "manifest_sha256": "cb38b0af65ca784dd08e10e24622fcb584377cc16170568f6a251936d26806e4"
+    },
+    "gift": {
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+      "version": 61,
+      "sha256": "19278ca76fae52a6b31855be987e757f8848bfcb5b549e6a7df929e70ef8fae3"
+    }
+  },
+  "rows": {
+    "scored_0008": {
+      "before": 109,
+      "after": 108,
+      "source": "good24/our_programs.csv",
+      "credit": "GoodPJW v24; original contributors in the published release; incoming row: wang Jakie, Santa 2026 | Arithmetic Recipe Pool and MILP",
+      "sha256": "bd5806165fb50fafa3fbf7a08943d7cb3ff8d89aad2a99ee56abb9ba8793457b"
+    },
+    "scored_0128": {
+      "before": 102,
+      "after": 101,
+      "source": "good24/our_programs.csv",
+      "credit": "GoodPJW v24; original contributors in the published release; incoming row: wang Jakie, Santa 2026 | Arithmetic Recipe Pool and MILP",
+      "sha256": "acd271bc5830bf97e68ba855836a073bda58309d7647bac1aa538240404620c2"
+    },
+    "scored_0295": {
+      "before": 122,
+      "after": 121,
+      "source": "emax780",
+      "credit": "E-Max AI; Wang Jakie; baseline_v94_133788.csv; Hansen_248894967985, GoodPJW_1713_public, Sargis_signed_regions_133924",
+      "sha256": "3aa0a1f118ced456883082a0bcd7139aacd834c9393cd3be00a917983fbe4eb8",
+      "strategy": "incremental_diverse",
+      "seed": 494054,
+      "rounds": 3000,
+      "inputs": [
+        {
+          "parent": "baseline_v94_133788.csv",
+          "sha256": "c74dc51e88b512db9e8d80afaaee872ac3bc535cc818aec316b4961c7ed69823"
+        },
+        {
+          "parent": "Hansen_248894967985",
+          "sha256": "a70ced7476caa475b8fbdb519f2c8a3877140a2b93092fd0f53c704d44163fb1"
+        },
+        {
+          "parent": "GoodPJW_1713_public",
+          "sha256": "1f1863b0eb721c9ec49d0581db9494abf28cc4af0ba482dcaa8a52f40a755de0"
+        },
+        {
+          "parent": "Sargis_signed_regions_133924",
+          "sha256": "515184a6bdf1e44a47ee7e74423fdfa01cbd97900dae718d0aae60fc71086522"
+        }
+      ],
+      "reported": 121
+    },
+    "scored_0732": {
+      "before": 112,
+      "after": 111,
+      "source": "emax780",
+      "credit": "E-Max AI; Wang Jakie; baseline_v94_133788.csv; Additional_public_1_1557, Our_v22_public, Prior_public_union",
+      "sha256": "4b851d669b133f3f67d8816e02ea366f47482e1fdeda5170c2807b8ca3424a9e",
+      "strategy": "anneal_diverse",
+      "seed": 494494,
+      "rounds": 3000,
+      "inputs": [
+        {
+          "parent": "baseline_v94_133788.csv",
+          "sha256": "12be6cea1f9576a7838a99f4a1499426d28207a4a2b14cee9c2bc290f4ffcada"
+        },
+        {
+          "parent": "Additional_public_1_1557",
+          "sha256": "02b71c68b6e6b8bc526fc34f16f710fcb981537fee80409b41bdf82bbd5130e4"
+        },
+        {
+          "parent": "Our_v22_public",
+          "sha256": "64c57e02e7b211ccd9013408881b24993a967a9ff4d3aea4868e1bd5d698dc9a"
+        },
+        {
+          "parent": "Prior_public_union",
+          "sha256": "06f1817a154dfe9fe4426612abce6fddd35600fc1e01a58f51294aef76988a3b"
+        }
+      ],
+      "reported": 111
+    },
+    "scored_0890": {
+      "before": 90,
+      "after": 89,
+      "source": "emax780",
+      "credit": "E-Max AI; Wang Jakie; baseline_v94_133788.csv; GoodPJW_1713_public, Our_v22_public, Sargis_signed_regions_133924",
+      "sha256": "778cc7f3a41cf0f5d1cb6b7f8a4a735753c6376e9454c46d4aab57f311cd2dc0",
+      "strategy": "anneal_diverse",
+      "seed": 494654,
+      "rounds": 3000,
+      "inputs": [
+        {
+          "parent": "baseline_v94_133788.csv",
+          "sha256": "b66d4d4655cc393eb4279cdae909a64799f186e44f0004e09f2c234200e1857e"
+        },
+        {
+          "parent": "GoodPJW_1713_public",
+          "sha256": "53004374fd10a4e2af7f8ec5b75b0baa2a22fe9792bdba997cf7cc7aeb7f9e5c"
+        },
+        {
+          "parent": "Our_v22_public",
+          "sha256": "eda0ea0d386c0aafe4754e073e76bd6cb9b8bf2e0301967a13a906b89cebdef4"
+        },
+        {
+          "parent": "Sargis_signed_regions_133924",
+          "sha256": "95b38839d286af26621cb9c466f5ba3228fed3ea343b82391051d1f35dcb2167"
+        }
+      ],
+      "reported": 89
+    },
+    "scored_0927": {
+      "before": 120,
+      "after": 119,
+      "source": "emax780",
+      "credit": "E-Max AI; Wang Jakie; baseline_v94_133788.csv; Sargis_signed_regions_133924",
+      "sha256": "1ba152ab1b0acf926b8ad9e5f458fd01a196d82ed8ec59321e9f4ef46e7f53b9",
+      "strategy": "anneal_diverse",
+      "seed": 494692,
+      "rounds": 3000,
+      "inputs": [
+        {
+          "parent": "baseline_v94_133788.csv",
+          "sha256": "32e6b14dda076cb0ab741d965f18ae05bc60df9552c3e0b8f2aa3c8d928d3d2a"
+        },
+        {
+          "parent": "Sargis_signed_regions_133924",
+          "sha256": "f8bc29fa5d8c4d918e1d2a2cf935909db47994f9a6ab2bf1992f8a2b850703a0"
+        }
+      ],
+      "reported": 119
+    },
+    "scored_0619": {
+      "before": 118,
+      "after": 117,
+      "source": "emax780",
+      "credit": "E-Max AI; Wang Jakie; baseline_v94_133788.csv; pratham, Sargis_signed_regions_133924",
+      "sha256": "6ebd4cc84e13f3bd0bd524e6e0e87cb456ba7ce128802e5d14067dc3d666b595",
+      "strategy": "anneal_diverse",
+      "seed": 494384,
+      "rounds": 3000,
+      "inputs": [
+        {
+          "parent": "baseline_v94_133788.csv",
+          "sha256": "2e643dfd1f4e4fc2966b4f11ea141b6bcd512ada9bf6acc96cc18394e348db7f"
+        },
+        {
+          "parent": "pratham",
+          "sha256": "7dc46006d16c6066a63c9eb3c04a0b7bc4f67bf4243044de6e49fffadd0280ab"
+        },
+        {
+          "parent": "Sargis_signed_regions_133924",
+          "sha256": "84582130caa4cb3882fbb6f9564faf64cd9397104e6ba516e118cba5d0d84a83"
+        }
+      ],
+      "reported": 117
+    },
+    "scored_0173": {
+      "before": 184,
+      "after": 183,
+      "source": "gift",
+      "credit": "Asterios Panoras, Gift per Run v61; previous row: Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",
+      "sha256": "bc1d900e9f52905d633fbf1a80f9a14e61536511bb0183b81867833edebc0b72"
+    }
+  }
+}

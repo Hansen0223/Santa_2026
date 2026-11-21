@@ -26,3 +26,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ```
 
 原搜索使用 Windows MinGW GCC 16.2.0。使用其他标准库时，随机采样顺序可能不同。[编译配置及原始方法](../puzzle-0711/wide/README.md)
+
+## 保留部分重新计算的指令
+
+从提交 `aacd89c` 的独立程序中筛出第 493 题，原版用 251 条指令，包含 8 次重复计算。把部分重复计算的使用者改接到第一次产生该数的位置，在原有运算顺序上重新分配寄存器，得到 249 条。把八次重复全部折叠并搜索其他顺序的这次尝试没有得到更短的可执行程序。
+
+在仓库根目录运行 `python -B collaboration/register-search/spill_copies.py --id scored_0493 --puzzles data/puzzles.csv --parents old.csv --output wins.csv`，其中 `old.csv` 可从上述提交中的 `submission.csv` 取得。[缩短后的程序](scored-0493.csv)

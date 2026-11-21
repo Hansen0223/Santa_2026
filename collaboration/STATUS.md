@@ -1,6 +1,6 @@
 # 开发协作进度
 
-更新于 2026-11-21T10:47+08:00。已从暂停位置恢复优化。独立候选 141,438 条、公开辅助候选 135,077 条作为本轮起点；截至本次更新，新增下界均已复核。[逐题上下界](puzzle-bounds.csv) · [暂停时的分片位置](evidence/ongoing-at-checkpoint.json)
+更新于 2026-11-21T11:05+08:00。已从暂停位置恢复优化。独立候选 141,438 条、公开辅助候选 135,077 条作为本轮起点；截至本次更新，新增下界均已复核。[逐题上下界](puzzle-bounds.csv) · [暂停时的分片位置](evidence/ongoing-at-checkpoint.json)
 
 后续研究优先探索能缩短程序的新方法。新候选合入时统一验算，已有结果复用原记录。
 
@@ -9,14 +9,15 @@
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
 | 借用旧解中消失的中间数 | 已登记 48 道公开辅助题 | 16 道开发题和 32 道留出题，借值后用完整程序计分。[分工和题号](borrowed-starts/historical-design.json) |
-| 共享前缀的暂借初值 | 正在试验 40 道独立与公开成绩接近的题 | 两种借值方法和直接搜索都有同等预算。[分工和题号](borrowed-starts/shared-prefix-design.json) |
+| 紧数值上限下共用一个较大的数 | 32 道已完成 | 30 道有多个目标可用同一数相减得到，实际程序长度均无改善，结束此分支。[结果](shared-intercept/upper-anchor-results.json.gz) |
+| 共享前缀的暂借初值 | 40 道已完成 | 独立路线逐题择短共省 4 条，第 871 题仅新方法缩短。公开辅助组无改进。[逐题结果](borrowed-starts/shared-prefix-results.json.gz) |
 | 可逆地替换一至两个目标 | 两条路线各完成 36 道 | 留出题上未超过直接搜索，结束扩大。[实验](goal-differences/results.json) |
-| 暂借数再从正式初值重建 | 独立扩展题正在运行 | 含初期对照已完成 708 道，累计省 175 条。[逐批结果](borrowed-starts/results/summary.json) |
+| 暂借数再从正式初值重建 | 已完成全部 840 道独立题 | 148 道共省 198 条，108 道比同预算直接搜索更短。[逐批结果](borrowed-starts/results/summary.json) |
 | Hiyohane 的 9 道独立改进 | 已复验全部 1,000 题 | 9 道共省 19 条。[来源与逐题差额](evidence/d6e507e-candidate.json) |
 | 早间公开版本第二批 | 已完整回放 | 九道题共省 11 条，公开辅助候选 133,814 条。[逐题来源](../public-assisted/releases/20261121-0933.json) |
 | 重新构造 873 道题 | 已完成 | 独立解在 132 道题共省 194 条，其中 73 道比直接优化整题更短。[分组与逐题结果](withheld-targets/extension/results.json) |
 | 11 月 21 日早间的公开程序 | 已对照五个版本 | Asterios v150 与 GoodPJW v20 的 171 道改进共省 235 条。与最新独立解合并后为 133,825 条。[逐题来源](../public-assisted/Releases-20261121.json) |
-| PR #1 | 已审查，等待作者补充来源和修正计数 | 91 道题的报告长度仍比主线短，逐题共差 125 条。从主线程序出发尝试两种搜索，本轮均未缩短。[审查意见](https://github.com/Hansen0223/Santa_2026/pull/1#pullrequestreview-6001705905) · [两组结果](evidence/pr-1-score-hints.json) |
+| PR #1 | 作者已更正计数并撤回导入，PR 已关闭 | 91 道题的报告长度仍比主线短，逐题共差 125 条。从主线程序出发尝试两种搜索，本轮均未缩短。[审查意见](https://github.com/Hansen0223/Santa_2026/pull/1#pullrequestreview-6001705905) · [两组结果](evidence/pr-1-score-hints.json) |
 | 第 272 题的证明 | 已独立复验 | 24 个分片均已穷尽，本题下界提高到 16，合计 37,981。[合并回执](evidence/combined-62e194b.json) |
 | 外部新增的 12 道证明 | 已逐片复核并合入 | 12 道各提高 1 条，合计下界 37,980。[合并回执](evidence/combined-membership-8d4b4df.json) |
 | GoodPJW v12 和 E-Max AI 134124 | 全部回放 | 27 道省 34 条，已更新到 134,079。另在 96 道独立题中找到 6 个较短程序，独立候选为 140,675。[逐题来源](frontier-134285/public-134079/README.md) |
@@ -78,6 +79,6 @@
 | 四种程序改写的组合 | 已完成 | 按顺序做成组重写、整题中间值替换、因数分解和算式组合。已比较最近有改进的 40 道独立题、39 道公开辅助题，独立省 11 条、辅助省 3 条。独立线余下 91 题另省 7 条。原先未改进的 48+48 题中仅独立第 730 题省 1 条，串行在两组留出题均未超过最佳单法。 |
 | 远端证明复核 | 已完成 | 已合并 8dd7478 新增的 65 项判定，重跑 1,151 个分片，状态、各片节点数及末层候选数均复现。外部证明现合计 33,733 条；逐题合并后仍为 36,731 条。前一批亦已复核 27 项、509 片。[65 项复核明细](evidence/upstream-8dd7478.json) · [复跑脚本](evidence/replay_increment.py) |
 
-本轮已完整回放的候选为独立 140,254 条、公开辅助 133,783 条，均为本地结果。全题已证下界 37,981，共 20 题已达最短。官方榜首在北京时间 10:35 为 128,330 条。[官方榜单](https://www.kaggle.com/competitions/santa-2026/leaderboard)
+本轮已完整回放的候选为独立 140,225 条、公开辅助 133,775 条，均为本地结果。全题已证下界 37,981，共 20 题已达最短。官方榜首在北京时间 11:00 为 128,330 条。[官方榜单](https://www.kaggle.com/competitions/santa-2026/leaderboard)
 
 [可复核的证明与分片](proof-status.md) · [已试方法与来源](methods.md) · [第 334 题复现](factor/README.md)

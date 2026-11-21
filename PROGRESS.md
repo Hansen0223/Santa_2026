@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:06
+
+本地最好候选 **133,775 条**，比上一版少 8 条，距 11:00 官方榜首 128,330 条还差 5,445 条。独立候选 **140,225 条**，比上一版少 29 条。原定的 840 道独立题已完成，148 道比实验起点短，共省 198 条。另一组 40 道题的共享前缀实验在第 871 题获得独有改进；第 493 题通过保留部分重复计算由 251 条降至 249 条。[八道公开改进](public-assisted/releases/frontier-133780.json) · [840 道题](collaboration/borrowed-starts/results/summary.json) · [40 道题](collaboration/borrowed-starts/shared-prefix-results.json.gz) · [第 493 题](collaboration/register-search/README.md)
+
 ## 北京时间 11 月 21 日 10:47
 
 本轮 5 道公开辅助题各省 1 条，当前最好候选为 **133,783 条**。独立候选为 **140,254 条**，以 10:35 官方榜首 128,330 条计算，最好候选相差 5,453 条。[五道改进及署名](public-assisted/releases/frontier-133788.json) · [独立搜索](collaboration/borrowed-starts/results/summary.json)
