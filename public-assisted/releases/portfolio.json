@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132521,
-  "sha256": "90f8a2068c2a3ab8836a5fa4e9bb31941b59fef32483b325f035d3928fd80b75",
+  "instructions": 132519,
+  "sha256": "3929c08b2755c5b5721fadb320788d06dd47898e67af2402937b10311b9976ef",
   "sources": [
     {
       "name": "repository",
@@ -11,34 +11,28 @@
       "full": true
     },
     {
-      "name": "alexchilton-v124",
-      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/124",
-      "license": "CC0: Public Domain",
-      "archive": "alexchilton-124.zip",
-      "archive_sha256": "ae7fee9dfa8684886eec2b8f41c45247d5f60ff23ea84a8e1fee13cee4f6b1c1",
-      "member": "rudolph_programs.csv",
-      "csv_sha256": "c315bfd13ebe37c07e80511a780c3922b2ae06afe182eec4301f6fd168fc16e8",
-      "full": true,
-      "replayed_instructions": 132625
-    },
-    {
-      "name": "asteriospanoras-v187",
-      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/187",
+      "name": "asterios-v188",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/188",
       "license": "Apache 2.0",
-      "archive": "asteriospanoras-187.zip",
-      "archive_sha256": "3bd992f4580eb626aef89762bc72f689388cec7b7b0745aabdc7a32a7cfb793f",
+      "archive": "asteriospanoras-188.zip",
+      "archive_sha256": "875d47a64f434cbb8b625b3e3374971e385917252fbb4aab97789af98fe2dc5c",
       "member": "best_programs.csv",
-      "csv_sha256": "9a89e5a7a00f0901b79b801ca40804ab5d1a4c6fc480d622ac1ab490723b0c65",
+      "csv_sha256": "28fc928613742ab679dcfd8d40ea04d449009702d65ff58e330285e3a8e1e856",
       "full": true,
-      "replayed_instructions": 132627
+      "replayed_instructions": 132622
     }
   ],
-  "previous_sha256": "241d5566e47ac6453371f567c6a61f1b620958cccde1fb3e6d71a4084da9750e",
+  "previous_sha256": "90f8a2068c2a3ab8836a5fa4e9bb31941b59fef32483b325f035d3928fd80b75",
   "improved": {
-    "scored_0793": [
-      204,
-      203,
-      "asteriospanoras-v187"
+    "scored_0295": [
+      119,
+      118,
+      "asterios-v188"
+    ],
+    "scored_0812": [
+      103,
+      102,
+      "asterios-v188"
     ]
   }
 }
