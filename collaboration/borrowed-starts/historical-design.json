@@ -1,0 +1,82 @@
+{
+  "base": "aacd89c",
+  "donors": [
+    [
+      "8bde969",
+      "public-assisted/"
+    ],
+    [
+      "8a031bc",
+      "public-assisted/"
+    ],
+    [
+      "138be6d",
+      "public-assisted/"
+    ],
+    [
+      "2488949",
+      "public-assisted/"
+    ],
+    [
+      "1fb2d8c",
+      "public-assisted/"
+    ],
+    [
+      "aacd89c",
+      ""
+    ]
+  ],
+  "development": [
+    "scored_0608",
+    "scored_0525",
+    "scored_0911",
+    "scored_0097",
+    "scored_0178",
+    "scored_0426",
+    "scored_0052",
+    "scored_0743",
+    "scored_0135",
+    "scored_0404",
+    "scored_0428",
+    "scored_0967",
+    "scored_0795",
+    "scored_0475",
+    "scored_0208",
+    "scored_0821"
+  ],
+  "holdout": [
+    "scored_0705",
+    "scored_0839",
+    "scored_0580",
+    "scored_0157",
+    "scored_0549",
+    "scored_0547",
+    "scored_0644",
+    "scored_0906",
+    "scored_0305",
+    "scored_0476",
+    "scored_0502",
+    "scored_0714",
+    "scored_0335",
+    "scored_0912",
+    "scored_0453",
+    "scored_0119",
+    "scored_0567",
+    "scored_0257",
+    "scored_0664",
+    "scored_0739",
+    "scored_0923",
+    "scored_0252",
+    "scored_0232",
+    "scored_0023",
+    "scored_0651",
+    "scored_0089",
+    "scored_0770",
+    "scored_0299",
+    "scored_0447",
+    "scored_0730",
+    "scored_0602",
+    "scored_0544"
+  ],
+  "rounds": 400
+}

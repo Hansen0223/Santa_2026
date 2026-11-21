@@ -15,3 +15,7 @@ python -B collaboration/borrowed-starts/compare.py --phase development --lane ow
 ## 同时暂借由同一中间数产生的一组值
 
 从双方程序只差 0 到 3 条的题中选出 40 道，其中 20 道曾在此前的借值搜索中缩短，另选 20 道作对照。对当前公开和独立程序分别测试直接搜索、单层借值和共享一层新前缀的借值；同一份程序只搜索一次。每组两段各 400 轮，使用相同的新随机种子。全部前缀及恢复步骤计入最终得分。[题号与父本](shared-prefix-design.json) · [搜索程序](shared_prefix.py)
+
+## 借用旧解中消失的中间数
+
+从五个历史版本与当前独立解中挑选曾被反复使用、已从现有程序消失的中间数。在 16 道开发题和 32 道留出题上比较直接搜索、借新数和借旧数，全部按最终可执行程序的实际长度计分。[题号与历史版本](historical-design.json) · [搜索程序](historical_values.py)

@@ -2,10 +2,13 @@
 
 更新于 2026-11-21T10:47+08:00。已从暂停位置恢复优化。独立候选 141,438 条、公开辅助候选 135,077 条作为本轮起点；截至本次更新，新增下界均已复核。[逐题上下界](puzzle-bounds.csv) · [暂停时的分片位置](evidence/ongoing-at-checkpoint.json)
 
+后续研究优先探索能缩短程序的新方法。新候选合入时统一验算，已有结果复用原记录。
+
 选择新题可运行 `python -B collaboration/next_proofs.py --puzzles data/puzzles.csv --limit 20`。清单合并两边的证明，跳过已达到下界的题和已登记的同题同预算计算，按还差几步排序。`helpers` 同时跳过外部仓库已发布、尚待本地复验的预算。提议的新预算不会改动已证下界。[分工清单生成器](next_proofs.py)
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 借用旧解中消失的中间数 | 已登记 48 道公开辅助题 | 16 道开发题和 32 道留出题，借值后用完整程序计分。[分工和题号](borrowed-starts/historical-design.json) |
 | 共享前缀的暂借初值 | 正在试验 40 道独立与公开成绩接近的题 | 两种借值方法和直接搜索都有同等预算。[分工和题号](borrowed-starts/shared-prefix-design.json) |
 | 可逆地替换一至两个目标 | 两条路线各完成 36 道 | 留出题上未超过直接搜索，结束扩大。[实验](goal-differences/results.json) |
 | 暂借数再从正式初值重建 | 独立扩展题正在运行 | 含初期对照已完成 708 道，累计省 175 条。[逐批结果](borrowed-starts/results/summary.json) |

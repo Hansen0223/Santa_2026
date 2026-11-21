@@ -79,7 +79,7 @@ def initial_values(p, graph):
     return old, {v: recipes[v][1] for v in fresh}
 
 
-def trial(job, seed_label='borrow-1', rounds=ROUNDS):
+def trial(job, seed_label='borrow-1', rounds=ROUNDS, donor_prefix=None):
     p, tape, arm, old, fresh, exe = job
     graph = active_graph(p, first_recipes(p, tape))
     seeds = [int(digest([seed_label, p.id, j])[:8], 16) for j in (1, 2)]
@@ -98,7 +98,11 @@ def trial(job, seed_label='borrow-1', rounds=ROUNDS):
         body = active_graph(aug, first_recipes(aug, first))
         used = sorted(set(anchors) & (set(p.targets) | {v for edge in body.values() for v in edge[1:]}))
         bank = graph | (fresh if arm == 'fresh' else {})
-        prefix = active_graph(p, bank, used)
+        if donor_prefix:
+            prefix = active_graph(p, donor_prefix, used)
+            bank = bank | prefix
+        else:
+            prefix = active_graph(p, bank, used)
         restored_options = []
         for candidate in (bank | body, body | prefix):
             restored_tape = compile_graph(p, candidate, recompute=True, schedule_width=4)
