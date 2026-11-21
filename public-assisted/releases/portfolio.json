@@ -1,38 +1,43 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132519,
-  "sha256": "3929c08b2755c5b5721fadb320788d06dd47898e67af2402937b10311b9976ef",
+  "instructions": 132515,
+  "sha256": "3de9c10837c7911378146c40962ae31038d9511330cd587c3fd5fd3a713c69d5",
   "sources": [
     {
       "name": "repository",
-      "revision": "b999a8283275f79aea86d52401db5d20c2de29a4",
+      "revision": "cd776a45f7494a0323bdda57706bc4c4925728b7",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "2431a82d57dd7728a5822934faf799451663ef1f0b92001677a10cede778bb47",
+      "csv_sha256": "04c0e390a94b6976eff7986923250ec5e3e3aaae0b11ac021cf866cf7d2a2631",
       "full": true
     },
     {
-      "name": "asterios-v188",
-      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/188",
-      "license": "Apache 2.0",
-      "archive": "asteriospanoras-188.zip",
-      "archive_sha256": "875d47a64f434cbb8b625b3e3374971e385917252fbb4aab97789af98fe2dc5c",
+      "name": "asteriospanoras-189",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/189",
+      "archive": "asteriospanoras-189.zip",
+      "archive_sha256": "fde61e7504fa4c5930e87bbf54c3104b98226690f30cbefcbbec2a647c3319b5",
       "member": "best_programs.csv",
-      "csv_sha256": "28fc928613742ab679dcfd8d40ea04d449009702d65ff58e330285e3a8e1e856",
+      "csv_sha256": "6b24aaa649c6eca1c1da58f49bcc326825e7601ad929ebcc2ca1abccdfce6568",
+      "license": "Apache 2.0",
       "full": true,
-      "replayed_instructions": 132622
+      "replayed_instructions": 132618
     }
   ],
-  "previous_sha256": "90f8a2068c2a3ab8836a5fa4e9bb31941b59fef32483b325f035d3928fd80b75",
+  "previous_sha256": "3929c08b2755c5b5721fadb320788d06dd47898e67af2402937b10311b9976ef",
   "improved": {
-    "scored_0295": [
-      119,
-      118,
-      "asterios-v188"
+    "scored_0505": [
+      109,
+      107,
+      "asteriospanoras-189"
     ],
-    "scored_0812": [
-      103,
-      102,
-      "asterios-v188"
+    "scored_0778": [
+      128,
+      127,
+      "asteriospanoras-189"
+    ],
+    "scored_0933": [
+      112,
+      111,
+      "asteriospanoras-189"
     ]
   }
 }
