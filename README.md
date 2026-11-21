@@ -2,7 +2,7 @@
 
 [当前分工、已完成的实验和正在搜索的题号](collaboration/STATUS.md) · [本轮进展](PROGRESS.md) · [第 649 题怎样少用一步](collaboration/exact-boundary/README.md)
 
-目前最短的本地候选为 **132,532 条**，尚未提交 Kaggle。北京时间 11 月 21 日 18:12 的榜首为 127,543 条，相差 4,989 条。[还原当前候选](public-assisted/releases/portfolio.md) · [可直接下载的公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
+目前最短的本地候选为 **132,530 条**，尚未提交 Kaggle。北京时间 11 月 21 日 18:36 的榜首为 127,200 条，相差 5,330 条。仓库可直接下载的公开辅助解为 133,626 条，独立解为 139,599 条。[还原当前候选](public-assisted/releases/portfolio.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
 
 每道题从给定的初始值出发，在 48 个寄存器中使用加、减、乘和整除生成全部目标值。程序中的值必须始终为正整数并且不超过题目上限。提交文件包含 `id` 和 `program` 两列，每题最多 4,096 条指令。总分是全部程序的指令数之和，越低越好。合并各项证明的总下界为 37,987 条，当前共有 20 题已证最短，合计 128 条。[逐题证明与运行分工](collaboration/proof-status.md)
 
@@ -47,7 +47,7 @@ python -B elf.py data/puzzles.csv public-assisted/submission.csv
 
 当前主文件中的程序由求解器从官方输入生成，或由这些程序进一步缩短。公开求解器的作者、版本、许可证和本地改动记录在 `generative/NOTICE.md`。每次主文件更新时，`checkpoint.py` 对完整 CSV 进行两次独立重放，并把每题所用来源写入 `origins.csv`。当前总分、文件哈希和历次改进见 `result.json`。实际排名由 Kaggle 提交后的榜单确定。[官方排行榜](https://www.kaggle.com/competitions/santa-2026/leaderboard)
 
-公开辅助候选以 Asterios Panoras 汇总的第 **126** 版为基准。原版重放为 134,185 条，本地逐题择短后省 **557 条**。每题的公开来源、历史许可及本地修改随程序一起发布。[公开辅助结果](public-assisted/result.json) · [逐题署名](public-assisted/origins.csv) · [来源说明](public-assisted/NOTICE.md) · [Kaggle 第 126 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/126)
+公开辅助候选以 Asterios Panoras 汇总的第 **126** 版为基准。原版重放为 134,185 条，本地逐题择短后省 **559 条**。每题的公开来源、历史许可及本地修改随程序一起发布。[公开辅助结果](public-assisted/result.json) · [逐题署名](public-assisted/origins.csv) · [来源说明](public-assisted/NOTICE.md) · [Kaggle 第 126 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/126)
 
 ## 持续优化
 

@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 18:40
+
+第 689 和 751 题各省 1 条，最好候选降至 **132,530 条**。Rudolph 第 123 版与仓库的公开辅助程序即可重建完整解。独立搜索中，对 410 道题尝试更换加减程序的起点，与相同轮数的直接搜索逐题取短后，18 题共省 21 条。合并协作者进展后，独立解为 **139,599 条**。北京时间 18:36，官方榜首降至 127,200 条。[候选与来源](public-assisted/releases/portfolio.md) · [独立搜索逐题结果](collaboration/circuit-cuts/transposed-sums-results.json.gz)
+
 ## 北京时间 11 月 21 日 18:30
 
 最好候选从 132,536 降至 **132,532 条**。GoodPJW 的第 40 版和 Hiyohane 的第 374 题带来 4 条改进。固定这次仓库版本后，只需一份公开 ZIP 即可还原完整候选。[输入、来源和还原方式](public-assisted/releases/portfolio.md)

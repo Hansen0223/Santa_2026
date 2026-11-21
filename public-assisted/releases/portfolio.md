@@ -1,13 +1,13 @@
-# 还原 132,532 条候选
+# 还原 132,530 条候选
 
-从 GoodPJW 的第 40 版完整程序、仓库两个固定版本的程序表及本地搜索结果逐题取短。官方题面和一份公开 ZIP 即可还原全部 1,000 题。[输入与逐题改进](portfolio.json) · [GoodPJW 第 40 版](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/40)
+将仓库的公开辅助程序与 Alex Chilton 的 Rudolph 第 123 版逐题取短，即可还原全部 1,000 题。源文件与仓库提交均固定在[合并清单](portfolio.json)中。[Rudolph 第 123 版原始 ZIP](https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/123)
 
-将官方比赛的 `puzzles.csv` 放入 `data/`，将第 40 版 ZIP 原样保存为 `archives/goodpjw2008-40.zip`。在仓库根目录运行：
+将官方比赛的 `puzzles.csv` 放在 `data/`，将原始 ZIP 保存在 `archives/alexchilton-123.zip`，然后从仓库根目录运行：
 
 ```sh
 python -B public-assisted/releases/portfolio.py --puzzles data/puzzles.csv --archives archives --out combined
 ```
 
-提交文件为 `combined/submission.csv`，完整程序的 SHA-256 为 `7a153aa475b2c8170509f111f281e5c6d57fbb4ebd8ccdb2215f88f046d0c122`。清单记录源文件的哈希、仓库提交及上游页面。GoodPJW 的公开汇总保留其原贡献者的署名，Atakan Aldemir 和 Wang Jakie 的算法署名见原 ZIP 内的 NOTICE。
+输出为 `combined/submission.csv`。完整文件的 SHA-256 是 `2c0c961d51b3333b3447fedcec644bd08ad3ebd8b1cd23173458b12afbb990ca`。等长时选择仓库已发布的程序，各题的历史署名保留在[仓库来源表](../origins.csv)中。
 
-对比上一版，第 111、618 题各省 1 条，Hiyohane 的第 374 题从 213 条降到 211 条。[第 374 题的提交](https://github.com/Hansen0223/Santa_2026/commit/0521078c877f1fea6b02d4409973cf9ef9b5f612)
+相对 132,536 条候选，本轮 5 题共省 6 条。第 111、618 题的改进先在 GoodPJW 第 40 版发现，第 374 题采用 Hiyohane 的 211 条程序，第 689、751 题的改进同时见于 Asterios 第 186 版和 Rudolph 第 123 版。最终选定清单中的两份来源即可重现全部改进。[GoodPJW 第 40 版](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/40) · [第 374 题提交](https://github.com/Hansen0223/Santa_2026/commit/0521078c877f1fea6b02d4409973cf9ef9b5f612) · [Asterios 第 186 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/186)
