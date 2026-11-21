@@ -1,0 +1,55 @@
+--- a/elf.py
++++ b/elf.py
+@@ -59,16 +59,19 @@
+     raise ValueError(f"unknown operator: {op!r}")
+ 
+ 
+-def replay(puzzle: Puzzle, program: Program) -> list[Step]:
++def _execute(puzzle: Puzzle, program: Program, trace: list[Step] | None) -> int:
+     if len(program) > MAX_STEPS:
+         raise ValueError(f"{puzzle.id}: too many instructions")
+     registers = [0] * puzzle.registers
+     registers[:len(puzzle.seeds)] = puzzle.seeds
+     missing = set(puzzle.targets).difference(puzzle.seeds)
+-    trace = []
++    limit = puzzle.limit
++    register_count = puzzle.registers
++    index = 0
+     for index, (op, left, right, destination) in enumerate(program, 1):
+-        if any(type(r) is not int or not 0 <= r < puzzle.registers
+-               for r in (left, right, destination)):
++        if (type(left) is not int or not 0 <= left < register_count
++                or type(right) is not int or not 0 <= right < register_count
++                or type(destination) is not int or not 0 <= destination < register_count):
+             raise ValueError(f"{puzzle.id}: invalid register at instruction {index}")
+         first, second = registers[left], registers[right]
+         if not first or not second:
+@@ -77,18 +80,25 @@
+             result = arithmetic(op, first, second)
+         except ValueError as error:
+             raise ValueError(f"{puzzle.id}: instruction {index} has {error}") from error
+-        if not 1 <= result <= puzzle.limit:
++        if not 1 <= result <= limit:
+             raise ValueError(f"{puzzle.id}: value limit violated at instruction {index}")
+         registers[destination] = result
+         missing.discard(result)
+-        trace.append(Step(result, op, first, second))
++        if trace is not None:
++            trace.append(Step(result, op, first, second))
+     if missing:
+         raise ValueError(f"{puzzle.id}: missing {len(missing)} targets; first is {min(missing)}")
++    return index
++
++
++def replay(puzzle: Puzzle, program: Program) -> list[Step]:
++    trace = []
++    _execute(puzzle, program, trace)
+     return trace
+ 
+ 
+ def check(puzzle: Puzzle, program: Program) -> int:
+-    return len(replay(puzzle, program))
++    return _execute(puzzle, program, None)
+ 
+ 
+ def read_puzzles(path: str | Path) -> list[Puzzle]:
