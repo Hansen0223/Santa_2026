@@ -10,4 +10,6 @@ Pardheev 的完整结果为 132,997 条。将这份程序与本仓库 `8038039` 
 python -B public-assisted/pardheev/combine.py --puzzles data/puzzles.csv --archive /path/to/pardheev-v1.zip --out combined
 ```
 
-另取 80 道算式差异较大的题继续搜索。将发布程序、仓库公开程序、独立程序一同作为起点，各题运行 700 轮。[题号与预算](search-pilot-design.json) · [搜索程序](search.py)
+从 423 道算式差异较大的题中先选 80 道，将发布程序、仓库公开程序、独立程序一同作为起点，每道搜索 700 轮，完整程序均未缩短。使用的 Wang Jakie 搜索代码来自 E-Max AI 汇编的第 3 版。[题号与预算](search-pilot-design.json) · [逐题结果](search-pilot-results.json.gz) · [搜索程序](search.py) · [所用源码](https://www.kaggle.com/datasets/royalacecat/santa-2026-retained-graph-search-source/versions/3)
+
+另外尝试了两种改写。第一种选 24 道，把一份程序的前半段接到另一份的后半段，允许用新算式补出缺少的中间数。第二种选 60 道，重新组合带正负号的和、积与整除，并将不同目标可共用的中间数合并。两组均未缩短当前候选，结束扩大。[24 道的结果](boundary-results.json.gz) · [前后段连接](boundary_join.py) · [60 道的结果](reassociation-results.json.gz) · [代数改写](reassociate.py)

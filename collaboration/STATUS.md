@@ -8,7 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
-| Pardheev 的 132,997 条候选 | 已合并，另有 80 道正在搜索 | 419 道被选中；新组合 132,841 条。[合并方案](../public-assisted/pardheev/) · [搜索题号](../public-assisted/pardheev/search-pilot-design.json) |
+| Pardheev 的 132,997 条候选 | 已合并，三项后续试验已完成 | 419 道带来改进，最好候选 132,841 条。另在 80、24、60 道题上试了三种改写。[合并与逐题结果](../public-assisted/pardheev/) |
 | 保留目标的最后几步，重建共用部分 | 已完成，144 道独立题省 6 条 | 第 670 题省 2 条。[逐题结果](withheld-targets/terminal-shell-results.json.gz) |
 | 在协作分支的 25 道题上重搜 | 已完成 | 独立解另省 129 条，两条路线按题择短后，最好候选另省 64 条。[输入与结果](recipe-union/contributor-results.json.gz) |
 | 72 个位置搜索后编回 48 个 | 已完成，两条路线各 36 道 | 未缩短，结束此方向。[逐题结果](register-search/relaxed-results.json.gz) |
