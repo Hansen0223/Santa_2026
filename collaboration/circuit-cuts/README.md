@@ -53,3 +53,7 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 双分支替换在同一汇合点的两条输入路径上分别改写，要求新操作数仍能精确产生原输出。在 72 道独立题和 96 道组合题中共生成 1,835 个候选图，231 个起点完成后续搜索，没有缩短。[求解器](paired_substitution.py) · [逐题结果](paired-substitution-results.json.gz)
 
 移动公因数试验允许同一数以原值、乘上因数或精确除以因数三种数值出现，保留符合原运算的连接。36 道独立题和 44 道组合题共完成 240 次选择，均未得到更短的合法程序。两项试验的父程序取自 `37cfdb7`。[求解器](factor_motion.py) · [逐题结果](factor-motion-results.json.gz)
+
+## 用共同的因子表示多个乘除结果
+
+把连续的乘除运算写成相对于入口值的整数指数向量。多个出口可以共用一个乘积或整商，也可以通过已生成的出口表示另一个出口。只保留能用正式规则逐条执行的改写。独立组覆盖 925 道至少有 12 条乘除指令的题，第 183 题引入两个新中间值，由 296 条降至 295 条，只允许原算式时为 296 条。组合组 906 道未缩短。[求解器](power_products.py) · [父本和逐题记录](power-products-results.json.gz) · [第 183 题新程序](power-products-independent-wins.csv)

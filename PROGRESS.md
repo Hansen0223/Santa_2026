@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:53
+
+独立解本轮少用 **55 条**，降至 **139,434 条**，仓库直接提供的公开辅助解为 **133,614 条**。借用历史程序中的目标分组，与原搜索逐题取短后省 43 条。最小割混合两份程序的实验共省 10 条。各方法的个别改进落在同一道题，合并时只计最短程序。[目标分组](collaboration/target-partition/README.md) · [混合两份程序](collaboration/recipe-union/README.md) · [乘除改写](collaboration/circuit-cuts/README.md)
+
 ## 北京时间 11 月 21 日 20:48
 
 组合候选降至 **132,498 条**。Pardheev 提供的第 505 和 809 题各省 1 条，Asterios Panoras 的第 880 题省 2 条。[三个固定文件与还原方法](public-assisted/releases/portfolio.md)
