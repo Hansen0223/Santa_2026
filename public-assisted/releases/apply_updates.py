@@ -37,6 +37,8 @@ def read_rows(source, archives):
             raise ValueError(f'{path.name}: unexpected archive hash')
         with zipfile.ZipFile(path) as archive:
             raw = archive.read(source['member'])
+    elif 'output_csv' in source:
+        raw = (archives / source['output_csv']).read_bytes()
     elif 'revision' in source:
         raw = subprocess.check_output(['git', 'show', source['revision'] + ':' + source['path']], cwd=ROOT)
     else:

@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132507,
-  "sha256": "8e11d3c084c63f97b9a2c07eae6bf1a5a9a25a6a836af9ae33599a9b6cf740a2",
+  "instructions": 132502,
+  "sha256": "0f6902ae51ccea2e0ea792a10e08f96405414f140e4f8c9f5a6d10c23c6674ea",
   "sources": [
     {
       "name": "repository",
@@ -11,54 +11,49 @@
       "full": true
     },
     {
-      "name": "goodpjw2008-43",
-      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/43",
-      "archive": "goodpjw2008-43.zip",
-      "archive_sha256": "4852fa89afde1ddab5b4ab1898c8743b67ac082d85ac5da68376c87d6c386d4a",
-      "member": "our_programs.csv",
-      "csv_sha256": "53658b150e50d3830d33bec050a78cf111d569248f28ba854dd4010488652272",
-      "license": "Apache 2.0",
+      "name": "E-Max AI notebook 372191792",
+      "url": "https://www.kaggle.com/code/royalacecat/santa-2026-public-frontier-score-132-608?scriptVersionId=372191792",
+      "output_csv": "royalacecat-372191792.csv",
+      "output_name": "submission.csv",
+      "csv_sha256": "d9facfc02930a32925d6f463c71371ffb7bfd54287e1ddd839572b58ace95b10",
       "full": true,
-      "replayed_instructions": 132616
-    },
-    {
-      "name": "pardheev-13",
-      "url": "https://www.kaggle.com/datasets/pardheev/santa-2026-elf-calculator-132997/versions/13",
-      "archive": "pardheev-13.zip",
-      "archive_sha256": "f38d14925a3593e43769dfa2cf4fc650218a4a1aece4f5360196600c62224b8a",
-      "member": "submission.csv",
-      "csv_sha256": "b3888becfb736a9006f9115507e44f2ee1f530c623c6d3a224db81290bd9707b",
-      "license": "Other (specified in description)",
-      "full": true,
-      "replayed_instructions": 132616
-    },
-    {
-      "name": "Asterios Panoras notebook 372173182",
-      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run?scriptVersionId=372173182",
-      "download_url": "https://www.kaggle.com/kernels/scriptcontent/372173182/download",
-      "notebook": "asterios-372173182.ipynb",
-      "notebook_sha256": "899672e5e6a88a616523c02399a3c1303712ff3bea3f04012c7ec4a3c4befa47",
-      "cell": 7,
-      "variable": "CHANGE",
-      "full": false
+      "replayed_instructions": 132608,
+      "upstream_manifest": "https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-132608-lean/versions/1"
     }
   ],
-  "previous_sha256": "b952abf6425ba01e49e96aeff0c56f5fcc316b2800964a6e86c3bcf939fe27a0",
+  "previous_sha256": "8e11d3c084c63f97b9a2c07eae6bf1a5a9a25a6a836af9ae33599a9b6cf740a2",
   "improved": {
-    "scored_0374": [
-      211,
-      210,
-      "repository"
+    "scored_0505": [
+      107,
+      106,
+      "E-Max AI notebook 372191792"
     ],
-    "scored_0681": [
-      193,
-      192,
-      "repository"
+    "scored_0524": [
+      108,
+      107,
+      "E-Max AI notebook 372191792"
     ],
-    "scored_0944": [
-      209,
-      208,
-      "repository"
+    "scored_0563": [
+      107,
+      106,
+      "E-Max AI notebook 372191792"
+    ],
+    "scored_0607": [
+      103,
+      102,
+      "E-Max AI notebook 372191792"
+    ],
+    "scored_0854": [
+      159,
+      158,
+      "E-Max AI notebook 372191792"
     ]
+  },
+  "improved_credits": {
+    "scored_0505": "E-Max AI / RoyalAceCat, using GoodPJW search",
+    "scored_0524": "Pardheev notebook output",
+    "scored_0563": "Pardheev notebook output",
+    "scored_0607": "Asterios public bank, same row credited to Mizero Lucky Gall in Asterios v191",
+    "scored_0854": "Asterios Panoras notebook change"
   }
 }
