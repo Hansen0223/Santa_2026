@@ -372,7 +372,7 @@ scored_0370,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithm
 scored_0371,work/creative/seed-basis-133773/emax772/wins.csv,"E-Max AI; Wang Jakie; baseline_v95_133780.csv, Sargis_signed_regions_133924, GoodPJW_1713_public",111
 scored_0372,work/creative/frontier-134285/good11/wins.csv,"goodpjw2008, Santa 2026 DAG-LNS Programs v11, our_programs.csv; Wang Jakie search, seeded crossover credited to E-Max AI, and public contributors in the released ladder. Published tape differs from the supplied public frontier.",117
 scored_0373,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",217
-scored_0374,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),Repository-native constructive search: solvers/graphs/virtual_search.py with solvers/native/virtual.cpp; warm-started from the incumbent. Upstream public credits are retained in the repository NOTICE files.,213
+scored_0374,git/0521078c877f (Hiyohane),Repository-native constructive search: solvers/graphs/virtual_search.py with solvers/native/virtual.cpp; warm-started from the incumbent. Upstream public credits are retained in the repository NOTICE files.,211
 scored_0375,Asterios v99,"Pratham Jain, Santa 2026 | Exact Portfolio Frontier [138084]",206
 scored_0376,work/creative/seed-basis-133773/public772/wins.csv,Asterios Panoras v158; public merge,23
 scored_0377,Asterios v113,"守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",87

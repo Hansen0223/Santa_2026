@@ -1,7 +1,7 @@
 {
   "puzzles": 1000,
-  "instructions": 139654,
-  "sha256": "f08cde60de5579205a7d1001f3fd48f40537cd14107e56232922ca400c963b1b",
+  "instructions": 139604,
+  "sha256": "bf17f52f8aa69783931a4659c42f0e6abefe9915ca1125d16ecb579a3c72fb34",
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
   "longest_program": 303,
   "arithmetic_lower_bound": 36731,
@@ -9,47 +9,48 @@
   "exact_steps": 112,
   "selected": {
     "work/virtual/lifetimes-135161/own-broad-all.csv": 10,
-    "WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383)": 40,
-    "work/creative/joint-132841/incoming.csv": 26,
-    "work/gpu/walk-independent.csv": 15,
-    "work/gpu/lineage-independent.csv": 25,
-    "work/creative/resume-135077/anneal-independent-full35/shorter.csv": 41,
-    "git/f8cf95c1bee8 (Hiyohane)": 4,
+    "WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383)": 60,
+    "work/creative/joint-132841/incoming.csv": 21,
+    "work/gpu/walk-independent.csv": 14,
+    "work/gpu/lineage-independent.csv": 24,
+    "work/creative/resume-135077/anneal-independent-full35/shorter.csv": 39,
+    "git/f8cf95c1bee8 (Hiyohane)": 3,
     "work/creative/joint-132841/siblings/own.csv": 10,
     "work/creative/ladder/lns-local.csv": 18,
     "work/heritage/blend-own-wins.csv": 8,
     "work/creative/transfer-133825/borrowed/own-expand-11.csv": 4,
-    "work/heritage/scale-own-wins.csv": 18,
+    "work/heritage/scale-own-wins.csv": 17,
     "work/virtual/withheld-134079/block-02-own.csv": 2,
     "work/creative/own-good/part3-wins.csv": 5,
-    "work/creative/resume-135077/independent-final-140814/shorter.csv": 19,
-    "collaboration/recipe-union/paired-splice-independent-wins.csv": 15,
+    "collaboration/circuit-cuts/transposed-independent-wins.csv": 18,
+    "work/creative/resume-135077/independent-final-140814/shorter.csv": 18,
     "work/gpu/bridge-36731/wide-first-release/wins.csv": 5,
     "work/gpu/overlap-independent.csv": 4,
-    "work/virtual/resume-135077/wang-second.csv": 37,
+    "work/virtual/resume-135077/wang-second.csv": 35,
     "work/virtual/whole-135358/sparse.csv": 2,
+    "collaboration/recipe-union/paired-splice-independent-wins.csv": 14,
     "work/virtual/lifetimes-135161/own-pressure.csv": 6,
     "git/59d8430580c1 (Hiyohane)": 9,
     "work/virtual/withheld-134079/block-16-own.csv": 4,
-    "work/creative/seed-basis-133773/hiyohane-88c64b6.csv": 10,
+    "work/creative/seed-basis-133773/hiyohane-88c64b6.csv": 9,
     "work/virtual/bank-135324/own-repeat.csv": 5,
-    "work/virtual/lifetimes-135161/own-direct-all.csv": 10,
+    "work/virtual/lifetimes-135161/own-direct-all.csv": 9,
     "work/creative/transfer-133825/borrowed/own-holdout.csv": 2,
     "git/96f4bcf79bb8 (Hiyohane)": 3,
     "git/1e8b8ad02ba1 (Hiyohane)": 5,
     "work/creative/transfer-133825/borrowed/own-expand-10.csv": 12,
     "work/creative/transfer-133825/contributors/hiyohane-d6e507e.csv": 2,
     "work/gpu/frontier-independent.csv": 3,
-    "work/virtual/portfolio-135289/own-all.csv": 19,
+    "work/virtual/portfolio-135289/own-all.csv": 18,
     "work/virtual/resume-135077/official-fresh-3.csv": 1,
     "work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv": 23,
     "work/virtual/guided-142434/small-twoply.csv": 1,
     "work/virtual/lifetimes-135161/schedule.csv": 1,
-    "git/00f9cd0d0c48 (Hiyohane)": 9,
+    "git/00f9cd0d0c48 (Hiyohane)": 7,
     "work/creative/own-good-reproduced/wins.csv": 3,
     "work/creative/transfer-133825/borrowed/own-expand-00.csv": 6,
     "work/virtual/lifetimes-135161/own-revisit-value-exchange.csv": 4,
-    "work/gpu/forced-active-independent.csv": 11,
+    "work/gpu/forced-active-independent.csv": 10,
     "work/gpu/graft-walk-independent.csv": 5,
     "git/19e58dbdcc79 (Hiyohane)": 3,
     "original-172868": 16,
@@ -59,25 +60,24 @@
     "work/virtual/carry-135348/own-full-deep.csv": 2,
     "git/c5486830c5cf (Hiyohane)": 5,
     "work/virtual/good10-wang-269/results/batch-02/winners.csv": 3,
-    "work/heritage/symbol-own-wins.csv": 4,
+    "work/heritage/symbol-own-wins.csv": 3,
     "work/virtual/good10-wang-269/results/batch-03/winners.csv": 3,
     "work/virtual/withheld-134079/block-07-own.csv": 7,
     "work/creative/seed-basis-133773/contributors-second/own.csv": 4,
     "work/creative/own-good/part2-wins.csv": 13,
     "work/virtual/bank-135324/own-neutral-hold.csv": 2,
     "work/virtual/withheld-134079/block-15-own.csv": 4,
-    "work/heritage/deep-own-wins.csv": 34,
+    "work/heritage/deep-own-wins.csv": 33,
     "work/virtual/lifetimes-135161/polish/own-remaining-wins.csv": 1,
     "work/virtual/siblings-135106/own-recovered-early.csv": 1,
-    "work/virtual/withheld-134079/block-08-own.csv": 5,
+    "work/virtual/withheld-134079/block-08-own.csv": 4,
     "work/virtual/withheld-134079/block-09-own.csv": 4,
     "work/creative/frontier-135161/own/best-shorter.csv": 10,
     "work/heritage/global-diversity/independent-wins.csv": 1,
     "work/virtual/repeated-135211/own-full.csv": 5,
     "work/gpu/pivot-independent.csv": 4,
     "work/heritage/path-relink/own-wins.csv": 5,
-    "work/virtual/withheld-134079/block-04-own.csv": 6,
-    "work/virtual/withheld-134079/block-14-own.csv": 5,
+    "work/virtual/withheld-134079/block-04-own.csv": 5,
     "work/virtual/withheld-134079/block-06-own.csv": 3,
     "work/creative/seed-basis-133773/shell/own.csv": 3,
     "work/virtual/withheld-134079/block-01-own.csv": 2,
@@ -86,7 +86,7 @@
     "work/virtual/siblings-135106/own-last.csv": 1,
     "work/virtual/temporary-targets-134182/development-own.csv": 2,
     "work/virtual/withheld-134079/block-17-own.csv": 4,
-    "work/virtual/portfolio-135289/own-wide-all.csv": 21,
+    "work/virtual/portfolio-135289/own-wide-all.csv": 20,
     "work/virtual/synthetic-134175/extension/extension-own.csv": 2,
     "work/gpu/forced-schedule-independent.csv": 3,
     "work/virtual/withheld-134079/block-13-own.csv": 6,
@@ -95,7 +95,6 @@
     "work/gpu/schedule-independent.csv": 4,
     "work/virtual/withheld-134079/block-05-own.csv": 2,
     "work/virtual/portfolio-135289/own-hold.csv": 1,
-    "work/virtual/bank-135324/own-full-native.csv": 12,
     "git/fac821a832dd (Hiyohane)": 5,
     "work/gpu/coop-independent.csv": 1,
     "work/creative/transfer-133825/borrowed/own-expand-08.csv": 6,
@@ -105,22 +104,22 @@
     "git/fb9fa8bfde72 (Hiyohane)": 4,
     "work/creative/transfer-133825/borrowed/own-expand-02.csv": 4,
     "work/creative/transfer-133825/borrowed/own-expand-07.csv": 5,
+    "work/virtual/withheld-134079/block-14-own.csv": 4,
     "work/creative/transfer-133825/borrowed/own-expand-16.csv": 4,
-    "git/6d97f43395c5 (Hiyohane)": 1,
     "work/creative/resume-135077/anneal-own-port160/shorter.csv": 14,
     "work/creative/ladder/branch-local.csv": 5,
     "work/virtual/whole-135358/guided.csv": 4,
     "git/b215ff1c0cd9 (Hiyohane)": 4,
     "work/creative/transfer-133825/borrowed/own-expand-14.csv": 7,
     "work/creative/transfer-133825/borrowed/own-expand-04.csv": 11,
-    "git/775fa4422695 (Hiyohane)": 3,
-    "work/virtual/target-partition-134285/holdout-independent.csv": 4,
+    "git/775fa4422695 (Hiyohane)": 2,
+    "work/virtual/target-partition-134285/holdout-independent.csv": 3,
     "git/c5ed33d16207 (WorkBuddy)": 1,
     "work/creative/forward/independent-replayed-0237.csv": 1,
     "work/gpu/orbit-extension/own-all.csv": 4,
     "git/9ed3a6ca7e34 (Hiyohane)": 1,
     "work/virtual/withheld-134079/holdout-own.csv": 3,
-    "work/virtual/bank-135324/own-neutral-full.csv": 7,
+    "work/virtual/bank-135324/own-neutral-full.csv": 6,
     "work/gpu/bridge-36731/construct/sparse-0250-1293-20.csv": 1,
     "work/creative/transfer-133825/borrowed/own-expand-01.csv": 4,
     "work/creative/market/own-offset-all.csv": 1,
@@ -129,10 +128,11 @@
     "work/creative/transfer-133825/borrowed/own-expand-15.csv": 3,
     "work/virtual/good10-wang-269/results/batch-01/winners.csv": 1,
     "git/8487fae06496 (Hiyohane)": 6,
-    "work/creative/transfer-133825/borrowed/own-expand-09.csv": 9,
+    "work/creative/transfer-133825/borrowed/own-expand-09.csv": 8,
+    "work/virtual/bank-135324/own-full-native.csv": 10,
     "work/creative/seed-basis-133773/contributor-cross/own.csv": 3,
     "work/virtual/whole-135358/focus.csv": 1,
-    "work/creative/own-good/part4-wins.csv": 7,
+    "work/creative/own-good/part4-wins.csv": 6,
     "git/65531669b923 (Hiyohane)": 2,
     "git/2cb3ab255360 (Hiyohane)": 1,
     "work/creative/paired-133808/nested/own.csv": 3,
@@ -140,7 +140,7 @@
     "work/creative/carry-gpu/full-own-wins.csv": 3,
     "work/creative/own-good/cumulative-wins.csv": 9,
     "work/virtual/good10-wang-269/results/batch-06/winners.csv": 1,
-    "git/e12c5f79825a (Hiyohane)": 8,
+    "git/e12c5f79825a (Hiyohane)": 7,
     "work/virtual/hyper-fresh-full.csv": 1,
     "work/creative/seed-basis-133773/shell-96/own.csv": 1,
     "work/gen/atakan-frontier-full.csv": 4,
@@ -151,9 +151,9 @@
     "work/gen/trajectory-full.csv": 2,
     "work/gen/arsen-delete-full.csv": 1,
     "work/virtual/good10-wang-269/results/batch-05/winners.csv": 2,
-    "work/virtual/portfolio-135289/own-post.csv": 2,
+    "work/virtual/portfolio-135289/own-post.csv": 1,
     "work/virtual/withheld-134079/block-12-own.csv": 4,
-    "git/eb09c94509b4 (Hiyohane)": 2,
+    "git/0521078c877f (Hiyohane)": 1,
     "work/gen/splice-full.csv": 1,
     "work/virtual/withheld-134079/block-10-own.csv": 2,
     "work/gpu/bridge-36731/construct/sparse-0387-697-23.csv": 1,
@@ -193,6 +193,7 @@
     "git/d5ba635a86dd (Hiyohane)": 1,
     "work/creative/family-gap/difference-full.csv": 1,
     "work/virtual/current-priced.csv": 1,
+    "git/eb09c94509b4 (Hiyohane)": 1,
     "work/gen/atlas-third.csv": 1,
     "work/gpu/bridge-36731/construct/balance-0818-1532-21.csv": 1,
     "work/virtual/reactive-134311/accepted/independent-shorter.csv": 2,
@@ -204,7 +205,6 @@
     "work/creative/seed-basis-133773/alternative/own-00.csv": 1,
     "work/gpu/suffix-neighbors-wide.csv": 1,
     "work/gpu/offset-independent.csv": 2,
-    "git/db99cdd3ace4 (Hiyohane)": 1,
     "work/virtual/steiner-own-full.csv": 1,
     "work/virtual/synthetic-134175/development-own.csv": 1,
     "work/virtual/lifetimes-135161/polish/own-wins.csv": 1,
@@ -241,7 +241,7 @@
     "independent_full_replay": true,
     "median_program": 124.0,
     "p90_program": 231,
-    "submission_bytes": 2251095,
+    "submission_bytes": 2250303,
     "kaggle_submission_status": "local_only"
   },
   "benchmarks": {
@@ -252,8 +252,8 @@
     "initial_radix_steps": 287503,
     "early_dictionary_steps": 202265,
     "public_reference_portfolio_steps": 138904,
-    "public_leaderboard_first_steps": 127543,
-    "public_leaderboard_snapshot_beijing": "2026-11-21 18:12",
+    "public_leaderboard_first_steps": 127200,
+    "public_leaderboard_snapshot_beijing": "2026-11-21 18:36",
     "public_leaderboard_url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
     "public_reference_sources": {
       "asterios": {
@@ -278,20 +278,20 @@
         "selected_puzzles": 1
       }
     },
-    "current_reduction_from_sample_percent": 90.6296,
+    "current_reduction_from_sample_percent": 90.633,
     "latest_official_leaderboard": {
       "url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
-      "checked_at": "2026-11-21T10:12:54.409110+00:00",
+      "checked_at": "2026-11-21T10:36:46.297617+00:00",
       "top_scores": [
-        127543,
-        127602,
+        127200,
+        127539,
         128300,
         129285,
-        129429,
-        129469,
+        129420,
+        129447,
         129498,
         129874,
-        129943,
+        129913,
         129996
       ],
       "evidence": "collaboration/leaderboard.json"
@@ -4136,6 +4136,88 @@
       "score": 139654,
       "adopted_rows": [],
       "source": "collaboration/recipe-union/paired-splice-independent-wins.csv"
+    },
+    {
+      "utc": "2026-11-21T10:39:25+00:00",
+      "base_revision": "12d466c6f5791474fb4659fd855d7932b964146e",
+      "previous_sha256": "f08cde60de5579205a7d1001f3fd48f40537cd14107e56232922ca400c963b1b",
+      "observed_program_sha256": "2b38b9d68a00ecf1f200997db012f264c09e1e40ba39e6f5d3eb079692a572b8",
+      "score": 139604,
+      "sha256": "bf17f52f8aa69783931a4659c42f0e6abefe9915ca1125d16ecb579a3c72fb34",
+      "adopted_rows": {
+        "scored_0016": [
+          127,
+          126
+        ],
+        "scored_0018": [
+          126,
+          125
+        ],
+        "scored_0141": [
+          135,
+          134
+        ],
+        "scored_0201": [
+          154,
+          153
+        ],
+        "scored_0202": [
+          128,
+          127
+        ],
+        "scored_0288": [
+          122,
+          120
+        ],
+        "scored_0347": [
+          99,
+          98
+        ],
+        "scored_0459": [
+          86,
+          85
+        ],
+        "scored_0509": [
+          123,
+          122
+        ],
+        "scored_0519": [
+          89,
+          88
+        ],
+        "scored_0602": [
+          94,
+          93
+        ],
+        "scored_0618": [
+          107,
+          106
+        ],
+        "scored_0657": [
+          100,
+          98
+        ],
+        "scored_0750": [
+          112,
+          110
+        ],
+        "scored_0802": [
+          184,
+          183
+        ],
+        "scored_0833": [
+          130,
+          129
+        ],
+        "scored_0835": [
+          122,
+          121
+        ],
+        "scored_0924": [
+          111,
+          110
+        ]
+      }
     }
   ],
   "target_count_lower_bound": 26898,

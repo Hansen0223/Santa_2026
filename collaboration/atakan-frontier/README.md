@@ -44,3 +44,8 @@ To repeat the source diagnosis, run lineage.py with --previous and --next pointi
 The two shorter.csv files and matching origins files are the portable output. verification.json records the full table totals and hashes; details.json.gz contains each of the 432 scoring trials and solver counters. The published package contains no Kaggle input data, binaries, full submission or third-party source copies.
 
 GoodPJW v23 contains Atakan Aldemir’s interface closure, joint-interface and relay searches. Each received the same 900 ms per case on 54 independent and 54 assisted cases. None shortened a program. [Source, settings and per-case outputs](goodpjw23-interfaces.json.gz)
+
+
+## 共同重建多处算式接口
+
+从 GoodPJW 第 40 版所附的 Atakan 源码构建两种搜索。独立与组合各测试 72 题，每题 60 个切口、宽度 24、模式 2、每次最多 600 毫秒。两种方法都没有产生更短的程序。[逐题结果](boundary-batch-results.json.gz)
