@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:19
+
+组合候选降至 **132,510 条**。第 110、347、985 题各省一条。GoodPJW 和 Pardheev 提供了此次采用的程序，本地独立搜索也在第 110 题达到 167 条。[完整输入和逐题来源](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 20:09
 
 Rudolph 第 126 版让第 8 题再省 1 条。组合候选现为 **132,513 条**，已重放全部题目。[固定输入和重建方法](public-assisted/releases/portfolio.md)

@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132513,
-  "sha256": "22a840c409fdfc3d2e56001ea2a0137328e8ca4c5dececb826652a6555f81516",
+  "instructions": 132510,
+  "sha256": "b952abf6425ba01e49e96aeff0c56f5fcc316b2800964a6e86c3bcf939fe27a0",
   "sources": [
     {
       "name": "repository",
@@ -11,15 +11,26 @@
       "full": true
     },
     {
-      "name": "alexchilton-126",
-      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/126",
-      "archive": "alexchilton-126.zip",
-      "archive_sha256": "04fe4522bf775750e5e93b8ee913ca3382b9da58cf7e0e1a46ca6df1a7540fdc",
-      "member": "rudolph_programs.csv",
-      "csv_sha256": "925b601709059a86d4ed0b1aab6a0d2a45aac1f6dfa4e3442e74cd8e9112ad34",
-      "license": "CC0: Public Domain",
+      "name": "goodpjw2008-43",
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/43",
+      "archive": "goodpjw2008-43.zip",
+      "archive_sha256": "4852fa89afde1ddab5b4ab1898c8743b67ac082d85ac5da68376c87d6c386d4a",
+      "member": "our_programs.csv",
+      "csv_sha256": "53658b150e50d3830d33bec050a78cf111d569248f28ba854dd4010488652272",
+      "license": "Apache 2.0",
       "full": true,
-      "replayed_instructions": 132617
+      "replayed_instructions": 132616
+    },
+    {
+      "name": "pardheev-13",
+      "url": "https://www.kaggle.com/datasets/pardheev/santa-2026-elf-calculator-132997/versions/13",
+      "archive": "pardheev-13.zip",
+      "archive_sha256": "f38d14925a3593e43769dfa2cf4fc650218a4a1aece4f5360196600c62224b8a",
+      "member": "submission.csv",
+      "csv_sha256": "b3888becfb736a9006f9115507e44f2ee1f530c623c6d3a224db81290bd9707b",
+      "license": "Other (specified in description)",
+      "full": true,
+      "replayed_instructions": 132616
     },
     {
       "name": "Asterios Panoras notebook 372173182",
@@ -32,12 +43,22 @@
       "full": false
     }
   ],
-  "previous_sha256": "095b8bca4878789ab1cd56c33ddb7a3e091792171e1afcb3ed1abd26b192149e",
+  "previous_sha256": "22a840c409fdfc3d2e56001ea2a0137328e8ca4c5dececb826652a6555f81516",
   "improved": {
-    "scored_0008": [
-      103,
-      102,
-      "alexchilton-126"
+    "scored_0110": [
+      168,
+      167,
+      "goodpjw2008-43"
+    ],
+    "scored_0347": [
+      95,
+      94,
+      "pardheev-13"
+    ],
+    "scored_0985": [
+      107,
+      106,
+      "goodpjw2008-43"
     ]
   }
 }
