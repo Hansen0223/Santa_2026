@@ -182,7 +182,7 @@ scored_0180,work/virtual/temporary-targets-134182/extension/extension-wins.csv,8
 scored_0181,work/gen/shrink-full.csv,31
 scored_0182,work/virtual/bank-135324/own-repeat.csv,165
 scored_0183,collaboration/circuit-cuts/power-products-independent-wins.csv,295
-scored_0184,git/c5486830c5cf (Hiyohane),115
+scored_0184,collaboration/register-search/spectral-regions-own-wins.csv,114
 scored_0185,git/fb9fa8bfde72 (Hiyohane),143
 scored_0186,collaboration/recipe-union/paired-splice-independent-wins.csv,110
 scored_0187,work/virtual/resume-135077/wang-second.csv,95
@@ -193,7 +193,7 @@ scored_0191,work/creative/transfer-133825/borrowed/own-expand-07.csv,103
 scored_0192,work/virtual/withheld-134079/block-07-own.csv,117
 scored_0193,work/virtual/withheld-134079/block-14-own.csv,129
 scored_0194,work/creative/joint-132841/incoming.csv,160
-scored_0195,collaboration/target-partition/donor-mask-independent-wins.csv,131
+scored_0195,collaboration/register-search/spectral-regions-own-wins.csv,130
 scored_0196,work/gpu/lineage-independent.csv,24
 scored_0197,work/creative/own-good/part2-wins.csv,131
 scored_0198,work/gpu/pivot-independent.csv,218
@@ -364,7 +364,7 @@ scored_0362,work/creative/joint-132841/siblings/own.csv,96
 scored_0363,work/virtual/portfolio-135289/own-post.csv,170
 scored_0364,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,118
 scored_0365,original-172868,4
-scored_0366,collaboration/circuit-cuts/propagation-independent-wins.csv,116
+scored_0366,collaboration/target-partition/near-tie-own-wins.csv,115
 scored_0367,work/creative/resume-135077/anneal-independent-full35/shorter.csv,125
 scored_0368,work/gpu/orbit-extension/own-all.csv,28
 scored_0369,work/creative/own-good/part2-wins.csv,253
@@ -742,7 +742,7 @@ scored_0740,collaboration/target-partition/donor-mask-independent-wins.csv,141
 scored_0741,work/creative/transfer-133825/borrowed/own-expand-04.csv,117
 scored_0742,work/virtual/withheld-134079/block-00-own.csv,194
 scored_0743,work/creative/transfer-133825/borrowed/own-expand-14.csv,108
-scored_0744,collaboration/register-search/interior-band-independent-wins.csv,294
+scored_0744,collaboration/register-search/spectral-regions-own-wins.csv,293
 scored_0745,work/creative/carry-gpu/full-own-wins.csv,188
 scored_0746,work/virtual/temporary-targets-134182/extension/extension-wins.csv,115
 scored_0747,work/creative/frontier-135161/own/best-shorter.csv,163

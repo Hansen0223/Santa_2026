@@ -57,3 +57,7 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 ## 用共同的因子表示多个乘除结果
 
 把连续的乘除运算写成相对于入口值的整数指数向量。多个出口可以共用一个乘积或整商，也可以通过已生成的出口表示另一个出口。只保留能用正式规则逐条执行的改写。独立组覆盖 925 道至少有 12 条乘除指令的题，第 183 题引入两个新中间值，由 296 条降至 295 条，只允许原算式时为 296 条。组合组 906 道未缩短。[求解器](power_products.py) · [父本和逐题记录](power-products-results.json.gz) · [第 183 题新程序](power-products-independent-wins.csv)
+
+## 有理函数重写
+
+将至多四个外部输入的局部算式转为有理函数，尝试约分、因式分解及不同变量序的霍纳展开，再用官方值域和整除规则构造算式。独立 920 题、组合 911 题，共得到 425,479 个通过全图依赖检查的候选改写，均未缩短整题，已结束这条路线。[逐题结果](rational-cuts-results.json.gz) · [求解器](rational_cuts.py)

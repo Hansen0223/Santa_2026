@@ -62,3 +62,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 独立组覆盖全部 896 道至少 35 条的题。逐题取短，23 题合计省 25 条，其中 14 题的中段重写胜过直接搜索。组合组覆盖全部 887 道符合条件的题。第 374、681、944 题各由中段重写省 1 条，第 110 题由直接搜索省 1 条。第 110 题同一程序也在独立组生成。[逐题结果及运行设置](interior-band-results.json.gz) · [独立改进](interior-band-independent-wins.csv) · [组合改进](interior-band-assisted-wins.csv)
 
 使用 `interior_bands.py --puzzles data/puzzles.csv --parent FROZEN.csv --engine ANNEAL_DIVERSE --out scratch/interior --count 1000`。输入取自 `37cfdb7` 的独立提交和该版本清单还原的组合提交。编译原有 Wang 搜索引擎的说明与改动随仓库发布。[Wang 引擎](../../generative/wang/NOTICE.md)
+
+## 按依赖关系划分不连续的子程序
+
+从指令依赖图的拉普拉斯特征向量选取子区域，补上区域内两点之间的依赖路径。每题最多优化三个区域，将它们的输出放回原题，再比较同一种子的整题直接搜索。底层算式搜索来自 Wang Jakie。独立组 119 题，逐题择短在 3 题省 3 条，其中 1 题的区域搜索优于整题对照。组合组 138 题，在 1 题省 1 条，其中 1 题的区域搜索优于对照。[逐题结果](spectral-regions-results.json.gz) · [分区搜索](spectral_regions.py) · [搜索引擎来源](../../generative/wang/NOTICE.md)
+
+运行 `python -B collaboration/register-search/spectral_regions.py --puzzles data/puzzles.csv --parent PARENT.csv --engine WANG --out OUTPUT --count COUNT`。独立父本为 `82d0de0:submission.csv`，组合父本为 `c42f416` 的 portfolio。完整记录含引擎指纹、选区、各区和对照结果。

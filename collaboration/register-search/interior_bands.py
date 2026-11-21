@@ -111,11 +111,14 @@ def work(task):
     # Preserve the incumbent first-occurrence order as one of the three axes.
     graph = {v:r for v,r in first_recipes(p,parent).items() if v in used}
     cuts = bands(p,graph,count)
+    return run_cuts(p,parent,engine,rounds,graph,cuts,440251+int(p.id[-4:]))
+
+
+def run_cuts(p,parent,engine,rounds,graph,cuts,seed):
     row = dict(before=len(parent),bands=[])
     best = parent
     if cuts:
         pairs = arithmetic_menu(p,graph)
-        seed = 440251+int(p.id[-4:])
         ordinary = solve(engine,p,[parent],seed,rounds)
         best = min((best,ordinary),key=len)
         row['control'] = len(ordinary)
