@@ -44,3 +44,7 @@ python -B ruler/planted.py scratch/ruler-positive --n 8
 python -B ruler/ruler.py /path/to/puzzles.csv parent.csv scratch/ruler-development --split pilot
 python -B ruler/ruler.py /path/to/puzzles.csv parent.csv scratch/ruler-holdout --split holdout
 ```
+
+## 由目标附近的平方数提出乘积
+
+在 36 道目标接近整数倍平方的题上，分别从当前独立程序和公开辅助程序出发。把不同平方根两两相乘，在乘法前后补回偏差，再按可执行程序长度取短。共形成 10,737 条交叉乘积候选路径与 4,089 条平方路径，两条路线均未缩短，因此结束此方向。[搜索](square_products.py) · [逐题数据](square-products.json.gz)

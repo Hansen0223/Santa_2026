@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "asteriospanoras/santa-2026-elf-programs-and-experiments/157/best_programs.csv": {
+      "ref": "asteriospanoras/santa-2026-elf-programs-and-experiments",
+      "version": 157,
+      "license": "Apache 2.0",
+      "archive": "a2e17f76aa908cd7f6d41b48e3de507572610444544d84a5c199921806b13bd0",
+      "file": "eca70b1e7b7b649dd2be902f7331ebbe922294df6b9c189c0621c22130fd3d1d",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/157",
+      "author": "Asterios Panoras"
+    },
+    "alexchilton/santa-2026-rudolph-programs/101/rudolph_programs.csv": {
+      "ref": "alexchilton/santa-2026-rudolph-programs",
+      "version": 101,
+      "license": "CC0: Public Domain",
+      "archive": "b55a85b2edcfadcb5841683a261151242782e621024bbb5cc2519b0b3911f211",
+      "file": "dc7509d3acbd7da29e635f508190119737cb0f01b01f18ea646fc0e80b9a538f",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/101",
+      "author": "Alex Chilton"
+    },
+    "asteriospanoras/santa-2026-best-public-score-a-gift-per-run/64/gift": {
+      "ref": "asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+      "version": 64,
+      "source": "654e5b4326551ec388c690e75279b85e2b88ac8e76aacb98c181674b6fa003d0",
+      "author": "Asterios Panoras",
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run"
+    }
+  },
+  "rows": {
+    "scored_0121": {
+      "before": 46,
+      "after": 45,
+      "credit": "Asterios Panoras v64; 守银摄金难铜, Santa 2026 134753 Verified Arithmetic Programs",
+      "source": "asteriospanoras/santa-2026-best-public-score-a-gift-per-run/64/gift",
+      "sha256": "c0c21cddc279297c1737c75ac00590777558e9095bab307675742bffcc812408"
+    }
+  }
+}

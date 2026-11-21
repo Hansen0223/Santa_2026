@@ -17,3 +17,5 @@ GoodPJW 第 23 版缩短了第 458 题。Asterios 的公开笔记本第 58 版�
 Asterios 第 155 版给出第 84 题的 38 条程序。E-Max AI 发布的新结果又将第 28、395、602、895 题各缩短 1 条。[逐题改进、作者和输入来源](frontier-133788.json)
 
 GoodPJW 第 24 版在第 8、128 题和 Asterios Panoras 的 Gift per Run 第 61 版在第 173 题各省 1 条。用 E-Max AI 公布的程序来源与种子搜索，另在五道题各省 1 条。[八道题及上游署名](frontier-133780.json)
+
+Asterios Panoras 的 Gift per Run v64 将第 121 题由 46 条缩到 45 条。[版本和逐题来源](gift-121-v64.json)
