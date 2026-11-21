@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 程序中段重写、跨题借用算式、双分支替换 | 本地搜索 | 中段重写已覆盖首批 144 道独立题和 150 道组合题，正在扩大到所有至少 35 条的题。跨题搜索在独立第 821 题省 1 条。双分支替换在 168 次试验中没有缩短，已停止扩测。[中段](register-search/interior_bands.py) · [跨题](cross-puzzle-templates/foreign_circuits.py) · [双分支](circuit-cuts/paired_substitution.py) |
 | 换掉已算出的数，再沿原指令重算 | 全部 955 道符合筛选的独立题、128 道组合题已完成 | 独立线逐题取短，20 题各省 1 条，其中 11 题改写优于对照。组合组未缩短。[逐题结果](circuit-cuts/propagation-results.json.gz) |
 | 从目标倒推中间步骤 | 独立 64 道、组合 80 道已完成 | 回到正式初值后，倒推组未缩短。直接搜索为独立第 418 题省 1 条。[逐题结果](borrowed-starts/reverse-targets-results.json.gz) |
 | 协作者发布的可选加速 | Hiyohane 分支 | 该分支已发布固定顺序的寄存器分配和候选算式筛选两项补丁。[寄存器分配](https://github.com/Hansen0223/Santa_2026/commit/96d0f8a) · [算式筛选](https://github.com/Hansen0223/Santa_2026/commit/ee332cd) |
