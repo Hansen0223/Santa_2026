@@ -54,3 +54,11 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 独立组覆盖所有符合此次父本筛选条件的 341 道题，320 道生成了可执行拼接。第 790 题直接拼出 228 条，比原程序短 1 条。拼接及其后续搜索在 9 道题上严格胜过直接搜索；三种起点逐题取短，19 道各省 1 条。第 985 题的直接搜索结果为 108 条，同时缩短了仓库的公开辅助解。组合组抽取 86 道，均产生了拼接，完整程序长度未缩短。[程序](stitch_programs.py) · [来源、分组及全部结果](stitch-results.json.gz) · [19 道改进](stitch-independent-wins.csv)
 
 运行入口接受 `--puzzles`、`--parent`、`--donors`、`--engine`、`--out` 及 `--count`。独立父本出自 `87bfed4`，组合父本由 `c191762` 中的清单生成。结果文件的 `donor_sources` 包含每个旧程序的 Git 版本或外部归档地址。公开归档中的 CSV 取出 id 和 program 两列后用本仓库的 write_submission 规范化。[Wang 搜索引擎来源](../../generative/wang/NOTICE.md)
+
+## 从中间截取连续的一段程序重新求解
+
+对原程序按首次产生数值的顺序、离初值的距离、离末端的距离分别排序。最多选三个区间，保留区间以外仍需用到的出口。区间内除必需输入外还可以借用从初值独立可达的数。重写后拼回整题，与相同种子下从完整原程序直接搜索的结果比较。
+
+独立组覆盖全部 896 道至少 35 条的题。逐题取短，23 题合计省 25 条，其中 14 题的中段重写胜过直接搜索。组合组覆盖全部 887 道符合条件的题。第 374、681、944 题各由中段重写省 1 条，第 110 题由直接搜索省 1 条。第 110 题同一程序也在独立组生成。[逐题结果及运行设置](interior-band-results.json.gz) · [独立改进](interior-band-independent-wins.csv) · [组合改进](interior-band-assisted-wins.csv)
+
+使用 `interior_bands.py --puzzles data/puzzles.csv --parent FROZEN.csv --engine ANNEAL_DIVERSE --out scratch/interior --count 1000`。输入取自 `37cfdb7` 的独立提交和该版本清单还原的组合提交。编译原有 Wang 搜索引擎的说明与改动随仓库发布。[Wang 引擎](../../generative/wang/NOTICE.md)

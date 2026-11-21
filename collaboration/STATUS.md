@@ -8,7 +8,8 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
-| 程序中段重写、跨题借用算式、双分支替换 | 本地搜索 | 中段重写已覆盖首批 144 道独立题和 150 道组合题，正在扩大到所有至少 35 条的题。跨题搜索在独立第 821 题省 1 条。双分支替换在 168 次试验中没有缩短，已停止扩测。[中段](register-search/interior_bands.py) · [跨题](cross-puzzle-templates/foreign_circuits.py) · [双分支](circuit-cuts/paired_substitution.py) |
+| 重写程序中段 | 独立和组合两组已跑完 | 独立 896 题中 23 题共省 25 条。组合 887 题中，第 374、681、944 题由中段重写各省 1 条，第 110 题由直接搜索省 1 条。[逐题结果](register-search/interior-band-results.json.gz) |
+| 跨题借用算式、双分支替换、移动公因数 | 三种方法均已完成 | 跨题借用算式使独立第 821 题由 103 条降到 102 条。后两种方法分别试了 168、80 次，均未缩短。[跨题](cross-puzzle-templates/foreign-circuit-results.json.gz) · [双分支](circuit-cuts/paired-substitution-results.json.gz) · [公因数](circuit-cuts/factor-motion-results.json.gz) |
 | 换掉已算出的数，再沿原指令重算 | 全部 955 道符合筛选的独立题、128 道组合题已完成 | 独立线逐题取短，20 题各省 1 条，其中 11 题改写优于对照。组合组未缩短。[逐题结果](circuit-cuts/propagation-results.json.gz) |
 | 从目标倒推中间步骤 | 独立 64 道、组合 80 道已完成 | 回到正式初值后，倒推组未缩短。直接搜索为独立第 418 题省 1 条。[逐题结果](borrowed-starts/reverse-targets-results.json.gz) |
 | 协作者发布的可选加速 | Hiyohane 分支 | 该分支已发布固定顺序的寄存器分配和候选算式筛选两项补丁。[寄存器分配](https://github.com/Hansen0223/Santa_2026/commit/96d0f8a) · [算式筛选](https://github.com/Hansen0223/Santa_2026/commit/ee332cd) |
@@ -103,6 +104,6 @@
 | 四种程序改写的组合 | 已完成 | 按顺序做成组重写、整题中间值替换、因数分解和算式组合。已比较最近有改进的 40 道独立题、39 道公开辅助题，独立省 11 条、辅助省 3 条。独立线余下 91 题另省 7 条。原先未改进的 48+48 题中仅独立第 730 题省 1 条，串行在两组留出题均未超过最佳单法。 |
 | 远端证明复核 | 已完成 | 已合并 8dd7478 新增的 65 项判定，重跑 1,151 个分片，状态、各片节点数及末层候选数均复现。外部证明现合计 33,733 条；逐题合并后仍为 36,731 条。前一批亦已复核 27 项、509 片。[65 项复核明细](evidence/upstream-8dd7478.json) · [复跑脚本](evidence/replay_increment.py) |
 
-已回放独立候选 139,515 条、仓库公开辅助候选 133,624 条及组合候选 132,510 条。全题已证下界 37,987，共 20 题已达最短。北京时间 20:04 的榜首为 127,200 条。[官方榜单](https://www.kaggle.com/competitions/santa-2026/leaderboard)
+已回放独立候选 139,489 条、仓库公开辅助候选 133,620 条及组合候选 132,510 条。全题已证下界 37,987，共 20 题已达最短。北京时间 20:22 的榜首为 127,200 条。[官方榜单](https://www.kaggle.com/competitions/santa-2026/leaderboard)
 
 [可复核的证明与分片](proof-status.md) · [已试方法与来源](methods.md) · [第 334 题复现](factor/README.md)

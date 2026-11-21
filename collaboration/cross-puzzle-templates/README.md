@@ -30,3 +30,7 @@ python -B evaluate.py /path/to/puzzles.csv scratch ./instantiate scratch/dev-ext
 ```
 
 要从头重建练习轨迹，再编译仓库的 `generative/rudolph.cpp`。运行 `train.py /path/to/practice_puzzles.csv ./rudolph output-library` 后，`evaluate.py /path/to/practice_puzzles.csv output-library ./instantiate output-practice --split practice --generator ./rudolph` 会重放 24 道练习留出题。
+
+## 借用另一道题已经用过的数和算式
+
+为每题选出与它共享少见中间数的其他题，在接收题的初值和原有算式上重建借来的算式。独立组 70 题、组合组 78 题，分别产生 1,291 和 1,102 个候选片段。第 821 题的独立程序由 103 条缩到 102 条，直接搜索仍为 103 条。组合组未缩短。父程序取自 `37cfdb7` 的独立提交和该版本重建的组合提交。[求解器](foreign_circuits.py) · [来源、设置和逐题结果](foreign-circuit-results.json.gz) · [第 821 题程序](foreign-circuit-independent-wins.csv)

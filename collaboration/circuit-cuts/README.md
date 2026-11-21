@@ -47,3 +47,9 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 独立解中所有长度至少 25 条的 955 道题一共尝试 1,367,776 次替换，553 道生成了可继续搜索的程序。直接替换未立即缩短整题。后续搜索在 12 道题比父程序短，其中 11 道优于直接搜索。将两组逐题取短，20 道各省 1 条。132,519 条的组合候选抽取 128 道，89 道产生了备选，均未缩短。另以本轮 21 道独立改进及 4 道公开改进为起点，在 132,514 条候选上合并多个来源并再次搜索，25 道均未再省步。[程序](propagate_values.py) · [配置、逐题记录和后续试验](propagation-results.json.gz) · [20 道独立改进](propagation-independent-wins.csv)
 
 使用 `propagate_values.py --puzzles data/puzzles.csv --parent FROZEN.csv --engine ANNEAL_DIVERSE --out results --count 1000` 可搜索全部符合筛选的题。两条路线的父程序及引擎哈希保存在结果中。[Wang Jakie 搜索引擎](../../generative/wang/NOTICE.md)
+
+## 同时改写两个输入，以及在整段算式中移动公因数
+
+双分支替换在同一汇合点的两条输入路径上分别改写，要求新操作数仍能精确产生原输出。在 72 道独立题和 96 道组合题中共生成 1,835 个候选图，231 个起点完成后续搜索，没有缩短。[求解器](paired_substitution.py) · [逐题结果](paired-substitution-results.json.gz)
+
+移动公因数试验允许同一数以原值、乘上因数或精确除以因数三种数值出现，保留符合原运算的连接。36 道独立题和 44 道组合题共完成 240 次选择，均未得到更短的合法程序。两项试验的父程序取自 `37cfdb7`。[求解器](factor_motion.py) · [逐题结果](factor-motion-results.json.gz)

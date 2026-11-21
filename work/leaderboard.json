@@ -1,16 +1,16 @@
 {
   "url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
-  "checked_at": "2026-11-21T11:50:00.304066+00:00",
+  "checked_at": "2026-11-21T12:22:09.799083+00:00",
   "top_scores": [
     127200,
-    127433,
+    127352,
     128300,
     129285,
     129404,
-    129447,
+    129443,
     129498,
     129639,
-    129853,
+    129815,
     129996
   ],
   "evidence": "collaboration/leaderboard.json"
