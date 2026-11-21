@@ -21,3 +21,5 @@ python -B collaboration/withheld-targets/compare.py --puzzles data/puzzles.csv -
 对 48 道题同时保留所有目标的最后三层算式，或者保留每个目标独用的整条分支。把它们需要的中间数作为一组新目标，求出更短的前半段，再接回结尾。两条路线使用同一组题。[题号和预算](terminal-shell-design.json) · [搜索程序](terminal_shell.py)
 
 第一批 48 道题的独立解共省 4 条。第 120、345 题各省 1 条，第 670 题从 189 条缩到 187 条。三道题都能由保留目标独用分支的方法缩短，公开辅助路线未缩短。用同一方法另取接下来的 96 道独立题。[首批结果](terminal-shell-results.json.gz) · [扩展题号](terminal-shell-next.json)
+
+追加的 96 道独立题中，第 204、314 题各省 1 条。两批 144 道独立题共省 6 条，结束本次扩展。[96 道结果](terminal-shell-next-results.json.gz)

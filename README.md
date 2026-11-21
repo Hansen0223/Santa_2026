@@ -2,7 +2,7 @@
 
 [当前分工、已完成的实验和正在搜索的题号](collaboration/STATUS.md) · [本轮进展](PROGRESS.md) · [第 649 题怎样少用一步](collaboration/exact-boundary/README.md)
 
-独立生成的候选为 **139,932 条**，结合公开算式的候选为 **133,655 条**。两份文件各经两套解释器重放全部 1,000 题。北京时间 11-21 11:44，官方榜首为 128,330 条，本地最短候选相差 5,325 条，尚未提交 Kaggle。[独立程序](submission.csv) · [公开辅助程序](public-assisted/submission.csv) · [榜单快照](collaboration/leaderboard.json)
+目前最短的本地候选为 **132,841 条**，由仓库程序与 Pardheev 第 1 版逐题合并得到。北京时间 11 月 21 日 11:44，榜首为 128,330 条，相差 4,511 条，尚未提交 Kaggle。仓库另有可直接下载的公开辅助候选 **133,655 条** 和独立候选 **139,930 条**。[还原 132,841 条候选](public-assisted/pardheev/) · [可直接下载的公开辅助程序](public-assisted/submission.csv) · [独立程序](submission.csv) · [榜单快照](collaboration/leaderboard.json)
 
 每道题从给定的初始值出发，在 48 个寄存器中使用加、减、乘和整除生成全部目标值。程序中的值必须始终为正整数并且不超过题目上限。提交文件包含 `id` 和 `program` 两列，每题最多 4,096 条指令。总分是全部程序的指令数之和，越低越好。合并各项证明的总下界为 37,981 条，当前共有 20 题已证最短，合计 128 条。[逐题证明与运行分工](collaboration/proof-status.md)
 
@@ -10,7 +10,7 @@
 
 | 想找什么 | 从哪里开始 |
 | --- | --- |
-| 当前最短候选、独立生成的候选 | [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) |
+| 当前最短候选、独立生成的候选 | [还原最短候选](public-assisted/pardheev/) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) |
 | 接手任务、查看其他开发者已经试过的方案 | [协作实验索引](collaboration/README.md) · [当前分工](collaboration/STATUS.md) |
 | 运行或改进求解器 | [按方法浏览求解器](solvers/README.md) · [统一运行入口](run.py) |
 | 找一道题的已知最短程序和已证下界 | [逐题上下界](collaboration/puzzle-bounds.csv) · [证明进展](collaboration/proof-status.md) |

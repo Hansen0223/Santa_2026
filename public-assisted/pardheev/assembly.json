@@ -1,0 +1,2109 @@
+{
+  "base": "8038039",
+  "release": "https://www.kaggle.com/datasets/pardheev/santa-2026-elf-calculator-132997/versions/1",
+  "archive_sha256": "668f99e60746e4ea2b46c64584af96bb34884612f4445b9e756be950d77685c4",
+  "instructions": 132841,
+  "sha256": "c861ed4fe539be46a20dcf50d4292b5c6fe4277645b5abc295c9c618bed8b159",
+  "sources": {
+    "base": 581,
+    "pardheev-v1": 419
+  },
+  "from_base": 814,
+  "changed": {
+    "scored_0003": [
+      196,
+      193,
+      "pardheev-v1"
+    ],
+    "scored_0005": [
+      47,
+      46,
+      "pardheev-v1"
+    ],
+    "scored_0006": [
+      110,
+      108,
+      "pardheev-v1"
+    ],
+    "scored_0007": [
+      132,
+      130,
+      "pardheev-v1"
+    ],
+    "scored_0010": [
+      180,
+      177,
+      "pardheev-v1"
+    ],
+    "scored_0011": [
+      106,
+      105,
+      "pardheev-v1"
+    ],
+    "scored_0015": [
+      218,
+      216,
+      "pardheev-v1"
+    ],
+    "scored_0016": [
+      124,
+      121,
+      "pardheev-v1"
+    ],
+    "scored_0017": [
+      109,
+      106,
+      "pardheev-v1"
+    ],
+    "scored_0020": [
+      241,
+      240,
+      "pardheev-v1"
+    ],
+    "scored_0021": [
+      39,
+      37,
+      "pardheev-v1"
+    ],
+    "scored_0022": [
+      102,
+      101,
+      "pardheev-v1"
+    ],
+    "scored_0023": [
+      157,
+      155,
+      "pardheev-v1"
+    ],
+    "scored_0024": [
+      29,
+      28,
+      "pardheev-v1"
+    ],
+    "scored_0025": [
+      117,
+      116,
+      "pardheev-v1"
+    ],
+    "scored_0026": [
+      181,
+      179,
+      "pardheev-v1"
+    ],
+    "scored_0029": [
+      35,
+      34,
+      "pardheev-v1"
+    ],
+    "scored_0030": [
+      188,
+      187,
+      "pardheev-v1"
+    ],
+    "scored_0031": [
+      246,
+      245,
+      "pardheev-v1"
+    ],
+    "scored_0033": [
+      208,
+      204,
+      "pardheev-v1"
+    ],
+    "scored_0034": [
+      166,
+      163,
+      "pardheev-v1"
+    ],
+    "scored_0036": [
+      233,
+      230,
+      "pardheev-v1"
+    ],
+    "scored_0037": [
+      194,
+      190,
+      "pardheev-v1"
+    ],
+    "scored_0038": [
+      144,
+      140,
+      "pardheev-v1"
+    ],
+    "scored_0039": [
+      111,
+      108,
+      "pardheev-v1"
+    ],
+    "scored_0040": [
+      170,
+      167,
+      "pardheev-v1"
+    ],
+    "scored_0041": [
+      115,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0042": [
+      165,
+      161,
+      "pardheev-v1"
+    ],
+    "scored_0043": [
+      210,
+      208,
+      "pardheev-v1"
+    ],
+    "scored_0044": [
+      75,
+      73,
+      "pardheev-v1"
+    ],
+    "scored_0046": [
+      30,
+      27,
+      "pardheev-v1"
+    ],
+    "scored_0047": [
+      168,
+      166,
+      "pardheev-v1"
+    ],
+    "scored_0048": [
+      143,
+      141,
+      "pardheev-v1"
+    ],
+    "scored_0049": [
+      159,
+      155,
+      "pardheev-v1"
+    ],
+    "scored_0053": [
+      109,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0055": [
+      80,
+      78,
+      "pardheev-v1"
+    ],
+    "scored_0064": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0065": [
+      36,
+      34,
+      "pardheev-v1"
+    ],
+    "scored_0066": [
+      37,
+      36,
+      "pardheev-v1"
+    ],
+    "scored_0071": [
+      112,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0072": [
+      101,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0074": [
+      205,
+      203,
+      "pardheev-v1"
+    ],
+    "scored_0075": [
+      254,
+      253,
+      "pardheev-v1"
+    ],
+    "scored_0076": [
+      143,
+      140,
+      "pardheev-v1"
+    ],
+    "scored_0079": [
+      132,
+      130,
+      "pardheev-v1"
+    ],
+    "scored_0080": [
+      147,
+      144,
+      "pardheev-v1"
+    ],
+    "scored_0086": [
+      100,
+      97,
+      "pardheev-v1"
+    ],
+    "scored_0090": [
+      182,
+      181,
+      "pardheev-v1"
+    ],
+    "scored_0092": [
+      34,
+      33,
+      "pardheev-v1"
+    ],
+    "scored_0094": [
+      252,
+      250,
+      "pardheev-v1"
+    ],
+    "scored_0095": [
+      33,
+      32,
+      "pardheev-v1"
+    ],
+    "scored_0096": [
+      173,
+      171,
+      "pardheev-v1"
+    ],
+    "scored_0099": [
+      120,
+      118,
+      "pardheev-v1"
+    ],
+    "scored_0100": [
+      120,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0102": [
+      115,
+      113,
+      "pardheev-v1"
+    ],
+    "scored_0103": [
+      40,
+      39,
+      "pardheev-v1"
+    ],
+    "scored_0106": [
+      223,
+      222,
+      "pardheev-v1"
+    ],
+    "scored_0108": [
+      179,
+      176,
+      "pardheev-v1"
+    ],
+    "scored_0109": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0110": [
+      169,
+      168,
+      "pardheev-v1"
+    ],
+    "scored_0116": [
+      86,
+      84,
+      "pardheev-v1"
+    ],
+    "scored_0118": [
+      107,
+      105,
+      "pardheev-v1"
+    ],
+    "scored_0121": [
+      45,
+      43,
+      "pardheev-v1"
+    ],
+    "scored_0122": [
+      153,
+      152,
+      "pardheev-v1"
+    ],
+    "scored_0124": [
+      25,
+      24,
+      "pardheev-v1"
+    ],
+    "scored_0127": [
+      96,
+      95,
+      "pardheev-v1"
+    ],
+    "scored_0129": [
+      267,
+      265,
+      "pardheev-v1"
+    ],
+    "scored_0131": [
+      93,
+      92,
+      "pardheev-v1"
+    ],
+    "scored_0132": [
+      101,
+      98,
+      "pardheev-v1"
+    ],
+    "scored_0143": [
+      114,
+      113,
+      "pardheev-v1"
+    ],
+    "scored_0144": [
+      116,
+      113,
+      "pardheev-v1"
+    ],
+    "scored_0145": [
+      216,
+      213,
+      "pardheev-v1"
+    ],
+    "scored_0147": [
+      92,
+      90,
+      "pardheev-v1"
+    ],
+    "scored_0152": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0153": [
+      95,
+      94,
+      "pardheev-v1"
+    ],
+    "scored_0155": [
+      223,
+      220,
+      "pardheev-v1"
+    ],
+    "scored_0162": [
+      135,
+      133,
+      "pardheev-v1"
+    ],
+    "scored_0164": [
+      119,
+      116,
+      "pardheev-v1"
+    ],
+    "scored_0165": [
+      241,
+      239,
+      "pardheev-v1"
+    ],
+    "scored_0166": [
+      204,
+      201,
+      "pardheev-v1"
+    ],
+    "scored_0171": [
+      126,
+      124,
+      "pardheev-v1"
+    ],
+    "scored_0175": [
+      92,
+      90,
+      "pardheev-v1"
+    ],
+    "scored_0176": [
+      99,
+      97,
+      "pardheev-v1"
+    ],
+    "scored_0177": [
+      106,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0183": [
+      274,
+      272,
+      "pardheev-v1"
+    ],
+    "scored_0184": [
+      114,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0188": [
+      96,
+      93,
+      "pardheev-v1"
+    ],
+    "scored_0191": [
+      103,
+      100,
+      "pardheev-v1"
+    ],
+    "scored_0192": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0193": [
+      125,
+      122,
+      "pardheev-v1"
+    ],
+    "scored_0197": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0203": [
+      215,
+      214,
+      "pardheev-v1"
+    ],
+    "scored_0204": [
+      200,
+      199,
+      "pardheev-v1"
+    ],
+    "scored_0205": [
+      130,
+      127,
+      "pardheev-v1"
+    ],
+    "scored_0208": [
+      227,
+      226,
+      "pardheev-v1"
+    ],
+    "scored_0210": [
+      88,
+      86,
+      "pardheev-v1"
+    ],
+    "scored_0213": [
+      97,
+      95,
+      "pardheev-v1"
+    ],
+    "scored_0214": [
+      125,
+      124,
+      "pardheev-v1"
+    ],
+    "scored_0215": [
+      162,
+      159,
+      "pardheev-v1"
+    ],
+    "scored_0216": [
+      113,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0221": [
+      35,
+      34,
+      "pardheev-v1"
+    ],
+    "scored_0222": [
+      33,
+      32,
+      "pardheev-v1"
+    ],
+    "scored_0223": [
+      200,
+      198,
+      "pardheev-v1"
+    ],
+    "scored_0224": [
+      178,
+      177,
+      "pardheev-v1"
+    ],
+    "scored_0227": [
+      112,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0243": [
+      105,
+      102,
+      "pardheev-v1"
+    ],
+    "scored_0247": [
+      107,
+      105,
+      "pardheev-v1"
+    ],
+    "scored_0249": [
+      256,
+      254,
+      "pardheev-v1"
+    ],
+    "scored_0252": [
+      66,
+      65,
+      "pardheev-v1"
+    ],
+    "scored_0253": [
+      78,
+      75,
+      "pardheev-v1"
+    ],
+    "scored_0254": [
+      209,
+      207,
+      "pardheev-v1"
+    ],
+    "scored_0255": [
+      271,
+      270,
+      "pardheev-v1"
+    ],
+    "scored_0256": [
+      84,
+      81,
+      "pardheev-v1"
+    ],
+    "scored_0258": [
+      271,
+      270,
+      "pardheev-v1"
+    ],
+    "scored_0259": [
+      109,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0260": [
+      86,
+      85,
+      "pardheev-v1"
+    ],
+    "scored_0265": [
+      190,
+      188,
+      "pardheev-v1"
+    ],
+    "scored_0266": [
+      101,
+      100,
+      "pardheev-v1"
+    ],
+    "scored_0268": [
+      200,
+      199,
+      "pardheev-v1"
+    ],
+    "scored_0270": [
+      116,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0272": [
+      22,
+      21,
+      "pardheev-v1"
+    ],
+    "scored_0275": [
+      145,
+      142,
+      "pardheev-v1"
+    ],
+    "scored_0280": [
+      110,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0282": [
+      43,
+      42,
+      "pardheev-v1"
+    ],
+    "scored_0283": [
+      212,
+      209,
+      "pardheev-v1"
+    ],
+    "scored_0288": [
+      119,
+      118,
+      "pardheev-v1"
+    ],
+    "scored_0296": [
+      39,
+      38,
+      "pardheev-v1"
+    ],
+    "scored_0298": [
+      95,
+      94,
+      "pardheev-v1"
+    ],
+    "scored_0299": [
+      92,
+      90,
+      "pardheev-v1"
+    ],
+    "scored_0300": [
+      40,
+      37,
+      "pardheev-v1"
+    ],
+    "scored_0303": [
+      198,
+      195,
+      "pardheev-v1"
+    ],
+    "scored_0304": [
+      121,
+      120,
+      "pardheev-v1"
+    ],
+    "scored_0307": [
+      96,
+      94,
+      "pardheev-v1"
+    ],
+    "scored_0308": [
+      30,
+      29,
+      "pardheev-v1"
+    ],
+    "scored_0309": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0310": [
+      107,
+      106,
+      "pardheev-v1"
+    ],
+    "scored_0313": [
+      172,
+      169,
+      "pardheev-v1"
+    ],
+    "scored_0316": [
+      110,
+      108,
+      "pardheev-v1"
+    ],
+    "scored_0321": [
+      277,
+      276,
+      "pardheev-v1"
+    ],
+    "scored_0322": [
+      176,
+      173,
+      "pardheev-v1"
+    ],
+    "scored_0323": [
+      117,
+      115,
+      "pardheev-v1"
+    ],
+    "scored_0325": [
+      101,
+      100,
+      "pardheev-v1"
+    ],
+    "scored_0326": [
+      122,
+      121,
+      "pardheev-v1"
+    ],
+    "scored_0327": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0330": [
+      121,
+      118,
+      "pardheev-v1"
+    ],
+    "scored_0331": [
+      245,
+      244,
+      "pardheev-v1"
+    ],
+    "scored_0333": [
+      211,
+      208,
+      "pardheev-v1"
+    ],
+    "scored_0340": [
+      97,
+      96,
+      "pardheev-v1"
+    ],
+    "scored_0341": [
+      130,
+      127,
+      "pardheev-v1"
+    ],
+    "scored_0343": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0345": [
+      198,
+      196,
+      "pardheev-v1"
+    ],
+    "scored_0350": [
+      54,
+      53,
+      "pardheev-v1"
+    ],
+    "scored_0353": [
+      145,
+      143,
+      "pardheev-v1"
+    ],
+    "scored_0354": [
+      115,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0355": [
+      106,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0356": [
+      81,
+      79,
+      "pardheev-v1"
+    ],
+    "scored_0359": [
+      110,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0361": [
+      127,
+      126,
+      "pardheev-v1"
+    ],
+    "scored_0367": [
+      118,
+      115,
+      "pardheev-v1"
+    ],
+    "scored_0375": [
+      206,
+      204,
+      "pardheev-v1"
+    ],
+    "scored_0378": [
+      85,
+      84,
+      "pardheev-v1"
+    ],
+    "scored_0380": [
+      157,
+      155,
+      "pardheev-v1"
+    ],
+    "scored_0382": [
+      141,
+      139,
+      "pardheev-v1"
+    ],
+    "scored_0384": [
+      145,
+      142,
+      "pardheev-v1"
+    ],
+    "scored_0386": [
+      187,
+      186,
+      "pardheev-v1"
+    ],
+    "scored_0391": [
+      194,
+      191,
+      "pardheev-v1"
+    ],
+    "scored_0395": [
+      83,
+      82,
+      "pardheev-v1"
+    ],
+    "scored_0396": [
+      35,
+      34,
+      "pardheev-v1"
+    ],
+    "scored_0397": [
+      186,
+      184,
+      "pardheev-v1"
+    ],
+    "scored_0401": [
+      27,
+      24,
+      "pardheev-v1"
+    ],
+    "scored_0404": [
+      102,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0407": [
+      155,
+      152,
+      "pardheev-v1"
+    ],
+    "scored_0410": [
+      179,
+      177,
+      "pardheev-v1"
+    ],
+    "scored_0412": [
+      176,
+      175,
+      "pardheev-v1"
+    ],
+    "scored_0414": [
+      105,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0416": [
+      124,
+      123,
+      "pardheev-v1"
+    ],
+    "scored_0419": [
+      23,
+      22,
+      "pardheev-v1"
+    ],
+    "scored_0420": [
+      121,
+      120,
+      "pardheev-v1"
+    ],
+    "scored_0421": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0427": [
+      116,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0429": [
+      112,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0431": [
+      82,
+      79,
+      "pardheev-v1"
+    ],
+    "scored_0432": [
+      110,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0434": [
+      105,
+      102,
+      "pardheev-v1"
+    ],
+    "scored_0437": [
+      123,
+      122,
+      "pardheev-v1"
+    ],
+    "scored_0439": [
+      117,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0442": [
+      172,
+      171,
+      "pardheev-v1"
+    ],
+    "scored_0443": [
+      28,
+      27,
+      "pardheev-v1"
+    ],
+    "scored_0445": [
+      230,
+      229,
+      "pardheev-v1"
+    ],
+    "scored_0451": [
+      113,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0453": [
+      108,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0454": [
+      205,
+      203,
+      "pardheev-v1"
+    ],
+    "scored_0455": [
+      27,
+      25,
+      "pardheev-v1"
+    ],
+    "scored_0457": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0458": [
+      148,
+      146,
+      "pardheev-v1"
+    ],
+    "scored_0459": [
+      81,
+      80,
+      "pardheev-v1"
+    ],
+    "scored_0465": [
+      110,
+      108,
+      "pardheev-v1"
+    ],
+    "scored_0466": [
+      184,
+      181,
+      "pardheev-v1"
+    ],
+    "scored_0469": [
+      84,
+      82,
+      "pardheev-v1"
+    ],
+    "scored_0470": [
+      254,
+      253,
+      "pardheev-v1"
+    ],
+    "scored_0477": [
+      128,
+      127,
+      "pardheev-v1"
+    ],
+    "scored_0478": [
+      80,
+      78,
+      "pardheev-v1"
+    ],
+    "scored_0479": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0482": [
+      182,
+      181,
+      "pardheev-v1"
+    ],
+    "scored_0486": [
+      103,
+      102,
+      "pardheev-v1"
+    ],
+    "scored_0491": [
+      183,
+      181,
+      "pardheev-v1"
+    ],
+    "scored_0492": [
+      32,
+      31,
+      "pardheev-v1"
+    ],
+    "scored_0493": [
+      228,
+      226,
+      "pardheev-v1"
+    ],
+    "scored_0496": [
+      106,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0498": [
+      116,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0499": [
+      110,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0501": [
+      110,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0502": [
+      157,
+      155,
+      "pardheev-v1"
+    ],
+    "scored_0503": [
+      81,
+      80,
+      "pardheev-v1"
+    ],
+    "scored_0506": [
+      113,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0507": [
+      165,
+      162,
+      "pardheev-v1"
+    ],
+    "scored_0509": [
+      121,
+      119,
+      "pardheev-v1"
+    ],
+    "scored_0510": [
+      87,
+      85,
+      "pardheev-v1"
+    ],
+    "scored_0511": [
+      243,
+      241,
+      "pardheev-v1"
+    ],
+    "scored_0512": [
+      122,
+      119,
+      "pardheev-v1"
+    ],
+    "scored_0513": [
+      149,
+      147,
+      "pardheev-v1"
+    ],
+    "scored_0514": [
+      211,
+      208,
+      "pardheev-v1"
+    ],
+    "scored_0517": [
+      133,
+      130,
+      "pardheev-v1"
+    ],
+    "scored_0521": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0522": [
+      86,
+      85,
+      "pardheev-v1"
+    ],
+    "scored_0523": [
+      105,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0526": [
+      213,
+      210,
+      "pardheev-v1"
+    ],
+    "scored_0530": [
+      155,
+      152,
+      "pardheev-v1"
+    ],
+    "scored_0531": [
+      181,
+      179,
+      "pardheev-v1"
+    ],
+    "scored_0532": [
+      76,
+      74,
+      "pardheev-v1"
+    ],
+    "scored_0534": [
+      105,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0536": [
+      243,
+      240,
+      "pardheev-v1"
+    ],
+    "scored_0541": [
+      53,
+      51,
+      "pardheev-v1"
+    ],
+    "scored_0545": [
+      107,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0547": [
+      109,
+      106,
+      "pardheev-v1"
+    ],
+    "scored_0548": [
+      34,
+      33,
+      "pardheev-v1"
+    ],
+    "scored_0550": [
+      88,
+      87,
+      "pardheev-v1"
+    ],
+    "scored_0551": [
+      171,
+      168,
+      "pardheev-v1"
+    ],
+    "scored_0552": [
+      215,
+      212,
+      "pardheev-v1"
+    ],
+    "scored_0553": [
+      128,
+      125,
+      "pardheev-v1"
+    ],
+    "scored_0555": [
+      106,
+      105,
+      "pardheev-v1"
+    ],
+    "scored_0567": [
+      97,
+      95,
+      "pardheev-v1"
+    ],
+    "scored_0568": [
+      104,
+      102,
+      "pardheev-v1"
+    ],
+    "scored_0569": [
+      112,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0570": [
+      82,
+      79,
+      "pardheev-v1"
+    ],
+    "scored_0571": [
+      190,
+      189,
+      "pardheev-v1"
+    ],
+    "scored_0574": [
+      101,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0578": [
+      97,
+      96,
+      "pardheev-v1"
+    ],
+    "scored_0580": [
+      216,
+      214,
+      "pardheev-v1"
+    ],
+    "scored_0581": [
+      248,
+      246,
+      "pardheev-v1"
+    ],
+    "scored_0584": [
+      42,
+      41,
+      "pardheev-v1"
+    ],
+    "scored_0590": [
+      108,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0591": [
+      127,
+      124,
+      "pardheev-v1"
+    ],
+    "scored_0596": [
+      94,
+      92,
+      "pardheev-v1"
+    ],
+    "scored_0599": [
+      119,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0603": [
+      117,
+      115,
+      "pardheev-v1"
+    ],
+    "scored_0604": [
+      105,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0609": [
+      148,
+      146,
+      "pardheev-v1"
+    ],
+    "scored_0610": [
+      265,
+      263,
+      "pardheev-v1"
+    ],
+    "scored_0611": [
+      27,
+      26,
+      "pardheev-v1"
+    ],
+    "scored_0614": [
+      20,
+      19,
+      "pardheev-v1"
+    ],
+    "scored_0616": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0618": [
+      104,
+      102,
+      "pardheev-v1"
+    ],
+    "scored_0619": [
+      117,
+      116,
+      "pardheev-v1"
+    ],
+    "scored_0623": [
+      75,
+      73,
+      "pardheev-v1"
+    ],
+    "scored_0624": [
+      106,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0628": [
+      202,
+      200,
+      "pardheev-v1"
+    ],
+    "scored_0629": [
+      154,
+      152,
+      "pardheev-v1"
+    ],
+    "scored_0631": [
+      104,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0635": [
+      34,
+      32,
+      "pardheev-v1"
+    ],
+    "scored_0639": [
+      101,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0641": [
+      114,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0648": [
+      95,
+      92,
+      "pardheev-v1"
+    ],
+    "scored_0651": [
+      123,
+      121,
+      "pardheev-v1"
+    ],
+    "scored_0652": [
+      93,
+      92,
+      "pardheev-v1"
+    ],
+    "scored_0653": [
+      131,
+      128,
+      "pardheev-v1"
+    ],
+    "scored_0655": [
+      256,
+      254,
+      "pardheev-v1"
+    ],
+    "scored_0656": [
+      31,
+      30,
+      "pardheev-v1"
+    ],
+    "scored_0659": [
+      82,
+      81,
+      "pardheev-v1"
+    ],
+    "scored_0661": [
+      222,
+      219,
+      "pardheev-v1"
+    ],
+    "scored_0667": [
+      119,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0668": [
+      101,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0669": [
+      108,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0672": [
+      55,
+      52,
+      "pardheev-v1"
+    ],
+    "scored_0674": [
+      104,
+      101,
+      "pardheev-v1"
+    ],
+    "scored_0675": [
+      117,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0677": [
+      223,
+      221,
+      "pardheev-v1"
+    ],
+    "scored_0679": [
+      115,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0680": [
+      193,
+      192,
+      "pardheev-v1"
+    ],
+    "scored_0683": [
+      118,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0686": [
+      92,
+      91,
+      "pardheev-v1"
+    ],
+    "scored_0692": [
+      195,
+      193,
+      "pardheev-v1"
+    ],
+    "scored_0697": [
+      96,
+      93,
+      "pardheev-v1"
+    ],
+    "scored_0699": [
+      117,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0701": [
+      27,
+      26,
+      "pardheev-v1"
+    ],
+    "scored_0705": [
+      108,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0706": [
+      181,
+      180,
+      "pardheev-v1"
+    ],
+    "scored_0707": [
+      83,
+      80,
+      "pardheev-v1"
+    ],
+    "scored_0712": [
+      187,
+      185,
+      "pardheev-v1"
+    ],
+    "scored_0713": [
+      99,
+      97,
+      "pardheev-v1"
+    ],
+    "scored_0714": [
+      141,
+      138,
+      "pardheev-v1"
+    ],
+    "scored_0715": [
+      118,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0716": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0722": [
+      116,
+      115,
+      "pardheev-v1"
+    ],
+    "scored_0723": [
+      96,
+      93,
+      "pardheev-v1"
+    ],
+    "scored_0727": [
+      77,
+      74,
+      "pardheev-v1"
+    ],
+    "scored_0730": [
+      105,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_0731": [
+      121,
+      120,
+      "pardheev-v1"
+    ],
+    "scored_0732": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0733": [
+      95,
+      93,
+      "pardheev-v1"
+    ],
+    "scored_0736": [
+      112,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0738": [
+      98,
+      97,
+      "pardheev-v1"
+    ],
+    "scored_0740": [
+      130,
+      127,
+      "pardheev-v1"
+    ],
+    "scored_0741": [
+      116,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0743": [
+      102,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0744": [
+      274,
+      272,
+      "pardheev-v1"
+    ],
+    "scored_0746": [
+      115,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0749": [
+      89,
+      87,
+      "pardheev-v1"
+    ],
+    "scored_0752": [
+      94,
+      91,
+      "pardheev-v1"
+    ],
+    "scored_0753": [
+      92,
+      89,
+      "pardheev-v1"
+    ],
+    "scored_0754": [
+      170,
+      168,
+      "pardheev-v1"
+    ],
+    "scored_0755": [
+      93,
+      91,
+      "pardheev-v1"
+    ],
+    "scored_0757": [
+      131,
+      129,
+      "pardheev-v1"
+    ],
+    "scored_0759": [
+      197,
+      196,
+      "pardheev-v1"
+    ],
+    "scored_0764": [
+      194,
+      193,
+      "pardheev-v1"
+    ],
+    "scored_0767": [
+      102,
+      101,
+      "pardheev-v1"
+    ],
+    "scored_0768": [
+      93,
+      92,
+      "pardheev-v1"
+    ],
+    "scored_0769": [
+      96,
+      95,
+      "pardheev-v1"
+    ],
+    "scored_0773": [
+      42,
+      41,
+      "pardheev-v1"
+    ],
+    "scored_0774": [
+      273,
+      272,
+      "pardheev-v1"
+    ],
+    "scored_0775": [
+      115,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0777": [
+      35,
+      34,
+      "pardheev-v1"
+    ],
+    "scored_0779": [
+      113,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0780": [
+      258,
+      256,
+      "pardheev-v1"
+    ],
+    "scored_0783": [
+      113,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0784": [
+      219,
+      216,
+      "pardheev-v1"
+    ],
+    "scored_0787": [
+      101,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0788": [
+      222,
+      219,
+      "pardheev-v1"
+    ],
+    "scored_0789": [
+      118,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0792": [
+      110,
+      108,
+      "pardheev-v1"
+    ],
+    "scored_0794": [
+      116,
+      115,
+      "pardheev-v1"
+    ],
+    "scored_0800": [
+      73,
+      72,
+      "pardheev-v1"
+    ],
+    "scored_0804": [
+      113,
+      111,
+      "pardheev-v1"
+    ],
+    "scored_0805": [
+      113,
+      110,
+      "pardheev-v1"
+    ],
+    "scored_0806": [
+      91,
+      89,
+      "pardheev-v1"
+    ],
+    "scored_0807": [
+      116,
+      113,
+      "pardheev-v1"
+    ],
+    "scored_0808": [
+      247,
+      246,
+      "pardheev-v1"
+    ],
+    "scored_0811": [
+      86,
+      84,
+      "pardheev-v1"
+    ],
+    "scored_0814": [
+      119,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0817": [
+      159,
+      157,
+      "pardheev-v1"
+    ],
+    "scored_0821": [
+      97,
+      94,
+      "pardheev-v1"
+    ],
+    "scored_0823": [
+      124,
+      123,
+      "pardheev-v1"
+    ],
+    "scored_0828": [
+      32,
+      31,
+      "pardheev-v1"
+    ],
+    "scored_0831": [
+      91,
+      90,
+      "pardheev-v1"
+    ],
+    "scored_0836": [
+      181,
+      180,
+      "pardheev-v1"
+    ],
+    "scored_0838": [
+      139,
+      137,
+      "pardheev-v1"
+    ],
+    "scored_0840": [
+      225,
+      223,
+      "pardheev-v1"
+    ],
+    "scored_0844": [
+      252,
+      249,
+      "pardheev-v1"
+    ],
+    "scored_0849": [
+      190,
+      189,
+      "pardheev-v1"
+    ],
+    "scored_0852": [
+      120,
+      118,
+      "pardheev-v1"
+    ],
+    "scored_0855": [
+      63,
+      62,
+      "pardheev-v1"
+    ],
+    "scored_0862": [
+      106,
+      105,
+      "pardheev-v1"
+    ],
+    "scored_0864": [
+      182,
+      179,
+      "pardheev-v1"
+    ],
+    "scored_0866": [
+      26,
+      25,
+      "pardheev-v1"
+    ],
+    "scored_0867": [
+      87,
+      84,
+      "pardheev-v1"
+    ],
+    "scored_0869": [
+      102,
+      101,
+      "pardheev-v1"
+    ],
+    "scored_0871": [
+      110,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0872": [
+      105,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0873": [
+      37,
+      35,
+      "pardheev-v1"
+    ],
+    "scored_0877": [
+      53,
+      51,
+      "pardheev-v1"
+    ],
+    "scored_0879": [
+      104,
+      101,
+      "pardheev-v1"
+    ],
+    "scored_0881": [
+      84,
+      82,
+      "pardheev-v1"
+    ],
+    "scored_0886": [
+      119,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0888": [
+      114,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0896": [
+      132,
+      130,
+      "pardheev-v1"
+    ],
+    "scored_0897": [
+      35,
+      33,
+      "pardheev-v1"
+    ],
+    "scored_0898": [
+      80,
+      78,
+      "pardheev-v1"
+    ],
+    "scored_0899": [
+      223,
+      221,
+      "pardheev-v1"
+    ],
+    "scored_0904": [
+      108,
+      106,
+      "pardheev-v1"
+    ],
+    "scored_0907": [
+      116,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0908": [
+      29,
+      28,
+      "pardheev-v1"
+    ],
+    "scored_0911": [
+      82,
+      79,
+      "pardheev-v1"
+    ],
+    "scored_0914": [
+      38,
+      36,
+      "pardheev-v1"
+    ],
+    "scored_0917": [
+      211,
+      208,
+      "pardheev-v1"
+    ],
+    "scored_0918": [
+      210,
+      208,
+      "pardheev-v1"
+    ],
+    "scored_0920": [
+      142,
+      139,
+      "pardheev-v1"
+    ],
+    "scored_0922": [
+      22,
+      21,
+      "pardheev-v1"
+    ],
+    "scored_0924": [
+      107,
+      106,
+      "pardheev-v1"
+    ],
+    "scored_0925": [
+      117,
+      114,
+      "pardheev-v1"
+    ],
+    "scored_0928": [
+      31,
+      28,
+      "pardheev-v1"
+    ],
+    "scored_0933": [
+      113,
+      112,
+      "pardheev-v1"
+    ],
+    "scored_0935": [
+      164,
+      161,
+      "pardheev-v1"
+    ],
+    "scored_0938": [
+      102,
+      99,
+      "pardheev-v1"
+    ],
+    "scored_0939": [
+      232,
+      231,
+      "pardheev-v1"
+    ],
+    "scored_0942": [
+      111,
+      109,
+      "pardheev-v1"
+    ],
+    "scored_0946": [
+      210,
+      207,
+      "pardheev-v1"
+    ],
+    "scored_0947": [
+      88,
+      87,
+      "pardheev-v1"
+    ],
+    "scored_0950": [
+      110,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0952": [
+      210,
+      207,
+      "pardheev-v1"
+    ],
+    "scored_0954": [
+      76,
+      73,
+      "pardheev-v1"
+    ],
+    "scored_0955": [
+      80,
+      79,
+      "pardheev-v1"
+    ],
+    "scored_0957": [
+      28,
+      26,
+      "pardheev-v1"
+    ],
+    "scored_0961": [
+      104,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0962": [
+      31,
+      30,
+      "pardheev-v1"
+    ],
+    "scored_0966": [
+      84,
+      81,
+      "pardheev-v1"
+    ],
+    "scored_0969": [
+      147,
+      145,
+      "pardheev-v1"
+    ],
+    "scored_0971": [
+      18,
+      17,
+      "pardheev-v1"
+    ],
+    "scored_0972": [
+      120,
+      118,
+      "pardheev-v1"
+    ],
+    "scored_0973": [
+      103,
+      100,
+      "pardheev-v1"
+    ],
+    "scored_0975": [
+      104,
+      103,
+      "pardheev-v1"
+    ],
+    "scored_0976": [
+      96,
+      95,
+      "pardheev-v1"
+    ],
+    "scored_0977": [
+      163,
+      160,
+      "pardheev-v1"
+    ],
+    "scored_0979": [
+      175,
+      173,
+      "pardheev-v1"
+    ],
+    "scored_0983": [
+      117,
+      116,
+      "pardheev-v1"
+    ],
+    "scored_0985": [
+      109,
+      107,
+      "pardheev-v1"
+    ],
+    "scored_0992": [
+      259,
+      256,
+      "pardheev-v1"
+    ],
+    "scored_0994": [
+      119,
+      117,
+      "pardheev-v1"
+    ],
+    "scored_0997": [
+      106,
+      104,
+      "pardheev-v1"
+    ],
+    "scored_1000": [
+      229,
+      228,
+      "pardheev-v1"
+    ]
+  }
+}

@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:49
+
+Pardheev 新公开的 132,997 条程序中，419 道短于仓库的公开辅助程序。按题择短得到 **132,841 条**，比 Pardheev 整份解少 156 条。北京时间 11:44 官方榜首为 128,330 条，相差 4,511 条，尚未提交。Pardheev 说明其程序可直接用于比赛或作为继续搜索的起点，原版从作者的发布页取得。已开始在 80 道题上重搜。另一组 96 道独立题共省 2 条，独立候选达到 **139,930 条**。[合并方法和署名](public-assisted/pardheev/) · [逐题差额](public-assisted/pardheev/assembly.json) · [96 道独立题](collaboration/withheld-targets/terminal-shell-next-results.json.gz)
+
 ## 北京时间 11 月 21 日 11:47
 
 协作程序的第二轮搜索让最好候选在 10 道题上共省 17 条。另合入 Asterios 第 380 题的 1 条改进，可直接下载的公开辅助候选为 **133,655 条**。独立候选为 **139,932 条**，包含重建前半段得到的 3 道改进。截止 11:44，官方榜首为 128,330 条。[协作程序](collaboration/recipe-union/contributor-second-results.json.gz) · [重建结果](collaboration/withheld-targets/terminal-shell-results.json.gz) · [第 380 题](public-assisted/releases/gift-380-v67.json)
