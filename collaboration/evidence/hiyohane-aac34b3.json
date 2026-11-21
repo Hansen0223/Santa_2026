@@ -1,0 +1,243 @@
+{
+  "commits": {
+    "4849268": {
+      "url": "https://github.com/Hansen0223/Santa_2026/commit/484926856bbfbe8ee5a256bbeb8623e15e7e5842",
+      "author": "Hiyohane",
+      "rows": {
+        "scored_0003": {
+          "parent": 202,
+          "candidate": 200,
+          "our_independent": 202,
+          "our_public": 196,
+          "prior_combined": 193
+        },
+        "scored_0160": {
+          "parent": 191,
+          "candidate": 189,
+          "our_independent": 191,
+          "our_public": 185,
+          "prior_combined": 185
+        },
+        "scored_0185": {
+          "parent": 146,
+          "candidate": 144,
+          "our_independent": 146,
+          "our_public": 140,
+          "prior_combined": 140
+        },
+        "scored_0194": {
+          "parent": 161,
+          "candidate": 160,
+          "our_independent": 161,
+          "our_public": 155,
+          "prior_combined": 155
+        },
+        "scored_0324": {
+          "parent": 184,
+          "candidate": 182,
+          "our_independent": 184,
+          "our_public": 178,
+          "prior_combined": 178
+        },
+        "scored_0407": {
+          "parent": 167,
+          "candidate": 165,
+          "our_independent": 167,
+          "our_public": 155,
+          "prior_combined": 152
+        },
+        "scored_0424": {
+          "parent": 217,
+          "candidate": 214,
+          "our_independent": 217,
+          "our_public": 206,
+          "prior_combined": 206
+        },
+        "scored_0428": {
+          "parent": 208,
+          "candidate": 204,
+          "our_independent": 208,
+          "our_public": 202,
+          "prior_combined": 202
+        },
+        "scored_0438": {
+          "parent": 191,
+          "candidate": 190,
+          "our_independent": 191,
+          "our_public": 185,
+          "prior_combined": 185
+        },
+        "scored_0504": {
+          "parent": 197,
+          "candidate": 196,
+          "our_independent": 197,
+          "our_public": 186,
+          "prior_combined": 186
+        },
+        "scored_0531": {
+          "parent": 189,
+          "candidate": 187,
+          "our_independent": 189,
+          "our_public": 181,
+          "prior_combined": 179
+        },
+        "scored_0608": {
+          "parent": 159,
+          "candidate": 158,
+          "our_independent": 159,
+          "our_public": 149,
+          "prior_combined": 149
+        },
+        "scored_0622": {
+          "parent": 172,
+          "candidate": 171,
+          "our_independent": 172,
+          "our_public": 165,
+          "prior_combined": 165
+        },
+        "scored_0644": {
+          "parent": 149,
+          "candidate": 147,
+          "our_independent": 148,
+          "our_public": 141,
+          "prior_combined": 141
+        },
+        "scored_0653": {
+          "parent": 141,
+          "candidate": 140,
+          "our_independent": 141,
+          "our_public": 131,
+          "prior_combined": 128
+        },
+        "scored_0662": {
+          "parent": 176,
+          "candidate": 175,
+          "our_independent": 176,
+          "our_public": 168,
+          "prior_combined": 168
+        },
+        "scored_0673": {
+          "parent": 174,
+          "candidate": 173,
+          "our_independent": 174,
+          "our_public": 168,
+          "prior_combined": 168
+        },
+        "scored_0826": {
+          "parent": 203,
+          "candidate": 202,
+          "our_independent": 203,
+          "our_public": 197,
+          "prior_combined": 197
+        },
+        "scored_0941": {
+          "parent": 239,
+          "candidate": 238,
+          "our_independent": 239,
+          "our_public": 232,
+          "prior_combined": 232
+        }
+      }
+    },
+    "aac34b3": {
+      "url": "https://github.com/Hansen0223/Santa_2026/commit/aac34b351e4b893aec5841ed4c400ed3015a2bc7",
+      "author": "Hiyohane",
+      "rows": {
+        "scored_0111": {
+          "parent": 210,
+          "candidate": 209,
+          "our_independent": 210,
+          "our_public": 208,
+          "prior_combined": 208
+        },
+        "scored_0235": {
+          "parent": 204,
+          "candidate": 201,
+          "our_independent": 204,
+          "our_public": 199,
+          "prior_combined": 199
+        },
+        "scored_0254": {
+          "parent": 214,
+          "candidate": 213,
+          "our_independent": 214,
+          "our_public": 209,
+          "prior_combined": 207
+        },
+        "scored_0262": {
+          "parent": 214,
+          "candidate": 212,
+          "our_independent": 214,
+          "our_public": 210,
+          "prior_combined": 210
+        },
+        "scored_0288": {
+          "parent": 123,
+          "candidate": 122,
+          "our_independent": 123,
+          "our_public": 119,
+          "prior_combined": 118
+        },
+        "scored_0299": {
+          "parent": 97,
+          "candidate": 96,
+          "our_independent": 97,
+          "our_public": 92,
+          "prior_combined": 90
+        },
+        "scored_0366": {
+          "parent": 119,
+          "candidate": 118,
+          "our_independent": 119,
+          "our_public": 114,
+          "prior_combined": 114
+        },
+        "scored_0580": {
+          "parent": 221,
+          "candidate": 219,
+          "our_independent": 221,
+          "our_public": 216,
+          "prior_combined": 214
+        },
+        "scored_0592": {
+          "parent": 207,
+          "candidate": 205,
+          "our_independent": 207,
+          "our_public": 204,
+          "prior_combined": 204
+        },
+        "scored_0681": {
+          "parent": 195,
+          "candidate": 194,
+          "our_independent": 195,
+          "our_public": 193,
+          "prior_combined": 193
+        },
+        "scored_0857": {
+          "parent": 221,
+          "candidate": 220,
+          "our_independent": 221,
+          "our_public": 218,
+          "prior_combined": 218
+        },
+        "scored_0864": {
+          "parent": 184,
+          "candidate": 183,
+          "our_independent": 184,
+          "our_public": 182,
+          "prior_combined": 179
+        },
+        "scored_0967": {
+          "parent": 112,
+          "candidate": 111,
+          "our_independent": 112,
+          "our_public": 107,
+          "prior_combined": 107
+        }
+      }
+    }
+  },
+  "rows": 32,
+  "independent_savings": 48,
+  "best_savings": 0
+}
