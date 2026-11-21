@@ -1168,6 +1168,7 @@ void plan_puzzle(Puzzle &p,const Trace &warm,const vector<Int> &warmOrder,int ta
     }
 }
 
+#ifndef SANTA_VIRTUAL_LIBRARY
 int main(int argc,char **argv) {
     if(argc!=9 && argc!=10) return 2;
     if(argc==10) join_mode=stoi(argv[9]);
@@ -1197,3 +1198,4 @@ int main(int argc,char **argv) {
     }
     return 0;
 }
+#endif

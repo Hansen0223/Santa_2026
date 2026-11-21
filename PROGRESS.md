@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 17 时
+
+公开程序与协作者提交逐题合并后为 132,545 条，再从第 756 题省下 1 条，达到 **132,544 条**。独立候选为 **139,732 条**。PR #4 的六项证明使总下界升至 37,987，仍有 20 题已证最短。PR #5 的分片成本估算工具和两种替代方法的分析也已合入。[还原当前最好候选](public-assisted/releases/v182.md) · [第 4 号 PR](https://github.com/Hansen0223/Santa_2026/pull/4) · [第 5 号 PR](https://github.com/Hansen0223/Santa_2026/pull/5)
+
 ## 北京时间 11 月 21 日 11:49
 
 Pardheev 新公开的 132,997 条程序中，419 道短于仓库的公开辅助程序。按题择短得到 **132,841 条**，比 Pardheev 整份解少 156 条。北京时间 11:44 官方榜首为 128,330 条，相差 4,511 条，尚未提交。Pardheev 说明其程序可直接用于比赛或作为继续搜索的起点，原版从作者的发布页取得。已开始在 80 道题上重搜。另一组 96 道独立题共省 2 条，独立候选达到 **139,930 条**。[合并方法和署名](public-assisted/pardheev/) · [逐题差额](public-assisted/pardheev/assembly.json) · [96 道独立题](collaboration/withheld-targets/terminal-shell-next-results.json.gz)

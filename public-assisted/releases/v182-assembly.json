@@ -1,0 +1,101 @@
+{
+  "instructions": 132544,
+  "sha256": "2ae6182bd428c3562bed7d708dd4e7a53e6047b7a982f9e1483ab28f004b4f44",
+  "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
+  "archive": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/182",
+  "archive_sha256": "7f84082b9272fb51ee4564713d10c541b5f0d92655562728f42a1ebba9bb391a",
+  "revision": "ae39b6649552d80b12aa2f04f2703f4c81ddc383",
+  "input_steps": {
+    "independent": 139732,
+    "public-assisted": 133634,
+    "asterios-v182": 132647
+  },
+  "selected": {
+    "public-assisted": 375,
+    "asterios-v182": 551,
+    "independent": 73,
+    "local-search": 1
+  },
+  "repository_improvements": {
+    "scored_0027": [
+      "independent",
+      109,
+      104
+    ],
+    "scored_0054": [
+      "public-assisted",
+      194,
+      193
+    ],
+    "scored_0073": [
+      "independent",
+      123,
+      115
+    ],
+    "scored_0190": [
+      "independent",
+      126,
+      116
+    ],
+    "scored_0286": [
+      "public-assisted",
+      113,
+      110
+    ],
+    "scored_0362": [
+      "independent",
+      111,
+      96
+    ],
+    "scored_0374": [
+      "public-assisted",
+      216,
+      213
+    ],
+    "scored_0484": [
+      "public-assisted",
+      130,
+      118
+    ],
+    "scored_0756": [
+      "local-search",
+      151,
+      150
+    ],
+    "scored_0803": [
+      "independent",
+      128,
+      119
+    ],
+    "scored_0815": [
+      "independent",
+      211,
+      210
+    ],
+    "scored_0870": [
+      "independent",
+      213,
+      211
+    ],
+    "scored_0878": [
+      "independent",
+      160,
+      156
+    ],
+    "scored_0893": [
+      "public-assisted",
+      127,
+      121
+    ],
+    "scored_0980": [
+      "independent",
+      130,
+      125
+    ],
+    "scored_0995": [
+      "independent",
+      142,
+      124
+    ]
+  }
+}

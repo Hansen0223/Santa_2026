@@ -2,7 +2,7 @@
 
 [当前分工、已完成的实验和正在搜索的题号](collaboration/STATUS.md) · [本轮进展](PROGRESS.md) · [第 649 题怎样少用一步](collaboration/exact-boundary/README.md)
 
-目前最短的本地候选为 **132,841 条**，由仓库程序与 Pardheev 第 1 版逐题合并得到。北京时间 11 月 21 日 11:44，榜首为 128,330 条，相差 4,511 条，尚未提交 Kaggle。仓库另有可直接下载的公开辅助候选 **133,655 条** 和独立候选 **139,930 条**。[还原 132,841 条候选](public-assisted/pardheev/) · [可直接下载的公开辅助程序](public-assisted/submission.csv) · [独立程序](submission.csv) · [榜单快照](collaboration/leaderboard.json)
+目前最短的本地候选为 **132,544 条**。北京时间 11 月 21 日 17:42，榜首为 127,543 条，相差 5,001 条。此候选尚未提交 Kaggle。仓库可直接下载的公开辅助候选为 **133,634 条**，独立候选为 **139,732 条**。[还原 132,544 条候选](public-assisted/releases/v182.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
 
 每道题从给定的初始值出发，在 48 个寄存器中使用加、减、乘和整除生成全部目标值。程序中的值必须始终为正整数并且不超过题目上限。提交文件包含 `id` 和 `program` 两列，每题最多 4,096 条指令。总分是全部程序的指令数之和，越低越好。合并各项证明的总下界为 37,987 条，当前共有 20 题已证最短，合计 128 条。[逐题证明与运行分工](collaboration/proof-status.md)
 
@@ -10,7 +10,7 @@
 
 | 想找什么 | 从哪里开始 |
 | --- | --- |
-| 当前最短候选、独立生成的候选 | [还原最短候选](public-assisted/pardheev/) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) |
+| 当前最短候选、独立生成的候选 | [还原最短候选](public-assisted/releases/v182.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) |
 | 接手任务、查看其他开发者已经试过的方案 | [协作实验索引](collaboration/README.md) · [当前分工](collaboration/STATUS.md) |
 | 运行或改进求解器 | [按方法浏览求解器](solvers/README.md) · [统一运行入口](run.py) |
 | 找一道题的已知最短程序和已证下界 | [逐题上下界](collaboration/puzzle-bounds.csv) · [证明进展](collaboration/proof-status.md) |
@@ -47,7 +47,7 @@ python -B elf.py data/puzzles.csv public-assisted/submission.csv
 
 当前主文件中的程序由求解器从官方输入生成，或由这些程序进一步缩短。公开求解器的作者、版本、许可证和本地改动记录在 `generative/NOTICE.md`。每次主文件更新时，`checkpoint.py` 对完整 CSV 进行两次独立重放，并把每题所用来源写入 `origins.csv`。当前总分、文件哈希和历次改进见 `result.json`。实际排名由 Kaggle 提交后的榜单确定。[官方排行榜](https://www.kaggle.com/competitions/santa-2026/leaderboard)
 
-公开辅助候选以 Asterios Panoras 汇总的第 **126** 版为基准。原版重放为 134,185 条，本地逐题择短后省 **538 条**。每题的公开来源、历史许可及本地修改随程序一起发布。[公开辅助结果](public-assisted/result.json) · [逐题署名](public-assisted/origins.csv) · [来源说明](public-assisted/NOTICE.md) · [Kaggle 第 126 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/126)
+公开辅助候选以 Asterios Panoras 汇总的第 **126** 版为基准。原版重放为 134,185 条，本地逐题择短后省 **551 条**。每题的公开来源、历史许可及本地修改随程序一起发布。[公开辅助结果](public-assisted/result.json) · [逐题署名](public-assisted/origins.csv) · [来源说明](public-assisted/NOTICE.md) · [Kaggle 第 126 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/126)
 
 ## 持续优化
 
