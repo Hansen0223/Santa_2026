@@ -1,0 +1,78 @@
+--- a/graph.py
++++ b/graph.py
+@@ -237,6 +237,48 @@
+     return tuple(instructions)
+ 
+ 
++def _allocate_fixed(puzzle: Puzzle, graph: Graph) -> Program | None:
++    """Run the fixed topological order without initializing a ready queue."""
++    if len(graph) > 4096:
++        return None
++    if not graph.keys().isdisjoint(puzzle.seeds):
++        return _allocate(puzzle, graph, False, 0, fixed_order=True)
++    uses = {}
++    for _, left, right in graph.values():
++        uses[left] = uses.get(left, 0) + 1
++        if right != left:
++            uses[right] = uses.get(right, 0) + 1
++    binding = {}
++    for index, value in enumerate(puzzle.seeds):
++        if value in uses and value not in binding:
++            binding[value] = index
++    occupied = set(binding.values())
++    free = [i for i in range(puzzle.registers) if i not in occupied]
++    heapq.heapify(free)
++    instructions = []
++    for value, (op, left, right) in graph.items():
++        a, b = binding.get(left), binding.get(right)
++        if a is None or b is None:
++            # Preserve diagnostic behavior for unexpected malformed order.
++            return _allocate(puzzle, graph, False, 0, fixed_order=True)
++        uses[left] -= 1
++        if not uses[left]:
++            heapq.heappush(free, binding.pop(left))
++        if right != left:
++            uses[right] -= 1
++            if not uses[right]:
++                heapq.heappush(free, binding.pop(right))
++        if not free:
++            return None
++        dest = heapq.heappop(free)
++        instructions.append((op, a, b, dest))
++        if uses.get(value, 0):
++            binding[value] = dest
++        else:
++            heapq.heappush(free, dest)
++    return tuple(instructions)
++
++
+ def _rematerialize(puzzle: Puzzle, graph: Graph, mode: str) -> Program | None:
+     seeds = set(puzzle.seeds)
+     binding = {}
+@@ -327,7 +369,7 @@
+             break
+         available.add(value)
+     for order in (chronological, graph):
+-        program = _allocate(puzzle, order, False, 0, fixed_order=True)
++        program = _allocate_fixed(puzzle, order)
+         if program is not None:
+             check(puzzle, program)
+             return program
+@@ -347,7 +389,7 @@
+                 if fingerprint in orders:
+                     continue
+                 orders.add(fingerprint)
+-                program = _allocate(puzzle, order, False, 0, fixed_order=True)
++                program = _allocate_fixed(puzzle, order)
+                 if program is not None:
+                     check(puzzle, program)
+                     return program
+@@ -355,7 +397,7 @@
+     if operation_width > 0:
+         order = _operation_order(puzzle, graph, operation_width)
+         if order is not None:
+-            program = _allocate(puzzle, order, False, 0, fixed_order=True)
++            program = _allocate_fixed(puzzle, order)
+             if program is None:
+                 raise RuntimeError("instruction-order search returned an infeasible schedule")
+             check(puzzle, program)
