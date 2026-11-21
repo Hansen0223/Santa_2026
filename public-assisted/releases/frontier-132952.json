@@ -1,0 +1,214 @@
+{
+  "portfolios": {
+    "sources": {
+      "asteriospanoras": {
+        "ref": "asteriospanoras/santa-2026-elf-programs-and-experiments",
+        "version": 160,
+        "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/160",
+        "license": "Apache 2.0",
+        "archive_sha256": "f027504ece1d50e0e74d9cc06f8df8ff7cd3a6da8aa4648b0fb8eafcdbfa73f6",
+        "local_zip": "asteriospanoras160.zip",
+        "files": {
+          "best_programs.csv": {
+            "sha256": "a7b96b0592312b1d212c01e8c0e948c58508024e18bea78d280d512c4a001521",
+            "score": 132997
+          }
+        }
+      },
+      "goodpjw2008": {
+        "ref": "goodpjw2008/santa-2026-dag-lns-programs",
+        "version": 26,
+        "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/26",
+        "license": "Apache 2.0",
+        "archive_sha256": "c381e1ddfdb0381e16dfcf0f0092fb29f2c2d380071063a47fabede25a91561c",
+        "local_zip": "goodpjw200826.zip",
+        "files": {
+          "our_programs.csv": {
+            "sha256": "077be7e0ae39ae730c01e4292316222f53b2051a6b6b636f5d9cf9d26ce2f8c9",
+            "score": 132954
+          },
+          "public_frontier.csv": {
+            "sha256": "35cb5f264aded5c461f52bb513d72baae3d899dc83ab98bc41383d2fa46826c6",
+            "score": 132956
+          }
+        }
+      },
+      "alexchilton": {
+        "ref": "alexchilton/santa-2026-rudolph-programs",
+        "version": 103,
+        "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/103",
+        "license": "CC0: Public Domain",
+        "archive_sha256": "cfcc63ba205081cc3d91518dc34dcc23bc54ed18f7f8f49c924c840fc72429c1",
+        "local_zip": "alexchilton103.zip",
+        "files": {
+          "rudolph_programs.csv": {
+            "sha256": "7747d59dba8183195d057331f8c071009a23f418441f613d9f077d4a2d0504a7",
+            "score": 132954
+          }
+        }
+      },
+      "royalacecat": {
+        "ref": "royalacecat/santa-2026-retained-replay-inputs-132952-direct",
+        "version": 1,
+        "url": "https://www.kaggle.com/datasets/royalacecat/santa-2026-retained-replay-inputs-132952-direct/versions/1",
+        "license": "Other (specified in description)",
+        "archive_sha256": "fd2a18846edaf6a03e83d5255fbb4b507765b60bdd2198c2d7798f9478d3bbc3",
+        "local_zip": "royalacecat1.zip",
+        "files": {
+          "asterios_132996.csv": {
+            "sha256": "8df92d0eb23c29c5dfe761b6080456e553cd51109e013a505b450686fcd655a3",
+            "score": 132996
+          },
+          "baseline_v97_133772.csv": {
+            "sha256": "cd9c0f7a95d2ebc3fdb2ab0ab289517074d708fba0fcfa4cc2b37c93280788b9",
+            "score": 133772
+          },
+          "kindasomethin_133813.csv": {
+            "sha256": "963471e8347e5827d62a8422315f900bf82effe432ec601e576cd38a0595868c",
+            "score": 133813
+          },
+          "mergepub_goodpjw_132954.csv": {
+            "sha256": "077be7e0ae39ae730c01e4292316222f53b2051a6b6b636f5d9cf9d26ce2f8c9",
+            "score": 132954
+          }
+        }
+      }
+    },
+    "base": 132841,
+    "after": 132838,
+    "rows": {
+      "scored_0141": {
+        "owner": "goodpjw2008",
+        "member": "our_programs.csv",
+        "credit": null,
+        "length": 128,
+        "base": 129
+      },
+      "scored_0172": {
+        "owner": "goodpjw2008",
+        "member": "our_programs.csv",
+        "credit": null,
+        "length": 158,
+        "base": 159
+      },
+      "scored_0549": {
+        "owner": "royalacecat",
+        "member": "asterios_132996.csv",
+        "credit": null,
+        "length": 115,
+        "base": 116
+      }
+    }
+  },
+  "search_295": {
+    "puzzle": "scored_0295",
+    "before": 121,
+    "after": 120,
+    "original": {
+      "mode": "incremental_diverse_deep",
+      "seed": 494068,
+      "rounds": 1800,
+      "parents": [
+        {
+          "source": "baseline_v97_133772.csv",
+          "sha256": "3aa0a1f118ced456883082a0bcd7139aacd834c9393cd3be00a917983fbe4eb8",
+          "length": 121
+        },
+        {
+          "source": "Sargis_signed_regions_133924",
+          "sha256": "515184a6bdf1e44a47ee7e74423fdfa01cbd97900dae718d0aae60fc71086522",
+          "length": 123
+        },
+        {
+          "source": "GoodPJW_1713_public",
+          "sha256": "1f1863b0eb721c9ec49d0581db9494abf28cc4af0ba482dcaa8a52f40a755de0",
+          "length": 123
+        },
+        {
+          "source": "Asterios_public_0922",
+          "sha256": "c74dc51e88b512db9e8d80afaaee872ac3bc535cc818aec316b4961c7ed69823",
+          "length": 122
+        }
+      ],
+      "result": 120,
+      "sha256": "53299b3acf4645f1dc40394c646ab729f5d7441db07c3043da6eafbd316e0299"
+    },
+    "additional": {
+      "mode": "anneal_diverse",
+      "seed": 876294,
+      "rounds": 1250,
+      "parents": [
+        {
+          "source": "repository combined",
+          "sha256": "3aa0a1f118ced456883082a0bcd7139aacd834c9393cd3be00a917983fbe4eb8",
+          "length": 121
+        },
+        {
+          "source": "retained 132952",
+          "sha256": "53299b3acf4645f1dc40394c646ab729f5d7441db07c3043da6eafbd316e0299",
+          "length": 120
+        },
+        {
+          "source": "independent",
+          "sha256": "99cbf1b4b024fc66c57c12486b66f6552e38b51d9d6a0367037473fd305d139f",
+          "length": 131
+        },
+        {
+          "source": "Sargis_signed_regions_133924",
+          "sha256": "515184a6bdf1e44a47ee7e74423fdfa01cbd97900dae718d0aae60fc71086522",
+          "length": 123
+        },
+        {
+          "source": "GoodPJW_1713_public",
+          "sha256": "1f1863b0eb721c9ec49d0581db9494abf28cc4af0ba482dcaa8a52f40a755de0",
+          "length": 123
+        },
+        {
+          "source": "Asterios_public_0922",
+          "sha256": "c74dc51e88b512db9e8d80afaaee872ac3bc535cc818aec316b4961c7ed69823",
+          "length": 122
+        }
+      ],
+      "result": 120,
+      "sha256": "560a36146c1179bbad885a452d819973bbd88c680f24259d67eb136d89ac2fed"
+    },
+    "source": "https://www.kaggle.com/datasets/royalacecat/santa-2026-retained-graph-search-source/versions/7",
+    "inputs": "https://www.kaggle.com/datasets/royalacecat/santa-2026-retained-replay-inputs-132952-direct/versions/1"
+  },
+  "engine": {
+    "ref": "royalacecat/santa-2026-retained-graph-search-source",
+    "version": 7,
+    "url": "https://www.kaggle.com/datasets/royalacecat/santa-2026-retained-graph-search-source/versions/7",
+    "archive": "5c2c01ca176a39698dc1363392c7266eba779b05c039ca875e0a28d5f09d7f4d",
+    "files": {
+      "common.inc": "2b876924774e19a9ba1ba1ed52351eb5485895be6759e3720b0d5091a50a61d6",
+      "main.inc": "7e514496bf56d073908cf137ebc9a6290826a422486316ef8f66577915625b52",
+      "compact.inc": "4132404aca1128d1e6c47eac6977a7a1577932a4438697eebc9e162ada5f3238",
+      "cross.inc": "7a742c6c5faca1727c57ec092b80d6eb7bb616d2c1ab2bc747cfc0789ea246bb",
+      "neutral.inc": "37f0eb32fa83f0b7d3d0a5262fa96253e824a7467c125c3e219c66a8187d4027",
+      "recipe_lookup.inc": "6eab4d783e02989a2b6027bdfeeea0c1f55a2000d0b75fe3eee376fe20a323a3",
+      "fast_perturb.inc": "5a2154f2e18db8888dd1de10684fb409015b01627b5f7817fbe4856a1a050cb2",
+      "cache_lookup.inc": "37a48bf4043e7c408f7e24c6a0a4917e9acde6cd133c881aa63339d641b3b591",
+      "cache_perturb.inc": "8cb736e327b7cbfc6c94607a30aac11f17b54ff653c77d33d0ba207def02c392",
+      "anneal.cpp": "0e4ec5db401e7b0642c93d3499634e8790dd78efa02f6ab689cf8be23e6befbb",
+      "anneal_seeded.cpp": "a99a1cc464ff34b87afb6e4ac0d3fbf239dbbf1a07dd610533862bfb82989e8b",
+      "incremental.cpp": "7a0d5327d0883e04c80c42761d7ec53e6cc3fbc45b36e0700bf5b1900dc09e8f",
+      "incremental_seeded.cpp": "6b1f50e8576796f99b823664055bfc2c4f3f86f905c2e22d9eb615dc7fab0c83",
+      "compact_rotate.cpp": "d2507768fa70f83f9f3bdb69218ef8e4bcec91ca100e1319956c91b94012c4cb",
+      "compact_rotate_seeded.cpp": "57fbb1f663d64815d31cdc35645b8e12cd9599aef485a2ae7170ab83cc78a410",
+      "anneal_retained.cpp": "52d3f8ef11217fe62c7197ef6b320df272736a96f55e7fb4d605ecef790a877a",
+      "incremental_retained.cpp": "d6b33ccdc59373941f82242ff5eb1cba6de2db976b918645cd340c15516af5f4",
+      "anneal_retained_oldest5.cpp": "ec70bb63c02c38d6155d146b58bc9851145425960223edd24927bd9af3cde1e9",
+      "incremental_retained_oldest5.cpp": "e83fee8db664f86b4abdd9ef58c51d10bc90fd52e95165767bf0804f8d20104f",
+      "anneal_diverse.cpp": "b60c8feead2a2754888ca0b6f58f271c00e9f7a0fc2192534f7f0720a83e479d",
+      "incremental_diverse.cpp": "13876df874176ae9434ea4f9f0ad7a0e2b06bdc3d1874df8dc49bcda8716952f",
+      "anneal_diverse16.cpp": "2c5523bc9762304051b39b0c15471ee4d87d15be45d0057dcfaa6b1f454aa71b",
+      "incremental_diverse16.cpp": "a34e0d0ee6ea90efb6d2ca360bd70cb0f336a92022b2d5c64166b9528b0a3369",
+      "anneal_diverse_deep.cpp": "4b2b8cd9d0e7c9658d42fc5184abc300894ac72f0c3f127e206fb1612b9be1aa",
+      "incremental_diverse_deep.cpp": "7ff8a67757bc123cd9809fb1c6da695c56622e31d143a97413edefa4f6bea591",
+      "cross_more.inc": "558b67a43402c72cabc2e30b11f797489c32cfdad19b02e658ffee54137fe1b1",
+      "anneal_crossover14.cpp": "056585fb1980f1869544c7ad796406afb200c4240ebe82fa1e25d927bcec99c8",
+      "incremental_crossover14.cpp": "323a058e6dfbceea8a322f26eb1df53d03605fab749dacac2c70876a6f7e5a58"
+    }
+  }
+}

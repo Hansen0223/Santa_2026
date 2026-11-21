@@ -23,3 +23,5 @@ Asterios Panoras 的 Gift per Run v64 将第 121 题由 46 条缩到 45 条。[�
 Asterios 第 158 版与 GoodPJW 第 25 版带来 3 道缩短。E-Max AI 的四道公开搜索分别获得 1 条改进；随后从新的本地候选出发，第 558 题进一步缩为 118 条。[程序来源及各题搜索](frontier-133772.json)
 
 Asterios 第 67 版公开笔记将第 380 题由 158 条缩至 157 条。[署名与版本](gift-380-v67.json)
+
+GoodPJW 第 26 版和 Asterios 的更正缩短第 141、172、549 题；从独立于 Pardheev 发布的历史输入重跑 E-Max AI 搜索，第 295 题由 121 条缩至 120 条。四道合计少 4 条。[版本、作者和逐题记录](frontier-132952.json)

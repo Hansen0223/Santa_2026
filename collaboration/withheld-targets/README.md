@@ -23,3 +23,7 @@ python -B collaboration/withheld-targets/compare.py --puzzles data/puzzles.csv -
 第一批 48 道题的独立解共省 4 条。第 120、345 题各省 1 条，第 670 题从 189 条缩到 187 条。三道题都能由保留目标独用分支的方法缩短，公开辅助路线未缩短。用同一方法另取接下来的 96 道独立题。[首批结果](terminal-shell-results.json.gz) · [扩展题号](terminal-shell-next.json)
 
 追加的 96 道独立题中，第 204、314 题各省 1 条。两批 144 道独立题共省 6 条，结束本次扩展。[96 道结果](terminal-shell-next-results.json.gz)
+
+## 从一组可用的数中反向删减
+
+选出同题多个目标共用的几个中间数，保留后续计算。先给前半段加入更多可选数，再反复移除仍能生成所有边界值的辅助数。两条路线各选 40 道，独立和组合程序分别形成 60、64 个不同前段，本次均未缩短。结束这一方向。[前段选择](discard_helpers.py) · [删减搜索](discard_helpers.cpp) · [逐题结果](discard-results.json.gz)
