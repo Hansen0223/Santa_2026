@@ -9,7 +9,7 @@ scored_0007,42,38,43,distinct-diamond/conditioned-claims.json.gz,146,132,132,89,
 scored_0008,39,35,40,distinct-diamond/conditioned-claims.json.gz,112,109,109,69,0
 scored_0009,18,13,18,helper-wave9.json,28,28,28,10,0
 scored_0010,43,38,45,distinct-diamond/conditioned-claims.json.gz,186,180,180,135,0
-scored_0011,37,35,38,distinct-diamond/conditioned-claims.json.gz,110,106,106,68,0
+scored_0011,37,35,38,distinct-diamond/conditioned-claims.json.gz,109,106,106,68,0
 scored_0012,39,36,40,distinct-diamond/claims.json.gz,193,180,180,140,0
 scored_0013,43,37,45,distinct-diamond/conditioned-claims.json.gz,184,176,176,131,0
 scored_0014,14,12,14,helper-wave9.json,25,24,24,10,0
@@ -26,7 +26,7 @@ scored_0024,21,22,22,proofs_ext,29,29,29,7,0
 scored_0025,42,38,43,distinct-diamond/claims.json.gz,119,117,117,74,0
 scored_0026,43,40,45,distinct-diamond/claims.json.gz,190,181,181,136,0
 scored_0027,42,39,43,distinct-diamond/conditioned-claims.json.gz,115,109,109,66,0
-scored_0028,42,40,43,distinct-diamond/claims.json.gz,122,118,118,75,0
+scored_0028,42,40,43,distinct-diamond/claims.json.gz,122,117,117,74,0
 scored_0029,18,14,18,helper-wave15.json,38,35,35,17,0
 scored_0030,43,40,45,distinct-diamond/conditioned-claims.json.gz,195,188,188,143,0
 scored_0031,38,35,40,distinct-diamond/conditioned-claims.json.gz,266,246,246,206,0
@@ -38,9 +38,9 @@ scored_0036,45,40,47,distinct-diamond/conditioned-claims.json.gz,238,233,233,186
 scored_0037,40,37,42,distinct-diamond/claims.json.gz,208,194,194,152,0
 scored_0038,38,35,40,distinct-diamond/conditioned-claims.json.gz,154,144,144,104,0
 scored_0039,40,37,41,distinct-diamond/claims.json.gz,120,111,111,70,0
-scored_0040,41,38,43,distinct-diamond/claims.json.gz,182,170,170,127,0
+scored_0040,41,38,43,distinct-diamond/claims.json.gz,181,170,170,127,0
 scored_0041,40,37,41,distinct-diamond/conditioned-claims.json.gz,119,115,115,74,0
-scored_0042,38,35,40,distinct-diamond/conditioned-claims.json.gz,171,165,165,125,0
+scored_0042,38,35,40,distinct-diamond/conditioned-claims.json.gz,169,165,165,125,0
 scored_0043,41,36,42,distinct-diamond/conditioned-claims.json.gz,231,210,210,168,0
 scored_0044,38,37,39,distinct-diamond/claims.json.gz,79,75,75,36,0
 scored_0045,42,40,43,distinct-diamond/claims.json.gz,166,160,160,117,0
@@ -60,7 +60,7 @@ scored_0058,42,38,44,distinct-diamond/conditioned-claims.json.gz,286,263,263,219
 scored_0059,38,36,40,conditional-helper-membership/pilot.json,149,139,139,99,0
 scored_0060,41,36,42,distinct-diamond/conditioned-claims.json.gz,272,251,251,209,0
 scored_0061,4,4,4,domain-bounds.csv,4,4,4,0,1
-scored_0062,39,35,40,distinct-diamond/conditioned-claims.json.gz,153,147,147,107,0
+scored_0062,39,35,40,distinct-diamond/conditioned-claims.json.gz,152,147,147,107,0
 scored_0063,40,38,41,distinct-diamond/claims.json.gz,102,101,101,60,0
 scored_0064,42,39,43,distinct-diamond/claims.json.gz,112,111,111,68,0
 scored_0065,19,21,21,proofs_ext,37,36,36,15,0
@@ -82,7 +82,7 @@ scored_0080,41,37,42,distinct-diamond/claims.json.gz,157,147,147,105,0
 scored_0081,39,36,40,distinct-diamond/claims.json.gz,133,126,126,86,0
 scored_0082,38,36,39,distinct-diamond/claims.json.gz,94,92,92,53,0
 scored_0083,42,37,44,distinct-diamond/conditioned-claims.json.gz,180,176,176,132,0
-scored_0084,19,16,19,conditioned-bounds.json,40,39,39,20,0
+scored_0084,19,16,19,conditioned-bounds.json,40,38,38,19,0
 scored_0085,40,38,41,distinct-diamond/claims.json.gz,93,89,89,48,0
 scored_0086,42,38,43,distinct-diamond/conditioned-claims.json.gz,110,100,100,57,0
 scored_0087,38,35,40,distinct-diamond/conditioned-claims.json.gz,260,242,242,202,0
@@ -141,7 +141,7 @@ scored_0139,43,40,45,distinct-diamond/conditioned-claims.json.gz,188,179,179,134
 scored_0140,43,40,45,distinct-diamond/claims.json.gz,167,162,162,117,0
 scored_0141,41,38,42,distinct-diamond/claims.json.gz,136,129,129,87,0
 scored_0142,38,35,39,distinct-diamond/claims.json.gz,127,120,120,81,0
-scored_0143,42,38,43,distinct-diamond/conditioned-claims.json.gz,115,114,114,71,0
+scored_0143,42,38,43,distinct-diamond/conditioned-claims.json.gz,114,114,114,71,0
 scored_0144,42,39,43,distinct-diamond/claims.json.gz,122,116,116,73,0
 scored_0145,42,37,44,distinct-diamond/conditioned-claims.json.gz,233,216,216,172,0
 scored_0146,41,37,43,distinct-diamond/conditioned-claims.json.gz,281,259,259,216,0
@@ -167,7 +167,7 @@ scored_0165,37,35,39,distinct-diamond/claims.json.gz,262,241,241,202,0
 scored_0166,40,35,42,distinct-diamond/conditioned-claims.json.gz,214,204,204,162,0
 scored_0167,39,36,40,distinct-diamond/claims.json.gz,271,251,251,211,0
 scored_0168,43,38,45,distinct-diamond/conditioned-claims.json.gz,288,264,264,219,0
-scored_0169,42,38,43,distinct-diamond/conditioned-claims.json.gz,105,99,99,56,0
+scored_0169,42,38,43,distinct-diamond/conditioned-claims.json.gz,103,99,99,56,0
 scored_0170,41,40,43,distinct-diamond/claims.json.gz,225,221,221,178,0
 scored_0171,40,37,42,distinct-diamond/claims.json.gz,133,126,126,84,0
 scored_0172,37,35,38,distinct-diamond/claims.json.gz,164,159,159,121,0
@@ -393,7 +393,7 @@ scored_0391,39,36,41,distinct-diamond/claims.json.gz,195,194,194,153,0
 scored_0392,38,35,39,distinct-diamond/conditioned-claims.json.gz,101,98,98,59,0
 scored_0393,16,13,16,helper-wave9.json,23,23,23,7,0
 scored_0394,43,40,44,distinct-diamond/conditioned-claims.json.gz,127,115,115,71,0
-scored_0395,41,39,41,domain-bounds.csv,94,84,84,43,0
+scored_0395,41,39,41,domain-bounds.csv,94,83,83,42,0
 scored_0396,17,18,18,proofs_ext,36,35,35,17,0
 scored_0397,41,37,43,distinct-diamond/claims.json.gz,191,186,186,143,0
 scored_0398,38,35,40,distinct-diamond/conditioned-claims.json.gz,214,204,204,164,0
@@ -404,7 +404,7 @@ scored_0402,41,38,42,distinct-diamond/claims.json.gz,94,90,90,48,0
 scored_0403,43,40,45,distinct-diamond/conditioned-claims.json.gz,232,230,230,185,0
 scored_0404,41,39,43,conditional-helper-membership/block-06.json.gz,111,102,102,59,0
 scored_0405,44,38,46,distinct-diamond/conditioned-claims.json.gz,288,269,269,223,0
-scored_0406,41,38,42,distinct-helper-edges/full-certificates.json,118,115,115,73,0
+scored_0406,41,38,42,distinct-helper-edges/full-certificates.json,116,115,115,73,0
 scored_0407,42,40,43,distinct-diamond/claims.json.gz,167,155,155,112,0
 scored_0408,43,40,44,distinct-diamond/claims.json.gz,166,164,164,120,0
 scored_0409,17,18,18,proofs_ext,21,21,21,3,0
@@ -429,7 +429,7 @@ scored_0427,42,40,44,distinct-diamond/claims.json.gz,118,116,116,72,0
 scored_0428,41,38,42,distinct-diamond/claims.json.gz,208,202,202,160,0
 scored_0429,42,40,43,distinct-diamond/claims.json.gz,119,112,112,69,0
 scored_0430,39,36,40,distinct-diamond/conditioned-claims.json.gz,90,88,88,48,0
-scored_0431,37,35,38,distinct-diamond/conditioned-claims.json.gz,88,82,82,44,0
+scored_0431,37,35,38,distinct-diamond/conditioned-claims.json.gz,87,82,82,44,0
 scored_0432,38,35,39,distinct-diamond/claims.json.gz,111,110,110,71,0
 scored_0433,42,40,43,distinct-diamond/claims.json.gz,137,131,131,88,0
 scored_0434,39,36,40,distinct-diamond/conditioned-claims.json.gz,114,105,105,65,0
@@ -497,9 +497,9 @@ scored_0495,40,38,41,distinct-diamond/claims.json.gz,96,95,95,54,0
 scored_0496,39,36,40,distinct-diamond/conditioned-claims.json.gz,106,106,106,66,0
 scored_0497,40,37,42,conditional-helper-membership/block-00.json.gz,180,170,170,128,0
 scored_0498,42,39,44,conditional-helper-membership/block-04.json.gz,117,116,116,72,0
-scored_0499,41,37,42,distinct-diamond/conditioned-claims.json.gz,114,110,110,68,0
+scored_0499,41,37,42,distinct-diamond/conditioned-claims.json.gz,112,110,110,68,0
 scored_0500,38,35,39,distinct-diamond/claims.json.gz,87,81,81,42,0
-scored_0501,39,36,40,distinct-diamond/conditioned-claims.json.gz,112,110,110,70,0
+scored_0501,39,36,40,distinct-diamond/conditioned-claims.json.gz,111,110,110,70,0
 scored_0502,38,35,40,distinct-diamond/conditioned-claims.json.gz,173,157,157,117,0
 scored_0503,37,35,38,distinct-diamond/conditioned-claims.json.gz,85,81,81,43,0
 scored_0504,41,37,43,distinct-diamond/conditioned-claims.json.gz,197,186,186,143,0
@@ -515,15 +515,15 @@ scored_0513,39,35,40,distinct-diamond/conditioned-claims.json.gz,159,149,149,109
 scored_0514,41,36,42,distinct-diamond/conditioned-claims.json.gz,223,211,211,169,0
 scored_0515,17,14,17,helper-wave13.json,27,26,26,9,0
 scored_0516,41,38,42,distinct-diamond/claims.json.gz,167,159,159,117,0
-scored_0517,43,40,45,distinct-diamond/conditioned-claims.json.gz,136,133,133,88,0
+scored_0517,43,40,45,distinct-diamond/conditioned-claims.json.gz,134,133,133,88,0
 scored_0518,41,36,42,distinct-diamond/conditioned-claims.json.gz,205,195,195,153,0
-scored_0519,41,39,43,conditional-helper-membership/extension.json,91,87,87,44,0
+scored_0519,41,39,43,conditional-helper-membership/extension.json,90,87,87,44,0
 scored_0520,41,37,43,distinct-diamond/conditioned-claims.json.gz,181,172,172,129,0
 scored_0521,38,35,40,conditional-helper-membership/block-02.json.gz,116,112,112,72,0
 scored_0522,38,35,39,distinct-diamond/conditioned-claims.json.gz,92,86,86,47,0
 scored_0523,39,37,40,distinct-diamond/claims.json.gz,110,105,105,65,0
 scored_0524,41,38,42,distinct-diamond/claims.json.gz,113,113,113,71,0
-scored_0525,38,35,39,distinct-diamond/claims.json.gz,120,107,107,68,0
+scored_0525,38,35,39,distinct-diamond/claims.json.gz,118,107,107,68,0
 scored_0526,41,36,42,distinct-diamond/conditioned-claims.json.gz,222,213,213,171,0
 scored_0527,42,38,44,distinct-diamond/conditioned-claims.json.gz,222,216,216,172,0
 scored_0528,41,37,43,distinct-diamond/conditioned-claims.json.gz,144,133,133,90,0
@@ -575,7 +575,7 @@ scored_0573,38,35,40,distinct-diamond/conditioned-claims.json.gz,195,178,178,138
 scored_0574,39,37,41,distinct-diamond/claims.json.gz,107,101,101,60,0
 scored_0575,39,37,40,distinct-diamond/claims.json.gz,104,103,103,63,0
 scored_0576,38,35,40,distinct-diamond/conditioned-claims.json.gz,173,161,161,121,0
-scored_0577,42,38,43,distinct-diamond/conditioned-claims.json.gz,129,116,116,73,0
+scored_0577,42,38,43,distinct-diamond/conditioned-claims.json.gz,128,116,116,73,0
 scored_0578,39,37,40,distinct-diamond/claims.json.gz,99,97,97,57,0
 scored_0579,40,36,41,distinct-diamond/conditioned-claims.json.gz,168,164,164,123,0
 scored_0580,42,38,43,distinct-diamond/claims.json.gz,221,216,216,173,0
@@ -600,7 +600,7 @@ scored_0598,36,35,37,distinct-diamond/claims.json.gz,84,81,81,44,0
 scored_0599,43,40,44,distinct-diamond/claims.json.gz,120,119,119,75,0
 scored_0600,3,3,3,domain-bounds.csv,3,3,3,0,1
 scored_0601,40,36,41,distinct-diamond/claims.json.gz,127,120,120,79,0
-scored_0602,39,36,40,distinct-diamond/conditioned-claims.json.gz,94,93,93,53,0
+scored_0602,39,36,40,distinct-diamond/conditioned-claims.json.gz,94,92,92,52,0
 scored_0603,41,40,43,distinct-diamond/claims.json.gz,120,117,117,74,0
 scored_0604,41,38,42,distinct-diamond/claims.json.gz,106,105,105,63,0
 scored_0605,42,38,43,distinct-diamond/claims.json.gz,170,163,163,120,0
@@ -615,7 +615,7 @@ scored_0613,38,36,40,conditional-helper-membership/block-05.json.gz,114,101,101,
 scored_0614,16,12,16,helper-wave5.json,20,20,20,4,0
 scored_0615,40,37,42,distinct-diamond/claims.json.gz,119,113,113,71,0
 scored_0616,38,35,39,distinct-diamond/conditioned-claims.json.gz,121,114,114,75,0
-scored_0617,37,36,39,conditional-helper-membership/block-03.json.gz,93,90,90,51,0
+scored_0617,37,36,39,conditional-helper-membership/block-03.json.gz,92,90,90,51,0
 scored_0618,38,35,39,distinct-diamond/claims.json.gz,107,104,104,65,0
 scored_0619,38,35,39,distinct-diamond/claims.json.gz,118,118,118,79,0
 scored_0620,18,19,19,proofs_ext,34,31,31,12,0
@@ -639,7 +639,7 @@ scored_0637,19,15,19,helper-wave9.json,29,28,28,9,0
 scored_0638,42,38,44,distinct-diamond/conditioned-claims.json.gz,283,270,270,226,0
 scored_0639,41,37,42,distinct-diamond/conditioned-claims.json.gz,103,101,101,59,0
 scored_0640,38,35,39,distinct-diamond/conditioned-claims.json.gz,225,208,208,169,0
-scored_0641,40,38,41,distinct-diamond/claims.json.gz,121,114,114,73,0
+scored_0641,40,38,41,distinct-diamond/claims.json.gz,119,114,114,73,0
 scored_0642,41,38,42,distinct-diamond/claims.json.gz,129,120,120,78,0
 scored_0643,43,40,44,distinct-diamond/claims.json.gz,127,125,125,81,0
 scored_0644,39,36,41,distinct-diamond/claims.json.gz,151,141,141,100,0
@@ -667,7 +667,7 @@ scored_0665,38,36,40,conditional-helper-membership/block-02.json.gz,95,92,92,52,
 scored_0666,40,37,41,distinct-diamond/claims.json.gz,153,147,147,106,0
 scored_0667,41,38,42,distinct-diamond/claims.json.gz+distinct-helper-edges/conditioned-full-certificates.json,120,119,119,77,0
 scored_0668,39,35,40,distinct-diamond/conditioned-claims.json.gz,102,101,101,61,0
-scored_0669,42,40,43,distinct-diamond/claims.json.gz,110,108,108,65,0
+scored_0669,42,40,43,distinct-diamond/claims.json.gz,109,108,108,65,0
 scored_0670,38,35,40,distinct-diamond/conditioned-claims.json.gz,189,177,177,137,0
 scored_0671,40,36,41,distinct-diamond/conditioned-claims.json.gz,198,191,191,150,0
 scored_0672,17,14,18,distinct-helper-edges/conditioned-full-certificates.json,57,55,55,37,0
@@ -711,7 +711,7 @@ scored_0709,40,37,41,distinct-diamond/claims.json.gz,103,101,101,60,0
 scored_0710,39,36,40,distinct-diamond/conditioned-claims.json.gz,117,117,117,77,0
 scored_0711,16,12,16,helper-wave6-refined.json,21,21,21,5,0
 scored_0712,40,36,41,distinct-diamond/claims.json.gz,197,187,187,146,0
-scored_0713,39,37,41,distinct-diamond/claims.json.gz,104,99,99,58,0
+scored_0713,39,37,41,distinct-diamond/claims.json.gz,103,99,99,58,0
 scored_0714,43,40,44,distinct-diamond/claims.json.gz+distinct-helper-edges/conditioned-full-certificates.json,143,141,141,97,0
 scored_0715,41,36,42,distinct-diamond/conditioned-claims.json.gz,125,118,118,76,0
 scored_0716,42,40,43,distinct-diamond/claims.json.gz,116,114,114,71,0
@@ -803,7 +803,7 @@ scored_0801,37,35,38,distinct-diamond/claims.json.gz,105,100,100,62,0
 scored_0802,38,35,39,distinct-diamond/claims.json.gz,184,183,183,144,0
 scored_0803,39,36,40,distinct-diamond/conditioned-claims.json.gz,141,129,129,89,0
 scored_0804,42,39,43,distinct-diamond/claims.json.gz,115,113,113,70,0
-scored_0805,38,35,39,distinct-helper-edges/full-certificates.json,115,113,113,74,0
+scored_0805,38,35,39,distinct-helper-edges/full-certificates.json,114,113,113,74,0
 scored_0806,38,35,39,distinct-diamond/conditioned-claims.json.gz,94,91,91,52,0
 scored_0807,38,35,39,distinct-diamond/claims.json.gz,125,116,116,77,0
 scored_0808,39,35,41,distinct-diamond/conditioned-claims.json.gz,261,247,247,206,0
@@ -893,7 +893,7 @@ scored_0891,42,39,43,distinct-diamond/conditioned-claims.json.gz,115,110,110,67,
 scored_0892,16,16,16,domain-bounds.csv,16,16,16,0,1
 scored_0893,41,38,42,distinct-diamond/conditioned-claims.json.gz,130,127,127,85,0
 scored_0894,42,40,43,distinct-diamond/claims.json.gz,113,112,112,69,0
-scored_0895,40,36,41,distinct-diamond/conditioned-claims.json.gz,129,122,122,81,0
+scored_0895,40,36,41,distinct-diamond/conditioned-claims.json.gz,129,121,121,80,0
 scored_0896,41,38,43,distinct-diamond/conditioned-claims.json.gz,135,132,132,89,0
 scored_0897,18,19,19,proofs_ext,35,35,35,16,0
 scored_0898,25,23,26,distinct-diamond/claims.json.gz,83,80,80,54,0
@@ -982,8 +982,8 @@ scored_0980,42,39,44,conditional-helper-membership/block-01.json.gz,131,130,130,
 scored_0981,15,16,16,proofs_ext,28,25,25,9,0
 scored_0982,44,38,46,distinct-diamond/conditioned-claims.json.gz,288,271,271,225,0
 scored_0983,42,40,44,distinct-diamond/claims.json.gz,120,117,117,73,0
-scored_0984,40,37,41,distinct-diamond/claims.json.gz,126,123,123,82,0
-scored_0985,39,35,40,distinct-diamond/claims.json.gz,111,109,109,69,0
+scored_0984,40,37,41,distinct-diamond/claims.json.gz,125,123,123,82,0
+scored_0985,39,35,40,distinct-diamond/claims.json.gz,110,109,109,69,0
 scored_0986,41,37,43,distinct-diamond/conditioned-claims.json.gz,178,170,170,127,0
 scored_0987,38,35,39,distinct-diamond/claims.json.gz,109,109,109,70,0
 scored_0988,42,39,43,distinct-diamond/claims.json.gz,116,114,114,71,0

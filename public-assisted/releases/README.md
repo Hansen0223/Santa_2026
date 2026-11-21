@@ -13,3 +13,5 @@ Asterios Panoras 第 153 版及其笔记本第 55 版、GoodPJW 第 22 版和在
 E-Max AI 发布的五组计算都已在固定输入上重新生成。两份解释器核对后，五份程序逐条吻合，本轮合并独立改进后，仓库还在 4 道题上合计少 6 条。[运行版本、输入来源与逐题校验](emax-133796-output.json)
 
 GoodPJW 第 23 版缩短了第 458 题。Asterios 的公开笔记本第 58 版缩短了第 76 题，其父本署名 GoodPJW。[版本、原作者和逐题差额](20261121-1035.json) · [GoodPJW 使用的 Wang Jakie 原始声明](../GoodPJW-v20-NOTICE.md)
+
+Asterios 第 155 版给出第 84 题的 38 条程序。E-Max AI 发布的新结果又将第 28、395、602、895 题各缩短 1 条。[逐题改进、作者和输入来源](frontier-133788.json)

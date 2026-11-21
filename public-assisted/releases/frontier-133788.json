@@ -1,0 +1,150 @@
+{
+  "before": 133788,
+  "before_sha256": "c17b04394f0c46de3e4c57948e0e72b9cb43e9f4c6ee4a72a954a8c4b483288e",
+  "after": 133783,
+  "sources": {
+    "asterios155": {
+      "catalog": {
+        "ref": "asteriospanoras/santa-2026-elf-programs-and-experiments",
+        "currentVersionNumber": 155,
+        "lastUpdated": "2026-11-21T02:31:30.370Z",
+        "title": "Santa 2026 Elf Calculator: Programs + Experiments",
+        "licenseName": "Apache 2.0",
+        "totalBytes": 817578
+      },
+      "archive_sha256": "356c8911d2f772278b23a0712dc6a19c907f6a760ffa45c19f1ed3a0fd0eb2c0",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/155",
+      "file_sha256": "63a826b5a1a26a329769189d5efa7fcb522f0f0d7ac550df689816857d5c9425"
+    },
+    "rudy99": {
+      "catalog": {
+        "ref": "alexchilton/santa-2026-rudolph-programs",
+        "currentVersionNumber": 99,
+        "lastUpdated": "2026-11-21T02:30:51.157Z",
+        "title": "Santa 2026 Rudolph programs",
+        "licenseName": "CC0: Public Domain",
+        "totalBytes": 511251
+      },
+      "archive_sha256": "066b18752d2cb824c39d2cf9f8ca443ce3e8af15c62d4db5c82330d416d3db15",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/99",
+      "file_sha256": "7a3d4b9f0756a6cc5f4fbfdefb6ce047c4d140590dc94375d5799f42865f6660"
+    },
+    "source-pub788": {
+      "session": 372025210,
+      "source": "https://www.kaggle.com/code/royalacecat/santa-2026-public-frontier-score-133-788?scriptVersionId=372025210",
+      "score": 133788,
+      "sha256": "02ec7f64c86b6605b8082207c1e0d8c1b059d3761cefc257cd0d6fac17091d0a",
+      "notebook_sha256": "ab291dc80964bb02614249d1792b601be3649c16098ed5e38bda114eb1907b89",
+      "file_sha256": "02ec7f64c86b6605b8082207c1e0d8c1b059d3761cefc257cd0d6fac17091d0a"
+    }
+  },
+  "rows": {
+    "scored_0084": {
+      "before": 39,
+      "after": 38,
+      "credit": "Asterios Panoras v155; public merge",
+      "source": "asterios155",
+      "hash": "fddac9ce4acd6de956666d929cd07d62945b72c4ec8db8b8bf48981401d568ee"
+    },
+    "scored_0028": {
+      "before": 118,
+      "after": 117,
+      "credit": "E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents goodpjw_cp_sat_0233, GoodPJW_1713_public",
+      "source": "source-pub788",
+      "hash": "48931cedc45de3887014f9aafb0a856b40ed37c897adbd46c14923c1a0b0e074",
+      "mode": "anneal_diverse",
+      "seed": 493779,
+      "rounds": 3000,
+      "donors": [
+        {
+          "rank": "1",
+          "source": "goodpjw_cp_sat_0233",
+          "program_sha256": "b42ac35494485eca23cdcb25c271bbebc5a3ecd414dd1c3b71b033cb266f295f"
+        },
+        {
+          "rank": "2",
+          "source": "GoodPJW_1713_public",
+          "program_sha256": "3e51828ae6d5a3ea396fbcdae1ed4bb6f421be14a622012610cd8b869f3ccd7a"
+        }
+      ]
+    },
+    "scored_0395": {
+      "before": 84,
+      "after": 83,
+      "credit": "E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents Hansen_248894967985, Our_v22_public, Additional_public_1_1713",
+      "source": "source-pub788",
+      "hash": "15ab9e1f1461d1eec18f863b2e5b420cbf23eca244306bcf1b42dc11254d5b6d",
+      "mode": "incremental_diverse",
+      "seed": 494151,
+      "rounds": 3000,
+      "donors": [
+        {
+          "rank": "1",
+          "source": "Hansen_248894967985",
+          "program_sha256": "fdf989feac42231951d52d4026890340933044ff558545b474438ced34f63cbd"
+        },
+        {
+          "rank": "2",
+          "source": "Our_v22_public",
+          "program_sha256": "b2e91bf320a5b52ee499671fca73f7b109a6d6564f21b02907796d4c664b5ff7"
+        },
+        {
+          "rank": "3",
+          "source": "Additional_public_1_1713",
+          "program_sha256": "3a97f9a15998b3275cdcf4309478a28ce5645f2d33b56d3504be620177f9687c"
+        }
+      ]
+    },
+    "scored_0602": {
+      "before": 93,
+      "after": 92,
+      "credit": "E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents Roman_1115_public, Sargis_signed_regions_133924",
+      "source": "source-pub788",
+      "hash": "8d4973180fbdeff470ef23a009586031554c134bf465032ee4442115b15b3dd0",
+      "mode": "anneal_diverse",
+      "seed": 494360,
+      "rounds": 3000,
+      "donors": [
+        {
+          "rank": "1",
+          "source": "Roman_1115_public",
+          "program_sha256": "87e0a9b1a35baeee5d818d1f42da2b11a222236b9f708ba03575ebb508c8e53e"
+        },
+        {
+          "rank": "2",
+          "source": "Sargis_signed_regions_133924",
+          "program_sha256": "50949d58265ba071fb9397de89a333282df7aca9572304e1d4ec9dd428a3c6d5"
+        }
+      ]
+    },
+    "scored_0895": {
+      "before": 122,
+      "after": 121,
+      "credit": "E-Max AI, Santa 2026 Public Frontier 133788; Wang Jakie, credited search parents atakan, 10_prvsiyan, Sargis_signed_regions_133924",
+      "source": "source-pub788",
+      "hash": "29b344cdfb7d2663872eded610383c6838a9291413eb7b7bccd6f44005b1f4af",
+      "mode": "anneal_diverse",
+      "seed": 494648,
+      "rounds": 3000,
+      "donors": [
+        {
+          "rank": "1",
+          "source": "atakan",
+          "program_sha256": "fb8f5db29b484356eab127c7cd03e16853240249301f192847d1033ad2c93677"
+        },
+        {
+          "rank": "2",
+          "source": "10_prvsiyan",
+          "program_sha256": "2f62f91fd5122b77a447e845f1ae13e6f72da11be874a78fc148964c07755af0"
+        },
+        {
+          "rank": "3",
+          "source": "Sargis_signed_regions_133924",
+          "program_sha256": "fcf584129a88fee37cc5ed06fe42e131da12120cf02156025fb160f455a9172c"
+        }
+      ]
+    }
+  },
+  "emax_bundle": "https://www.kaggle.com/datasets/royalacecat/santa-2026-replay-133788-lean/versions/1",
+  "emax_manifest_sha256": "1de2fcfa2500c1ea290d11f87c14c658ed279998c33a57054028f033c8d93f60"
+}
