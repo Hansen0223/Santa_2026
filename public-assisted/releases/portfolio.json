@@ -1,0 +1,55 @@
+{
+  "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
+  "instructions": 132532,
+  "sha256": "7a153aa475b2c8170509f111f281e5c6d57fbb4ebd8ccdb2215f88f046d0c122",
+  "sources": [
+    {
+      "name": "independent",
+      "revision": "0521078c877f1fea6b02d4409973cf9ef9b5f612",
+      "path": "submission.csv",
+      "csv_sha256": "e8db8dc1984fe6b0e4202ef85940ed8708666f57264b39ca6b25136fabf7c58c",
+      "full": true
+    },
+    {
+      "name": "public-assisted",
+      "revision": "0521078c877f1fea6b02d4409973cf9ef9b5f612",
+      "path": "public-assisted/submission.csv",
+      "csv_sha256": "570f9970f257fe1d4703f483b62d38dfd34d3ed5a8c95d4086a4e42793f96bfe",
+      "full": true
+    },
+    {
+      "name": "goodpjw-v40",
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/40",
+      "license": "Apache 2.0",
+      "archive": "goodpjw2008-40.zip",
+      "archive_sha256": "21d310b5e9c448df82c2d6fa2f2765a78f2d71d4371cf5420b3a0b714bd01504",
+      "member": "our_programs.csv",
+      "csv_sha256": "132ad1b43d8c0f89cb3da479070cde6cd152dd09bf8fe78f6cc631f8dca72e74",
+      "full": true
+    },
+    {
+      "name": "local-v182",
+      "path": "public-assisted/releases/v182-search-wins.csv",
+      "csv_sha256": "b56c922fad06c72a700c3449a53b55e85009cee774e5f3d9e9975ebd4865918e",
+      "full": false
+    }
+  ],
+  "previous_sha256": "10453740e4a249eaaf4dd43349e9cf50a3cdc05f8d39128c024c6e5a62fbac67",
+  "improved": {
+    "scored_0111": [
+      208,
+      207,
+      "goodpjw-v40"
+    ],
+    "scored_0374": [
+      213,
+      211,
+      "public-assisted"
+    ],
+    "scored_0618": [
+      101,
+      100,
+      "goodpjw-v40"
+    ]
+  }
+}

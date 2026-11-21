@@ -1,6 +1,6 @@
 # 开发协作进度
 
-更新于 11 月 21 日北京时间 18 时。本地最好候选为 132,536 条。[还原方法](../public-assisted/releases/evening-20261121.md) · [逐题上下界](puzzle-bounds.csv)
+更新于 11 月 21 日北京时间 18 时。最好候选为 132,532 条。[还原方法](../public-assisted/releases/portfolio.md) · [逐题上下界](puzzle-bounds.csv)
 
 后续研究优先探索能缩短程序的新方法。新候选合入时统一验算，已有结果复用原记录。
 
@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 改写多条加减算式及调整乘除指令的比例 | 进行中 | 已完成第一轮，正在用不同的程序起点比较两种搜索。 |
 | 用中心差值补充中间数 | 两条路线各 96 道已完成 | 两组均未缩短，停止扩大。[结果](circuit-cuts/reflection-results.json.gz) |
 | 同时替换两处共用算式 | 独立 370 道、组合 296 道完成 | 本轮独立主线 15 道省 18 条，组合第 268 题省 1 条。[逐题记录](recipe-union/paired-splice-results.json.gz) |
 | 共用一个新中间值重建多个出口 | 独立 96 道、组合 64 道完成 | 两路均未缩短，停止扩大。[逐题记录](circuit-cuts/fanout-results.json.gz) |
