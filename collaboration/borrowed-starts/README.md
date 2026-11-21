@@ -23,3 +23,7 @@ python -B collaboration/borrowed-starts/compare.py --phase development --lane ow
 从五个历史版本与当前独立解中挑选曾被反复使用、已从现有程序消失的中间数。在 16 道开发题和 32 道留出题上比较直接搜索、借新数和借旧数，全部按最终可执行程序的实际长度计分。[题号与历史版本](historical-design.json) · [搜索程序](historical_values.py)
 
 两组共 48 道题，三种方法均未省下指令，结束此方向。[逐题记录](historical-results.json.gz)
+
+## 可逆地改换起始数
+
+把两个起始数做一次可逆四则运算，以所得的数替换其中一个起始数，再做第二次替换。临时题保留从新起点恢复原数的算式。回到正式题时按实际用到的初值重新构造，计入完整指令数。36 道计分题包含 20 道每目标用步数较多的题，两条路线均与同种子同轮数的直接搜索比较。[已分配题号](seed-basis-design.json) · [实现](seed_basis.py)

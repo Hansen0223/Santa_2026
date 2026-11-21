@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 可逆地改变初始数 | 36 道已分配 | 两条路线分别尝试恢复原初值再重建完整程序。[题号](borrowed-starts/seed-basis-design.json) |
 | 借用旧解中消失的中间数 | 48 道公开辅助题已完成 | 三种方法均未省下指令，结束此方向。[结果](borrowed-starts/historical-results.json.gz) |
 | 协作分支的 25 个独立程序 | 23 道并入独立解 | 独立解共省 130 条，6 道题也使最好候选缩短 27 条。[各题差额](evidence/hiyohane-0b893d9.json) |
 | Hiyohane 的最新结果 | 第 815、870 题各省 1 条 | 第 493 题两边分别找到一份 249 条程序。[逐题来源](evidence/hiyohane-5531355.json) |
