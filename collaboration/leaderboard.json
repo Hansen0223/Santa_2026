@@ -1,60 +1,84 @@
 {
-  "checked_at": "2026-11-21T10:36:46.297617+00:00",
+  "checked_at": "2026-11-21T10:46:52.082081+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
   },
-  "teams": 2090,
+  "teams": 2092,
   "top": [
     {
+      "teamId": 17386183,
+      "submissionId": 58662396,
       "rank": 1,
       "displayScore": "127200",
-      "teamId": 17386183
+      "medal": "GOLD",
+      "inTheMoney": true
     },
     {
+      "teamId": 17395013,
+      "submissionId": 58662558,
       "rank": 2,
-      "displayScore": "127539",
-      "teamId": 17395013
+      "displayScore": "127514",
+      "medal": "GOLD",
+      "inTheMoney": true
     },
     {
+      "teamId": 17384559,
+      "submissionId": 58650022,
       "rank": 3,
       "displayScore": "128300",
-      "teamId": 17384559
+      "medal": "GOLD",
+      "inTheMoney": true
     },
     {
+      "teamId": 17390199,
+      "submissionId": 58657538,
       "rank": 4,
       "displayScore": "129285",
-      "teamId": 17390199
+      "medal": "GOLD",
+      "inTheMoney": true
     },
     {
+      "teamId": 17384935,
+      "submissionId": 58662504,
       "rank": 5,
       "displayScore": "129420",
-      "teamId": 17384935
+      "medal": "GOLD"
     },
     {
+      "teamId": 17405703,
+      "submissionId": 58662335,
       "rank": 6,
       "displayScore": "129447",
-      "teamId": 17405703
+      "medal": "GOLD"
     },
     {
+      "teamId": 17387205,
+      "submissionId": 58649204,
       "rank": 7,
       "displayScore": "129498",
-      "teamId": 17387205
+      "medal": "GOLD"
     },
     {
+      "teamId": 17398383,
+      "submissionId": 58659967,
       "rank": 8,
       "displayScore": "129874",
-      "teamId": 17398383
+      "medal": "GOLD"
     },
     {
+      "teamId": 17385271,
+      "submissionId": 58662556,
       "rank": 9,
-      "displayScore": "129913",
-      "teamId": 17385271
+      "displayScore": "129902",
+      "medal": "GOLD"
     },
     {
+      "teamId": 17386955,
+      "submissionId": 58633251,
       "rank": 10,
       "displayScore": "129996",
-      "teamId": 17386955
+      "medal": "GOLD"
     }
   ],
   "full_response_file_sha256": "ea4072c963161a3fb10324803ccfb24ffce0c83cdcba437d7ebabcf8257150fe"

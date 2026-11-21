@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132530,
-  "sha256": "2c0c961d51b3333b3447fedcec644bd08ad3ebd8b1cd23173458b12afbb990ca",
+  "instructions": 132522,
+  "sha256": "241d5566e47ac6453371f567c6a61f1b620958cccde1fb3e6d71a4084da9750e",
   "sources": [
     {
       "name": "repository",
@@ -11,42 +11,67 @@
       "full": true
     },
     {
-      "name": "rudolph-v123",
-      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/123",
-      "license": "CC0: Public Domain",
-      "archive": "alexchilton-123.zip",
-      "archive_sha256": "8137fc22f3299998682361e64ef2280574b2beee4549947e44048e9812616956",
-      "member": "rudolph_programs.csv",
-      "csv_sha256": "a3bde86406c1ef02d5474662b66a8e51e390cc3201cdf0aad97090dced517020",
+      "name": "ishankarnick-v5",
+      "url": "https://www.kaggle.com/datasets/ishankarnick/santa-2026-frontier-programs/versions/5",
+      "license": "Apache 2.0",
+      "archive": "ishankarnick-5.zip",
+      "archive_sha256": "bdef41928e6f0984940f326551e2afdbd68c4f48b27491c75b9a8bab2dd3cdf4",
+      "member": "submission.csv",
+      "csv_sha256": "5ea463cf4a2d778656c2e62cf63b3ca5f7ad99c05bb5f3deeceab783c1eaef7f",
+      "full": true
+    },
+    {
+      "name": "goodpjw2008-v41",
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/41",
+      "license": "Apache 2.0",
+      "archive": "goodpjw2008-41.zip",
+      "archive_sha256": "9edf922cae10b4a53ab8089f33f260583d91ef9b74ab6304027a703154a82afd",
+      "member": "our_programs.csv",
+      "csv_sha256": "b1c8169a91e348985f46b803c6a9797b658a8819a864b8fbc055121a34805ab5",
       "full": true
     }
   ],
-  "previous_sha256": "10453740e4a249eaaf4dd43349e9cf50a3cdc05f8d39128c024c6e5a62fbac67",
+  "previous_sha256": "2c0c961d51b3333b3447fedcec644bd08ad3ebd8b1cd23173458b12afbb990ca",
   "improved": {
-    "scored_0111": [
-      208,
-      207,
-      "rudolph-v123"
+    "scored_0068": [
+      116,
+      115,
+      "ishankarnick-v5"
     ],
-    "scored_0374": [
-      213,
-      211,
-      "repository"
+    "scored_0142": [
+      120,
+      119,
+      "ishankarnick-v5"
     ],
-    "scored_0618": [
-      101,
-      100,
-      "rudolph-v123"
+    "scored_0295": [
+      120,
+      119,
+      "ishankarnick-v5"
     ],
-    "scored_0689": [
-      181,
-      180,
-      "rudolph-v123"
+    "scored_0390": [
+      93,
+      92,
+      "ishankarnick-v5"
     ],
-    "scored_0751": [
-      206,
-      205,
-      "rudolph-v123"
+    "scored_0563": [
+      108,
+      107,
+      "ishankarnick-v5"
+    ],
+    "scored_0736": [
+      109,
+      108,
+      "ishankarnick-v5"
+    ],
+    "scored_0907": [
+      114,
+      113,
+      "ishankarnick-v5"
+    ],
+    "scored_0930": [
+      80,
+      79,
+      "goodpjw2008-v41"
     ]
   }
 }

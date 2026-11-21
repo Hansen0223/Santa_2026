@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 18:53
+
+Ishan Karnick 第 5 版在七题各省一条，GoodPJW 第 41 版在第 930 题省一条，最好候选为 **132,522 条**。[还原方法与逐题来源](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 18:40
 
 第 689 和 751 题各省 1 条，最好候选降至 **132,530 条**。Rudolph 第 123 版与仓库的公开辅助程序即可重建完整解。独立搜索中，对 410 道题尝试更换加减程序的起点，与相同轮数的直接搜索逐题取短后，18 题共省 21 条。合并协作者进展后，独立解为 **139,599 条**。北京时间 18:36，官方榜首降至 127,200 条。[候选与来源](public-assisted/releases/portfolio.md) · [独立搜索逐题结果](collaboration/circuit-cuts/transposed-sums-results.json.gz)

@@ -1,6 +1,6 @@
 # 开发协作进度
 
-更新于 11 月 21 日北京时间 18:40。本地最好候选为 132,530 条。[还原方法](../public-assisted/releases/portfolio.md) · [逐题上下界](puzzle-bounds.csv)
+更新于 11 月 21 日北京时间 18:53。本地最好候选为 132,522 条。[还原方法](../public-assisted/releases/portfolio.md) · [逐题上下界](puzzle-bounds.csv)
 
 后续研究优先探索能缩短程序的新方法。新候选合入时统一验算，已有结果复用原记录。
 
