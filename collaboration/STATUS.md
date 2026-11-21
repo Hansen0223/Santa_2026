@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 保留目标的最后几步，重建共用部分 | 两条路线各 48 道 | 同时重建所有目标共用的一组中间数。[题号](withheld-targets/terminal-shell-design.json) · [程序](withheld-targets/terminal_shell.py) |
 | 在协作分支的 25 道题上重搜 | 已完成 | 独立解另省 129 条，两条路线按题择短后，最好候选另省 64 条。[输入与结果](recipe-union/contributor-results.json.gz) |
 | 72 个位置搜索后编回 48 个 | 两条路线各 36 道 | 选取真实寄存器占用较高的程序。[题号](register-search/relaxed-design.json) |
 | 对新协作程序继续搜索 | 25 道 | 两种搜索各 1,600 轮，采用两种不同的起始程序。[实现](recipe-union/contributor_continuation.py) |

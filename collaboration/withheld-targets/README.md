@@ -15,3 +15,7 @@
 ```shell
 python -B collaboration/withheld-targets/compare.py --puzzles data/puzzles.csv --out work/replay --phase extension --block 0 --replay-only
 ```
+
+## 保留结尾，重建共用部分
+
+对 48 道题同时保留所有目标的最后三层算式，或者保留每个目标独用的整条分支。把它们需要的中间数作为一组新目标，求出更短的前半段，再接回结尾。两条路线使用同一组题。[题号和预算](terminal-shell-design.json) · [搜索程序](terminal_shell.py)
