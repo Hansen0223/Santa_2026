@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:08
+
+Hiyohane 刚提交的第 815、870 题各再省 1 条。本地最短候选为 **133,773 条**，距 11:00 官方榜首 128,330 条相差 5,443 条。第 493 题双方独立找到了两份不同的 249 条程序，保留本地找到的程序，合并记录保留另一份。[合并的三道题](collaboration/evidence/hiyohane-5531355.json) · [作者提交](https://github.com/Hansen0223/Santa_2026/commit/553135531d60b3d780104b6cdfadff1c65f79016)
+
 ## 北京时间 11 月 21 日 11:06
 
 本地最好候选 **133,775 条**，比上一版少 8 条，距 11:00 官方榜首 128,330 条还差 5,445 条。独立候选 **140,225 条**，比上一版少 29 条。原定的 840 道独立题已完成，148 道比实验起点短，共省 198 条。另一组 40 道题的共享前缀实验在第 871 题获得独有改进；第 493 题通过保留部分重复计算由 251 条降至 249 条。[八道公开改进](public-assisted/releases/frontier-133780.json) · [840 道题](collaboration/borrowed-starts/results/summary.json) · [40 道题](collaboration/borrowed-starts/shared-prefix-results.json.gz) · [第 493 题](collaboration/register-search/README.md)

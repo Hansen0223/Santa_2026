@@ -1,0 +1,32 @@
+{
+  "source": "https://github.com/Hansen0223/Santa_2026/commit/553135531d60b3d780104b6cdfadff1c65f79016",
+  "rows": {
+    "scored_0493": {
+      "id": "scored_0493",
+      "previous": 251,
+      "published": 249,
+      "our": 249,
+      "same_program": false,
+      "published_program_sha256": "982e3fbcd0cc9903b25cead97e465ad8c949f977140a0ec21db9849a0097c9a8",
+      "our_program_sha256": "a4c2b5272ba1f465cb04dce84ce006914bf6337764288f4c4e07c53618edf496"
+    },
+    "public-assisted/scored_0815": {
+      "id": "scored_0815",
+      "previous": 212,
+      "published": 211,
+      "our": 212,
+      "same_program": false,
+      "published_program_sha256": "20a0d9481dc0acca2198641801e1af5bce2bbaa9c5ef8484d9999fae1a980531",
+      "our_program_sha256": "6a27c3574a62a18c34c07fcdf5748e4e3a8026af854dba79712020321a1c96e7"
+    },
+    "public-assisted/scored_0870": {
+      "id": "scored_0870",
+      "previous": 213,
+      "published": 212,
+      "our": 213,
+      "same_program": false,
+      "published_program_sha256": "7ff8a816089c73cc31eec659399bbbcdb37fc4787ecce5bc876388e6ae4b6e6e",
+      "our_program_sha256": "254a1cb5d8c7689f7006195b36e108a39ef98c570b55fc5a2d27e2caeaa87697"
+    }
+  }
+}

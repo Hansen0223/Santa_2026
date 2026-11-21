@@ -21,3 +21,5 @@ python -B collaboration/borrowed-starts/compare.py --phase development --lane ow
 ## 借用旧解中消失的中间数
 
 从五个历史版本与当前独立解中挑选曾被反复使用、已从现有程序消失的中间数。在 16 道开发题和 32 道留出题上比较直接搜索、借新数和借旧数，全部按最终可执行程序的实际长度计分。[题号与历史版本](historical-design.json) · [搜索程序](historical_values.py)
+
+两组共 48 道题，三种方法均未省下指令，结束此方向。[逐题记录](historical-results.json.gz)
