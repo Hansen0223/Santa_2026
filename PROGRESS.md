@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:09
+
+Rudolph 第 126 版让第 8 题再省 1 条。组合候选现为 **132,513 条**，已重放全部题目。[固定输入和重建方法](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 20:01
 
 独立解降至 **139,515 条**。沿现有指令重算，在 955 道独立题上与直接搜索逐题取短，20 道共省 20 条。另在反向求解试验中，直接搜索使第 418 题再省 1 条。把这些新程序与最新公开程序重新组合，组合候选保持 **132,514 条**。[重算结果](collaboration/circuit-cuts/README.md) · [反向试验](collaboration/borrowed-starts/README.md)

@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132514,
-  "sha256": "095b8bca4878789ab1cd56c33ddb7a3e091792171e1afcb3ed1abd26b192149e",
+  "instructions": 132513,
+  "sha256": "22a840c409fdfc3d2e56001ea2a0137328e8ca4c5dececb826652a6555f81516",
   "sources": [
     {
       "name": "repository",
@@ -11,15 +11,15 @@
       "full": true
     },
     {
-      "name": "asteriospanoras-189",
-      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/189",
-      "archive": "asteriospanoras-189.zip",
-      "archive_sha256": "fde61e7504fa4c5930e87bbf54c3104b98226690f30cbefcbbec2a647c3319b5",
-      "member": "best_programs.csv",
-      "csv_sha256": "6b24aaa649c6eca1c1da58f49bcc326825e7601ad929ebcc2ca1abccdfce6568",
-      "license": "Apache 2.0",
+      "name": "alexchilton-126",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/126",
+      "archive": "alexchilton-126.zip",
+      "archive_sha256": "04fe4522bf775750e5e93b8ee913ca3382b9da58cf7e0e1a46ca6df1a7540fdc",
+      "member": "rudolph_programs.csv",
+      "csv_sha256": "925b601709059a86d4ed0b1aab6a0d2a45aac1f6dfa4e3442e74cd8e9112ad34",
+      "license": "CC0: Public Domain",
       "full": true,
-      "replayed_instructions": 132618
+      "replayed_instructions": 132617
     },
     {
       "name": "Asterios Panoras notebook 372173182",
@@ -32,12 +32,12 @@
       "full": false
     }
   ],
-  "previous_sha256": "3de9c10837c7911378146c40962ae31038d9511330cd587c3fd5fd3a713c69d5",
+  "previous_sha256": "095b8bca4878789ab1cd56c33ddb7a3e091792171e1afcb3ed1abd26b192149e",
   "improved": {
-    "scored_0290": [
-      148,
-      147,
-      "Asterios Panoras notebook 372173182"
+    "scored_0008": [
+      103,
+      102,
+      "alexchilton-126"
     ]
   }
 }
