@@ -1,0 +1,161 @@
+{
+  "base_commit": "c982b16",
+  "method": "solvers.graphs.virtual_search + solvers.native.virtual.cpp (ultra settings) on the independent line, plus per-puzzle cross-line transfer",
+  "settings": {
+    "leaves": 160,
+    "width": 10,
+    "scan": 2,
+    "joins": 16383,
+    "style": 5,
+    "tail": 6,
+    "seeds": "20261126 / 20261127"
+  },
+  "independent": {
+    "before": 139766,
+    "after": 139732,
+    "sha256": "b79e6240c4ef26b2fe5a509d72c804d5673aee954c39883f2ffc37c68a379e74",
+    "wins": {
+      "scored_0104": [
+        243,
+        242
+      ],
+      "scored_0106": [
+        233,
+        232
+      ],
+      "scored_0119": [
+        231,
+        227
+      ],
+      "scored_0240": [
+        114,
+        113
+      ],
+      "scored_0263": [
+        231,
+        229
+      ],
+      "scored_0264": [
+        215,
+        214
+      ],
+      "scored_0310": [
+        110,
+        109
+      ],
+      "scored_0321": [
+        294,
+        293
+      ],
+      "scored_0352": [
+        237,
+        236
+      ],
+      "scored_0372": [
+        124,
+        123
+      ],
+      "scored_0483": [
+        175,
+        174
+      ],
+      "scored_0488": [
+        157,
+        156
+      ],
+      "scored_0494": [
+        216,
+        215
+      ],
+      "scored_0502": [
+        173,
+        172
+      ],
+      "scored_0505": [
+        112,
+        111
+      ],
+      "scored_0527": [
+        222,
+        221
+      ],
+      "scored_0671": [
+        198,
+        197
+      ],
+      "scored_0692": [
+        208,
+        207
+      ],
+      "scored_0740": [
+        144,
+        143
+      ],
+      "scored_0795": [
+        189,
+        187
+      ],
+      "scored_0815": [
+        211,
+        210
+      ],
+      "scored_0826": [
+        201,
+        200
+      ],
+      "scored_0844": [
+        269,
+        267
+      ],
+      "scored_0850": [
+        186,
+        185
+      ],
+      "scored_0870": [
+        212,
+        211
+      ],
+      "scored_0912": [
+        220,
+        218
+      ],
+      "scored_0993": [
+        222,
+        221
+      ]
+    }
+  },
+  "public_assisted": {
+    "before": 133639,
+    "after": 133634,
+    "sha256": "5aff5a6d5c83742ba3f28ff28e89b01a53c68f5a07c2ee2fadaf54bd6b53443a",
+    "wins": {
+      "scored_0374": [
+        214,
+        213,
+        "ultra"
+      ],
+      "scored_0505": [
+        112,
+        111,
+        "independent"
+      ],
+      "scored_0756": [
+        152,
+        151,
+        "ultra"
+      ],
+      "scored_0815": [
+        211,
+        210,
+        "independent"
+      ],
+      "scored_0870": [
+        212,
+        211,
+        "independent"
+      ]
+    }
+  },
+  "verification": "python -B elf.py data/puzzles.csv <submission.csv | public-assisted/submission.csv>"
+}
