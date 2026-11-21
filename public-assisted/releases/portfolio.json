@@ -1,13 +1,13 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 132498,
-  "sha256": "bd6997a9c6aa1b21f9424d34fd84e8dc811c48689664e40a57c37bf772d58273",
+  "instructions": 132496,
+  "sha256": "a1af826e648e3f1a688cd571821394b465dc3600e37d9028eeed3d22fffdca61",
   "sources": [
     {
       "name": "repository",
-      "revision": "f588765207f61cf7e780f6f97432eb7a112fa8f1",
+      "revision": "6088f1b89a902b6910fa55fd227a8c024a34e911",
       "path": "public-assisted/submission.csv",
-      "csv_sha256": "cfd9ff868dcd9219bb5b1ee9d664d20713dda35bd2f0cb64382008634cd73756",
+      "csv_sha256": "bf94004bad4970ac2110bc61f449504c5e50d10ca82f01c5d2c66cafe4836689",
       "full": true
     },
     {
@@ -42,27 +42,15 @@
       "full": false
     }
   ],
-  "previous_sha256": "0f6902ae51ccea2e0ea792a10e08f96405414f140e4f8c9f5a6d10c23c6674ea",
+  "previous_sha256": "bd6997a9c6aa1b21f9424d34fd84e8dc811c48689664e40a57c37bf772d58273",
   "improved": {
-    "scored_0505": [
-      106,
-      105,
-      "pardheev notebook 372197498"
-    ],
-    "scored_0809": [
-      109,
-      108,
-      "pardheev notebook 372197498"
-    ],
-    "scored_0880": [
-      36,
-      34,
-      "asteriospanoras notebook 372197665"
+    "scored_0190": [
+      116,
+      114,
+      "repository"
     ]
   },
   "improved_credits": {
-    "scored_0505": "Pardheev notebook 372197498",
-    "scored_0809": "Pardheev notebook 372197498",
-    "scored_0880": "Asterios Panoras notebook 372197665"
+    "scored_0190": "Independent repository program, optimized with the control configuration of the GoodPJW / E-Max AI search."
   }
 }
