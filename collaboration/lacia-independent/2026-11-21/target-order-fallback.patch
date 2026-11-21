@@ -1,0 +1,52 @@
+--- a/graph.py
++++ b/graph.py
+@@ -81,29 +81,36 @@
+                 membership |= target_bit
+         groups[membership] |= bits[left] | bits[right]
+     max_mask = (1 << len(targets)) - 1
+-    beam = [(0, 0, seed_bits, ())]
++    # Coverage distributes over computed | closure and never depends on
++    # the path used to produce the same computed values.
++    target_specs = [(bit, closure, sum(p for member, _, p, _ in target_specs
++                                      if closure & member), value)
++                    for bit, closure, _, value in target_specs]
++    needed_cache = {}
++    beam = [(0, 0, seed_bits, (), 0)]
+     complete = []
+     for _ in targets:
+         next_states = {}
+-        for peak, _, computed, order in beam:
+-            for bit, closure, _, target in target_specs:
++        for peak, _, computed, order, prior_covered in beam:
++            for bit, closure, closure_covered, target in target_specs:
+                 if computed & bit:
+                     continue
+                 combined = computed | closure
+-                covered = 0
+-                for member, _, pattern, _ in target_specs:
+-                    if combined & member:
+-                        covered |= pattern
+-                needed = 0
+-                for pattern, inputs in groups.items():
+-                    if not pattern & covered:
+-                        needed |= inputs
++                covered = prior_covered | closure_covered
++                needed = needed_cache.get(covered)
++                if needed is None:
++                    needed = 0
++                    for pattern, inputs in groups.items():
++                        if not pattern & covered:
++                            needed |= inputs
++                    if len(needed_cache) < 4096:
++                        needed_cache[covered] = needed
+                 boundary = (combined & needed).bit_count()
+                 rank = (max(peak, boundary), boundary, combined, (*order, target))
+                 if covered == max_mask:
+                     complete.append(rank)
+-                elif combined not in next_states or rank < next_states[combined]:
+-                    next_states[combined] = rank
++                elif combined not in next_states or rank < next_states[combined][:4]:
++                    next_states[combined] = (*rank, covered)
+         beam = heapq.nsmallest(width, next_states.values())
+         if not beam:
+             break
