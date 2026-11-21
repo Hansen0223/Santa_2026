@@ -180,14 +180,20 @@ def main():
     parser.add_argument('--donors',type=Path,nargs='+',required=True)
     for name,n in [('count',90),('offset',0),('jobs',6),('pairs',3),('rounds',350)]:
         parser.add_argument('--'+name,type=int,default=n)
+    parser.add_argument('--method',choices=('cut','shared-outputs'),default='cut')
     args = parser.parse_args()
     puzzles = read_puzzles(args.puzzles)
     bank = read_submission(args.parent)
     donors = {path.name:read_submission(path) for path in args.donors}
     if len(donors)!=len(args.donors):
         raise ValueError('Donors need distinct file names')
+    worker = work
+    salt = 'cutmix1-'
+    if args.method=='shared-outputs':
+        from shared_outputs import work as worker
+        salt = 'shared-outputs1-'
     jobs = []
-    for p in sorted(puzzles,key=lambda x:hashlib.sha256(('cutmix1-'+x.id).encode()).digest()):
+    for p in sorted(puzzles,key=lambda x:hashlib.sha256((salt+x.id).encode()).digest()):
         parent = bank[p.id]
         if len(parent)<20:
             continue
@@ -207,13 +213,13 @@ def main():
             jobs.append((p,parent,[(n,t) for _,n,t in best],args.engine,args.rounds))
     wins,rows = {},{}
     with ProcessPoolExecutor(args.jobs) as pool:
-        for i,t,row in pool.map(work,jobs[args.offset:args.offset+args.count]):
+        for i,t,row in pool.map(worker,jobs[args.offset:args.offset+args.count]):
             rows[i] = row
             if len(t)<len(bank[i]):
                 wins[i] = t
     args.out.mkdir(exist_ok=True,parents=True)
     write_submission(args.out/'wins.csv',[p for p in puzzles if p.id in wins],wins)
-    record = dict(eligible=len(jobs),parent_sha256=sha256(args.parent),engine_sha256=sha256(args.engine),
+    record = dict(method=args.method,eligible=len(jobs),parent_sha256=sha256(args.parent),engine_sha256=sha256(args.engine),
                   donors={f.name:sha256(f) for f in args.donors},
                   settings={k:v for k,v in vars(args).items() if isinstance(v,int)},rows=rows)
     (args.out/'results.json.gz').write_bytes(gzip.compress(json.dumps(record,separators=(',',':')).encode(),mtime=0))

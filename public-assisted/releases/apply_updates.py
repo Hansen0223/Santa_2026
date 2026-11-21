@@ -1,6 +1,7 @@
 """Apply credited, hash-pinned row improvements to an existing Santa 2026 submission."""
 import argparse
 import ast
+import base64
 import csv
 import hashlib
 import io
@@ -10,6 +11,7 @@ import subprocess
 import tempfile
 import sys
 import zipfile
+import zlib
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -30,6 +32,11 @@ def read_rows(source, archives):
         if len(assignments) != 1:
             raise ValueError('Expected one assignment of the program table')
         values = ast.literal_eval(assignments[0])
+        if 'encoding' in source:
+            if source['encoding'] != 'base64-zlib-json' or not isinstance(values, str):
+                raise ValueError('Unrecognized notebook program encoding')
+            data = base64.b64decode(''.join(values.split()), validate=True)
+            values = json.loads(zlib.decompress(data))
         return {i: tuple(map(tuple, tape)) for i, tape in values.items()}
     if 'archive' in source:
         path = archives / source['archive']

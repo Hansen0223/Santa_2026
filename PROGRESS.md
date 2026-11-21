@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 20:48
+
+组合候选降至 **132,498 条**。Pardheev 提供的第 505 和 809 题各省 1 条，Asterios Panoras 的第 880 题省 2 条。[三个固定文件与还原方法](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 20:34
 
 第 505、524、563、607、854 题各省 1 条，组合候选达 **132,502 条**。从 E-Max AI 的固定版本下载一个文件即可重建。[作者及逐题改进](public-assisted/releases/portfolio.md)
