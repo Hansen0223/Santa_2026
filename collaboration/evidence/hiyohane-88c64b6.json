@@ -1,0 +1,72 @@
+{
+  "source": "https://github.com/Hansen0223/Santa_2026/commit/88c64b6dc198a28d788898fcade2346e2e35c11e",
+  "author": "Hiyohane",
+  "rows": {
+    "scored_0031": {
+      "parent": 266,
+      "contributed": 265,
+      "own": 266,
+      "public": 246
+    },
+    "scored_0033": {
+      "parent": 223,
+      "contributed": 222,
+      "own": 223,
+      "public": 208
+    },
+    "scored_0069": {
+      "parent": 295,
+      "contributed": 294,
+      "own": 295,
+      "public": 273
+    },
+    "scored_0107": {
+      "parent": 263,
+      "contributed": 262,
+      "own": 263,
+      "public": 244
+    },
+    "scored_0163": {
+      "parent": 273,
+      "contributed": 272,
+      "own": 273,
+      "public": 245
+    },
+    "scored_0441": {
+      "parent": 191,
+      "contributed": 190,
+      "own": 191,
+      "public": 177
+    },
+    "scored_0444": {
+      "parent": 257,
+      "contributed": 256,
+      "own": 257,
+      "public": 237
+    },
+    "scored_0508": {
+      "parent": 214,
+      "contributed": 213,
+      "own": 214,
+      "public": 201
+    },
+    "scored_0573": {
+      "parent": 195,
+      "contributed": 194,
+      "own": 195,
+      "public": 178
+    },
+    "scored_0781": {
+      "parent": 257,
+      "contributed": 256,
+      "own": 257,
+      "public": 242
+    },
+    "scored_0902": {
+      "parent": 224,
+      "contributed": 223,
+      "own": 224,
+      "public": 209
+    }
+  }
+}

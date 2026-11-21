@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:26
+
+Hiyohane 同时发布的 11 个独立程序全部较短，独立候选达到 **139,955 条**。当前最好候选为 **133,681 条**。[11 道题及贡献者提交](collaboration/evidence/hiyohane-88c64b6.json)
+
 ## 北京时间 11 月 21 日 11:25
 
 在协作分支的 25 道题上重新搜索，已有程序还能再缩短。独立路线中 21 题共省 129 条，得到 **139,966 条**；从两条路线逐题择短，最好候选省 64 条。另合入 Asterios 第 121 题的 1 条改进，本地最好候选为 **133,681 条**，与 11:00 榜首相差 5,351 条。[25 道题逐项结果](collaboration/recipe-union/contributor-results.json.gz) · [第 121 题](public-assisted/releases/gift-121-v64.json)
