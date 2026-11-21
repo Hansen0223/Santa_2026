@@ -36,3 +36,5 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 在较大的临时工作区中搜索
 
 在实时占用寄存器较多的程序上，先用 72 个位置寻找更短的算术图，再把它排回正式比赛的 48 个寄存器。对同一父本也从 48 个寄存器直接搜索。两条路线各取 36 道。[输入和题号](relaxed-design.json) · [程序](relaxed_search.py)
+
+36 道独立题中 20 道探索到第 49 个或更高的位置；36 道公开辅助题中有 5 道。两组均未缩短完整程序，结束这一方向。[结果](relaxed-results.json.gz)

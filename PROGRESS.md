@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 21 日 11:47
+
+协作程序的第二轮搜索让最好候选在 10 道题上共省 17 条。另合入 Asterios 第 380 题的 1 条改进，可直接下载的公开辅助候选为 **133,655 条**。独立候选为 **139,932 条**，包含重建前半段得到的 3 道改进。截止 11:44，官方榜首为 128,330 条。[协作程序](collaboration/recipe-union/contributor-second-results.json.gz) · [重建结果](collaboration/withheld-targets/terminal-shell-results.json.gz) · [第 380 题](public-assisted/releases/gift-380-v67.json)
+
 ## 北京时间 11 月 21 日 11:36
 
 在三道新公开程序及四道可重建的程序上取得改进，第 558 题在公开的 119 条基础上再省 1 条，达到 118 条。当前最好候选 **133,673 条**，比上一版少 8 条；独立候选 **139,954 条**。截至 11:28，官方榜首为 128,330 条，相差 5,343 条。[七道题及各自来源](public-assisted/releases/frontier-133772.json) · [已结束的旧程序试验](collaboration/recipe-union/alternate-pilot-results.json.gz)

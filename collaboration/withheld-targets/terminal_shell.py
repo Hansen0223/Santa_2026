@@ -58,10 +58,10 @@ def optimize(p,t,exe,seed,rounds):
 
 
 def search(job):
-    p,lane,tape,exe,rounds=job
+    p,lane,tape,exe,rounds,variants=job
     seed=709511+int(p.id[-4:]);best=tape
     rec=dict(id=p.id,lane=lane,before=len(tape),seed=seed,rounds=rounds,arms={})
-    for name in ('terminal','private'):
+    for name in variants:
         split=decomposition(p,tape,name)
         if split is None:continue
         inner,current,shell,head=split
@@ -85,6 +85,9 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     for k in ('puzzles','binary','out'):ap.add_argument('--'+k,type=Path,required=True)
     ap.add_argument('--jobs',type=int,default=6);ap.add_argument('--rounds',type=int,default=560)
+    ap.add_argument('--offset',type=int,default=0);ap.add_argument('--count',type=int,default=48)
+    ap.add_argument('--lane',choices=('both','own','public'),default='both')
+    ap.add_argument('--variant',choices=('both','private','terminal'),default='both')
     a=ap.parse_args();a.out.mkdir(exist_ok=True,parents=True);ps=read_puzzles(a.puzzles)
     tables={};credits={}
     for lane,pre in [('public','public-assisted/'),('own','')]:
@@ -92,16 +95,20 @@ def main():
         credits[lane]=table(pre+'origins.csv')
     ps=[p for p in ps if 12<=len(p.targets)<=39 and 100<=len(tables['public'][p.id])<=270]
     ps.sort(key=lambda p:hashlib.sha256(('terminal-shell-1'+p.id).encode()).digest())
-    cases=ps[:48]
-    (a.out/'design.json').write_bytes((json.dumps(dict(base=BASE,ids=[q.id for q in cases],rounds=a.rounds),indent=2)+'\n').encode())
+    if a.offset<0 or a.count<1:ap.error('choose a nonnegative offset and positive count')
+    cases=ps[a.offset:a.offset+a.count]
+    if not cases:ap.error('selection is empty')
+    lanes=tuple(tables) if a.lane=='both' else (a.lane,)
+    variants=('terminal','private') if a.variant=='both' else (a.variant,)
+    (a.out/'design.json').write_bytes((json.dumps(dict(base=BASE,ids=[q.id for q in cases],rounds=a.rounds,offset=a.offset,lanes=lanes,variants=variants),indent=2)+'\n').encode())
     jobs={};keys={}
     for p in cases:
-        for lane,tab in tables.items():
-            t=tab[p.id];key=p.id,t
-            jobs.setdefault(key,(p,lane,t,a.binary.resolve(),a.rounds));keys[lane,p.id]=key
+        for lane in lanes:
+            t=tables[lane][p.id];key=p.id,t
+            jobs.setdefault(key,(p,lane,t,a.binary.resolve(),a.rounds,variants));keys[lane,p.id]=key
     with ThreadPoolExecutor(a.jobs) as pool:records=dict(zip(jobs,pool.map(search,jobs.values())))
     summary={}
-    for lane in tables:
+    for lane in lanes:
         rows=[records[keys[lane,p.id]] for p in cases];wins={r['id']:r['program'] for r in rows if 'program' in r}
         write_submission(a.out/(lane+'.csv'),[p for p in cases if p.id in wins],wins)
         with (a.out/(lane+'.origins.csv')).open('w',encoding='utf8',newline='') as f:

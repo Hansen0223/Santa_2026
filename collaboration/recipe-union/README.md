@@ -24,3 +24,5 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 从其他独立旧程序重新起步
 
 17 份独立搜索历史中，有 890 道题具备长度相近且算式不同的候选。先取备选质量最高的 24 道，另按题号抽取 24 道。每个程序分别从当前最短解和不同结构的旧解开始，两路各 360 轮；独立候选只缩短 1 条，公开辅助候选没有缩短。把旧解放在首位未取得额外改进，本轮没有扩大到其余题目。[逐题结果](alternate-pilot-results.json.gz) · [48 道的历史候选](alternate-pilot-donors.json.gz) · [程序](alternate_starts.py)
+
+第二轮重新搜索同一批题，11 道独立题共省 18 条。逐题比较两条路线后，最好候选在 10 道共省 17 条，其中第 190 和 996 题各省 3 条。[每道题及其父程序](contributor-second-results.json.gz)

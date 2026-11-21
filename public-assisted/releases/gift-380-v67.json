@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "alexchilton/santa-2026-rudolph-programs/102/rudolph_programs.csv": {
+      "ref": "alexchilton/santa-2026-rudolph-programs",
+      "version": 102,
+      "license": "CC0: Public Domain",
+      "archive": "036cae8896d8cdb571a6abb643e642ec86e9c5226a85360fdeeb3a525bf6a97b",
+      "file": "ff1da8df8f28f1785dc7d53cfa1a6071e0889efac0a6c6656353562b48dd47a9",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/102",
+      "author": "Alex Chilton"
+    },
+    "asteriospanoras/santa-2026-best-public-score-a-gift-per-run/67/gift": {
+      "ref": "asteriospanoras/santa-2026-best-public-score-a-gift-per-run",
+      "version": 67,
+      "source": "cb5c00bd4f17972dd768b177bd5b3b5dbd643f3f2a9e898839afb52d1e092583",
+      "author": "Asterios Panoras",
+      "url": "https://www.kaggle.com/code/asteriospanoras/santa-2026-best-public-score-a-gift-per-run"
+    }
+  },
+  "rows": {
+    "scored_0380": {
+      "before": 158,
+      "after": 157,
+      "credit": "Asterios Panoras v67; Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",
+      "source": "asteriospanoras/santa-2026-best-public-score-a-gift-per-run/67/gift",
+      "sha256": "2319a67414991d5d940d563f90749230af8af06b6fda047a2e2ef607b0f1860d"
+    }
+  }
+}

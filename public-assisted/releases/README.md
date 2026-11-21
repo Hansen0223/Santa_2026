@@ -21,3 +21,5 @@ GoodPJW 第 24 版在第 8、128 题和 Asterios Panoras 的 Gift per Run 第 61
 Asterios Panoras 的 Gift per Run v64 将第 121 题由 46 条缩到 45 条。[版本和逐题来源](gift-121-v64.json)
 
 Asterios 第 158 版与 GoodPJW 第 25 版带来 3 道缩短。E-Max AI 的四道公开搜索分别获得 1 条改进；随后从新的本地候选出发，第 558 题进一步缩为 118 条。[程序来源及各题搜索](frontier-133772.json)
+
+Asterios 第 67 版公开笔记将第 380 题由 158 条缩至 157 条。[署名与版本](gift-380-v67.json)
