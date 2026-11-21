@@ -1,0 +1,52 @@
+--- a/generative/component_select.py
++++ b/generative/component_select.py
+@@ -12,7 +12,7 @@
+ import time
+ 
+ from run_source import ROOT
+-from parallel_solve import arithmetic,compile_best
++from parallel_solve import compile_best
+ from solvers.graphs.crossover_lns import load_solver
+ from elf import check,read_puzzles,read_submission,sha256,write_submission
+ from graph import active_graph,first_recipes
+@@ -36,11 +36,37 @@
+     for graph in graphs:
+         for v,r in graph.items():
+             if v in ways and r[1] in present and r[2] in present:ways[v].add(canonical(r))
++    _extend_live_recipes(values, ways, p.limit)
++    return primary,ways
++
++
++def _extend_live_recipes(values, ways, limit):
++    """Follow the original pair/op order, creating recipes only for live outputs."""
++    get=ways.get
+     for i,a in enumerate(values):
+         for b in values[:i+1]:
+-            for v,r in arithmetic(a,b,p.limit):
+-                if v in ways and v not in (a,b) and len(ways[v])<45:ways[v].add(canonical(r))
+-    return primary,ways
++            lo,hi=(b,a) if b<a else (a,b)
++            v=lo+hi
++            rs=get(v)
++            if rs is not None and v<=limit and len(rs)<45:
++                rs.add(('+',lo,hi))
++            if lo!=hi:
++                v=hi-lo
++                rs=get(v)
++                if rs is not None and v!=lo and len(rs)<45:
++                    rs.add(('-',hi,lo))
++            # Multiplying or dividing by 1 would reproduce an operand.
++            if lo==1:
++                continue
++            v=lo*hi
++            rs=get(v)
++            if rs is not None and v<=limit and len(rs)<45:
++                rs.add(('*',lo,hi))
++            v,r=divmod(hi,lo)
++            if not r and v!=lo: # v cannot equal hi with lo>=2
++                rs=get(v)
++                if rs is not None and len(rs)<45:
++                    rs.add(('/',hi,lo))
+ 
+ 
+ def ordered(p,primary,ways,seed):
