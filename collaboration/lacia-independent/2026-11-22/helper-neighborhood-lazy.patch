@@ -1,0 +1,58 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -79,7 +79,7 @@
+             consumers[source].add(output)
+     rng = random.Random(seed)
+ 
+-    def neighborhood(roots):
++    def removed_cone(roots):
+         removed = set(roots)
+         frontier = list(roots)
+         while frontier and len(removed) < 48:
+@@ -88,14 +88,7 @@
+                 if source in incumbent and consumers[source] <= removed:
+                     removed.add(source)
+                     frontier.append(source)
+-        forbidden = set()
+-        frontier = list(roots)
+-        while frontier:
+-            for value in consumers[frontier.pop()] - forbidden - removed:
+-                forbidden.add(value)
+-                frontier.append(value)
+-        frozen = incumbent.keys() - removed
+-        return tuple(sorted(roots)), frozen, forbidden
++        return removed
+ 
+     candidates = []
+     seen = set()
+@@ -107,15 +100,24 @@
+             if roots in seen:
+                 continue
+             seen.add(roots)
+-            wanted, frozen, forbidden = neighborhood(roots)
+-            freed = len(incumbent) - len(frozen)
++            removed = removed_cone(roots)
++            freed = len(removed)
+             if freed <= len(roots) + 1:
+                 continue
+             weight = (freed - len(roots)) * (1 + 0.12 * min(4, len(consumers[value]))) + rng.random()
+-            candidates.append((weight, value, wanted, frozen, forbidden))
+-    candidates.sort(reverse=True)
+-    for _, _, wanted, frozen, forbidden in candidates[:count]:
+-        yield wanted, frozen, forbidden
++            candidates.append((weight, value, tuple(sorted(roots)), roots, removed))
++    # Root tuples are unique, so the first three fields break every tie.
++    candidates.sort(key=lambda entry: entry[:3], reverse=True)
++    # Take the same incumbent snapshot for all yields.
++    nodes = incumbent.copy().keys()
++    for _, _, wanted, roots, removed in candidates[:count]:
++        forbidden = set()
++        frontier = list(roots)
++        while frontier:
++            for value in consumers[frontier.pop()] - forbidden - removed:
++                forbidden.add(value)
++                frontier.append(value)
++        yield wanted, nodes - removed, forbidden
+ 
+ 
+ def tree_costs(available: set[int], bank: dict[int, set[Recipe]]) -> dict[int, int]:
