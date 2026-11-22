@@ -1,0 +1,45 @@
+--- a/graph.py
++++ b/graph.py
+@@ -312,9 +312,42 @@
+         return None
+ 
+ 
++def _chronological_closure(puzzle: Puzzle, proposed: Graph) -> Graph | None:
++    """Extract the original-order live closure, or fall back for a non-topological input."""
++    seeds = set(puzzle.seeds)
++    pending = set(puzzle.targets).difference(seeds)
++    reverse_live = {}
++    for value, recipe in reversed(proposed.items()):
++        if value in pending:
++            pending.remove(value)
++            _, left, right = recipe
++            if left not in seeds:
++                pending.add(left)
++            if right not in seeds:
++                pending.add(right)
++            reverse_live[value] = recipe
++            if not pending:
++                break
++    if pending:
++        return None
++    if len(reverse_live) == len(proposed):
++        return proposed
++    return dict(reversed(reverse_live.items()))
++
++
+ def compile_graph(puzzle: Puzzle, proposed: Graph, attempts: int = 4,
+                   recompute: bool = False, schedule_width: int = 0,
+                   operation_width: int = 0) -> Program | None:
++    if type(proposed) is dict:
++        try:
++            chronological_fast = _chronological_closure(puzzle, proposed)
++        except (TypeError, ValueError):
++            chronological_fast = None
++        if chronological_fast is not None:
++            program = _allocate(puzzle, chronological_fast, False, 0, fixed_order=True)
++            if program is not None:
++                check(puzzle, program)
++                return program
+     try:
+         graph = active_graph(puzzle, proposed)
+     except (KeyError, ValueError):
