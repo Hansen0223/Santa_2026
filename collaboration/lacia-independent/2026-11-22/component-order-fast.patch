@@ -1,0 +1,38 @@
+--- a/generative/component_select.py
++++ b/generative/component_select.py
+@@ -47,6 +47,16 @@
+     rng=random.Random(seed)
+     roots=set(p.seeds)
+     order_index={v:i for i,v in enumerate(primary)}
++    if seed==0 and len(ways)==len(primary) and all(
++            v in ways and v not in roots
++            and (a in roots or order_index.get(a,10**8)<order_index[v])
++            and (b in roots or order_index.get(b,10**8)<order_index[v])
++            for v,(_,a,b) in primary.items()):
++        # With no donor-only entries and already ordered primary edges,
++        # each next primary position is ready before any later priority.
++        positions=dict.fromkeys(roots,-1)
++        positions.update(order_index)
++        return _earlier_recipes(ways,positions,primary)
+     waiting=defaultdict(list);remain=[];outputs=[];queue=[]
+     priority={}
+     for v,rs in ways.items():
+@@ -73,8 +83,16 @@
+             remain[ix]-=1
+             if not remain[ix]:heapq.heappush(queue,priority[outputs[ix]])
+     if set(primary)-positions.keys():raise RuntimeError("primary graph unavailable")
+-    return {v:[r for r in sorted(ways[v]) if all(positions.get(z,10**8)<positions[v] for z in r[1:])]
+-            for v in sequence}
++    return _earlier_recipes(ways,positions,sequence)
++
++
++def _earlier_recipes(ways,positions,sequence):
++    result={}
++    for v in sequence:
++        index=positions[v]
++        result[v]=[r for r in sorted(ways[v])
++                   if positions.get(r[1],10**8)<index and positions.get(r[2],10**8)<index]
++    return result
+ 
+ 
+ def components(p,allowed,primary):
