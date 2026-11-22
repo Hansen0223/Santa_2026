@@ -1,0 +1,38 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -166,20 +166,23 @@
+                     break
+         radius += 1
+     pair_index = defaultdict(list)
++    bridge_costs = {}
+     for first, second in combinations_with_replacement(sorted(anchors), 2):
++        # All operations on this pair have the same cost. Record the
++        # cheapest admitted recipe as we fill each bounded output menu.
++        cost = 1 + costs[first] + (costs[second] if first != second else 0)
+         quotient, remainder = divmod(second, first)
+-        pairs = ((first + second, "+", first, second),
+-                 (second - first, "-", second, first),
+-                 (first * second, "*", first, second),
+-                 (quotient if remainder == 0 else 0, "/", second, first))
+-        for value, op, left, right in pairs:
+-            cost = 1 + sum(costs[node] for node in {left, right})
+-            if 1 <= value <= limit and value not in (left, right) and cost < costs.get(value, 1000):
+-                recipe = (op, left, right)
+-                if len(pair_index[value]) < 3 and recipe not in pair_index[value]:
+-                    pair_index[value].append(recipe)
+-    bridge_costs = {value: min(1 + sum(costs[node] for node in set(recipe[1:])) for recipe in options)
+-                    for value, options in pair_index.items()}
++        for value, op in ((first + second, "+"), (second - first, "-"),
++                          (first * second, "*"), (quotient if remainder == 0 else 0, "/")):
++            if not 1 <= value <= limit or value in (first, second) or cost >= costs.get(value, 1000):
++                continue
++            options = pair_index[value]
++            if len(options) == 3:
++                continue
++            # A sorted input pair is visited once, so this recipe is unique.
++            left, right = (first, second) if op in "+*" else (second, first)
++            options.append((op, left, right))
++            bridge_costs[value] = min(cost, bridge_costs.get(value, cost))
+     fresh = tuple(value for value, cost in bridge_costs.items() if cost <= 2)
+     for index, output in enumerate(pivots):
+         joins = {}
