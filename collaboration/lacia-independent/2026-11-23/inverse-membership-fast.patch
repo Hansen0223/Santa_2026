@@ -1,0 +1,66 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -139,14 +139,27 @@
+     return costs
+ 
+ 
+-def inverses(target, anchor):
+-    quotient, remainder = divmod(target, anchor)
+-    inverse, inverse_remainder = divmod(anchor, target)
+-    return (
+-        (target - anchor, "+", False), (anchor - target, "-", True),
+-        (target + anchor, "-", False), (quotient if not remainder else 0, "*", False),
+-        (target * anchor, "/", False), (inverse if not inverse_remainder else 0, "/", True),
+-    )
++def inverses(target, anchor, allowed):
++    delta = target - anchor
++    if delta > 0:
++        if delta in allowed:
++            yield delta, "+", False
++    elif -delta in allowed:
++        yield -delta, "-", True
++    other = target + anchor
++    if other in allowed:
++        yield other, "-", False
++    if target > anchor:
++        quotient, rem = divmod(target, anchor)
++        if not rem and quotient in allowed:
++            yield quotient, "*", False
++    other = target * anchor
++    if other in allowed:
++        yield other, "/", False
++    if anchor > target:
++        quotient, rem = divmod(anchor, target)
++        if not rem and quotient in allowed:
++            yield quotient, "/", True
+ 
+ 
+ def bridge_recipes(values, pivots, costs, limit, bank, capacity, deep_count):
+@@ -184,13 +197,14 @@
+             options.append((op, left, right))
+             bridge_costs[value] = min(cost, bridge_costs.get(value, cost))
+     fresh = tuple(value for value, cost in bridge_costs.items() if cost <= 2)
++    allowed = values | pair_index.keys()
+     for index, output in enumerate(pivots):
+         joins = {}
+         for anchor in values:
+             if anchor == output:
+                 continue
+-            for other, op, anchor_first in inverses(output, anchor):
+-                if other == output or (other not in values and other not in pair_index):
++            for other, op, anchor_first in inverses(output, anchor, allowed):
++                if other == output:
+                     continue
+                 left, right = (anchor, other) if anchor_first else (other, anchor)
+                 if op in "+*" and left > right:
+@@ -206,8 +220,8 @@
+             for anchor in fresh:
+                 if anchor == output:
+                     continue
+-                for other, op, anchor_first in inverses(output, anchor):
+-                    if other == output or other not in pair_index:
++                for other, op, anchor_first in inverses(output, anchor, pair_index):
++                    if other == output:
+                         continue
+                     left, right = (anchor, other) if anchor_first else (other, anchor)
+                     if op in "+*" and left > right:
