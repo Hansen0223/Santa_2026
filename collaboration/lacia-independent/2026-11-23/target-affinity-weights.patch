@@ -1,0 +1,20 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -29,6 +29,8 @@
+     targets = sorted(set(puzzle.targets) - set(puzzle.seeds))
+     closures = {value: set(active_graph(puzzle, incumbent, (value,))) for value in targets}
+     owners = Counter(node for closure in closures.values() for node in closure)
++    inverse_owner = {value: 1 / count for value, count in owners.items()}
++    affinity = inverse_owner.__getitem__
+     donor_sizes = {}
+     for target, closure in closures.items():
+         outside = incumbent.keys() - {value for value in closure if owners[value] == 1}
+@@ -58,7 +60,7 @@
+         while len(block) < min(len(targets), width):
+             available = [target for target in targets if target not in block]
+             choice = max(available, key=lambda target: (
+-                sum(1 / owners[value] for value in closures[target] & union)
++                sum(map(affinity, closures[target] & union))
+                 + 0.2 * urgency[target] + 0.08 * rng.random()))
+             block.add(choice)
+             union.update(closures[choice])
