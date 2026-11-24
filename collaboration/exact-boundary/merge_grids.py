@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 HERE = ROOT/"collaboration"
 sys.path[:0] = [str(ROOT),str(HERE)]
-from elf import read_puzzles,sha256
+from elf import check,read_puzzles,sha256
 from merge_arithmetic_bounds import FIELDS,projection,sha
 from merge_conditioned_bounds import parse
 
@@ -44,11 +44,63 @@ def verify_grid(puzzle, archive, official):
     return None
 
 
+def child_check(row,puzzle,official,moduli,parents,helpers):
+    coords = tuple(row["coords"])
+    fields = dict(puzzle=puzzle.id,official=official,engine=ENGINE,group_width=16,helpers=helpers,moduli=moduli)
+    if (any(row.get(k)!=v for k,v in fields.items()) or len(coords)!=3 or
+            coords[:2] not in parents or not 0<=coords[2]<moduli[2]):
+        raise ValueError(f"Unexpected child coordinates {coords}")
+    if row["status"] not in ("UNSAT","UNKNOWN","FOUND") or len(row["metrics"])!=7:
+        raise ValueError(f"Malformed child decision {coords}")
+    nodes = row["metrics"][0]
+    if not 0<=nodes<=row["budget"] or row["status"]=="UNKNOWN" and nodes!=row["budget"]:
+        raise ValueError(f"Invalid node count for {coords}")
+    if row["status"]=="FOUND" and check(puzzle,row["program"])>len(set(puzzle.targets)-set(puzzle.seeds))+helpers:
+        raise ValueError(f"Invalid witness for {coords}")
+    return coords
+
+
+def summarize(puzzle,official,grid,children):
+    verify_grid(puzzle,grid,official)
+    head = grid["rows"][0]
+    n,m,z = head["moduli"]
+    cells = {(r["coords"][0],r["coords"][1]):r for r in grid["rows"]}
+    if z!=1 or len(cells)!=n*m:
+        raise ValueError("Expected a complete two-level parent grid")
+    pending = {key for key,row in cells.items() if row["status"]=="UNKNOWN"}
+    parts = children[0]["moduli"][2] if children else 1
+    grouped = {}
+    for row in children:
+        k = child_check(row,puzzle,official,[n,m,parts],pending,head["helpers"])
+        if k in grouped:
+            raise ValueError(f"Duplicate child {k}")
+        grouped[k] = row
+    closed = {key for key in pending if all(grouped.get((*key,j),{}).get("status")=="UNSAT" for j in range(parts))}
+    return sorted(closed), sorted(pending-closed)
+
+
+def verify_refinement(puzzle, grid, refined, official, parent_digest):
+    helpers = grid["rows"][0]["helpers"]
+    children = refined["children"]
+    if (refined["puzzle"] != puzzle.id or refined["helpers"] != helpers
+            or refined["parent_sha256"] != parent_digest or refined["parts"] < 2
+            or not children or children[0]["moduli"][2] != refined["parts"]):
+        raise ValueError("Refinement does not match the parent grid")
+    closed, remaining = summarize(puzzle, official, grid, children)
+    if ([list(cell) for cell in closed] != refined["closed"]
+            or [list(cell) for cell in remaining] != refined["remaining"]):
+        raise ValueError("Refinement coverage does not match the recorded decision")
+    if not remaining:
+        return len(set(puzzle.targets) - set(puzzle.seeds)) + helpers + 1
+    return None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for field in ("puzzles","prior","grids","receipt"):
         parser.add_argument("--"+field,type=Path,required=True)
     parser.add_argument("--base",required=True)
+    parser.add_argument("--refined",type=Path,help="Third-axis exclusion for a grid in --grids")
     parser.add_argument("--write",action="store_true")
     a = parser.parse_args()
     official = sha256(a.puzzles)
@@ -62,24 +114,37 @@ def main():
     by_id = {r["id"]:r for r in rows}
     archive = json.loads(gzip.decompress(a.grids.read_bytes()))
     completed = {}
+    sources = {}
+    parent_source = a.grids.resolve().relative_to(HERE).as_posix()
     for grid in archive["grids"]:
         pid = grid["puzzle"]
         result = verify_grid(puzzles[pid],grid,official)
-        if result is not None:
-            completed[pid] = max(result,completed.get(pid,0))
+        if result is not None and result > completed.get(pid, 0):
+            completed[pid] = result
+            sources[pid] = parent_source
+    if a.refined:
+        refined = json.loads(gzip.decompress(a.refined.read_bytes()))
+        pid = refined["puzzle"]
+        parents = [g for g in archive["grids"] if g["puzzle"] == pid
+                   and g["rows"][0]["helpers"] == refined["helpers"]]
+        if len(parents) != 1:
+            raise ValueError("Expected exactly one parent grid for the refinement")
+        result = verify_refinement(puzzles[pid], parents[0], refined, official, sha256(a.grids))
+        if result is not None and result > completed.get(pid, 0):
+            completed[pid] = result
+            sources[pid] = a.refined.resolve().relative_to(HERE).as_posix()
     changed = {}
-    source = a.grids.resolve().relative_to(HERE).as_posix()
     for pid,n in completed.items():
         row = by_id[pid]
         old = int(row["certified_lower"])
         assert n<=int(row["best_verified_upper"])
         if n>old:
             changed[pid] = n-old
-            row.update(local_lower=str(n),certified_lower=str(n),winning_lower_source=source)
+            row.update(local_lower=str(n),certified_lower=str(n),winning_lower_source=sources[pid])
     new_total = prior["certified_lower"]+sum(changed.values())
     assert new_total==sum(int(r["certified_lower"]) for r in rows)
     deps = dict(prior["dependencies"])
-    for path in (a.prior,a.grids):
+    for path in filter(None, (a.prior, a.grids, a.refined)):
         deps[path.resolve().relative_to(HERE).as_posix()] = sha256(path)
     receipt = dict(prior,base_commit=base,base_table_sha256=sha(raw),previous_certified_lower=prior["certified_lower"],
                    parent_lower_projection_sha256=prior["lower_projection_sha256"],certified_lower=new_total,

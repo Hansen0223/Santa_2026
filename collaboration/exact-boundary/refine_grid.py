@@ -11,8 +11,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT),str(ROOT/"collaboration/puzzle-0882-diversity")]
-from elf import check,read_puzzles,sha256,write_submission
-from merge_grids import ENGINE,verify_grid
+from elf import read_puzzles,sha256,write_submission
+from merge_grids import ENGINE,child_check,summarize
 from refine_open import store
 from tiny import encode
 
@@ -24,41 +24,6 @@ def selected_grid(path,puzzle,helpers):
     if len(candidates) != 1:
         raise ValueError("Expected one grid for the requested puzzle and budget")
     return candidates[0]
-
-
-def child_check(row,puzzle,official,moduli,parents,helpers):
-    coords = tuple(row["coords"])
-    fields = dict(puzzle=puzzle.id,official=official,engine=ENGINE,group_width=16,helpers=helpers,moduli=moduli)
-    if (any(row.get(k)!=v for k,v in fields.items()) or len(coords)!=3 or
-            coords[:2] not in parents or not 0<=coords[2]<moduli[2]):
-        raise ValueError(f"Unexpected child coordinates {coords}")
-    if row["status"] not in ("UNSAT","UNKNOWN","FOUND") or len(row["metrics"])!=7:
-        raise ValueError(f"Malformed child decision {coords}")
-    nodes = row["metrics"][0]
-    if not 0<=nodes<=row["budget"] or row["status"]=="UNKNOWN" and nodes!=row["budget"]:
-        raise ValueError(f"Invalid node count for {coords}")
-    if row["status"]=="FOUND" and check(puzzle,row["program"])>len(set(puzzle.targets)-set(puzzle.seeds))+helpers:
-        raise ValueError(f"Invalid witness for {coords}")
-    return coords
-
-
-def summarize(puzzle,official,grid,children):
-    verify_grid(puzzle,grid,official)
-    head = grid["rows"][0]
-    n,m,z = head["moduli"]
-    cells = {(r["coords"][0],r["coords"][1]):r for r in grid["rows"]}
-    if z!=1 or len(cells)!=n*m:
-        raise ValueError("Expected a complete two-level parent grid")
-    pending = {key for key,row in cells.items() if row["status"]=="UNKNOWN"}
-    parts = children[0]["moduli"][2] if children else 1
-    grouped = {}
-    for row in children:
-        k = child_check(row,puzzle,official,[n,m,parts],pending,head["helpers"])
-        if k in grouped:
-            raise ValueError(f"Duplicate child {k}")
-        grouped[k] = row
-    closed = {key for key in pending if all(grouped.get((*key,j),{}).get("status")=="UNSAT" for j in range(parts))}
-    return sorted(closed), sorted(pending-closed)
 
 
 def main():
