@@ -994,7 +994,7 @@ scored_0992,work/creative/frontier-134285/matched-134115/wins.csv,"Exact tape in
 scored_0993,work/creative/frontier-134285/matched-134115/wins.csv,"Exact tape in Roman Rozen's IceFire session 371861819 and bikrambasnet1's Arithmetic Graph Rewrites session 371860204. The latter credits konbu17, the public portfolios listed in Roman-Bikram-sources.json, earlier Wang Jakie search and other upstream authors. Exact origin before the published portfolio is not specified per row.",216
 scored_0994,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: E-Max AI, Santa 2026 | Public Frontier | Score 133,860",119
 scored_0995,local from official inputs,Generated from official inputs,124
-scored_0996,collaboration/register-search/tight-register-independent-wins.csv,Independent program generated from dc02345:submission.csv as recorded in tight-register-results.json.gz.,111
+scored_0996,collaboration/recipe-union/novelty-portfolio-independent-wins.csv,Independent program from a34fd20:submission.csv and the Git donors in novelty-portfolio-results.json.gz.,109
 scored_0997,local from official inputs,Generated from official inputs,106
 scored_0998,work/creative/frontier-134285/merge079/wins.csv,"bikrambasnet1 (Bikram Basnet), Arithmetic Graph Rewrites session 371868626. Includes CPU/CUDA graph rewrites, Roman Rozen's IceFire, konbu17 and the original public portfolios credited in the notebook. Earlier row-level contributor is unspecified. This exact program is present in these portfolios: Bikram, Roman, Rudolph.",203
 scored_0999,Asterios v113,"wang Jakie, Santa 2026 | Arithmetic Recipe Pool and MILP",105

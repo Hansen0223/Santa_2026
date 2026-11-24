@@ -67,3 +67,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 近同分公开程序的另一路搜索
 
 以 128,494 步组合解为父本，选用相差至多两步的公开程序。553 道题分别测试合并原算式及枚举新算式，均未缩短。另取中间值集合至少相差四个的全部 57 道题，比较只用当前程序、公开程序优先及当前程序优先三种等轮数搜索，也未缩短。[逐题记录](near-tie-archives-results.json.gz) · [等轮数搜索](near_tie_archives.py) · [算式搜索](full_union.py) · [Sargis Khachatryan 的公开程序](https://www.kaggle.com/code/avazaku/elf-calc-backward-frontier-rewrite?scriptVersionId=373248714) · [Ertuğrul Özer 的公开程序](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373304666)
+
+## 在相近长度内优先选择不同的中间值
+
+限定起点长度，优先选原程序未使用、且历史候选中较少出现的中间值。所有选中值均须服务于目标，能分配到正式寄存器的不同程序才进入下一轮。对照为同种子同轮数的直接搜索及使用相同历史候选的交叉搜索。独立组 174 道中 119 道得到不同起点，逐题共 4 道省 5 条，其中 1 道胜过两种对照。组合组原算式 45 道、扩充算式 155 道，分别有 30、52 道得到不同起点，均未缩短。[逐题结果](novelty-portfolio-results.json.gz) · [采用的程序](novelty-portfolio-independent-wins.csv) · [实现](novelty_portfolio.py)

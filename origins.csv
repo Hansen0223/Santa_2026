@@ -79,7 +79,7 @@ scored_0077,work/virtual/good10-wang-269/results/batch-03/winners.csv,106
 scored_0078,work/virtual/withheld-134079/block-07-own.csv,112
 scored_0079,work/creative/seed-basis-133773/contributors-second/own.csv,133
 scored_0080,work/creative/own-good/part2-wins.csv,157
-scored_0081,collaboration/recipe-union/forced-alternates-own-wins.csv,130
+scored_0081,collaboration/recipe-union/novelty-portfolio-independent-wins.csv,129
 scored_0082,collaboration/recipe-union/paired-splice-independent-wins.csv,93
 scored_0083,work/virtual/bank-135324/own-neutral-hold.csv,180
 scored_0084,collaboration/recipe-union/forced-alternates-own-wins.csv,39
@@ -162,7 +162,7 @@ scored_0160,work/creative/joint-132841/incoming.csv,189
 scored_0161,work/virtual/repeated-135211/own-full.csv,164
 scored_0162,work/virtual/withheld-134079/block-05-own.csv,139
 scored_0163,work/creative/seed-basis-133773/hiyohane-88c64b6.csv,272
-scored_0164,collaboration/recipe-union/forced-alternates-own-wins.csv,129
+scored_0164,collaboration/recipe-union/novelty-portfolio-independent-wins.csv,128
 scored_0165,work/gpu/lineage-independent.csv,262
 scored_0166,work/virtual/portfolio-135289/own-hold.csv,214
 scored_0167,work/heritage/deep-own-wins.csv,271
@@ -272,7 +272,7 @@ scored_0270,work/creative/resume-135077/independent-final-140814/shorter.csv,124
 scored_0271,git/019a8fc58359 (Hiyohane),39
 scored_0272,work/creative/ladder/lns-local.csv,22
 scored_0273,work/creative/transfer-133825/borrowed/own-expand-15.csv,186
-scored_0274,collaboration/circuit-cuts/propagation-independent-wins.csv,135
+scored_0274,collaboration/recipe-union/novelty-portfolio-independent-wins.csv,134
 scored_0275,work/gpu/lineage-independent.csv,153
 scored_0276,work/creative/ladder/lns-local.csv,78
 scored_0277,work/virtual/good10-wang-269/results/batch-01/winners.csv,111
@@ -994,7 +994,7 @@ scored_0992,collaboration/register-search/quotient-chains-independent-wins.csv,2
 scored_0993,collaboration/register-search/shared-levels-independent-wins.csv,219
 scored_0994,work/virtual/synthetic-134175/holdout-own.csv,121
 scored_0995,work/creative/joint-132841/siblings/own.csv,124
-scored_0996,collaboration/register-search/tight-register-independent-wins.csv,111
+scored_0996,collaboration/recipe-union/novelty-portfolio-independent-wins.csv,109
 scored_0997,work/creative/resume-135077/anneal-independent-full35/shorter.csv,106
 scored_0998,work/heritage/blend-own-wins.csv,218
 scored_0999,git/00f9cd0d0c48 (Hiyohane),108

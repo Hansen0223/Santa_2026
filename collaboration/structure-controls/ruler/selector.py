@@ -32,7 +32,8 @@ def strong(nodes,edges):
                 if u not in group:group[u]=v;todo.append(u)
     return group
 
-def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None,required_recipes=()):
+def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None,
+                      required_recipes=(),novelty_weights=None):
     cp=load_solver();seeds=set(p.seeds)
     bank=defaultdict(set)
     def canon(e):
@@ -72,16 +73,30 @@ def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_
     if omit_old:
         old=set(original)-set(p.targets)
         model.add(sum(pay[v] for v in old)<=len(old)-omit_old)
-    total=sum(pay.values());model.add(total<=limit);model.minimize(total)
+    total=sum(pay.values());model.add(total<=limit)
+    objective=total
+    if novelty_weights:
+        wants=set(p.targets)
+        consumers=defaultdict(list)
+        for (_,e),f in flags.items():
+            for operand in set(e[1:])-seeds:
+                consumers[operand].append(f)
+        for node in nodes-wants:
+            model.add(pay[node]<=sum(consumers[node]))
+        reward=sum(pay[v]*weight for v,weight in novelty_weights.items() if v in pay)
+        objective=total-(limit+1)*reward
+    model.minimize(objective)
     solver=cp.CpSolver();solver.parameters.num_search_workers=1
     solver.parameters.random_seed=619;solver.parameters.max_deterministic_time=.35
     status=solver.solve(model);name=solver.status_name(status)
     r=dict(status=name,values=len(nodes),recipes=len(flags),cyclic_rank_vars=len(rank))
-    forced=bool(omit_old or required_recipes)
+    forced=bool(omit_old or required_recipes or novelty_weights)
     best=None if forced else tape
     if status in (cp.OPTIMAL,cp.FEASIBLE):
         select={v:e for (v,e),f in flags.items() if solver.value(f)}
         graph=active_graph(p,select);r['graph']=len(graph)
+        if novelty_weights:
+            r['novelty']=sum(novelty_weights.get(v,0) for v in graph)
         if (forced and len(graph)<=limit) or len(graph)<len(tape):
             ts=[schedule_like(p,tape,graph),compile_graph(p,graph,attempts=4,recompute=True,schedule_width=10)]
             ts=[j for j in ts if j and check(p,j)<=(limit if forced else len(tape)-1)]

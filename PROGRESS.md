@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 12:38
+
+近等长程序的三路搜索，独立解 4 道省 5 步，降至 **139,272 步**。仓库公开辅助解为 **133,594 步**，本地组合解仍为 **128,492 步**。[逐题结果](collaboration/recipe-union/novelty-portfolio-results.json.gz)
+
 ## 北京时间 11 月 24 日 12:30
 
 临时缩减寄存器的两阶段试验中，独立解 1 道共省 3 步，降至 **139,277 步**。仓库公开辅助解为 **133,596 步**，本地组合解仍为 **128,492 步**。[逐题结果](collaboration/register-search/tight-register-results.json.gz)
