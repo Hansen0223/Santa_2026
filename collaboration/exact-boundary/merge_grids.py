@@ -47,13 +47,16 @@ def verify_grid(puzzle, archive, official):
     return None
 
 
-def child_check(row,puzzle,official,moduli,parents,helpers):
+def child_check(row,puzzle,official,moduli,parents,helpers,engine=ENGINE):
     coords = tuple(row["coords"])
-    fields = dict(puzzle=puzzle.id,official=official,engine=ENGINE,group_width=16,helpers=helpers,moduli=moduli)
+    width,limit,metrics=GRID_ENGINES[engine]
+    if puzzle.limit>limit:
+        raise ValueError("Refinement exceeds this engine's value limit")
+    fields = dict(puzzle=puzzle.id,official=official,engine=engine,group_width=width,helpers=helpers,moduli=moduli)
     if (any(row.get(k)!=v for k,v in fields.items()) or len(coords)!=3 or
             coords[:2] not in parents or not 0<=coords[2]<moduli[2]):
         raise ValueError(f"Unexpected child coordinates {coords}")
-    if row["status"] not in ("UNSAT","UNKNOWN","FOUND") or len(row["metrics"])!=7:
+    if row["status"] not in ("UNSAT","UNKNOWN","FOUND") or len(row["metrics"])!=metrics:
         raise ValueError(f"Malformed child decision {coords}")
     nodes = row["metrics"][0]
     if not 0<=nodes<=row["budget"] or row["status"]=="UNKNOWN" and nodes!=row["budget"]:
@@ -66,8 +69,6 @@ def child_check(row,puzzle,official,moduli,parents,helpers):
 def summarize(puzzle,official,grid,children):
     verify_grid(puzzle,grid,official)
     head = grid["rows"][0]
-    if head["engine"] != ENGINE:
-        raise ValueError("Third-axis refinement requires the grouped dense engine")
     n,m,z = head["moduli"]
     cells = {(r["coords"][0],r["coords"][1]):r for r in grid["rows"]}
     if z!=1 or len(cells)!=n*m:
@@ -76,7 +77,7 @@ def summarize(puzzle,official,grid,children):
     parts = children[0]["moduli"][2] if children else 1
     grouped = {}
     for row in children:
-        k = child_check(row,puzzle,official,[n,m,parts],pending,head["helpers"])
+        k = child_check(row,puzzle,official,[n,m,parts],pending,head["helpers"],head["engine"])
         if k in grouped:
             raise ValueError(f"Duplicate child {k}")
         grouped[k] = row

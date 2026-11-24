@@ -12,3 +12,7 @@ python -B -m solvers.arithmetic.factor_resynthesis collaboration/factor/parent.c
 ```
 
 命令的最后一行为 `rows 1 saved 3`。写出的 CSV 仅含这道题，可用 checkpoint.py 和现有完整候选按题择短。预附结果由上述搜索实际产生。[运行记录](result.json)
+
+## 组合解上的后续验证
+
+从 128,491 步组合解中挑出 28 道含较长乘积支路的题，检验两因子能否复用同一个中间数。未找到更短的完整程序。[逐题结果](combined-factor-followup.json.gz)

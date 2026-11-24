@@ -628,7 +628,7 @@ scored_0626,38,35,39,distinct-helper-edges/full-certificates.json,174,167,167,12
 scored_0627,41,38,42,distinct-diamond/claims.json.gz,115,112,112,70,0
 scored_0628,39,35,41,distinct-diamond/conditioned-claims.json.gz,218,202,202,161,0
 scored_0629,41,38,42,distinct-diamond/claims.json.gz,162,154,154,112,0
-scored_0630,17,12,17,evidence/0630-0654-closed-grids.json.gz,26,25,25,8,0
+scored_0630,18,12,18,evidence/0630-h8-refined.json.gz,26,25,25,7,0
 scored_0631,37,35,38,distinct-diamond/claims.json.gz,109,104,104,66,0
 scored_0632,41,38,43,distinct-diamond/claims.json.gz,185,185,185,142,0
 scored_0633,40,36,41,distinct-diamond/conditioned-claims.json.gz,171,165,165,124,0

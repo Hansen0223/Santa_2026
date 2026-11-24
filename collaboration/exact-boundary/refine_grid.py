@@ -1,4 +1,4 @@
-"""Split unresolved cells of a dense arithmetic proof along its third axis."""
+"""Split unresolved cells of an arithmetic proof along its third axis."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import gzip
@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT),str(ROOT/"collaboration/puzzle-0882-diversity")]
 from elf import read_puzzles,sha256,write_submission
-from merge_grids import ENGINE,child_check,summarize
+from merge_grids import GRID_ENGINES,child_check,summarize
 from refine_open import store
 from tiny import encode
 
@@ -41,9 +41,11 @@ def main():
     official = sha256(args.puzzles)
     puzzle = next(p for p in read_puzzles(args.puzzles) if p.id==args.id)
     binary = args.binary.resolve(strict=True)
-    if sha256(binary)!=ENGINE:
-        raise ValueError("The engine differs from the archived reference")
     base = selected_grid(args.prior,puzzle,args.helpers)
+    engine = sha256(binary)
+    if engine != base["rows"][0]["engine"] or engine not in GRID_ENGINES:
+        raise ValueError("The engine differs from the archived reference")
+    width,_,_ = GRID_ENGINES[engine]
     base_sha = sha256(args.prior)
     _, open_parents = summarize(puzzle,official,base,[])
     left,right,_ = base["rows"][0]["moduli"]
@@ -51,10 +53,10 @@ def main():
     args.out.mkdir(parents=True,exist_ok=True)
     rows = {}
     cells = set(map(tuple,open_parents))
-    ctx = dict(puzzle=puzzle.id,helpers=args.helpers,moduli=moduli,official=official,engine=ENGINE,group_width=16)
+    ctx = dict(puzzle=puzzle.id,helpers=args.helpers,moduli=moduli,official=official,engine=engine,group_width=width)
 
     def take(row):
-        key = child_check(row,puzzle,official,moduli,cells,args.helpers)
+        key = child_check(row,puzzle,official,moduli,cells,args.helpers,engine)
         old = rows.get(key)
         if old is None or old["status"]=="UNKNOWN" and (row["status"]!="UNKNOWN" or row["budget"]>old["budget"]):
             rows[key] = row
@@ -73,7 +75,7 @@ def main():
         nums = (puzzle.limit,len(puzzle.seeds),len(puzzle.targets),args.helpers,args.budget,*puzzle.seeds,*puzzle.targets)
         result = subprocess.run([str(binary),"star",*coords],input=" ".join(map(str,nums))+"\n",
                                 text=True,capture_output=True,check=True,
-                                env={**os.environ,"SANTA_GROUP_WIDTH":"16"},
+                                env={**os.environ,"SANTA_GROUP_WIDTH":str(width)},
                                 creationflags=getattr(subprocess,"BELOW_NORMAL_PRIORITY_CLASS",0))
         fields = result.stdout.splitlines()
         status,*values=fields[0].split()
@@ -83,7 +85,7 @@ def main():
             if witness[:len(puzzle.seeds)]!=puzzle.seeds:
                 raise ValueError("Witness changed the initial values")
             row["program"]=encode(puzzle,witness[len(puzzle.seeds):])
-        child_check(row,puzzle,official,moduli,cells,args.helpers)
+        child_check(row,puzzle,official,moduli,cells,args.helpers,engine)
         store(args.out/("-".join(f"{x:02}" for x in key)+".json"),row)
         return key,row
 

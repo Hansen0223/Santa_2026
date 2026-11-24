@@ -1,8 +1,10 @@
 # 最短程序证明与分片协作
 
-1,000 题的已证总下界为 **38,004 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+1,000 题的已证总下界为 **38,005 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
 
-第 630 题的新下界为 17 步，第 654 题从 20 步提高到 22 步。三个网格共 384 个分片全部无解。[逐片记录](evidence/0630-0654-closed-grids.json.gz) · [合并回执](evidence/combined-0630-0654.json)
+第 630 题的最后一个未决分片经细分后全部排除，已证下界从 17 步提高到 18 步。[原分片](evidence/0630-h8-resume.json.gz) · [最终细分](evidence/0630-h8-refined.json.gz) · [合并回执](evidence/combined-0630-h8.json)
+
+第 630 题前一轮证明了 17 步下界，第 654 题从 20 步提高到 22 步。三个网格共 384 个分片全部无解。[逐片记录](evidence/0630-0654-closed-grids.json.gz) · [合并回执](evidence/combined-0630-0654.json)
 
 第 472 题的 192 个分片全部无解，已证下界由 18 步升到 19 步。[逐片判定](evidence/0472-h8-final-grid.json.gz) · [最新合并回执](evidence/combined-0472-h8.json)
 

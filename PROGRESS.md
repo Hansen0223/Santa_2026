@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 14:25
+
+第 630 题最后的未决分片已排除，已证下界升至 **18 步**。全题总下界达到 **38,005 步**，组合解仍是 **128,491 步**。[最新证明](collaboration/evidence/combined-0630-h8.json)
+
 ## 北京时间 11 月 24 日 14:21
 
 第 630、654 题的下界分别提高至 **17 步、22 步**，全题总下界升至 **38,004 步**。第 24 题首轮结束，384 个分片中排除 164 个。组合解仍为 **128,491 步**。[证明结果](collaboration/evidence/0630-0654-closed-grids.json.gz) · [缩短试验](collaboration/recipe-union/cross-exchanges-results.json.gz)
