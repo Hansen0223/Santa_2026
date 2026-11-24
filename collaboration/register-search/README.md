@@ -94,3 +94,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 从不同目标反推它们需要的中间值，再检查这些值能否从同一个新中间数出发得到。独立组 881 道，其中第 993 题 220 → 219。组合组 875 道未缩短。[逐题结果](shared-levels-results.json.gz) · [采用的程序](shared-levels-independent-wins.csv) · [求解器](shared_levels.py)
 
 另选候选解接近已证下界且长度至多 33 的 38 道题，枚举可用数的一步结果与目标的逆向算式。用 8、30、100 个备选的三组均未缩短组合解。[逐题结果](boundary-ensembles-results.json.gz) · [求解器](boundary_ensembles.py)
+
+## 分叉共享和加减重组
+
+尝试先算一个新中间数，再由它构造两个不同中间数供多个结果使用。两组分别试了仅针对终端目标，以及同时针对被多个结果读取的中间数。独立组 156 + 241 道、组合组 166 + 252 道，均未缩短。两种分组的题目有重叠。[求解器](shared_forks.py)
+
+把连在一起的加减算式展开成带符号的输入数列，尝试让多个输出共享同一对加减。独立和组合各 200 道均未缩短。另在 19 道小题上用至多三个操作替换原有中间数，组合解也未缩短。[加减重组](signed_overlaps.py) · [小题替换](two_hop_replacements.py) · [全部逐题结果](shared-forks-and-signed-results.json.gz)

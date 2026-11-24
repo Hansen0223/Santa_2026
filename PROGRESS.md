@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 11:13
+
+第 971 题完成全部 768 个分片的首轮搜索，已排除 341 个。组合候选为 **128,500 条**。[分片记录](collaboration/evidence/0971-h9-grid.json.gz)
+
 ## 北京时间 11 月 24 日 11:03
 
 第 993 题的独立程序由 220 条缩至 219 条，独立候选降至 **139,341 条**。组合候选为 **128,500 条**。[逐题结果](collaboration/register-search/shared-levels-results.json.gz)

@@ -48,3 +48,5 @@
 外部更新 8dd7478 新增 65 项，已按该提交的程序重跑 1,151 个分片。每个分片的结果和节点数、每题的末层候选总数均与记录相同。外部下界总和为 33,733；逐题比较后，1,000 题的合并下界仍为 36,731。复跑命令为 `python -B collaboration/evidence/replay_increment.py 8dd7478 --puzzles data/puzzles.csv --binary ./external-exact --output audit.json`，其中求解器按本仓库的证明说明编译。[逐项比较](evidence/upstream-8dd7478.json) · [编译说明](../proofs/local/README.md)
 
 第 971 题试跑了 9 个辅助值预算的 24 个分片。11 个无解，13 个达到 350 万节点上限。下界仍为 15 条，已回放的组合程序为 17 条。[分片坐标、预算和结果](evidence/0971-h9-probe.json.gz)
+
+第 971 题的 768 个分片均已返回。累计 341 个无解、427 个未决，其中已有 400 个分片按 1,200 万节点预算返回。下界仍为 15 条，组合程序为 17 条。[完整分片网格](evidence/0971-h9-grid.json.gz) · [用于继续搜索的入口](exact-boundary/scan_grid.py)
