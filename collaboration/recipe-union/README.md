@@ -63,3 +63,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 先改用另一组中间数，再继续搜索
 
 用当前和历史程序的算式建立候选集合。要求新程序放弃当前程序的至少 2 个或 6 个中间值，同时最多允许多用两步，得到可以实际执行的方案后继续搜索。与同种子、同轮数的直接搜索比较。独立组 607 道，逐题取短后 36 道共省 42 条，其中 16 道胜过直接搜索。旧组合组 112 道有 98 个备选实际进入下一轮，未缩短。在新版组合解上另试 130 道题。244 个模型用已知可行的历史程序作初始提示，共省 0 条。对新版公开改过的六道题另跑两种搜索，未进一步缩短。[逐题结果](forced-alternates-results.json.gz) · [采用的独立程序](forced-alternates-own-wins.csv) · [求解器](forced_alternates.py)
+
+## 近同分公开程序的另一路搜索
+
+以 128,494 步组合解为父本，选用相差至多两步的公开程序。553 道题分别测试合并原算式及枚举新算式，均未缩短。另取中间值集合至少相差四个的全部 57 道题，比较只用当前程序、公开程序优先及当前程序优先三种等轮数搜索，也未缩短。[逐题记录](near-tie-archives-results.json.gz) · [等轮数搜索](near_tie_archives.py) · [算式搜索](full_union.py) · [Sargis Khachatryan 的公开程序](https://www.kaggle.com/code/avazaku/elf-calc-backward-frontier-rewrite?scriptVersionId=373248714) · [Ertuğrul Özer 的公开程序](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373304666)

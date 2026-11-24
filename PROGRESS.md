@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 11:40
+
+第 744 题的 267 步算式试了两种新调度，仍使用 268 步的可执行程序。用两份近同分公开程序重组了 553 道题，并对差异较大的 57 道做额外搜索，组合解仍为 **128,494 步**。11:40 官方榜首为 **125,650 步**，相差 **2,844 步**。[调度结果](collaboration/register-search/interleave-schedule-results.json) · [逐题搜索](collaboration/recipe-union/near-tie-archives-results.json.gz)
+
 ## 北京时间 11 月 24 日 11:30
 
 更换中间值后联合搜索，独立 36 道共省 42 条，独立候选为 **139,299 条**，直接可下载的公开辅助候选为 **133,599 条**。[逐题进展](collaboration/recipe-union/forced-alternates-results.json.gz)
