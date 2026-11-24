@@ -113,4 +113,4 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 
 ## 同时重建一对共享算式的目标
 
-拆掉仅服务于该目标对的算式。分别尝试从保留算式开始、保留一个共享中间数再重建，或让后完成的目标复用先完成目标的中间数。独立组覆盖 893 道题，第 314 题 200 → 199，第 903 题 158 → 157。组合组试了 200 道，未缩短。[逐题结果及公开来源核对](pair-exclusive-cuts-results.json.gz) · [采用的独立程序](pair-exclusive-cuts-independent-wins.csv) · [实现](pair_exclusive_cuts.py)
+拆掉仅服务于该目标对的算式。分别尝试从保留算式开始、保留一个共享中间数再重建，或让后完成的目标复用先完成目标的中间数。独立组覆盖 893 道题，第 314 题 200 → 199，第 903 题 158 → 157。组合组试了 200 道，未缩短。另允许替代起点多用一步，在 120 道中实际继续搜索了 97 道的 189 个不同起点，与同预算直接搜索均未缩短。[逐题结果及公开来源核对](pair-exclusive-cuts-results.json.gz) · [采用的独立程序](pair-exclusive-cuts-independent-wins.csv) · [实现](pair_exclusive_cuts.py)
