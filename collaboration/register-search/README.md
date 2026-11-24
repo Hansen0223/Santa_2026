@@ -132,3 +132,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 倒推时把一半候选位置留给最靠近已有值或一步正向结果的数。与只按原顺序保留候选比较，搜索宽度和截取位置数量相同。独立组的两路各跑完 1,000 道，加入新筛选省 9 条，原筛选省 3 条，两组并取逐题最短后 10 道各省 1 条。组合组的新筛选覆盖全部 1,000 道，未缩短。另对组合与独立各抽 240 道，专门重建多个目标共用的中间数，试了 90 和 112 个截取位置，均未找到更短的替代算式。[逐题结果及公开核对](inverse-proximity-results.json.gz) · [采用的独立程序](inverse-proximity-independent-wins.csv) · [实现](two_sided_chains.py)
 
 在冻结父本上运行 `two_sided_chains.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --count 1000 --roots 8 --width 24 --proximity`。去掉 `--proximity` 重跑原筛选，加 `--shared` 改选两条以上目标支路共用的值。
+
+## 用两步造出一个供多条算式复用的数
+
+为两条以上原算式寻找同一个可复用的中间数。组合组 350 道与独立组 650 道没有通过保守的依赖筛选。允许一起重建原输入后，组合 130 道与独立 180 道进入算式选择，未缩短。再允许替代程序多一步并要求实际用到新算式，两组共 260 道未找到能执行的起点，其中 252 道在预算内未决。人工例从 9 步缩至 4 步，同样条件下只允许一步构造的对照为 5 步。[逐题结果](composed-hubs-results.json.gz) · [实现](composed_hubs.py)

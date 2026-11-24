@@ -32,7 +32,7 @@ def strong(nodes,edges):
                 if u not in group:group[u]=v;todo.append(u)
     return group
 
-def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None):
+def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None,required_recipes=()):
     cp=load_solver();seeds=set(p.seeds)
     bank=defaultdict(set)
     def canon(e):
@@ -66,6 +66,8 @@ def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_
         model.add_hint(pay[v],int(v in hint))
         if v in rank:model.add_hint(rank[v],positions.get(v,0))
     for v in set(p.targets)-seeds:model.add(pay[v]==1)
+    if required_recipes:
+        model.add_bool_or([flags[v,canon(e)] for v,e in required_recipes])
     limit=len(tape)+slack
     if omit_old:
         old=set(original)-set(p.targets)
@@ -75,13 +77,14 @@ def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_
     solver.parameters.random_seed=619;solver.parameters.max_deterministic_time=.35
     status=solver.solve(model);name=solver.status_name(status)
     r=dict(status=name,values=len(nodes),recipes=len(flags),cyclic_rank_vars=len(rank))
-    best=None if omit_old else tape
+    forced=bool(omit_old or required_recipes)
+    best=None if forced else tape
     if status in (cp.OPTIMAL,cp.FEASIBLE):
         select={v:e for (v,e),f in flags.items() if solver.value(f)}
         graph=active_graph(p,select);r['graph']=len(graph)
-        if (omit_old and len(graph)<=limit) or len(graph)<len(tape):
+        if (forced and len(graph)<=limit) or len(graph)<len(tape):
             ts=[schedule_like(p,tape,graph),compile_graph(p,graph,attempts=4,recompute=True,schedule_width=10)]
-            ts=[j for j in ts if j and check(p,j)<=(limit if omit_old else len(tape)-1)]
+            ts=[j for j in ts if j and check(p,j)<=(limit if forced else len(tape)-1)]
             if ts:best=min(ts,key=len)
     r['physical']=len(best) if best is not None else None
     return r,best
