@@ -114,3 +114,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 同时重建一对共享算式的目标
 
 拆掉仅服务于该目标对的算式。分别尝试从保留算式开始、保留一个共享中间数再重建，或让后完成的目标复用先完成目标的中间数。独立组覆盖 893 道题，第 314 题 200 → 199，第 903 题 158 → 157。组合组试了 200 道，未缩短。另允许替代起点多用一步，在 120 道中实际继续搜索了 97 道的 189 个不同起点，与同预算直接搜索均未缩短。[逐题结果及公开来源核对](pair-exclusive-cuts-results.json.gz) · [采用的独立程序](pair-exclusive-cuts-independent-wins.csv) · [实现](pair_exclusive_cuts.py)
+
+## 先完成一组目标，再搜索剩余程序
+
+把一组目标及其依赖提前安排，实际分配寄存器后从这个截点继续搜索。对照采用相同长度的原顺序截点和整题搜索，轮数与种子相同。独立组 126 道，第 846 题 99 → 98，两种对照均为 99。组合组 102 道，未缩短。另对组合组所有 870 道符合筛选条件的题尝试只重排，其中 832 道得到新截点，长度均未缩短。[逐题结果](target-frontier-results.json.gz) · [采用的程序](target-frontier-independent-wins.csv) · [实现](target_frontier_cuts.py)
+
+同一轮在组合解的另外一组 96 道中，复跑两个联合替换中间数的版本，均未缩短。两个版本分别检验 1,215 和 1 个三值移除情形。所用引擎、种子策略及逐题计数已一并存档。[逐题结果](target-frontier-results.json.gz) · [联合替换](../../solvers/native/cooperative_exchange.cpp) · [分阶段替换](../../solvers/native/staged_exchange.cpp)
