@@ -633,7 +633,7 @@ scored_0631,37,35,38,distinct-diamond/claims.json.gz,109,104,104,66,0
 scored_0632,41,38,43,distinct-diamond/claims.json.gz,185,185,185,142,0
 scored_0633,40,36,41,distinct-diamond/conditioned-claims.json.gz,171,165,165,124,0
 scored_0634,39,36,40,distinct-diamond/claims.json.gz,170,164,164,124,0
-scored_0635,16,18,18,proofs_ext,36,34,34,16,0
+scored_0635,16,18,18,proofs_ext,35,34,34,16,0
 scored_0636,40,36,41,distinct-diamond/conditioned-claims.json.gz,267,251,251,210,0
 scored_0637,19,15,19,helper-wave9.json,29,28,28,9,0
 scored_0638,42,38,44,distinct-diamond/conditioned-claims.json.gz,282,270,270,226,0

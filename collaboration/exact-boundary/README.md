@@ -49,3 +49,7 @@ python -B collaboration/exact-boundary/small_domains.py ./sparse-boundary.exe
 从正式初值构造 4、6 或 8 步的可执行前缀，按目标在接下来一两步中可达到的数量筛选。后续倒推仍须将前缀计入得分。组合与独立各 14 道小题，各检查 336 个前缀，均未缩短。[逐题结果](target-supported-prefix-results.json.gz) · [前缀筛选](target_supported_prefixes.py) · [现有倒推引擎](reverse_obligations.cpp)
 
 可用 C++20 编译 `reverse_obligations.cpp`，再将可执行文件传给 `target_supported_prefixes.py --engine`。逐题记录包含引擎指纹、前缀、搜索宽度和种子。
+
+## 从初值向前生成多目标程序
+
+每加一个中间值后立即生成已可达的目标，按接下来还能支持的目标数量选取保留方案。从初值、原顺序截点和部分目标的依赖集合出发。组合组与独立组各 21 道，第 635 题的独立程序由 36 步缩至 35 步。另以三份程序为起点尝试缩短该题 32 步组合解，未进一步缩短。[结果](forward-pressure-results.json.gz) · [采用的程序](forward-pressure-independent-wins.csv) · [试验入口](forward_pressure.py)
