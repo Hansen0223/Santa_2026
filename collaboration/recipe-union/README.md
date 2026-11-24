@@ -75,3 +75,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 同分公开版本的交叉搜索
 
 Kmmmvs 的公开版本回放为 128,492 步，66 道题的程序与组合解不同，逐题未直接缩短。对其中符合交叉条件的 47 道题继续搜索，组合解未缩短。[逐题结果](kmmmvs-373331093-crossover.json.gz) · [公开版本](https://www.kaggle.com/code/kmmmvs/analysis-santa-2026?scriptVersionId=373331093)
+
+## 用两份程序各自独有的值生成新算式
+
+从不同父本各取一个独有数，生成供多个算式使用的新中间值，比较原候选算式集合以及加入新算式后的搜索。独立组 130 道，第 81 题只有加入新算式才缩短，第 635 题对照也缩短，逐题取短共省 2 步。组合组 104 道及两道独立改进的后续搜索均未缩短。[逐题结果](cross-born-results.json.gz) · [采用的程序](cross-born-independent-wins.csv) · [实现](cross_born.py)
