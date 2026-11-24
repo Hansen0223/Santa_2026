@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 10:23
+
+两条新路线逐题取短，在 54 道题共省 60 条，独立候选降至 **139,346 条**。仓库公开辅助候选降至 **133,607 条**。组合候选为 **128,501 条**。[商和余数](collaboration/register-search/quotient-chains-results.json.gz) · [新算式](collaboration/recipe-union/full-union-results.json.gz)
+
 ## 北京时间 11 月 24 日 10:12
 
 700 道题合计省 3,976 条，组合候选降至 **128,501 条**。[各题改进与来源](public-assisted/releases/portfolio.md)

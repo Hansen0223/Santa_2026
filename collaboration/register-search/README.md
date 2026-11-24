@@ -74,3 +74,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 从原程序中截取可以仅凭初值及其他小数构造的子程序，保留外部程序实际读取的值。在三个上限下枚举备选算式并求解，再放回原题，用官方题目重放。组合组 150 道题试了 391 个子程序，均未缩短。
 独立组 150 道题省 0 条。
 结构线索来自 Sadam Torres 对共享常量的公开分析。[固定版本](https://www.kaggle.com/code/sadamtorres/santa-2026-the-elves-left-their-scratch-paper?scriptVersionId=373154578) · [求解器](small_dictionary.py) · [逐题结果](refresh-128501-results.json.gz)
+
+## 从结果向后寻找商和余数
+
+截取最多六个只有一个去处的根节点，并找出能一同移除的算式。用剩余程序中可独立得到的值作乘数和余数，逆向尝试重建，然后重新分配寄存器。独立组 1000 道题中 51 道共省 56 条。组合组 1000 道题未缩短。第 744 题得到 267 条的算式图，待找到满足 48 个寄存器的顺序。[逐题结果](quotient-chains-results.json.gz) · [采用的独立程序](quotient-chains-independent-wins.csv) · [求解器](quotient_chains.py)

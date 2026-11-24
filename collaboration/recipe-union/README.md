@@ -55,3 +55,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 独立组 614 道题共省 2 条，第 525 题 117 → 116，第 641 题 118 → 117，第 641 题只有保留多条路径才缩短。组合组 968 道题共省 0 条。[逐题记录及父本](backward-beam-results.json.gz) · [独立改进](backward-beam-own-wins.csv)
 
 独立历史均取自记录所列 Git 版本的根目录提交；组合组同时使用两条仓库主线、旧组合解、Asterios Panoras 第 196 版、GoodPJW 第 43 版与 Alex Chilton 第 126 版。外部表取原件的 id 和 program 两列，保留原顺序及程序文本，再传入 --donors。[Asterios](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/196) · [GoodPJW](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/43) · [Alex Chilton](https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/126)
+
+## 用其他程序的值生成新算式
+
+在独立 607 道题、组合 230 道题上，对比合并原有算式，以及用相同的值枚举额外算式再求解。独立组 5 道共省 6 条，均由新增算式带来。组合组未缩短。[逐题结果和父本](full-union-results.json.gz) · [采用的独立程序](full-union-independent-wins.csv) · [求解器](full_union.py)
