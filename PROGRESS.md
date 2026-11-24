@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 12:10
+
+倒推搜索与对照逐题取短，独立解 10 题各省 1 步，降至 **139,284 步**。组合仍为 **128,492 步**。[逐题结果](collaboration/register-search/inverse-proximity-results.json.gz)
+
 ## 北京时间 11 月 24 日 12:03
 
 合并 Ertuğrul Özer 新发布的两个程序，第 106、170 题各省 1 步，1,000 道题全部重放通过，本地组合解降至 **128,492 步**。12:03 榜首为 **125,650 步**，差 **2,842 步**。[还原方式](public-assisted/releases/portfolio.md) · [固定来源](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373317540)

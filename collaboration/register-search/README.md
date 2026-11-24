@@ -126,3 +126,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 先找能从已有值一步算出的两个新中间数，再检查两者是否能合成供另一条算式使用的第三个。一起估算哪些旧算式会失去全部使用者，并和保留同一批单步算式的对照比较。独立组覆盖 880 道题，第 447 题 230 → 229，第 902 题 223 → 222，两题均仅加入联合算式后缩短。组合组的 875 道符合筛选条件的题跑完，其中 270 道进入算式选择，两组均未缩短。[逐题结果](helper-triangles-results.json.gz) · [采用的独立程序](helper-triangles-independent-wins.csv) · [实现](helper_triangles.py)
 
 完整组合组使用 `python -B collaboration/register-search/helper_triangles.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --count 1000 --width 170 --allow-direct --joint`，需在 Python 环境安装 OR-Tools。
+
+## 倒推时保留接近已有算式的数
+
+倒推时把一半候选位置留给最靠近已有值或一步正向结果的数。与只按原顺序保留候选比较，搜索宽度和截取位置数量相同。独立组的两路各跑完 1,000 道，加入新筛选省 9 条，原筛选省 3 条，两组并取逐题最短后 10 道各省 1 条。组合组的新筛选覆盖全部 1,000 道，未缩短。另对组合与独立各抽 240 道，专门重建多个目标共用的中间数，试了 90 和 112 个截取位置，均未找到更短的替代算式。[逐题结果及公开核对](inverse-proximity-results.json.gz) · [采用的独立程序](inverse-proximity-independent-wins.csv) · [实现](two_sided_chains.py)
+
+在冻结父本上运行 `two_sided_chains.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --count 1000 --roots 8 --width 24 --proximity`。去掉 `--proximity` 重跑原筛选，加 `--shared` 改选两条以上目标支路共用的值。

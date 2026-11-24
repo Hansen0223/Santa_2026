@@ -1,8 +1,10 @@
 """Meet a backwards quotient search with exact short constructions from the fixed graph."""
 import argparse
+from bisect import bisect_left
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 import gzip
+from heapq import nsmallest
 import json
 from pathlib import Path
 
@@ -39,13 +41,23 @@ def substitutions(puzzle, value, pool, finish):
         yield {value: ("+",half,half),half:finish[half]}
 
 
-def search(puzzle, root, pool, finish, budget, width):
+def search(puzzle, root, pool, finish, budget, width, *, proximity=False):
     available = set(pool)
+    anchors = sorted(available | finish.keys()) if proximity else None
     pending = {root: ()}
     attempts = []
+
+    def near(value):
+        i = bisect_left(anchors, value)
+        gap = min(abs(value - anchors[j]) for j in (i-1, i) if 0 <= j < len(anchors))
+        return gap.bit_length(), gap, value
+
     for depth in range(budget + 1):
         priority = lambda v: (v not in available,v not in finish,v.bit_length(),v)
-        beam = sorted(pending,key=priority)[:width]
+        beam = nsmallest(width, pending, key=priority)
+        if anchors and len(pending) > width:
+            chosen = beam[:(width+1)//2]
+            beam = chosen + nsmallest(width-len(chosen), pending.keys()-set(chosen), key=near)
         next_pending = {}
         for v in beam:
             prefix = dict(pending[v])
@@ -87,22 +99,31 @@ def split_three(puzzle, root, finish):
 
 
 def work(task):
-    puzzle,parent,root_count,width = task
+    puzzle,parent,root_count,width,shared,proximity = task
     original = first_recipes(puzzle,parent)
     graph = active_graph(puzzle,original)
-    uses = Counter(set(puzzle.targets))
+    targets = set(puzzle.targets)
+    consumers = Counter()
     for _, a, b in graph.values():
-        uses.update({a,b})
+        consumers.update({a,b})
+    uses = consumers + Counter(targets)
+    owner = {value: 1 << j for j, value in enumerate(sorted(targets))} if shared else {}
+    if shared:
+        for value, (_, a, b) in reversed(graph.items()):
+            for operand in {a,b}:
+                owner[operand] = owner.get(operand,0) | owner.get(value,0)
     cuts = []
     for v in graph:
-        if uses[v] != 1 or v.bit_length() < 21:
+        support = owner.get(v,0).bit_count()
+        wanted = (consumers[v] >= 2 and support >= 2) if shared else uses[v] == 1
+        if not wanted or v.bit_length() < 21:
             continue
         cone = private_cone(graph,uses,v)
         if 4 <= len(cone) <= 10:
-            cuts.append((-len(cone),-v.bit_length(),v,cone))
+            cuts.append((-len(cone),-support,-v.bit_length(),v,cone))
     best = parent
     rows = []
-    for _,_,root,removed in sorted(cuts)[:root_count]:
+    for _,_,_,root,removed in sorted(cuts)[:root_count]:
         fixed = {v:e for v,e in graph.items() if v not in removed}
         available = set(puzzle.seeds)
         for v, (_,a,b) in fixed.items():
@@ -123,7 +144,7 @@ def work(task):
                 candidates.append(path)
                 if idx == 5:
                     break
-        candidates.extend(search(puzzle,root,pool,finish,len(removed)-1,width))
+        candidates.extend(search(puzzle,root,pool,finish,len(removed)-1,width,proximity=proximity))
         trial = set()
         tried = 0
         for path in sorted(candidates,key=len):
@@ -137,7 +158,8 @@ def work(task):
             candidate = compile_on_parent(puzzle,parent,path | fixed)
             if candidate is not None and len(candidate)<len(best):
                 best = candidate
-        rows.append(dict(root=root,old=len(removed),tries=tried,shortest=min(map(len,candidates),default=None)))
+        rows.append(dict(root=root,old=len(removed),tries=tried,shortest=min(map(len,candidates),default=None),
+                         targets=owner.get(root,0).bit_count() if shared else None))
     check(puzzle,best)
     return puzzle.id,best,dict(before=len(parent),after=len(best),cuts=rows,eligible=len(cuts))
 
@@ -148,18 +170,22 @@ def main():
         parser.add_argument("--"+name,type=Path,required=True)
     for name, default in (("count",96),("offset",0),("roots",3),("width",18),("jobs",9)):
         parser.add_argument("--"+name,type=int,default=default)
+    parser.add_argument("--shared",action="store_true",help="Rebuild roots used in at least two target branches.")
+    parser.add_argument("--proximity",action="store_true",help="Keep some numbers near the single-operation frontier.")
     args=parser.parse_args()
     puzzles=read_puzzles(args.puzzles)
     bank=read_submission(args.parent)
     import hashlib
     order=sorted(puzzles,key=lambda p:hashlib.sha256(("two-sided1-"+p.id).encode()).digest())
-    task=[(p,bank[p.id],args.roots,args.width) for p in order[args.offset:args.offset+args.count]]
+    task=[(p,bank[p.id],args.roots,args.width,args.shared,args.proximity)
+          for p in order[args.offset:args.offset+args.count]]
     rows,wins={},{}
     with ProcessPoolExecutor(args.jobs) as pool:
         for i,tape,row in pool.map(work,task,chunksize=2):
             rows[i]=row
             if len(tape)<len(bank[i]):
                 wins[i]=tape
+                print(i,len(bank[i]),len(tape),flush=True)
     args.out.mkdir(parents=True,exist_ok=True)
     write_submission(args.out/"wins.csv",[p for p in puzzles if p.id in wins],wins)
     data=dict(parent_sha256=sha256(args.parent),settings={k:v for k,v in vars(args).items() if isinstance(v,int)},rows=rows)
