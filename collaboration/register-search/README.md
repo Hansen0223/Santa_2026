@@ -140,3 +140,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 放大局部结果后再整除
 
 先造出目标值的整数倍，用带正负余数的乘积表示分子，最后做整除。同一个截取位置也直接构造原值作为对照。筛选后的组合 875 道与独立 880 道已全部检查，分别覆盖 2,350 和 2,748 个截取位置。两组在本次范围内均未找到更短的替代算式。人工例从 37、53、17、11 出发，能用三步构造 116。[逐题结果](scaled-numerators-results.json.gz) · [实现](scaled_numerators.py)
+
+## 临时减少寄存器，再按正式限制继续搜索
+
+以原程序的峰值需求为基准，尝试少用 3 或 6 个寄存器。将原算式重排或按需重算后，在较小容量下搜索，再恢复官方容量继续搜索。与两段都按正式容量搜索的对照使用相同种子和轮数。独立组 195 道中 162 道得到合格的较小容量起点，逐题从全部组取短共省 3 步，其中 1 道的较小容量起点及后续搜索胜过两段正式容量对照。组合组 165 道中 128 道得到合格起点，组合评分未缩短。[逐题结果](tight-register-results.json.gz) · [采用的独立程序](tight-register-independent-wins.csv) · [实现](tight_register_search.py)

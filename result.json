@@ -1,7 +1,7 @@
 {
   "puzzles": 1000,
-  "instructions": 139280,
-  "sha256": "01da0454ccd53ac53a08127012cdfe5eeb6b2137d722792ed94b71ec2dda72a1",
+  "instructions": 139277,
+  "sha256": "cdc8425b2fdd313afd41e645ac13c584a58c604148cfae933ac198186036c79c",
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
   "longest_program": 303,
   "arithmetic_lower_bound": 36731,
@@ -59,7 +59,7 @@
     "work/virtual/withheld-134079/block-18-own.csv": 1,
     "git/c5486830c5cf (Hiyohane)": 4,
     "collaboration/register-search/interior-band-independent-wins.csv": 13,
-    "collaboration/recipe-union/forced-alternates-own-wins.csv": 34,
+    "collaboration/recipe-union/forced-alternates-own-wins.csv": 33,
     "work/virtual/good10-wang-269/results/batch-02/winners.csv": 3,
     "work/heritage/symbol-own-wins.csv": 3,
     "work/virtual/good10-wang-269/results/batch-03/winners.csv": 3,
@@ -223,7 +223,8 @@
     "work/gpu/rollback-independent.csv": 1,
     "work/gpu/exchange-independent.csv": 1,
     "work/virtual/portfolio-135289/own-wide-hold.csv": 1,
-    "collaboration/register-search/shared-levels-independent-wins.csv": 1
+    "collaboration/register-search/shared-levels-independent-wins.csv": 1,
+    "collaboration/register-search/tight-register-independent-wins.csv": 1
   },
   "inputs": {
     "final-allocated.csv": {
@@ -251,7 +252,7 @@
     "independent_full_replay": true,
     "median_program": 123.0,
     "p90_program": 231,
-    "submission_bytes": 2245300,
+    "submission_bytes": 2245243,
     "kaggle_submission_status": "local_only"
   },
   "benchmarks": {
@@ -288,7 +289,7 @@
         "selected_puzzles": 1
       }
     },
-    "current_reduction_from_sample_percent": 90.6547,
+    "current_reduction_from_sample_percent": 90.6549,
     "latest_official_leaderboard": {
       "url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
       "checked_at": "2026-11-24T03:15:01.868568+00:00",
@@ -5506,6 +5507,20 @@
         "scored_0918": [
           218,
           217
+        ]
+      }
+    },
+    {
+      "utc": "2026-11-24T04:30:15+00:00",
+      "base_revision": "e7fab2cadc2d44c356b826d55d1f90c288aa7a71",
+      "previous_sha256": "01da0454ccd53ac53a08127012cdfe5eeb6b2137d722792ed94b71ec2dda72a1",
+      "observed_program_sha256": "01da0454ccd53ac53a08127012cdfe5eeb6b2137d722792ed94b71ec2dda72a1",
+      "score": 139277,
+      "sha256": "cdc8425b2fdd313afd41e645ac13c584a58c604148cfae933ac198186036c79c",
+      "adopted_rows": {
+        "scored_0996": [
+          114,
+          111
         ]
       }
     }
