@@ -1,0 +1,49 @@
+--- a/scc_donor_select.py
++++ b/scc_donor_select.py
+@@ -10,14 +10,13 @@
+ import csv
+ from collections import Counter, defaultdict
+ from concurrent.futures import ProcessPoolExecutor
+-from itertools import combinations_with_replacement
+ import json
+ import math
+ from pathlib import Path
+ from tempfile import TemporaryDirectory
+ import time
+ 
+-from scc_select import arithmetic, canonical, incumbent_bank, load_solver, optimize
++from scc_select import arithmetic, canonical, load_solver, optimize
+ from checkpoint import independent_score
+ from elf import check, read_puzzles, read_submission, score, sha256, write_submission
+ from graph import active_graph, first_recipes
+@@ -29,7 +28,8 @@
+ 
+ 
+ def rankbank(p, tape, donors):
+-    pri,ways=incumbent_bank(p,tape)
++    pri=active_graph(p,first_recipes(p,tape))
++    ways={v:{canonical(r)} for v,r in pri.items()}
+     targets=set(p.targets)
+     roots=set(p.seeds)
+     present=set(pri)|roots
+@@ -39,9 +39,17 @@
+         novelty.update(active_graph(p,first_recipes(p,q)).keys()-present)
+     incoming=defaultdict(list)
+     observed=tuple(dict.fromkeys((*p.seeds,*pri))); pos={v:i for i,v in enumerate(observed)}
+-    for a,b in combinations_with_replacement(observed,2):
+-        for v,r in arithmetic(a,b,p.limit):
+-            if v in novelty:incoming[v].append(canonical(r))
++    # The incumbent bank and donor grounding use the identical unordered
++    # exterior pairs. Preserve the incumbent traversal (which sets the 45 cap);
++    # donor recipes below are sorted before their separate cap is applied.
++    for i,a in enumerate(observed):
++        for b in observed[:i+1]:
++            for v,r in arithmetic(a,b,p.limit):
++                rs=ways.get(v)
++                if rs is not None and v not in (a,b) and len(rs)<45:
++                    rs.add(canonical(r))
++                elif v in novelty:
++                    incoming[v].append(canonical(r))
+     use=Counter(x for _,a,b in pri.values() for x in {a,b})+Counter(targets)
+     for v,rs in incoming.items():
+         rs.sort(key=lambda r:(len(set(r[1:])-roots), sum(pos[x] for x in set(r[1:])),r))
