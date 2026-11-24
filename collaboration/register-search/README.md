@@ -154,3 +154,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 分别反解加、减、乘、除的六种搭配，再开放其中一个结果做一步额外变换。独立组 240 道、组合组 180 道测试前者，分别从中取 165、125 道测试后者。组合组有少量可编排的新方案，两组最终均未缩短。[逐题结果](dual-operation-results.json.gz) · [实现](dual_operations.py)
 
 第 744 题把 267 步候选的中间数保留区间放入完整的寄存器容量约束，限时未得到可行编排，仍保留 268 步程序。[结果](register-intervals-result.json) · [实现](register_intervals.py)
+
+## 同时重建一个中间值的所有使用者
+
+替换同一中间值的全部直接使用者。组合 180 道、独立 220 道测试一个新共享值，再各取 118、145 道允许两个。另对组合 52 道、独立 74 道在固定输入下做分片内穷举。两路均未缩短完整程序。[逐题结果](fanout-results.json.gz) · [候选构造](fanout_repair.py) · [固定输入搜索](fanout_exact.py)

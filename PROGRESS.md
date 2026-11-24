@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 13:49
+
+第 237、584、635、701、877 题各提高一步下界，全题总下界升至 **37,997 步**。第 24 题又排除 29 个分片，仍在搜索。新尝试未缩短组合解，本地仍为 **128,491 步**。[逐题证明](collaboration/evidence/small-helper-wave-20261124.json.gz) · [缩短试验](collaboration/register-search/fanout-results.json.gz)
+
 ## 北京时间 11 月 24 日 13:38
 
 第 635 题的独立程序由 36 步降至 35 步，独立候选降至 **139,271 步**，1,000 题全部回放通过。本地组合解仍为 **128,491 步**。[逐题结果](collaboration/exact-boundary/forward-pressure-results.json.gz)
