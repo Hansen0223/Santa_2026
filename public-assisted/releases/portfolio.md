@@ -5,8 +5,8 @@
 | 题号 | 步数 | 改进来源 |
 | --- | --- | --- |
 | 571 | 189 → 188 | 本地按依赖关系划分子区域并与整题搜索择短 |
-| 927 | 119 → 118 | Sargis Khachatryan, Elf Calc | Backward Frontier Rewrite |
-| 946 | 207 → 206 | asteriospanoras-372207578 |
+| 927 | 119 → 118 | Sargis Khachatryan, Elf Calc \| Backward Frontier Rewrite |
+| 946 | 207 → 206 | Asterios Panoras 的笔记本 372207578 |
 
 将官方题目保存为 `data/puzzles.csv`，将以下原件放入 `archives/`。
 

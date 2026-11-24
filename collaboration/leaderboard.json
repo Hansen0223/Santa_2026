@@ -1,61 +1,61 @@
 {
-  "checked_at": "2026-11-21T13:14:35.508603+00:00",
+  "checked_at": "2026-11-24T02:09:49.210993+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
   },
-  "teams": 2114,
+  "teams": 2750,
   "top": [
     {
       "teamId": 17386183,
       "rank": 1,
-      "displayScore": "127200"
+      "displayScore": "125650"
+    },
+    {
+      "teamId": 17409261,
+      "rank": 2,
+      "displayScore": "126026"
     },
     {
       "teamId": 17395013,
-      "rank": 2,
-      "displayScore": "127259"
-    },
-    {
-      "teamId": 17384559,
       "rank": 3,
-      "displayScore": "128300"
+      "displayScore": "126151"
     },
     {
-      "teamId": 17390199,
+      "teamId": 17390470,
       "rank": 4,
-      "displayScore": "129285"
+      "displayScore": "126154"
     },
     {
-      "teamId": 17405703,
+      "teamId": 17385751,
       "rank": 5,
-      "displayScore": "129376"
+      "displayScore": "126241"
     },
     {
-      "teamId": 17384935,
+      "teamId": 17402142,
       "rank": 6,
-      "displayScore": "129394"
-    },
-    {
-      "teamId": 17387205,
-      "rank": 7,
-      "displayScore": "129498"
-    },
-    {
-      "teamId": 17398383,
-      "rank": 8,
-      "displayScore": "129639"
+      "displayScore": "126285"
     },
     {
       "teamId": 17385271,
-      "rank": 9,
-      "displayScore": "129751"
+      "rank": 7,
+      "displayScore": "126761"
     },
     {
-      "teamId": 17386955,
+      "teamId": 17390199,
+      "rank": 8,
+      "displayScore": "127000"
+    },
+    {
+      "teamId": 17409641,
+      "rank": 9,
+      "displayScore": "127066"
+    },
+    {
+      "teamId": 17401032,
       "rank": 10,
-      "displayScore": "129996"
+      "displayScore": "127102"
     }
   ],
-  "full_response_file_sha256": "20888b10df4b680a2e94ab8569c6cb06aa5de85173962bf9ef20dd97e306fe7f"
+  "full_response_file_sha256": "667ac6ffece4ca36db6464f5eac6bb3ac4ba34e490061da98823480a82ea817a"
 }

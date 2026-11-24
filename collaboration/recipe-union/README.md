@@ -47,3 +47,11 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 选取两个程序都计算、但求法不同的一组数作为出口。从原程序中移除专门为这组出口执行的指令，以不依赖出口且仍能从初值抵达的数作为输入。在这个较小的题内从两份程序出发重新搜索，再拼回所有正式目标。独立组 106 道，由完整程序直接搜索得到 3 道改进，共 3 条。组合组 132 道未缩短。[逐题数据](shared-outputs-results.json.gz) · [独立改进](shared-outputs-independent-wins.csv) · [实现](shared_outputs.py)
 
 两组实验均由 `cut_parents.py` 运行。指定 `--method cut` 或 `--method shared-outputs`，再传入 `--puzzles`、`--parent`、`--donors`、`--engine` 和 `--out`。每份结果中的输入记录提供 Git 版本或 Kaggle 固定归档地址，程序按实际来源区分。[Wang 求解引擎](../../generative/wang/NOTICE.md)
+
+## 反向保留多个未完成目标集合
+
+从所有目标向前驱倒推。在保留一份原始解的值顺序时，把其他解能提前算出的中间值插入其中。每处理一个值，按尚需生成的数集合合并状态，保留已经付出步数更少的路径。不同替代式共同需要的祖先给出剩余步数下界。首轮保留单条路径作对照，再保留 32 条路径。所有计分程序重新分配寄存器并按官方题目回放。倒推思路参考 Sargis Khachatryan 的公开笔记本。[参考笔记本的固定版本](https://www.kaggle.com/code/avazaku/elf-calc-backward-frontier-rewrite?scriptVersionId=372206360) · [本地实现](backward_beam.py)
+
+独立组 614 道题共省 2 条，第 525 题 117 → 116，第 641 题 118 → 117，第 641 题只有保留多条路径才缩短。组合组 968 道题共省 0 条。[逐题记录及父本](backward-beam-results.json.gz) · [独立改进](backward-beam-own-wins.csv)
+
+独立历史均取自记录所列 Git 版本的根目录提交；组合组同时使用两条仓库主线、旧组合解、Asterios Panoras 第 196 版、GoodPJW 第 43 版与 Alex Chilton 第 126 版。外部表取原件的 id 和 program 两列，保留原顺序及程序文本，再传入 --donors。[Asterios](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/196) · [GoodPJW](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/43) · [Alex Chilton](https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/126)
