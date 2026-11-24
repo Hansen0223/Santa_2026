@@ -104,3 +104,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 分解目标附近的整数
 
 用现有的小数作为偏移量，对截取算式的目标加减该偏移后做有界因数分解。只保留两个因数都能自现有值一步构造的方案。以 128,494 步组合解为父本，97 道题共试 99 个截取位置，没有得到符合该条件的乘积，组合解未缩短。[逐题结果](nearby-factors-results.json.gz) · [求解器](nearby_factors.py)
+
+## 在原指令之间插入新算式
+
+保持部分原指令的顺序，对其余指令枚举合法交错方式。另一种方法从最后一条指令向前安排，按尚需保留的值筛选部分顺序。两法在 200 个小算例中与枚举全部拓扑顺序一致。第 744 题以 128,494 步组合作为父本，尝试原顺序、局部窗口及最大宽度 8,192 的反向搜索，均无法将已有的 267 条算式装入 48 个寄存器，仍使用原 268 条程序。[逐项结果](interleave-schedule-results.json) · [实现](interleave_schedule.py)
+
+在提供题目和组合父本文件后，运行 `python -B collaboration/register-search/interleave_schedule.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --puzzle-id scored_0744 --root 966557520839863841` 可重跑固定原顺序和反向搜索。

@@ -1,0 +1,72 @@
+{
+  "scored_0744": {
+    "states": 96,
+    "deepest": 95,
+    "movable": 6,
+    "before": 268,
+    "graph": 267,
+    "root": 966557520839863841,
+    "scheduled": null,
+    "incumbent": [
+      {
+        "states": 535,
+        "deepest": 95,
+        "movable": 18
+      },
+      {
+        "states": 287,
+        "deepest": 101,
+        "movable": 18
+      },
+      {
+        "states": 888,
+        "deepest": 106,
+        "movable": 18
+      }
+    ],
+    "repaired": [
+      {
+        "states": 112,
+        "deepest": 95,
+        "movable": 18
+      },
+      {
+        "states": 100,
+        "deepest": 95,
+        "movable": 18
+      },
+      {
+        "states": 125,
+        "deepest": 95,
+        "movable": 18
+      }
+    ],
+    "depth-first": [
+      {
+        "states": 210,
+        "deepest": 56,
+        "movable": 18
+      },
+      {
+        "states": 145,
+        "deepest": 56,
+        "movable": 18
+      },
+      {
+        "states": 145,
+        "deepest": 56,
+        "movable": 18
+      }
+    ],
+    "recipe_swaps": 2,
+    "deepest_recipe_swap": 95,
+    "reverse_128": 92,
+    "reverse_1024": 90,
+    "reverse_8192": 129
+  },
+  "parent_sha256": "71023d53f8e62affbc136088528de25f8378ced84c697be5ba65b132b43e313e",
+  "exhaustive_controls": {
+    "feasible": 146,
+    "infeasible": 54
+  }
+}
