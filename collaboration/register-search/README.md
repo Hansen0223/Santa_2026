@@ -169,3 +169,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 同时替换同一数值的两条下游分支
 
 先以两条分支的共同输入为起点，对组合和独立解各试 110 道题。再分别对 85 道和 105 道题禁止使用一个旧中间值，保留等长替换以便后续继续压缩。两组均未缩短完整程序。[逐题结果](deep-cuts-results.json.gz)
+
+## 在下一步同时使用前一个结果和它的一个操作数
+
+从后一个结果反推共享操作数，也允许它先经一次运算再达到原值。用两道构造题确认两种形式均能生成可回放程序。组合组 120 道和独立组 140 道均未找到符合替换预算的算式，不扩大这次筛选。另对第 744 题的 292 步独立候选尝试去除一次重复计算，两种排程均未缩短。[逐题结果](output-feedback-results.json.gz) · [实现](output_feedback.py)

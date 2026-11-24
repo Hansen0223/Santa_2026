@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 14:38
+
+对组合解 120 道、独立解 140 道试验了一种新的双输出改写，均未缩短。四道题新排除 283 个分片，全题已证下界仍为 **38,013 步**。组合解为 **128,491 步**，距北京时间 14:37 的榜首 **2,841 步**。[改写结果](collaboration/register-search/output-feedback-results.json.gz) · [分片记录](collaboration/evidence/two-seed-h10-pilot-20261124.json.gz) · [榜单快照](collaboration/leaderboard.json)
+
 ## 北京时间 11 月 24 日 14:32
 
 第 21、233、863、962 题的已证下界各提高 2 步，全题总下界升至 **38,013 步**。组合解仍为 **128,491 步**，距北京时间 14:27 的榜首 2,841 步。公开候选 v264 未带来更短的逐题程序，基于其不同写法尝试重组 21 道题也未缩短。[证明回执](collaboration/evidence/combined-two-seed-20261124.json) · [公开候选对比](collaboration/evidence/alexchilton-264-comparison.json) · [重组结果](collaboration/recipe-union/alex264-cross-born-results.json.gz)
