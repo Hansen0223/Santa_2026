@@ -68,3 +68,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 从指令依赖图的拉普拉斯特征向量选取子区域，补上区域内两点之间的依赖路径。每题最多优化三个区域，将它们的输出放回原题，再比较同一种子的整题直接搜索。底层算式搜索来自 Wang Jakie。独立组 119 题，逐题择短在 3 题省 3 条，其中 1 题的区域搜索优于整题对照。组合组 138 题，在 1 题省 1 条，其中 1 题的区域搜索优于对照。[逐题结果](spectral-regions-results.json.gz) · [分区搜索](spectral_regions.py) · [搜索引擎来源](../../generative/wang/NOTICE.md)
 
 运行 `python -B collaboration/register-search/spectral_regions.py --puzzles data/puzzles.csv --parent PARENT.csv --engine WANG --out OUTPUT --count COUNT`。独立父本为 `82d0de0:submission.csv`，组合父本为 `c42f416` 的 portfolio。完整记录含引擎指纹、选区、各区和对照结果。
+
+## 重建供其他算式使用的小数
+
+从原程序中截取可以仅凭初值及其他小数构造的子程序，保留外部程序实际读取的值。在三个上限下枚举备选算式并求解，再放回原题，用官方题目重放。组合组 150 道题试了 391 个子程序，均未缩短。
+独立组 150 道题省 0 条。
+结构线索来自 Sadam Torres 对共享常量的公开分析。[固定版本](https://www.kaggle.com/code/sadamtorres/santa-2026-the-elves-left-their-scratch-paper?scriptVersionId=373154578) · [求解器](small_dictionary.py) · [逐题结果](refresh-128501-results.json.gz)

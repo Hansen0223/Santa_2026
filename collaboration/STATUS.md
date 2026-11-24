@@ -8,6 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
+| 128,501 条候选的新一轮搜索 | 四路首轮已完成 | 倒推 980 道、依赖分区 160 道、新程序 120 道、小数子程序 150 道，组合组均未缩短。[逐题记录](register-search/refresh-128501-results.json.gz) |
 | 从目标倒推时保留多条替代路径 | 独立 614 题、组合 968 题完成 | 独立第 525、641 题各省 1 条，组合组无缩短。[逐题结果](recipe-union/backward-beam-results.json.gz) |
 | 按依赖关系划分子区域 | 独立 119 题、组合 138 题完成 | 独立组省 3 条，组合组省 1 条。[逐题结果](register-search/spectral-regions-results.json.gz) |
 | 局部算式的有理函数重写 | 两组共 1831 道次完成 | 两组均无缩短。[逐题结果](circuit-cuts/rational-cuts-results.json.gz) |

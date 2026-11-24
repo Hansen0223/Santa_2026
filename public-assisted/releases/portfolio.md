@@ -1,6 +1,6 @@
 # 还原 128,501 条候选
 
-本轮 700 道题共省 3976 条。[逐题来源与指纹](portfolio.json) · [上一版 132,477 条候选](https://github.com/Hansen0223/Santa_2026/blob/5b76ad0/public-assisted/releases/portfolio.md)
+本轮 700 道题共省 3,976 条。[逐题来源与指纹](portfolio.json) · [上一版 132,477 条候选](https://github.com/Hansen0223/Santa_2026/blob/5b76ad0/public-assisted/releases/portfolio.md)
 
 | 题号（节选） | 步数 | 改进来源 |
 | --- | --- | --- |
