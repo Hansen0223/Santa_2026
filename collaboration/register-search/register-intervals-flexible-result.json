@@ -1,0 +1,13 @@
+{
+  "id": "scored_0744",
+  "root": 966557520839863841,
+  "parent_sha256": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
+  "before": 268,
+  "graph": 267,
+  "status": "UNKNOWN",
+  "scheduled": null,
+  "seconds": 60,
+  "workers": 6,
+  "recipes": 886,
+  "alternates": 6
+}

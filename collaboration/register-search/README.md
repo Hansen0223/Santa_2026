@@ -162,3 +162,6 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 用两个带偏移的结果反推共同乘数
 
 从两个中间结果与保留值的和或差求公因数。先单独生成两个商，再尝试让第一个商参与生成第二个商。两组搜索分别覆盖组合 170、220 道，独立 210、270 道。部分候选可执行，两组均未缩短整题。[逐题结果](common-offset-factors-results.json.gz) · [实现](common_offset_factors.py)
+
+
+第 744 题进一步允许为同一整数选择不同算式，并同时安排执行顺序。限时未得到 267 步解，继续采用 268 步程序。[试验结果](register-intervals-flexible-result.json)

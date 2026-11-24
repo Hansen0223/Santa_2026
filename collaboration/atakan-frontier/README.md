@@ -53,3 +53,7 @@ GoodPJW v23 contains Atakan Aldemir’s interface closure, joint-interface and r
 ## 从 GoodPJW 第 239 版重建多目标片段
 
 用 Atakan Aldemir 的多目标片段搜索测试 24 道组合题和 32 道独立题，每题执行两种配置，112 次均完成，没有缩短。[逐题结果、输入与源码哈希](target-block-results.json.gz) · [运行入口](target_blocks.py) · [固定发布包](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/239)
+
+## 从初值分组构造完整程序
+
+比较整题从头构造、把目标分组并复用前面生成的值，以及用新程序的部分算式改写已有程序。前两种在组合 32 道、独立 48 道上运行，含局部改写的一轮覆盖组合 54 道、独立 76 道。两轮均未缩短整题。[逐题记录与上游来源](cold-target-groups-results.json.gz) · [试验入口](cold_target_groups.py)

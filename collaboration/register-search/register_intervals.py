@@ -2,12 +2,14 @@
 import argparse
 from collections import Counter, defaultdict
 import json
+from itertools import combinations_with_replacement
 from pathlib import Path
 
 from quotient_chains import inverse_chain, private_cone
 from elf import check, read_puzzles, read_submission, sha256, write_submission
 from graph import _allocate, active_graph, first_recipes
 from solvers.graphs.crossover_lns import load_solver
+from solvers.graphs.corpus_prefix import arithmetic_edges
 
 
 def schedule(puzzle, graph, reference, seconds, workers):
@@ -58,6 +60,85 @@ def schedule(puzzle, graph, reference, seconds, workers):
     return tape, solver.status_name(status)
 
 
+def recipe_pool(puzzle, graph, reference, maximum):
+    available = sorted(graph.keys() | set(puzzle.seeds))
+    choices = {v: {edge} for v, edge in graph.items()}
+    for a, b in combinations_with_replacement(available, 2):
+        for v, edge in arithmetic_edges(a, b, puzzle.limit):
+            if v in choices and v not in (a, b):
+                choices[v].add(edge)
+    def rank(v, edge):
+        position = reference.get(v, len(graph))
+        inputs = tuple(reference.get(u, -1) for u in edge[1:])
+        return (sum(i >= position for i in inputs), max(inputs), edge)
+    pool = {}
+    for v, es in choices.items():
+        incumbent = graph[v]
+        alternatives = sorted(es - {incumbent}, key=lambda e:rank(v,e))[:maximum]
+        pool[v] = (incumbent, *alternatives)
+    return pool
+
+
+def flexible_schedule(puzzle, graph, reference, seconds, workers, maximum):
+    """Choose one recipe per value while enforcing exact register capacity."""
+    cp = load_solver()
+    model = cp.CpModel()
+    recipes = recipe_pool(puzzle, graph, reference, maximum)
+    count = len(graph)
+    position = {v:model.new_int_var(0, count - 1, f"at_{i}") for i,v in enumerate(graph)}
+    model.add_all_different(position.values())
+    use = defaultdict(list)
+    used = {}
+    for output, choices in recipes.items():
+        used[output] = []
+        for index, edge in enumerate(choices):
+            selected = model.new_bool_var("recipe") if len(choices)>1 else None
+            used[output].append((selected, edge))
+            for operand in {edge[1], edge[2]}:
+                if selected is not None:
+                    if operand in position:
+                        model.add(position[operand] < position[output]).only_enforce_if(selected)
+                    read = model.new_int_var(-1, count - 1, "optional_read")
+                    model.add(read == position[output]).only_enforce_if(selected)
+                    model.add(read == -1).only_enforce_if(selected.Not())
+                else:
+                    if operand in position:
+                        model.add(position[operand] < position[output])
+                    read = position[output]
+                use[operand].append(read)
+            if selected is not None:
+                model.add_hint(selected, int(index == 0))
+        if len(choices)>1:
+            model.add_exactly_one(flag for flag,_ in used[output])
+        if output in reference:
+            model.add_hint(position[output],reference[output])
+
+    intervals = []
+    for v in dict.fromkeys((*puzzle.seeds, *graph)):
+        if v not in position and not use[v]:
+            continue
+        start = position[v] + 1 if v in position else 0
+        # A value without readers still occupies its destination for its write.
+        final = model.new_int_var(-1, count, "last_occupancy")
+        earliest = start if v in position else -1
+        model.add_max_equality(final, [earliest, *use[v]])
+        size = model.new_int_var(0, count + 1, "lifetime")
+        intervals.append(model.new_interval_var(start, size, final + 1, "live_value"))
+    model.add_cumulative(intervals, [1]*len(intervals), puzzle.registers)
+    solver = cp.CpSolver()
+    solver.parameters.max_time_in_seconds = seconds
+    solver.parameters.num_search_workers = workers
+    status = solver.solve(model)
+    tape = None
+    if status in (cp.OPTIMAL,cp.FEASIBLE):
+        order = sorted(graph, key=lambda v:solver.value(position[v]))
+        selected = {v:next(e for flag,e in used[v] if flag is None or solver.value(flag)) for v in order}
+        tape = _allocate(puzzle,selected,False,0,fixed_order=True)
+        if tape is None or check(puzzle,tape) != count:
+            raise ValueError("Register assignment disagrees with optional recipes")
+    return tape, solver.status_name(status), sum(map(len,recipes.values()))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     for field in ("puzzles", "parent", "out"):
@@ -66,6 +147,7 @@ def main():
     ap.add_argument("--root", type=int, required=True)
     ap.add_argument("--seconds", type=int, default=30)
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--alternates", type=int, default=0)
     args = ap.parse_args()
     puzzle = next(p for p in read_puzzles(args.puzzles) if p.id == args.id)
     parent = read_submission(args.parent)[puzzle.id]
@@ -83,10 +165,14 @@ def main():
         raise ValueError("No shorter quotient chain")
     graph = active_graph(puzzle, fixed | replacement)
     hint = {v: i for i, v in enumerate(v for v in original if v in graph)}
-    tape, status = schedule(puzzle, graph, hint, args.seconds, args.workers)
+    if args.alternates:
+        tape,status,recipes=flexible_schedule(puzzle,graph,hint,args.seconds,args.workers,args.alternates)
+    else:
+        tape,status=schedule(puzzle,graph,hint,args.seconds,args.workers)
+        recipes=len(graph)
     record = dict(id=puzzle.id, root=args.root, parent_sha256=sha256(args.parent), before=len(parent),
                   graph=len(graph), status=status, scheduled=len(tape) if tape else None,
-                  seconds=args.seconds, workers=args.workers)
+                  seconds=args.seconds, workers=args.workers, recipes=recipes, alternates=args.alternates)
     args.out.mkdir(exist_ok=True, parents=True)
     (args.out/"result.json").write_text(json.dumps(record, indent=2)+"\n", encoding="utf8")
     if tape and len(tape) < len(parent):
