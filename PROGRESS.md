@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 12:03
+
+合并 Ertuğrul Özer 新发布的两个程序，第 106、170 题各省 1 步，1,000 道题全部重放通过，本地组合解降至 **128,492 步**。12:03 榜首为 **125,650 步**，差 **2,842 步**。[还原方式](public-assisted/releases/portfolio.md) · [固定来源](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373317540)
+
 ## 北京时间 11 月 24 日 12:02
 
 联合替换中间算式，第 447、902 题的独立程序各省 1 步，独立候选降至 **139,294 步**。组合解仍为 **128,494 步**。[逐题结果](collaboration/register-search/helper-triangles-results.json.gz)

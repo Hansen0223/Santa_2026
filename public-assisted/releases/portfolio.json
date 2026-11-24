@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 128494,
-  "sha256": "71023d53f8e62affbc136088528de25f8378ced84c697be5ba65b132b43e313e",
+  "instructions": 128492,
+  "sha256": "ca84df2b9f8c14d6c1b6ffa3b3fe7593e5717eea1354b09194e20c9d2c3531d6",
   "sources": [
     {
       "name": "repository",
@@ -20,47 +20,32 @@
       "license": "Apache 2.0",
       "full": true,
       "replayed_instructions": 128494
+    },
+    {
+      "name": "ozertuu-373317540",
+      "url": "https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373317540",
+      "output_csv": "ozertuu-373317540-submission.csv",
+      "output_name": "submission.csv",
+      "csv_sha256": "09ecb9b46c824fa079952488216ffbbbb77a08929c75c041417f94042540fe39",
+      "full": true,
+      "replayed_instructions": 128492
     }
   ],
-  "previous_sha256": "c00261d394fcd8c1955dadfcb8ee7c1fae6d2e587256541d95ebef64aaac8c99",
+  "previous_sha256": "71023d53f8e62affbc136088528de25f8378ced84c697be5ba65b132b43e313e",
   "improved": {
-    "scored_0088": [
-      192,
-      191,
-      "goodpjw2008-239"
+    "scored_0106": [
+      210,
+      209,
+      "ozertuu-373317540"
     ],
-    "scored_0251": [
-      197,
-      196,
-      "goodpjw2008-239"
-    ],
-    "scored_0342": [
-      201,
-      200,
-      "goodpjw2008-239"
-    ],
-    "scored_0374": [
-      199,
-      198,
-      "goodpjw2008-239"
-    ],
-    "scored_0375": [
-      194,
-      193,
-      "goodpjw2008-239"
-    ],
-    "scored_0831": [
-      86,
-      85,
-      "goodpjw2008-239"
+    "scored_0170": [
+      207,
+      206,
+      "ozertuu-373317540"
     ]
   },
   "improved_credits": {
-    "scored_0088": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
-    "scored_0251": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
-    "scored_0342": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
-    "scored_0374": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
-    "scored_0375": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
-    "scored_0831": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239"
+    "scored_0106": "Ertuğrul Özer (ozertuu), notebook 373317540",
+    "scored_0170": "Ertuğrul Özer (ozertuu), notebook 373317540"
   }
 }
