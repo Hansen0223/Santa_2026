@@ -58,4 +58,4 @@ python -B collaboration/exact-boundary/small_domains.py ./sparse-boundary.exe
 
 ## 扩展可登记的精确搜索值域
 
-分片入口也接受已有的通用搜索器。使用固定二进制指纹，合并记录按引擎核对数值上限与分片覆盖。第 388、472 题的首轮已启动，当前下界尚未改变。[通用搜索器构建回执](../../proofs/local/work/gpu/closest-36729/build.json)
+分片入口也接受已有的通用搜索器。使用固定二进制指纹，合并记录按引擎核对数值上限与分片覆盖。第 388、472 题各返回 192 个分片，分别有 0、125 个无解。两题下界尚未改变。[逐片记录](../evidence/0388-0472-h8-grid.json.gz)[通用搜索器构建回执](../../proofs/local/work/gpu/closest-36729/build.json)
