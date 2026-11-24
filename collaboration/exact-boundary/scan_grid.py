@@ -49,7 +49,15 @@ def main():
 
     if args.prior:
         raw=json.loads(gzip.decompress(args.prior.read_bytes()))
-        for row in raw["rows"]:
+        if "grids" in raw:
+            matching=[g["rows"] for g in raw["grids"] if g["puzzle"]==p.id and g["rows"]
+                      and g["rows"][0]["helpers"]==args.helpers]
+            if len(matching)!=1:
+                raise ValueError("Expected one archived grid for the selected puzzle and helper budget")
+            prior_rows=matching[0]
+        else:
+            prior_rows=raw["rows"]
+        for row in prior_rows:
             take(row)
     for f in args.out.glob("*.json"):
         take(json.loads(f.read_bytes()))
