@@ -1,6 +1,8 @@
-# 第 882 题的 22 步解至少需要 6 个新辅助值
+# 第 882 题的最短程序为 23 步
 
-五份独立程序用过 **20 个不同的辅助值**。如果本题存在 22 步解，其中至少 **6 个辅助值**必须来自这 20 个数以外。当前全局下界仍是 22 步，已知程序为 23 步。这里的结果限定了还能产生 22 步见证的整数选择。[全局下界](../../proofs/local/proofs/helper-wave17.json) · [五份可回放程序及其来源](parents.json)
+第 882 题有 12 个不在初值中的目标。22 步程序至多计算 10 个辅助值。穷尽 768 个原分片后，所有 22 步以内的程序均被排除。仓库的 23 步程序用官方题目成功重放，因此 23 步为最短。[最终搜索记录](h10-open-progress.json.gz) · [逐题上下界](../puzzle-bounds.csv) · [和旧下界合并的回执](../evidence/combined-882.json)
+
+此前五份独立程序用过 **20 个不同的辅助值**。在全域搜索完成之前，分档证明曾排除使用至多 5 个集合外新值的 22 步程序。下面保留这部分搜索记录及更换起点的实验。
 
 第五档固定 5 个旧值，允许另外 5 个任意值。全部 15,504 组都已排除。[第五档推导与复验](five-new.md)
 
@@ -46,9 +48,9 @@ python -B collaboration/puzzle-0882-diversity/verify.py --puzzles data/puzzles.c
 
 ## 对剩余分片的细分搜索
 
-已返回 226/240 个细分格，其中 220 个已排除，6 个仍待判定。已完整排除 5 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
+最后 240 个细分格均被排除。余数加细贡献 8 个子格，第四层分组贡献 104 个子格。这些记录有一部分对应同一个父格，合并统计只计一次。[最终逐格结果](h10-open-progress.json.gz)
 
-全部 768 个分片中，757 个直接排除，一个细分后排除。本轮继续检查其余十个，每个再分为 24 格。任一 22 条程序可与现有下界相遇，只有剩余各格全部排除才能证明现有 23 条程序最短。[第一轮逐片记录](h10-first-grid.json.gz) · [剩余坐标](../evidence/active-search-20261121.json)
+全部 768 个分片中，757 个直接排除，一个细分后排除。其余十个再各分为 24 格，最后全部排除。[第一轮逐片记录](h10-first-grid.json.gz) · [剩余坐标](../evidence/active-search-20261121.json)
 
 使用 [hot.cpp](../../proofs/local/work/gpu/closest-36729/hot.cpp) 编译搜索程序，然后从仓库根目录运行以下命令。复用同一输出目录可以继续检验尚未完成的格。
 
@@ -61,3 +63,6 @@ python -B collaboration/puzzle-0882-diversity/refine_open.py --puzzles data/puzz
 
 
 达到搜索上限的格子可以继续拆分。第一种对第三层枚举序号取更细的余数，例如原余数为 0（模 24），就检查模 96 的 0、24、48、72。第二种按第四层的枚举序号分组，保留前三层坐标。只有一组更小分片全部判为无解，才排除它们的父分片。新程序的未分片搜索与原程序的三个对照逐项一致。运行 `build_fourth.py` 构建可选的第四层搜索，再用 `refine_fourth.py` 指定已有的未决格。汇总时可传入 `--deep` 和 `--fourth`，后者同时需要执行这些分片的 `--fourth-binary`。[第三层拆分](refine_cell.py) · [第四层拆分](refine_fourth.py) · [汇总程序](summarize_refinement.py)
+
+
+在仓库根目录运行 `python -B collaboration/puzzle-0882-diversity/apply_bound.py --puzzles data/puzzles.csv --verify-only`，可重建分片覆盖并重放 23 步见证。省略 `--verify-only` 可在上一版合并表上登记新下界。要更新随后变化的可行解，在 `collaboration/refresh_witnesses.py` 中使用 `--receipt collaboration/evidence/combined-882.json`。完整搜索也可按记录的坐标和预算复跑。原始网格使用同一密集引擎，第三层参数为 `0 1`；第四层记录另外提供两个分片参数。

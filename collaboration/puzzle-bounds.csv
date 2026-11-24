@@ -880,7 +880,7 @@ scored_0878,42,38,44,distinct-diamond/conditioned-claims.json.gz,156,156,156,112
 scored_0879,40,36,41,distinct-diamond/conditioned-claims.json.gz,110,104,104,63,0
 scored_0880,18,15,18,helper-wave9.json,36,36,36,18,0
 scored_0881,39,37,40,distinct-diamond/claims.json.gz,87,84,84,44,0
-scored_0882,22,17,22,helper-wave17.json,23,23,23,1,0
+scored_0882,23,17,23,puzzle-0882-diversity/h10-open-progress.json.gz,23,23,23,0,1
 scored_0883,7,7,7,domain-bounds.csv,7,7,7,0,1
 scored_0884,41,40,43,conditional-helper-membership/block-02.json.gz,106,105,105,62,0
 scored_0885,43,40,45,distinct-diamond/conditioned-claims.json.gz,173,163,163,118,0
