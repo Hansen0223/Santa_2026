@@ -120,3 +120,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 把一组目标及其依赖提前安排，实际分配寄存器后从这个截点继续搜索。对照采用相同长度的原顺序截点和整题搜索，轮数与种子相同。独立组 126 道，第 846 题 99 → 98，两种对照均为 99。组合组 102 道，未缩短。另对组合组所有 870 道符合筛选条件的题尝试只重排，其中 832 道得到新截点，长度均未缩短。[逐题结果](target-frontier-results.json.gz) · [采用的程序](target-frontier-independent-wins.csv) · [实现](target_frontier_cuts.py)
 
 同一轮在组合解的另外一组 96 道中，复跑两个联合替换中间数的版本，均未缩短。两个版本分别检验 1,215 和 1 个三值移除情形。所用引擎、种子策略及逐题计数已一并存档。[逐题结果](target-frontier-results.json.gz) · [联合替换](../../solvers/native/cooperative_exchange.cpp) · [分阶段替换](../../solvers/native/staged_exchange.cpp)
+
+## 用两个新中间数合成第三个
+
+先找能从已有值一步算出的两个新中间数，再检查两者是否能合成供另一条算式使用的第三个。一起估算哪些旧算式会失去全部使用者，并和保留同一批单步算式的对照比较。独立组覆盖 880 道题，第 447 题 230 → 229，第 902 题 223 → 222，两题均仅加入联合算式后缩短。组合组的 875 道符合筛选条件的题跑完，其中 270 道进入算式选择，两组均未缩短。[逐题结果](helper-triangles-results.json.gz) · [采用的独立程序](helper-triangles-independent-wins.csv) · [实现](helper_triangles.py)
+
+完整组合组使用 `python -B collaboration/register-search/helper_triangles.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --count 1000 --width 170 --allow-direct --joint`，需在 Python 环境安装 OR-Tools。

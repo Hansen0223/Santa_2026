@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 12:02
+
+联合替换中间算式，第 447、902 题的独立程序各省 1 步，独立候选降至 **139,294 步**。组合解仍为 **128,494 步**。[逐题结果](collaboration/register-search/helper-triangles-results.json.gz)
+
 ## 北京时间 11 月 24 日 11:57
 
 按一组目标的依赖确定截点，第 846 题的独立程序从 99 到 98，独立候选降至 **139,296 步**。组合解仍为 **128,494 步**。[逐题结果](collaboration/register-search/target-frontier-results.json.gz)
