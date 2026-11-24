@@ -53,3 +53,5 @@ python -B collaboration/exact-boundary/small_domains.py ./sparse-boundary.exe
 ## 从初值向前生成多目标程序
 
 每加一个中间值后立即生成已可达的目标，按接下来还能支持的目标数量选取保留方案。从初值、原顺序截点和部分目标的依赖集合出发。组合组与独立组各 21 道，第 635 题的独立程序由 36 步缩至 35 步。另以三份程序为起点尝试缩短该题 32 步组合解，未进一步缩短。[结果](forward-pressure-results.json.gz) · [采用的程序](forward-pressure-independent-wins.csv) · [试验入口](forward_pressure.py)
+
+扩展数值范围后，另试组合 85 道和独立 84 道。Ertuğrul Özer 第 502 版含 49 道等长替代程序，从有实际中间值差异的小题里选 14 道重新搜索。这三组均未缩短。[逐题结果](forward-pressure-results.json.gz) · [公开版本](https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/502)

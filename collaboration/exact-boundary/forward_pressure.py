@@ -87,6 +87,8 @@ def main():
     for key, n in (("count", 50), ("width", 32), ("branch", 8), ("jobs", 8),
                    ("restarts", 3), ("timeout", 12), ("cap", 350000)):
         ap.add_argument("--" + key, type=int, default=n)
+    ap.add_argument("--min-cap", type=int, default=1)
+    ap.add_argument("--max-steps", type=int, default=39)
     ap.add_argument("--salt-stride", type=int, default=19)
     ap.add_argument("--ids", nargs="+")
     ap.add_argument("--donors", nargs="+", type=Path, default=[])
@@ -99,9 +101,9 @@ def main():
     cohort = []
     for p in puzzles:
         n = len(parent[p.id])
-        if ((not args.ids or p.id in args.ids) and 0 < len(set(p.targets) - set(p.seeds)) < n < 40 and bound[p.id] < n
+        if ((not args.ids or p.id in args.ids) and 0 < len(set(p.targets) - set(p.seeds)) < n <= args.max_steps and bound[p.id] < n
                 and len(p.seeds) == len(set(p.seeds)) and len(p.seeds) + n <= p.registers
-                and p.limit <= args.cap):
+                and args.min_cap <= p.limit <= args.cap):
             cohort.append(p)
     chosen = sorted(cohort, key=lambda p: (p.limit, p.id))[:args.count]
     tasks = []

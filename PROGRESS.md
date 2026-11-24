@@ -4,6 +4,8 @@
 
 第 635 题的独立程序由 36 步降至 35 步，独立候选降至 **139,271 步**，1,000 题全部回放通过。本地组合解仍为 **128,491 步**。[逐题结果](collaboration/exact-boundary/forward-pressure-results.json.gz)
 
+第 24 题相对上轮再排除 **33 个分片**，累计 **49 个**，搜索仍在继续。北京时间 13:40 核对时，组合解距榜首 **2,841 步**。[分片记录](collaboration/evidence/0024-h11-checkpoint.json.gz)
+
 ## 北京时间 11 月 24 日 13:32
 
 配对重建与多目标片段试验未缩短程序。第 24 题再排除 16 个分片，仍在搜索。本地组合解 **128,491 步**，北京时间 13:23 核对时距榜首 **2,841 步**。[缩短试验](collaboration/register-search/dual-operation-results.json.gz) · [搜索快照](collaboration/evidence/0024-h11-checkpoint.json.gz)
