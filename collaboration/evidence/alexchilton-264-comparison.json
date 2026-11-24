@@ -1,0 +1,13 @@
+{
+  "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/264",
+  "archive_sha256": "e70386a00e80deebdbaa57cb9757a52479f4134639b57deabaf02aca253afc44",
+  "member": "rudolph_programs.csv",
+  "csv_sha256": "58b41af2c0b87b40e1107f147b3a8bd5529060bdf30620cbf7bc0fe4c1ad57bb",
+  "parent_sha256": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
+  "replayed_instructions": 128491,
+  "improved": {},
+  "different_tapes": 986,
+  "different_value_sets": 172,
+  "different_recipes": 565,
+  "difference_ge_4": 68
+}

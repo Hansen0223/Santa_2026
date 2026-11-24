@@ -165,3 +165,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 
 
 第 744 题进一步允许为同一整数选择不同算式，并同时安排执行顺序。限时未得到 267 步解，继续采用 268 步程序。[试验结果](register-intervals-flexible-result.json)
+
+## 同时替换同一数值的两条下游分支
+
+先以两条分支的共同输入为起点，对组合和独立解各试 110 道题。再分别对 85 道和 105 道题禁止使用一个旧中间值，保留等长替换以便后续继续压缩。两组均未缩短完整程序。[逐题结果](deep-cuts-results.json.gz)

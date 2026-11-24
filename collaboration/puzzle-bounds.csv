@@ -19,7 +19,7 @@ scored_0017,38,36,40,conditional-helper-membership/block-07.json.gz,109,109,109,
 scored_0018,40,37,42,conditional-helper-membership/block-04.json.gz,124,119,119,77,0
 scored_0019,13,14,14,proofs_ext,23,22,22,8,0
 scored_0020,38,35,40,distinct-diamond/conditioned-claims.json.gz,265,241,241,201,0
-scored_0021,19,16,19,conditioned-bounds.json,41,39,39,20,0
+scored_0021,21,16,21,evidence/two-seed-closed-grids-20261124.json.gz,41,39,39,18,0
 scored_0022,41,38,42,distinct-diamond/conditioned-claims.json.gz,102,102,102,60,0
 scored_0023,37,35,39,distinct-diamond/claims.json.gz,163,157,157,118,0
 scored_0024,24,22,24,evidence/0024-h10-final-grid.json.gz,29,29,29,5,0
@@ -231,7 +231,7 @@ scored_0229,39,36,40,distinct-diamond/conditioned-claims.json.gz,152,139,139,99,
 scored_0230,40,36,41,distinct-diamond/conditioned-claims.json.gz,222,210,210,169,0
 scored_0231,42,38,44,distinct-diamond/conditioned-claims.json.gz,186,179,179,135,0
 scored_0232,38,35,40,distinct-diamond/conditioned-claims.json.gz,168,166,166,126,0
-scored_0233,20,17,20,helper-wave13.json,32,32,32,12,0
+scored_0233,22,17,22,evidence/two-seed-closed-grids-20261124.json.gz,32,32,32,10,0
 scored_0234,43,40,45,distinct-diamond/conditioned-claims.json.gz,190,179,179,134,0
 scored_0235,40,37,42,distinct-diamond/claims.json.gz,197,197,197,155,0
 scored_0236,37,35,39,distinct-diamond/claims.json.gz,115,108,108,69,0
@@ -861,7 +861,7 @@ scored_0859,41,37,43,distinct-diamond/conditioned-claims.json.gz,227,218,218,175
 scored_0860,38,35,40,distinct-diamond/claims.json.gz,147,143,143,103,0
 scored_0861,41,37,42,distinct-diamond/claims.json.gz,162,156,156,114,0
 scored_0862,41,40,42,distinct-helper-edges/full-certificates.json,106,106,106,64,0
-scored_0863,19,17,19,helper-wave13.json,32,30,30,11,0
+scored_0863,21,17,21,evidence/two-seed-closed-grids-20261124.json.gz,32,30,30,9,0
 scored_0864,37,34,38,distinct-diamond/claims.json.gz,183,182,182,144,0
 scored_0865,45,40,47,distinct-diamond/conditioned-claims.json.gz,243,230,230,183,0
 scored_0866,15,16,16,proofs_ext,26,26,26,10,0
@@ -960,7 +960,7 @@ scored_0958,14,12,14,helper-wave9.json,25,24,24,10,0
 scored_0959,43,40,45,distinct-diamond/conditioned-claims.json.gz,237,227,227,182,0
 scored_0960,41,38,42,distinct-diamond/claims.json.gz,129,123,123,81,0
 scored_0961,38,35,39,distinct-diamond/claims.json.gz,107,104,104,65,0
-scored_0962,19,16,19,helper-wave13.json,33,31,31,12,0
+scored_0962,21,16,21,evidence/two-seed-closed-grids-20261124.json.gz,33,31,31,10,0
 scored_0963,40,36,41,distinct-diamond/conditioned-claims.json.gz,129,121,121,80,0
 scored_0964,43,40,45,distinct-diamond/conditioned-claims.json.gz,214,202,202,157,0
 scored_0965,44,39,46,distinct-diamond/conditioned-claims.json.gz,194,192,192,146,0
