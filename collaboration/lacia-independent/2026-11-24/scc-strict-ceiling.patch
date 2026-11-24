@@ -1,0 +1,23 @@
+--- a/scc_select.py
++++ b/scc_select.py
+@@ -175,11 +175,19 @@
+         if v not in forced:model.add_hint(use[v],int(v in primary))
+     objective=sum(u for v,u in use.items() if v not in forced)
+     model.minimize(objective)
+-    model.add(objective<=len(primary)-len(forced))
++    # A DAG cannot compile to fewer steps than its distinct nonseed values.
++    # The existing physical tape is the fallback, so reject ties at the model.
++    upper = min(len(primary), len(incumbent) - 1)
++    model.add(objective<=upper-len(forced))
+     solver=cp.CpSolver();settings=solver.parameters
+     settings.num_search_workers=1;settings.max_time_in_seconds=float(seconds)
+     status=solver.solve(model)
+     meta=dict(sccs=len(groups),cyclic_sizes=sorted((len(g) for g in groups if len(g)>1),reverse=True),forced=len(forced),status=solver.status_name(status),solver_sec=solver.wall_time)
++    if status == cp.INFEASIBLE and upper < len(primary):
++        # The original primary is a feasible DAG, only the strict cap removed it.
++        meta.update(status="NO_STRICT_IMPROVEMENT", logical=len(primary),
++                    finite_bank_node_lower_bound=float(upper+1))
++        return incumbent,meta
+     if status not in (cp.OPTIMAL,cp.FEASIBLE):return incumbent,meta
+     graph=active_graph(p,{v:r for z,(v,r) in edges.items() if solver.value(z)})
+     meta.update(logical=len(graph),finite_bank_node_lower_bound=solver.best_objective_bound+len(forced))
