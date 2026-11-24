@@ -71,3 +71,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 在相近长度内优先选择不同的中间值
 
 限定起点长度，优先选原程序未使用、且历史候选中较少出现的中间值。所有选中值均须服务于目标，能分配到正式寄存器的不同程序才进入下一轮。对照为同种子同轮数的直接搜索及使用相同历史候选的交叉搜索。独立组 174 道中 119 道得到不同起点，逐题共 4 道省 5 条，其中 1 道胜过两种对照。组合组原算式 45 道、扩充算式 155 道，分别有 30、52 道得到不同起点，均未缩短。[逐题结果](novelty-portfolio-results.json.gz) · [采用的程序](novelty-portfolio-independent-wins.csv) · [实现](novelty_portfolio.py)
+
+## 同分公开版本的交叉搜索
+
+Kmmmvs 的公开版本回放为 128,492 步，66 道题的程序与组合解不同，逐题未直接缩短。对其中符合交叉条件的 47 道题继续搜索，组合解未缩短。[逐题结果](kmmmvs-373331093-crossover.json.gz) · [公开版本](https://www.kaggle.com/code/kmmmvs/analysis-santa-2026?scriptVersionId=373331093)
