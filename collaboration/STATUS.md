@@ -8,7 +8,7 @@
 
 | 工作 | 负责方 | 范围与进展 |
 | --- | --- | --- |
-| 第 971 题的精确搜索 | 768 个分片均有结果 | 341 个无解，427 个仍未决。[分片档案](evidence/0971-h9-grid.json.gz) |
+| 第 971 题的精确搜索 | 768 个分片均有结果 | 344 个无解，424 个仍未决。[分片档案](evidence/0971-h9-grid.json.gz) |
 | 同一个中间值分叉与加减重组 | 两条路线已测试 | 独立组与组合组均未缩短。[逐题结果](register-search/shared-forks-and-signed-results.json.gz) |
 | 两层共享的中间值 | 独立 881 道、组合 875 道 | 第 993 题独立解 220 → 219，组合组未缩短。[逐题结果](register-search/shared-levels-results.json.gz) |
 | 小题的候选算式重组 | 38 道完成 | 没有缩短组合候选。[逐题结果](register-search/boundary-ensembles-results.json.gz) |
