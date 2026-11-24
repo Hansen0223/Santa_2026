@@ -100,6 +100,71 @@ def create(puzzle, old, sources, limit, two_steps):
     return list(constructions.values()),rewards,dict(births=len(births),ranked=len(ranked))
 
 
+def ranked_exchanges(puzzle, old, treatment, rewards, requested):
+    targets=set(puzzle.targets)
+    uses=Counter(v for _,a,b in old.values() for v in {a,b})+Counter(targets)
+    birth=defaultdict(list)
+    recipients=defaultdict(set)
+    for path in treatment:
+        for output,edge in path.items():
+            if output in rewards:
+                birth[output].append(edge)
+            if output in old:
+                for operand in set(edge[1:]) & rewards.keys():
+                    recipients[operand].add(output)
+    proposals=[]
+    for h,uses_h in recipients.items():
+        removed=removable_together(old,uses,uses_h)
+        forbidden=sorted(removed-targets,key=lambda v:(-uses[v],v))
+        if not forbidden:
+            continue
+        edges=[e for e in birth[h] if forbidden[0] not in e[1:]]
+        if edges:
+            proposals.append((-len(removed),-len(uses_h),h,forbidden[0],edges))
+    for _,_,h,omitted,edges in sorted(proposals)[:requested]:
+        yield h,omitted,tuple((h,e) for e in edges)
+
+
+def guided(puzzle, parent, donors, engine, width, two_steps, rounds, requested):
+    graphs=[active_graph(puzzle,first_recipes(puzzle,t)) for t in (parent,*donors)]
+    old=graphs[0]
+    original=first_recipes(puzzle,parent)
+    literal=additions(puzzle,[parent,*donors])
+    treatment,rewards,counts=create(puzzle,old,graphs,width,two_steps)
+    report=dict(before=len(parent),donors=list(map(len,donors)),**counts,exchanges=[])
+    best=parent
+    ready=[]
+    for fresh,omitted,required in ranked_exchanges(puzzle,old,treatment,rewards,requested):
+        details,tape=compile_selection(puzzle,parent,original,literal+treatment,False,
+            slack=2,required_recipes=required,novelty_weights={fresh:1},forbidden_values=(omitted,))
+        details.update(introduced=fresh,omitted=omitted)
+        report["exchanges"].append(details)
+        if tape is not None:
+            result=active_graph(puzzle,first_recipes(puzzle,tape))
+            if fresh not in result or omitted in result:
+                raise ValueError("A forced replacement changed during scheduling")
+            best=min((best,tape),key=len)
+            ready.append((tape,details))
+    if engine and ready:
+        seed=311223+int(puzzle.id[-4:])
+        control=solve(engine,puzzle,[parent,*donors[:2]],seed,rounds)
+        report["control"]=len(control)
+        best=min((best,control),key=len)
+        for tape,details in ready:
+            refined=solve(engine,puzzle,[tape,parent,*donors[:2]],seed,rounds)
+            details["polish"]=len(refined)
+            best=min((best,refined),key=len)
+    report["after"]=check(puzzle,best)
+    return puzzle.id,best,report
+
+
+def run(job):
+    *args, force = job
+    if force:
+        return guided(*args,force)
+    return work(tuple(args))
+
+
 def work(job):
     puzzle,parent,donors,engine,width,two_steps,rounds=job
     source=[active_graph(puzzle,first_recipes(puzzle,t)) for t in (parent,*donors)]
@@ -136,7 +201,7 @@ def main():
     parser.add_argument("--engine",type=Path)
     parser.add_argument("--donors",type=Path,nargs="+",required=True)
     parser.add_argument("--two-steps",action="store_true")
-    for name,n in (("count",130),("gap",14),("width",42),("jobs",8),("rounds",420)):
+    for name,n in (("count",130),("gap",14),("width",42),("jobs",8),("rounds",420),("force",0),("offset",0)):
         parser.add_argument("--"+name,type=int,default=n)
     args=parser.parse_args()
     ps=read_puzzles(args.puzzles)
@@ -160,11 +225,11 @@ def main():
         if candidates:
             ranked.append((-max(candidates.values())/len(parent),p.id,p,
                            sorted(candidates,key=lambda t:(-candidates[t],len(t),t))[:3]))
-    selected=sorted(ranked)[:args.count]
-    tasks=[(p,bank[p.id],d,args.engine,args.width,args.two_steps,args.rounds) for _,_,p,d in selected]
+    selected=sorted(ranked)[args.offset:args.offset+args.count]
+    tasks=[(p,bank[p.id],d,args.engine,args.width,args.two_steps,args.rounds,args.force) for _,_,p,d in selected]
     rows,wins={},{}
     with ProcessPoolExecutor(args.jobs) as pool:
-        for i,tape,row in pool.map(work,tasks,chunksize=1):
+        for i,tape,row in pool.map(run,tasks,chunksize=1):
             rows[i]=row
             if len(tape)<len(bank[i]):
                 wins[i]=tape

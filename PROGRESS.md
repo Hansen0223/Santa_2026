@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 14:21
+
+第 630、654 题的下界分别提高至 **17 步、22 步**，全题总下界升至 **38,004 步**。第 24 题首轮结束，384 个分片中排除 164 个。组合解仍为 **128,491 步**。[证明结果](collaboration/evidence/0630-0654-closed-grids.json.gz) · [缩短试验](collaboration/recipe-union/cross-exchanges-results.json.gz)
+
 ## 北京时间 11 月 24 日 14:15
 
 第 81、635 题的独立程序各省 1 步，独立候选降至 **139,269 步**，全量回放通过。组合解仍为 **128,491 步**。第 24 题又排除 18 个分片。[逐题试验](collaboration/recipe-union/cross-born-results.json.gz) · [分片记录](collaboration/evidence/0024-h11-checkpoint.json.gz)

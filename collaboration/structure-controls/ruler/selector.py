@@ -33,7 +33,7 @@ def strong(nodes,edges):
     return group
 
 def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None,
-                      required_recipes=(),novelty_weights=None):
+                      required_recipes=(),novelty_weights=None,forbidden_values=()):
     cp=load_solver();seeds=set(p.seeds)
     bank=defaultdict(set)
     def canon(e):
@@ -67,6 +67,8 @@ def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_
         model.add_hint(pay[v],int(v in hint))
         if v in rank:model.add_hint(rank[v],positions.get(v,0))
     for v in set(p.targets)-seeds:model.add(pay[v]==1)
+    for v in forbidden_values:
+        model.add(pay[v]==0)
     if required_recipes:
         model.add_bool_or([flags[v,canon(e)] for v,e in required_recipes])
     limit=len(tape)+slack
@@ -90,7 +92,7 @@ def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_
     solver.parameters.random_seed=619;solver.parameters.max_deterministic_time=.35
     status=solver.solve(model);name=solver.status_name(status)
     r=dict(status=name,values=len(nodes),recipes=len(flags),cyclic_rank_vars=len(rank))
-    forced=bool(omit_old or required_recipes or novelty_weights)
+    forced=bool(omit_old or required_recipes or novelty_weights or forbidden_values)
     best=None if forced else tape
     if status in (cp.OPTIMAL,cp.FEASIBLE):
         select={v:e for (v,e),f in flags.items() if solver.value(f)}
