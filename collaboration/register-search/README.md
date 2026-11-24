@@ -100,3 +100,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 尝试先算一个新中间数，再由它构造两个不同中间数供多个结果使用。两组分别试了仅针对终端目标，以及同时针对被多个结果读取的中间数。独立组 156 + 241 道、组合组 166 + 252 道，均未缩短。两种分组的题目有重叠。[求解器](shared_forks.py)
 
 把连在一起的加减算式展开成带符号的输入数列，尝试让多个输出共享同一对加减。独立和组合各 200 道均未缩短。另在 19 道小题上用至多三个操作替换原有中间数，组合解也未缩短。[加减重组](signed_overlaps.py) · [小题替换](two_hop_replacements.py) · [全部逐题结果](shared-forks-and-signed-results.json.gz)
+
+## 分解目标附近的整数
+
+用现有的小数作为偏移量，对截取算式的目标加减该偏移后做有界因数分解。只保留两个因数都能自现有值一步构造的方案。以 128,494 步组合解为父本，97 道题共试 99 个截取位置，没有得到符合该条件的乘积，组合解未缩短。[逐题结果](nearby-factors-results.json.gz) · [求解器](nearby_factors.py)
