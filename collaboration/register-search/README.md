@@ -144,3 +144,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 临时减少寄存器，再按正式限制继续搜索
 
 以原程序的峰值需求为基准，尝试少用 3 或 6 个寄存器。将原算式重排或按需重算后，在较小容量下搜索，再恢复官方容量继续搜索。与两段都按正式容量搜索的对照使用相同种子和轮数。独立组 195 道中 162 道得到合格的较小容量起点，逐题从全部组取短共省 3 步，其中 1 道的较小容量起点及后续搜索胜过两段正式容量对照。组合组 165 道中 128 道得到合格起点，组合评分未缩短。[逐题结果](tight-register-results.json.gz) · [采用的独立程序](tight-register-independent-wins.csv) · [实现](tight_register_search.py)
+
+## 省略一次写入并替换使用它的算式
+
+沿原有执行顺序删除一步，先尝试用当时寄存器里的数重建受影响的各步，再尝试延长此前算出的数的保留时间并重新分配寄存器。128,492 步组合解、独立解和仓库公开辅助解各试 1,000 道，均未缩短。[逐题记录](omit-physical-write-results.json.gz) · [实现](omit_physical_write.py)
