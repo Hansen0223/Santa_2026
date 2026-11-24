@@ -1,0 +1,55 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -278,3 +278,22 @@
+ 
+-def cp_select(puzzle, bank, available, frozen_graph, wanted, incumbent, seconds, schedule, stats):
++def bank_requires_orders(bank, available):
++    """Check whether the union may contain cyclic recipe selections."""
++    dependencies = dict.fromkeys(bank, 0)
++    users = defaultdict(list)
++    for output, recipes in bank.items():
++        operands = {value for _, a, b in recipes for value in (a, b) if value not in available}
++        dependencies[output] = len(operands)
++        for x in operands:
++            users[x].append(output)
++    ready = [v for v, n in dependencies.items() if not n]
++    for value in ready:
++        for user in users.get(value, ()):
++            dependencies[user] -= 1
++            if not dependencies[user]:
++                ready.append(user)
++    return len(ready) != len(bank)
++
++
++def cp_select(puzzle, bank, available, frozen_graph, wanted, incumbent, seconds, schedule, stats,
++              check_acyclic=False):
+     cp = load_solver()
+@@ -287,7 +306,12 @@
+     model = cp.CpModel()
+-    present = {value: model.new_bool_var(f"value_{i}") for i, value in enumerate(sorted(bank))}
+-    time_index = {value: model.new_int_var(0, ceiling, f"order_{i}")
+-                  for i, value in enumerate(sorted(bank))}
++    values = sorted(bank)
++    present = {value: model.new_bool_var(f"value_{i}") for i, value in enumerate(values)}
++    # Any selection in an acyclic union is acyclic, and its topological
++    # positions fit below the bound on the number of selected values.
++    time_index = (
++        {value: model.new_int_var(0, ceiling, f"order_{i}") for i, value in enumerate(values)}
++        if not check_acyclic or bank_requires_orders(bank, available) else None
++    )
+     recipes = []
+-    for value in sorted(bank):
++    for value in values:
+         choices = []
+@@ -299,3 +323,4 @@
+                 model.add_implication(use, present[operand])
+-                model.add(time_index[operand] < time_index[value]).only_enforce_if(use)
++                if time_index is not None:
++                    model.add(time_index[operand] < time_index[value]).only_enforce_if(use)
+         model.add(sum(choices) == present[value])
+@@ -377,3 +402,4 @@
+                                           capacity, maximum_recipes, deep_bridge, local_neighbors)
+-        candidate = cp_select(puzzle, cut, available, base_graph, wanted, best, seconds, schedule, stats)
++        candidate = cp_select(puzzle, cut, available, base_graph, wanted, best, seconds, schedule, stats,
++                              check_acyclic=not capacity)
+         if len(candidate) < len(best):
