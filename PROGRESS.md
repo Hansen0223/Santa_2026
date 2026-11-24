@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 10:12
+
+700 道题合计省 3976 条，组合候选降至 **128,501 条**。[各题改进与来源](public-assisted/releases/portfolio.md)
+
 ## 北京时间 11 月 21 日 21:18
 
 第 571、927、946 题合计省 3 条，组合候选降至 **132,477 条**。[各题改进与来源](public-assisted/releases/portfolio.md)
