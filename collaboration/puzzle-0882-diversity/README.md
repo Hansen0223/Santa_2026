@@ -46,7 +46,7 @@ python -B collaboration/puzzle-0882-diversity/verify.py --puzzles data/puzzles.c
 
 ## 对剩余分片的细分搜索
 
-已返回 190/240 个细分格，其中 184 个已排除，6 个达到当前搜索上限。已完整排除 3 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
+已返回 226/240 个细分格，其中 220 个已排除，6 个仍待判定。已完整排除 5 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
 
 全部 768 个分片中，757 个直接排除，一个细分后排除。本轮继续检查其余十个，每个再分为 24 格。任一 22 条程序可与现有下界相遇，只有剩余各格全部排除才能证明现有 23 条程序最短。[第一轮逐片记录](h10-first-grid.json.gz) · [剩余坐标](../evidence/active-search-20261121.json)
 
@@ -58,3 +58,6 @@ python -B collaboration/puzzle-0882-diversity/refine_open.py --puzzles data/puzz
 
 
 原批次仍在运行时，使用同一输出目录并添加 `--retry-only --budget 80000000`，仅处理已有的未决格。汇总时运行 `summarize_refinement.py --puzzles data/puzzles.csv --in work/h10-882 --out h10-open-progress.json.gz`，检查坐标是否完整、来源是否一致、有没有可回放的 22 步程序。
+
+
+达到搜索上限的格子可以继续拆分。第一种对第三层枚举序号取更细的余数，例如原余数为 0（模 24），就检查模 96 的 0、24、48、72。第二种按第四层的枚举序号分组，保留前三层坐标。只有一组更小分片全部判为无解，才排除它们的父分片。新程序的未分片搜索与原程序的三个对照逐项一致。运行 `build_fourth.py` 构建可选的第四层搜索，再用 `refine_fourth.py` 指定已有的未决格。汇总时可传入 `--deep` 和 `--fourth`，后者同时需要执行这些分片的 `--fourth-binary`。[第三层拆分](refine_cell.py) · [第四层拆分](refine_fourth.py) · [汇总程序](summarize_refinement.py)
