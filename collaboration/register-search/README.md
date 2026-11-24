@@ -84,3 +84,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 从目标一端反推全部四种运算的未知操作数，从已知值一端枚举可一步得到的整数。当两端相遇时，将候选重新放入原题检查。独立组全量 1,000 道中有 4 道各省 1 条，组合组扩大到全部 1,000 道，未缩短。
 
 另一项试验比较不同截断位置的新路径。同一个新值出现在两段互不重叠的子程序中时，尝试只计算一次。独立组 150 道提出 272 对长度可能更短的路径，完整重排后均未缩短。组合组 145 道没有形成这样的成对路径。[逐题结果](two-sided-chains-results.json.gz) · [采用的独立程序](two-sided-chains-independent-wins.csv) · [两端搜索](two_sided_chains.py) · [成对重建](joint_chains.py)
+
+## 临时增大寄存器容量后再恢复比赛限制
+
+对组合解中寄存器占用较高的 120 道，以及独立解的 100 道，分别在原始限制、增加 1 个和增加 4 个寄存器的条件下搜索。两组均未缩短。单独重建第 744 题的 267 步算式时，增加 6 个和 10 个寄存器的两组都得到 267 步程序，恢复到 48 个寄存器后仍未找到可用顺序。组合评分沿用 268 步。[逐题结果](relaxed-registers-results.json.gz) · [求解器](relaxed_registers.py)

@@ -46,7 +46,7 @@ python -B collaboration/puzzle-0882-diversity/verify.py --puzzles data/puzzles.c
 
 ## 对剩余分片的细分搜索
 
-已返回 105/240 个细分格，其中 104 个已排除，1 个达到本轮搜索上限。已完整排除 1 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
+已返回 190/240 个细分格，其中 184 个已排除，6 个达到当前搜索上限。已完整排除 3 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
 
 全部 768 个分片中，757 个直接排除，一个细分后排除。本轮继续检查其余十个，每个再分为 24 格。任一 22 条程序可与现有下界相遇，只有剩余各格全部排除才能证明现有 23 条程序最短。[第一轮逐片记录](h10-first-grid.json.gz) · [剩余坐标](../evidence/active-search-20261121.json)
 
@@ -55,3 +55,6 @@ python -B collaboration/puzzle-0882-diversity/verify.py --puzzles data/puzzles.c
 ```shell
 python -B collaboration/puzzle-0882-diversity/refine_open.py --puzzles data/puzzles.csv --binary ./proof-hot --out work/h10-882 --jobs 4
 ```
+
+
+原批次仍在运行时，使用同一输出目录并添加 `--retry-only --budget 80000000`，仅处理已有的未决格。汇总时运行 `summarize_refinement.py --puzzles data/puzzles.csv --in work/h10-882 --out h10-open-progress.json.gz`，检查坐标是否完整、来源是否一致、有没有可回放的 22 步程序。

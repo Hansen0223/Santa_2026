@@ -22,11 +22,11 @@ def store(path, record):
     Path(tmp.name).replace(path)
 
 
-def search(puzzle, binary, first, second, third, budget):
+def search(puzzle, binary, first, second, third, budget, thirds=24):
     values = [puzzle.limit, len(puzzle.seeds), len(puzzle.targets), 10, budget,
               *puzzle.seeds, *puzzle.targets]
     result = subprocess.run(
-        [str(binary), 'star', str(first), '24', str(second), '32', str(third), '24'],
+        [str(binary), 'star', str(first), '24', str(second), '32', str(third), str(thirds)],
         input=' '.join(map(str, values)) + '\n', text=True, capture_output=True, check=True,
         env={**os.environ, 'SANTA_GROUP_WIDTH': '16'},
         creationflags=getattr(subprocess, 'BELOW_NORMAL_PRIORITY_CLASS', 0))
@@ -56,6 +56,8 @@ def main():
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--jobs', type=int, default=4)
     parser.add_argument('--budget', type=int, default=20000000)
+    parser.add_argument('--retry-only', action='store_true',
+                        help='Only retry existing UNKNOWN cells below the new budget')
     args = parser.parse_args()
     if min(args.jobs, args.budget) < 1:
         parser.error('jobs and budget must be positive')
@@ -85,6 +87,8 @@ def main():
         for k in range(24):
             key = [i, j, k]
             path = args.out / f'{i:02}-{j:02}-{k:02}.json'
+            if args.retry_only and not path.exists():
+                continue
             if path.exists():
                 old = json.loads(path.read_bytes())
                 if old['context'] != context or old['coordinates'] != key:
