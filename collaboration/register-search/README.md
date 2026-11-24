@@ -78,3 +78,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 从结果向后寻找商和余数
 
 截取最多六个只有一个去处的根节点，并找出能一同移除的算式。用剩余程序中可独立得到的值作乘数和余数，逆向尝试重建，然后重新分配寄存器。独立组 1000 道题中 51 道共省 56 条。组合组 1000 道题未缩短。第 744 题得到 267 条的算式图，待找到满足 48 个寄存器的顺序。[逐题结果](quotient-chains-results.json.gz) · [采用的独立程序](quotient-chains-independent-wins.csv) · [求解器](quotient_chains.py)
+
+## 从两端相遇，再尝试合并两段算式
+
+从目标一端反推全部四种运算的未知操作数，从已知值一端枚举可一步得到的整数。当两端相遇时，将候选重新放入原题检查。独立组全量 1,000 道中有 4 道各省 1 条，组合组首轮 155 道未缩短。
+
+另一项试验比较不同截断位置的新路径。同一个新值出现在两段互不重叠的子程序中时，尝试只计算一次。独立组 150 道提出 272 对长度可能更短的路径，完整重排后均未缩短。组合组 145 道没有形成这样的成对路径。[逐题结果](two-sided-chains-results.json.gz) · [采用的独立程序](two-sided-chains-independent-wins.csv) · [两端搜索](two_sided_chains.py) · [成对重建](joint_chains.py)

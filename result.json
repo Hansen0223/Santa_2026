@@ -1,7 +1,7 @@
 {
   "puzzles": 1000,
-  "instructions": 139346,
-  "sha256": "d6fb79e43cde0b44c92eb323c17747c9e5832a5488e9d3db41181bb8397a2d74",
+  "instructions": 139342,
+  "sha256": "df0ed7bdfc3687987678172a89b6da4906980a1e5860282dc8ba8a72662b920c",
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
   "longest_program": 303,
   "arithmetic_lower_bound": 36731,
@@ -26,7 +26,7 @@
     "work/creative/resume-135077/independent-final-140814/shorter.csv": 16,
     "work/gpu/bridge-36731/wide-first-release/wins.csv": 5,
     "work/gpu/overlap-independent.csv": 3,
-    "work/virtual/resume-135077/wang-second.csv": 29,
+    "work/virtual/resume-135077/wang-second.csv": 28,
     "work/virtual/whole-135358/sparse.csv": 2,
     "collaboration/recipe-union/paired-splice-independent-wins.csv": 7,
     "work/virtual/lifetimes-135161/own-pressure.csv": 6,
@@ -39,11 +39,11 @@
     "work/virtual/lifetimes-135161/own-direct-all.csv": 8,
     "work/creative/transfer-133825/borrowed/own-holdout.csv": 2,
     "git/96f4bcf79bb8 (Hiyohane)": 3,
-    "git/6d7feb429753 (Hiyohane)": 9,
+    "git/6d7feb429753 (Hiyohane)": 8,
     "work/creative/transfer-133825/borrowed/own-expand-10.csv": 9,
     "work/creative/transfer-133825/contributors/hiyohane-d6e507e.csv": 2,
     "work/gpu/frontier-independent.csv": 3,
-    "work/virtual/portfolio-135289/own-all.csv": 17,
+    "work/virtual/portfolio-135289/own-all.csv": 16,
     "work/virtual/resume-135077/official-fresh-3.csv": 1,
     "work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv": 20,
     "work/virtual/guided-142434/small-twoply.csv": 1,
@@ -71,7 +71,7 @@
     "work/virtual/lifetimes-135161/polish/own-remaining-wins.csv": 1,
     "work/virtual/siblings-135106/own-recovered-early.csv": 1,
     "work/virtual/withheld-134079/block-08-own.csv": 4,
-    "work/heritage/deep-own-wins.csv": 25,
+    "work/heritage/deep-own-wins.csv": 24,
     "work/virtual/withheld-134079/block-09-own.csv": 4,
     "work/creative/frontier-135161/own/best-shorter.csv": 10,
     "work/heritage/global-diversity/independent-wins.csv": 1,
@@ -171,6 +171,7 @@
     "collaboration/circuit-cuts/product-join-independent-wins.csv": 2,
     "work/creative/own-good/part4-wins.csv": 4,
     "work/gpu/witness-dfs/own-blind.csv": 1,
+    "collaboration/register-search/two-sided-chains-independent-wins.csv": 4,
     "git/19e58dbdcc79 (Hiyohane)": 2,
     "work/virtual/temporary-targets-134182/holdout-own.csv": 2,
     "work/virtual/resume-135077/polish2-own-remaining.csv": 1,
@@ -246,7 +247,7 @@
     "independent_full_replay": true,
     "median_program": 123.5,
     "p90_program": 231,
-    "submission_bytes": 2245706,
+    "submission_bytes": 2245539,
     "kaggle_submission_status": "local_only"
   },
   "benchmarks": {
@@ -258,7 +259,7 @@
     "early_dictionary_steps": 202265,
     "public_reference_portfolio_steps": 138904,
     "public_leaderboard_first_steps": 125650,
-    "public_leaderboard_snapshot_beijing": "2026-11-24 10:16",
+    "public_leaderboard_snapshot_beijing": "2026-11-24 10:24",
     "public_leaderboard_url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
     "public_reference_sources": {
       "asterios": {
@@ -283,10 +284,10 @@
         "selected_puzzles": 1
       }
     },
-    "current_reduction_from_sample_percent": 90.6503,
+    "current_reduction_from_sample_percent": 90.6506,
     "latest_official_leaderboard": {
       "url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
-      "checked_at": "2026-11-24T02:16:57.798087+00:00",
+      "checked_at": "2026-11-24T02:24:19.584223+00:00",
       "top_scores": [
         125650,
         126026,
@@ -296,8 +297,8 @@
         126285,
         126761,
         127000,
-        127066,
-        127102
+        127064,
+        127066
       ],
       "evidence": "collaboration/leaderboard.json"
     }
@@ -5175,6 +5176,32 @@
         "scored_0992": [
           273,
           271
+        ]
+      }
+    },
+    {
+      "utc": "2026-11-24T02:28:05+00:00",
+      "base_revision": "62948480bd241cb0af878822584be20ded43cbae",
+      "previous_sha256": "d6fb79e43cde0b44c92eb323c17747c9e5832a5488e9d3db41181bb8397a2d74",
+      "observed_program_sha256": "d6fb79e43cde0b44c92eb323c17747c9e5832a5488e9d3db41181bb8397a2d74",
+      "score": 139342,
+      "sha256": "df0ed7bdfc3687987678172a89b6da4906980a1e5860282dc8ba8a72662b920c",
+      "adopted_rows": {
+        "scored_0475": [
+          199,
+          198
+        ],
+        "scored_0525": [
+          116,
+          115
+        ],
+        "scored_0694": [
+          162,
+          161
+        ],
+        "scored_0808": [
+          261,
+          260
         ]
       }
     }
