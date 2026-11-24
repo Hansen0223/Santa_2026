@@ -312,7 +312,7 @@ scored_0310,collaboration/register-search/suffix-independent-wins.csv,106
 scored_0311,collaboration/recipe-union/cut-parents-independent-wins.csv,112
 scored_0312,collaboration/register-search/suffix-independent-wins.csv,268
 scored_0313,work/virtual/withheld-134079/block-06-own.csv,182
-scored_0314,work/creative/seed-basis-133773/shell-96/own.csv,200
+scored_0314,collaboration/register-search/pair-exclusive-cuts-independent-wins.csv,199
 scored_0315,work/virtual/portfolio-135289/own-wide-all.csv,237
 scored_0316,work/creative/transfer-133825/contributors/hiyohane-d6e507e.csv,121
 scored_0317,work/gpu/walk-independent.csv,182
@@ -901,7 +901,7 @@ scored_0899,collaboration/register-search/suffix-independent-wins.csv,227
 scored_0900,work/virtual/portfolio-135289/own-all.csv,177
 scored_0901,work/gpu/901-independent/independent-17.csv,17
 scored_0902,work/creative/seed-basis-133773/hiyohane-88c64b6.csv,223
-scored_0903,work/creative/ladder/lns-local.csv,158
+scored_0903,collaboration/register-search/pair-exclusive-cuts-independent-wins.csv,157
 scored_0904,work/virtual/reactive-134311/accepted/independent-shorter.csv,108
 scored_0905,work/gpu/lineage-independent.csv,245
 scored_0906,work/virtual/lifetimes-135161/own-direct-all.csv,214

@@ -110,3 +110,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 保持部分原指令的顺序，对其余指令枚举合法交错方式。另一种方法从最后一条指令向前安排，按尚需保留的值筛选部分顺序。两法在 200 个小算例中与枚举全部拓扑顺序一致。第 744 题以 128,494 步组合作为父本，尝试原顺序、局部窗口及最大宽度 8,192 的反向搜索，均无法将已有的 267 条算式装入 48 个寄存器，仍使用原 268 条程序。[逐项结果](interleave-schedule-results.json) · [实现](interleave_schedule.py)
 
 在提供题目和组合父本文件后，运行 `python -B collaboration/register-search/interleave_schedule.py --puzzles PUZZLES.csv --parent PARENT.csv --out OUTPUT --puzzle-id scored_0744 --root 966557520839863841` 可重跑固定原顺序和反向搜索。
+
+## 同时重建一对共享算式的目标
+
+拆掉仅服务于该目标对的算式。分别尝试从保留算式开始、保留一个共享中间数再重建，或让后完成的目标复用先完成目标的中间数。独立组覆盖 893 道题，第 314 题 200 → 199，第 903 题 158 → 157。组合组试了 200 道，未缩短。[逐题结果及公开来源核对](pair-exclusive-cuts-results.json.gz) · [采用的独立程序](pair-exclusive-cuts-independent-wins.csv) · [实现](pair_exclusive_cuts.py)

@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 11:49
+
+联合重建共享算式的目标，独立解第 314、903 题各省 1 步，独立候选降至 **139,297 步**。组合解仍为 **128,494 步**。[逐题结果](collaboration/register-search/pair-exclusive-cuts-results.json.gz)
+
 ## 北京时间 11 月 24 日 11:40
 
 第 744 题的 267 步算式试了两种新调度，仍使用 268 步的可执行程序。用两份近同分公开程序重组了 553 道题，并对差异较大的 57 道做额外搜索，组合解仍为 **128,494 步**。11:40 官方榜首为 **125,650 步**，相差 **2,844 步**。[调度结果](collaboration/register-search/interleave-schedule-results.json) · [逐题搜索](collaboration/recipe-union/near-tie-archives-results.json.gz)
