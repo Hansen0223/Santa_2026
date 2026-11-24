@@ -12,6 +12,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT), str(ROOT/"collaboration/puzzle-0882-diversity")]
 from elf import check, read_puzzles, sha256, write_submission
+from merge_grids import GRID_ENGINES
 from tiny import encode
 from refine_open import store
 
@@ -33,11 +34,13 @@ def main():
     if args.archive_only and args.archive is None:
         parser.error("--archive-only requires --archive")
     p=next(x for x in read_puzzles(args.puzzles) if x.id==args.id)
-    if p.limit>2000000:
-        parser.error("The dense engine requires a value limit at most 2,000,000")
-    binary=args.binary.resolve(strict=True)
+    binary = args.binary.resolve(strict=True)
+    digest = sha256(binary)
+    width, limit = GRID_ENGINES.get(digest, (16, 2_000_000))
+    if p.limit > limit:
+        parser.error("Selected engine does not support the puzzle's value limit")
     context=dict(puzzle=p.id,helpers=args.helpers,official=sha256(args.puzzles),
-                 engine=sha256(binary),group_width=16,moduli=[args.shards,args.subshards,1])
+                 engine=digest,group_width=width,moduli=[args.shards,args.subshards,1])
     args.out.mkdir(parents=True,exist_ok=True)
     rows={}
     permitted={(i,j,0) for i in range(args.shards) for j in range(args.subshards)}
@@ -91,7 +94,7 @@ def main():
                  key=lambda x:hashlib.sha256(f"{p.id}-{x}".encode()).digest())
     nums=[p.limit,len(p.seeds),len(p.targets),args.helpers,args.budget,*p.seeds,*p.targets]
     wire=" ".join(map(str,nums))+"\n"
-    env={**os.environ,"SANTA_GROUP_WIDTH":"16"}
+    env={**os.environ,"SANTA_GROUP_WIDTH":str(width)}
 
     def run(coord):
         fields=[str(v) for part in zip(coord,context["moduli"]) for v in part]

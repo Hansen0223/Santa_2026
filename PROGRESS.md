@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 13:59
+
+第 237 题的 128 个分片均无解，已证下界提高到 **23 步**，全题总下界升至 **38,000 步**。第 24 题又排除 34 个分片。新缩短试验未降低 **128,491 步**的组合解。[证明记录](collaboration/evidence/0237-h9-grid.json.gz) · [搜索试验](collaboration/register-search/common-offset-factors-results.json.gz)
+
 ## 北京时间 11 月 24 日 13:53
 
 第 5 题和第 877 题各再提高一步下界，分别为 **25 步、27 步**。全题总下界达到 **37,999 步**。[证明记录](collaboration/evidence/small-helper-followup-20261124.json.gz)

@@ -1,4 +1,4 @@
-"""Validate coverage of archived dense-search grids and merge completed exclusions."""
+"""Validate coverage of archived arithmetic search grids and merge completed exclusions."""
 import argparse
 import csv
 import gzip
@@ -17,6 +17,8 @@ from merge_arithmetic_bounds import FIELDS,projection,sha
 from merge_conditioned_bounds import parse
 
 ENGINE = "71dca8b89c358900e7312c23768d1dfcd13f2e8e6473850f82a7a3c3c999ec28"
+SPARSE_ENGINE = "5956ae6cc457545fa842c52a35774cd14572b3fdc0fae7e38cfa0cd19106dcfa"
+GRID_ENGINES = {ENGINE: (16, 2_000_000), SPARSE_ENGINE: (0, 10**18)}
 
 
 def verify_grid(puzzle, archive, official):
@@ -26,7 +28,8 @@ def verify_grid(puzzle, archive, official):
     first = rows[0]
     expected = {name:first[name] for name in ("puzzle","helpers","moduli","group_width","engine","official")}
     assert first["puzzle"]==puzzle.id and first["official"]==official
-    assert first["group_width"]==16 and first["engine"]==ENGINE and puzzle.limit<=2_000_000
+    group_width, limit = GRID_ENGINES[first["engine"]]
+    assert first["group_width"] == group_width and puzzle.limit <= limit
     assert first["helpers"]>=5 and len(first["moduli"])==3 and min(first["moduli"])>=1
     cells = set(product(*(range(n) for n in first["moduli"])))
     seen = set()
@@ -63,6 +66,8 @@ def child_check(row,puzzle,official,moduli,parents,helpers):
 def summarize(puzzle,official,grid,children):
     verify_grid(puzzle,grid,official)
     head = grid["rows"][0]
+    if head["engine"] != ENGINE:
+        raise ValueError("Third-axis refinement requires the grouped dense engine")
     n,m,z = head["moduli"]
     cells = {(r["coords"][0],r["coords"][1]):r for r in grid["rows"]}
     if z!=1 or len(cells)!=n*m:

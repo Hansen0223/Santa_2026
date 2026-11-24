@@ -158,3 +158,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 同时重建一个中间值的所有使用者
 
 替换同一中间值的全部直接使用者。组合 180 道、独立 220 道测试一个新共享值，再各取 118、145 道允许两个。另对组合 52 道、独立 74 道在固定输入下做分片内穷举。两路均未缩短完整程序。[逐题结果](fanout-results.json.gz) · [候选构造](fanout_repair.py) · [固定输入搜索](fanout_exact.py)
+
+## 用两个带偏移的结果反推共同乘数
+
+从两个中间结果与保留值的和或差求公因数。先单独生成两个商，再尝试让第一个商参与生成第二个商。两组搜索分别覆盖组合 170、220 道，独立 210、270 道。部分候选可执行，两组均未缩短整题。[逐题结果](common-offset-factors-results.json.gz) · [实现](common_offset_factors.py)
