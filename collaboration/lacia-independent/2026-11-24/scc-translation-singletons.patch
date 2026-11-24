@@ -1,0 +1,30 @@
+--- a/scc_select.py
++++ b/scc_select.py
+@@ -90,18 +90,24 @@
+     present=set(p.seeds)|set(old)
+     uses=Counter(v for _,a,b in old.values() for v in {a,b})
+     targets=set(p.targets)
+-    groups=defaultdict(list)
++    groups={}
+     observed=sorted(present)
+     for i,a in enumerate(observed):
+         for b in observed[:i]:
+             d=a-b
+             if d<33 or d in present:continue
+-            groups[d].append((a,b))
++            ports=groups.get(d)
++            if ports is None:
++                groups[d]=(a,b)
++            elif isinstance(ports,tuple):
++                groups[d]=[ports,(a,b)]
++            else:
++                ports.append((a,b))
+     # Each latent is an absent common translation among disjoint old endpoints.
+     def disjoint(ports):
+         a,b=ports[0]
+         return any(a not in j and b not in j for j in ports[1:])
+-    clusters={d:rs for d,rs in groups.items() if 2<=len(rs)<=14 and disjoint(rs)}
++    clusters={d:rs for d,rs in groups.items() if isinstance(rs,list) and len(rs)<=14 and disjoint(rs)}
+     links=[]
+     scalars=sorted(present.intersection(range(2,65)),key=lambda k:(-uses[k],k))[:16]
+     for a,rs in clusters.items():
