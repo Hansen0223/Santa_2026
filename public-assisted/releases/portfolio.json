@@ -1,34 +1,66 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 128500,
-  "sha256": "c00261d394fcd8c1955dadfcb8ee7c1fae6d2e587256541d95ebef64aaac8c99",
+  "instructions": 128494,
+  "sha256": "71023d53f8e62affbc136088528de25f8378ced84c697be5ba65b132b43e313e",
   "sources": [
     {
       "name": "repository",
-      "revision": "63eabf54cdb83aeb2131673256a9c10f186b78df",
+      "revision": "ff94691133904b49235e372df29eb220a465ed34",
       "path": "public-assisted/submission.csv",
       "csv_sha256": "988f1bf9486b6242cfbb2f2a4f52877426b7f201ae7b4a2e2dd20ae0245c9d4c",
       "full": true
     },
     {
-      "name": "goodpjw2008-373296333-submission.csv",
-      "url": "https://www.kaggle.com/code/goodpjw2008/santa-2026-fresh-program-re-search-lb-128-500?scriptVersionId=373296333",
-      "output_csv": "goodpjw2008-373296333-submission.csv",
-      "output_name": "submission.csv",
-      "csv_sha256": "b0a304d123df67814574fc043af99faf2631c0c93962c77dd9800dbac40dd1f2",
+      "name": "goodpjw2008-239",
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/239",
+      "archive": "goodpjw2008-239.zip",
+      "archive_sha256": "9141111189c23e312de421ab70af65d16a8f967b23816dfc7f02871205795252",
+      "member": "our_programs.csv",
+      "csv_sha256": "38a437e6ab024562bedbe8e990bcdf56a017c0f584b4835a8cf2fd546909b8b6",
+      "license": "Apache 2.0",
       "full": true,
-      "replayed_instructions": 128500
+      "replayed_instructions": 128494
     }
   ],
-  "previous_sha256": "e05fafed6121b06044b41e7ae7e9ebfdd693f4aa790bd312da868161510fb88e",
+  "previous_sha256": "c00261d394fcd8c1955dadfcb8ee7c1fae6d2e587256541d95ebef64aaac8c99",
   "improved": {
-    "scored_0363": [
-      150,
-      149,
-      "goodpjw2008-373296333-submission.csv"
+    "scored_0088": [
+      192,
+      191,
+      "goodpjw2008-239"
+    ],
+    "scored_0251": [
+      197,
+      196,
+      "goodpjw2008-239"
+    ],
+    "scored_0342": [
+      201,
+      200,
+      "goodpjw2008-239"
+    ],
+    "scored_0374": [
+      199,
+      198,
+      "goodpjw2008-239"
+    ],
+    "scored_0375": [
+      194,
+      193,
+      "goodpjw2008-239"
+    ],
+    "scored_0831": [
+      86,
+      85,
+      "goodpjw2008-239"
     ]
   },
   "improved_credits": {
-    "scored_0363": "GoodPJW (DAG-LNS), also credited in Ishan Karnick v66 sources.csv"
+    "scored_0088": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
+    "scored_0251": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
+    "scored_0342": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
+    "scored_0374": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
+    "scored_0375": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239",
+    "scored_0831": "Ertuğrul Özer (ozertuu), notebook 373304666; identical row mirrored by GoodPJW v239"
   }
 }
