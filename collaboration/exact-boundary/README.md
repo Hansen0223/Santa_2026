@@ -43,3 +43,9 @@ python -B collaboration/exact-boundary/small_domains.py ./sparse-boundary.exe
 ## 小题重新构造起始常数
 
 从正式初值构造一批至多用三步得到的数。选取能替换原算式的单个数或数对，并和原本算式一起选择。组合候选试了 34 道，独立候选试了 48 道，均未缩短。[逐题结果](seed-basis-menu-results.json.gz) · [实现](seed_basis_menu.py)
+
+## 按短程目标覆盖选取初始算式
+
+从正式初值构造 4、6 或 8 步的可执行前缀，按目标在接下来一两步中可达到的数量筛选。后续倒推仍须将前缀计入得分。组合与独立各 14 道小题，各检查 336 个前缀，均未缩短。[逐题结果](target-supported-prefix-results.json.gz) · [前缀筛选](target_supported_prefixes.py) · [现有倒推引擎](reverse_obligations.cpp)
+
+可用 C++20 编译 `reverse_obligations.cpp`，再将可执行文件传给 `target_supported_prefixes.py --engine`。逐题记录包含引擎指纹、前缀、搜索宽度和种子。

@@ -23,11 +23,15 @@ def main():
     parser.add_argument("--id",required=True)
     parser.add_argument("--helpers",required=True,type=int)
     parser.add_argument("--prior",type=Path)
+    parser.add_argument("--archive",type=Path,help="Save the merged grid as a resumable gzip archive")
+    parser.add_argument("--archive-only",action="store_true",help="Archive existing results without starting more searches")
     for k,n in (("shards",24),("subshards",32),("jobs",8),("budget",2000000)):
         parser.add_argument("--"+k,type=int,default=n)
     args=parser.parse_args()
     if min(args.shards,args.subshards,args.jobs,args.budget)<1 or args.helpers<5:
         parser.error("Shard counts and budgets must be positive; select at least five helpers")
+    if args.archive_only and args.archive is None:
+        parser.error("--archive-only requires --archive")
     p=next(x for x in read_puzzles(args.puzzles) if x.id==args.id)
     if p.limit>2000000:
         parser.error("The dense engine requires a value limit at most 2,000,000")
@@ -61,12 +65,26 @@ def main():
             take(row)
     for f in args.out.glob("*.json"):
         take(json.loads(f.read_bytes()))
+
+    def archive_rows():
+        if args.archive is None:
+            return
+        payload = {"grids":[{"puzzle":p.id,"rows":[rows[key] for key in sorted(rows)]}]}
+        temporary = args.archive.with_suffix(args.archive.suffix+".tmp")
+        temporary.write_bytes(gzip.compress(json.dumps(payload,separators=(",",":")).encode(),mtime=0))
+        temporary.replace(args.archive)
+
+    if args.archive_only:
+        archive_rows()
+        print(f"Archived {len(rows)} cells",flush=True)
+        return
     upper=len(set(p.targets)-set(p.seeds))+args.helpers
     for row in rows.values():
         if row["status"]=="FOUND":
             if check(p,row["program"])>upper:
                 raise ValueError("Invalid saved witness")
             write_submission(args.out/"witness.csv",[p],{p.id:row["program"]})
+            archive_rows()
             return
     tasks=sorted((x for x in permitted if x not in rows or
                   (rows[x]["status"]=="UNKNOWN" and rows[x]["budget"]<args.budget)),
@@ -110,6 +128,11 @@ def main():
                 for outstanding in pending:
                     outstanding.cancel()
                 break
+    if args.archive is not None:
+        # Jobs already running when a witness was found may have finished too.
+        for f in args.out.glob("*.json"):
+            take(json.loads(f.read_bytes()))
+        archive_rows()
 
 
 if __name__=="__main__":
