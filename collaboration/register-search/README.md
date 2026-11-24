@@ -117,7 +117,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 
 ## 先完成一组目标，再搜索剩余程序
 
-把一组目标及其依赖提前安排，实际分配寄存器后从这个截点继续搜索。对照采用相同长度的原顺序截点和整题搜索，轮数与种子相同。独立组 126 道，第 846 题 99 → 98，两种对照均为 99。组合组 102 道，未缩短。另对组合组所有 870 道符合筛选条件的题尝试只重排，其中 832 道得到新截点，长度均未缩短。[逐题结果](target-frontier-results.json.gz) · [采用的程序](target-frontier-independent-wins.csv) · [实现](target_frontier_cuts.py)
+把一组目标及其依赖提前安排，实际分配寄存器后从这个截点继续搜索。对照采用相同长度的原顺序截点和整题搜索，轮数与种子相同。独立组 126 道，第 846 题 99 → 98，两种对照均为 99。 此后扩大到另外 240 道独立题。逐题择短后 3 道共省 4 步，其中 0 道按目标划分的结果严格优于两种对照。组合组 102 道，未缩短。另对组合组所有 870 道符合筛选条件的题尝试只重排，其中 832 道得到新截点，长度均未缩短。[逐题结果](target-frontier-results.json.gz) · [采用的程序](target-frontier-independent-wins.csv) · [实现](target_frontier_cuts.py)
 
 同一轮在组合解的另外一组 96 道中，复跑两个联合替换中间数的版本，均未缩短。两个版本分别检验 1,215 和 1 个三值移除情形。所用引擎、种子策略及逐题计数已一并存档。[逐题结果](target-frontier-results.json.gz) · [联合替换](../../solvers/native/cooperative_exchange.cpp) · [分阶段替换](../../solvers/native/staged_exchange.cpp)
 

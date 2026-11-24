@@ -203,7 +203,7 @@ scored_0201,collaboration/circuit-cuts/transposed-independent-wins.csv,153
 scored_0202,collaboration/register-search/stitch-independent-wins.csv,126
 scored_0203,collaboration/register-search/interior-band-independent-wins.csv,228
 scored_0204,collaboration/register-search/quotient-chains-independent-wins.csv,206
-scored_0205,collaboration/recipe-union/forced-alternates-own-wins.csv,136
+scored_0205,collaboration/register-search/target-frontier-independent-wins.csv,134
 scored_0206,work/creative/resume-135077/anneal-independent-diverse-full105/shorter.csv,163
 scored_0207,work/heritage/deep-own-wins.csv,234
 scored_0208,work/gpu/lineage-independent.csv,229
@@ -804,7 +804,7 @@ scored_0802,collaboration/register-search/quotient-chains-independent-wins.csv,1
 scored_0803,work/creative/joint-132841/siblings/own.csv,119
 scored_0804,work/creative/resume-135077/independent-final-140814/shorter.csv,115
 scored_0805,collaboration/recipe-union/paired-splice-independent-wins.csv,113
-scored_0806,work/virtual/good10-wang-269/results/batch-07/winners.csv,94
+scored_0806,collaboration/register-search/target-frontier-independent-wins.csv,93
 scored_0807,collaboration/register-search/stitch-independent-wins.csv,121
 scored_0808,collaboration/register-search/two-sided-chains-independent-wins.csv,260
 scored_0809,work/virtual/withheld-134079/block-06-own.csv,115
@@ -916,7 +916,7 @@ scored_0914,work/creative/ladder/lns-local.csv,39
 scored_0915,work/heritage/symbol-own-wins.csv,197
 scored_0916,work/heritage/symbol-own-wins.csv,238
 scored_0917,work/heritage/deep-own-wins.csv,221
-scored_0918,collaboration/register-search/inverse-proximity-independent-wins.csv,218
+scored_0918,collaboration/register-search/target-frontier-independent-wins.csv,217
 scored_0919,work/creative/transfer-133825/borrowed/own-expand-09.csv,119
 scored_0920,collaboration/target-partition/donor-mask-independent-wins.csv,149
 scored_0921,work/heritage/deep-own-wins.csv,174

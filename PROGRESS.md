@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 12:20
+
+扩展按目标依赖重排的试验，独立解 3 道共省 4 步，降至 **139,280 步**。本地组合解仍为 **128,492 步**。[重排结果](collaboration/register-search/target-frontier-results.json.gz) · [共享中间值试验](collaboration/register-search/composed-hubs-results.json.gz)
+
 ## 北京时间 11 月 24 日 12:10
 
 倒推搜索与对照逐题取短，独立解 10 题各省 1 步，降至 **139,284 步**。组合仍为 **128,492 步**。[逐题结果](collaboration/register-search/inverse-proximity-results.json.gz)
