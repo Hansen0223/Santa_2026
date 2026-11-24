@@ -1,5 +1,13 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 13:21
+
+第 93 题少 1 步，本地组合解降至 **128,491 步**，1,000 题全部回放通过。北京时间 13:15 榜首为 125,650 步，差 **2,841 步**。第 24 题下界提高至 **24 步**，全题总下界为 **37,992 步**。[候选](public-assisted/releases/portfolio.md) · [证明](collaboration/evidence/0024-h10-final-grid.json.gz)
+
+## 北京时间 11 月 24 日 13:17
+
+第 113 题的 22 步预算已全部排除，已证下界提高至 **23 步**。全题总下界为 **37,991 步**。[证明记录](collaboration/evidence/0113-h11-final-grid.json.gz)
+
 ## 北京时间 11 月 24 日 13:12
 
 第 113 题再排除 **20 个分片**，剩 **8 个未决**。已证下界为 22 步，本地组合解仍为 **128,492 步**。[细分记录](collaboration/evidence/0113-h11-third-grid.json.gz)
@@ -283,14 +291,6 @@ GoodPJW 第 11 版的完整导出为 134,203 条。逐题与原有解比较，67
 
 
 ## 11 月 20 日两种搜索的执行次序
-
-## 北京时间 11 月 24 日 13:21
-
-第 93 题少 1 步，本地组合解降至 **128,491 步**，1,000 题全部回放通过。北京时间 13:15 榜首为 125,650 步，差 **2,841 步**。第 24 题下界提高至 **24 步**，全题总下界为 **37,992 步**。[候选](public-assisted/releases/portfolio.md) · [证明](collaboration/evidence/0024-h10-final-grid.json.gz)
-
-## 北京时间 11 月 24 日 13:17
-
-第 113 题的 22 步预算已全部排除，已证下界提高至 **23 步**。全题总下界为 **37,991 步**。[证明记录](collaboration/evidence/0113-h11-final-grid.json.gz)
 
 独立程序 **140,727** 条，公开辅助程序 **134,298** 条，均已用两种解释器重放全部 1,000 题。独立试验的 4 题省 7 条，其中 0627 只有先用 Atakan 再用 Wang 才达到 115。公开辅助另外 4 题的父本均有署名，0079 是本地搜索得到的另一份同长程序。[执行次序与程序](collaboration/cross-method-order/README.md) · [公开源复现](collaboration/retained-pool/v42-audit.json) · [完整分数与逐题变动](collaboration/evidence/ordered-search-v42-merge.json)
 
