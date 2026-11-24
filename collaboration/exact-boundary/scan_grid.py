@@ -36,7 +36,7 @@ def main():
     p=next(x for x in read_puzzles(args.puzzles) if x.id==args.id)
     binary = args.binary.resolve(strict=True)
     digest = sha256(binary)
-    width, limit = GRID_ENGINES.get(digest, (16, 2_000_000))
+    width, limit, metric_count = GRID_ENGINES.get(digest, (16, 2_000_000, 7))
     if p.limit > limit:
         parser.error("Selected engine does not support the puzzle's value limit")
     context=dict(puzzle=p.id,helpers=args.helpers,official=sha256(args.puzzles),
@@ -103,9 +103,9 @@ def main():
         lines=proc.stdout.splitlines()
         status,*tokens=lines[0].split()
         metrics=list(map(int,tokens))
-        if (status not in ("UNSAT","UNKNOWN","FOUND") or len(metrics)!=7 or
+        if (status not in ("UNSAT","UNKNOWN","FOUND") or len(metrics)!=metric_count or
                 not 0<=metrics[0]<=args.budget or len(lines)!=1+(status=="FOUND")):
-            raise ValueError(f"Unexpected decision for {coord}")
+            raise ValueError(f"Unexpected decision for {coord}: {lines[0]}")
         row=dict(context,coords=coord,budget=args.budget,status=status,metrics=metrics)
         if status=="FOUND":
             sequence=tuple(map(int,lines[1].split()))

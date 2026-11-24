@@ -18,7 +18,7 @@ from merge_conditioned_bounds import parse
 
 ENGINE = "71dca8b89c358900e7312c23768d1dfcd13f2e8e6473850f82a7a3c3c999ec28"
 SPARSE_ENGINE = "5956ae6cc457545fa842c52a35774cd14572b3fdc0fae7e38cfa0cd19106dcfa"
-GRID_ENGINES = {ENGINE: (16, 2_000_000), SPARSE_ENGINE: (0, 10**18)}
+GRID_ENGINES = {ENGINE: (16, 2_000_000, 7), SPARSE_ENGINE: (0, 10**18, 4)}
 
 
 def verify_grid(puzzle, archive, official):
@@ -28,7 +28,7 @@ def verify_grid(puzzle, archive, official):
     first = rows[0]
     expected = {name:first[name] for name in ("puzzle","helpers","moduli","group_width","engine","official")}
     assert first["puzzle"]==puzzle.id and first["official"]==official
-    group_width, limit = GRID_ENGINES[first["engine"]]
+    group_width, limit, metrics = GRID_ENGINES[first["engine"]]
     assert first["group_width"] == group_width and puzzle.limit <= limit
     assert first["helpers"]>=5 and len(first["moduli"])==3 and min(first["moduli"])>=1
     cells = set(product(*(range(n) for n in first["moduli"])))
@@ -38,7 +38,7 @@ def verify_grid(puzzle, archive, official):
         assert all(row[name]==value for name,value in expected.items())
         coord = tuple(row["coords"])
         assert coord in cells and coord not in seen
-        assert row["status"] in ("UNSAT","UNKNOWN") and len(row["metrics"])==7
+        assert row["status"] in ("UNSAT","UNKNOWN") and len(row["metrics"])==metrics
         assert 0<=row["metrics"][0]<=row["budget"]
         seen.add(coord)
         statuses.add(row["status"])
