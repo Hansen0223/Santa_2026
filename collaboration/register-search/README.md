@@ -148,3 +148,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 省略一次写入并替换使用它的算式
 
 沿原有执行顺序删除一步，先尝试用当时寄存器里的数重建受影响的各步，再尝试延长此前算出的数的保留时间并重新分配寄存器。128,492 步组合解、独立解和仓库公开辅助解各试 1,000 道，均未缩短。[逐题记录](omit-physical-write-results.json.gz) · [实现](omit_physical_write.py)
+
+## 用同一对整数重建两个中间结果
+
+分别反解加、减、乘、除的六种搭配，再开放其中一个结果做一步额外变换。独立组 240 道、组合组 180 道测试前者，分别从中取 165、125 道测试后者。组合组有少量可编排的新方案，两组最终均未缩短。[逐题结果](dual-operation-results.json.gz) · [实现](dual_operations.py)
+
+第 744 题把 267 步候选的中间数保留区间放入完整的寄存器容量约束，限时未得到可行编排，仍保留 268 步程序。[结果](register-intervals-result.json) · [实现](register_intervals.py)

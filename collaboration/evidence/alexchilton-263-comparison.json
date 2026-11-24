@@ -1,0 +1,11 @@
+{
+  "archive": "alexchilton-263.zip",
+  "member": "rudolph_programs.csv",
+  "replayed_instructions": 128492,
+  "archive_sha256": "53a852c22fd52eb084ed542077c618ba93e5d269b677cfee0fe5cac810c2549f",
+  "csv_sha256": "e363de6fe9bf9afa1db2ca79328d64c8c8667279fe9e0ab89fe689ce8eaa5554",
+  "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/263",
+  "shorter": {},
+  "against": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
+  "rows": 1000
+}

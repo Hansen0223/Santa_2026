@@ -49,3 +49,7 @@ GoodPJW v23 contains Atakan Aldemir’s interface closure, joint-interface and r
 ## 共同重建多处算式接口
 
 从 GoodPJW 第 40 版所附的 Atakan 源码构建两种搜索。独立与组合各测试 72 题，每题 60 个切口、宽度 24、模式 2、每次最多 600 毫秒。两种方法都没有产生更短的程序。[逐题结果](boundary-batch-results.json.gz)
+
+## 从 GoodPJW 第 239 版重建多目标片段
+
+用 Atakan Aldemir 的多目标片段搜索测试 24 道组合题和 32 道独立题，每题执行两种配置，112 次均完成，没有缩短。[逐题结果、输入与源码哈希](target-block-results.json.gz) · [运行入口](target_blocks.py) · [固定发布包](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/239)

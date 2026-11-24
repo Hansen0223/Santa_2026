@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 13:32
+
+配对重建与多目标片段试验未缩短程序。第 24 题再排除 16 个分片，仍在搜索。本地组合解 **128,491 步**，北京时间 13:23 核对时距榜首 **2,841 步**。[缩短试验](collaboration/register-search/dual-operation-results.json.gz) · [搜索快照](collaboration/evidence/0024-h11-checkpoint.json.gz)
+
 ## 北京时间 11 月 24 日 13:21
 
 第 93 题少 1 步，本地组合解降至 **128,491 步**，1,000 题全部回放通过。北京时间 13:15 榜首为 125,650 步，差 **2,841 步**。第 24 题下界提高至 **24 步**，全题总下界为 **37,992 步**。[候选](public-assisted/releases/portfolio.md) · [证明](collaboration/evidence/0024-h10-final-grid.json.gz)
