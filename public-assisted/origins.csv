@@ -503,7 +503,7 @@ scored_0501,work/creative/frontier-134285/good11/wins.csv,"goodpjw2008, Santa 20
 scored_0502,Asterios v99,"Pratham Jain, Santa 2026 | Exact Portfolio Frontier [137861]",157
 scored_0503,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: goodpjw2008, Santa 2026 | LNS + CP-SAT Recombine | LB 134,047",81
 scored_0504,Asterios v99,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",186
-scored_0505,WorkBuddy ultra virtual_search (leaves 160 / width 10 / scan 2 / style 5 / tail 6 / joins 16383),Repository-native constructive search: solvers/graphs/virtual_search.py with solvers/native/virtual.cpp; warm-started from the incumbent. Upstream public credits are retained in the repository NOTICE files.,110
+scored_0505,collaboration/recipe-union/forced-alternates-own-wins.csv,Independent arithmetic programs from the Git parents listed in forced-alternates-results.json.gz.,108
 scored_0506,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: E-Max AI, Santa 2026 | Public Frontier | Score 133,970",113
 scored_0507,Asterios v99,"Pratham Jain, Santa 2026 | Exact Portfolio Frontier [138084]",165
 scored_0508,Asterios v99,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",201
@@ -725,7 +725,7 @@ scored_0723,Asterios v113,"wang Jakie, Santa 2026 | Arithmetic Recipe Pool and M
 scored_0724,Asterios v99,"Pratham Jain, Santa 2026 | Exact Portfolio Frontier [137822]",162
 scored_0725,work/creative/frontier-134285/matched-134115/wins.csv,"Exact tape in Roman Rozen's IceFire session 371861819 and bikrambasnet1's Arithmetic Graph Rewrites session 371860204. The latter credits konbu17, the public portfolios listed in Roman-Bikram-sources.json, earlier Wang Jakie search and other upstream authors. Exact origin before the published portfolio is not specified per row.",211
 scored_0726,Asterios v99,"Ertuğrul Özer, Santa 2026 | Starter Notebook!",147
-scored_0727,local from official inputs,Generated from official inputs,77
+scored_0727,collaboration/recipe-union/forced-alternates-own-wins.csv,Independent arithmetic programs from the Git parents listed in forced-alternates-results.json.gz.,76
 scored_0728,Asterios v99,"Nilanjan_Saha123, Best-of-Public Elf Optimizer (graph/MILP/window/suffix passes)",255
 scored_0729,work/creative/frontier-134285/merge079/wins.csv,"bikrambasnet1 (Bikram Basnet), Arithmetic Graph Rewrites session 371868626. Includes CPU/CUDA graph rewrites, Roman Rozen's IceFire, konbu17 and the original public portfolios credited in the notebook. Earlier row-level contributor is unspecified. The author identifies this case as a one-step gain from jointly rebuilding three target chains. This exact program is present in these portfolios: Bikram, Roman, Rudolph.",273
 scored_0730,work/creative/morning-134063/qualified/wins.csv,"Asterios Panoras, dataset v150 credit: Pratham Jain, Santa 2026 | Exact Portfolio Frontier [134051]",105

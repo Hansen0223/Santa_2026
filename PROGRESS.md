@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 11:22
+
+更换中间值后联合搜索，独立 12 道共省 14 条，独立候选为 **139,327 条**，直接可下载的公开辅助候选为 **133,604 条**。[逐题进展](collaboration/recipe-union/forced-alternates-results.json.gz)
+
 ## 北京时间 11 月 24 日 11:18
 
 第 88、251、342、374、375、831 题合计省 6 条，组合候选降至 **128,494 条**。[各题改进与来源](public-assisted/releases/portfolio.md)

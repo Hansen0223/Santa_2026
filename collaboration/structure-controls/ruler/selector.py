@@ -32,7 +32,7 @@ def strong(nodes,edges):
                 if u not in group:group[u]=v;todo.append(u)
     return group
 
-def compile_selection(p,tape,original,supplied,expand):
+def compile_selection(p,tape,original,supplied,expand,*,omit_old=0,slack=0,hint_graph=None):
     cp=load_solver();seeds=set(p.seeds)
     bank=defaultdict(set)
     def canon(e):
@@ -51,7 +51,8 @@ def compile_selection(p,tape,original,supplied,expand):
     nodes=set(bank);group=strong(nodes,bank);size=Counter(group.values())
     model=cp.CpModel();pay={v:model.new_bool_var('') for v in sorted(nodes)}
     rank={v:model.new_int_var(0,len(nodes),'') for v in sorted(nodes) if size[group[v]]>1}
-    positions={v:i for i,v in enumerate(original)};flags={}
+    hint=original if hint_graph is None else hint_graph
+    positions={v:i for i,v in enumerate(hint)};flags={}
     for v in sorted(nodes):
         choices=[]
         for e in sorted(bank[v]):
@@ -60,24 +61,28 @@ def compile_selection(p,tape,original,supplied,expand):
             for u in set(e[1:])-seeds:
                 model.add_implication(f,pay[u])
                 if group[v]==group[u]:model.add(rank[u]<rank[v]).only_enforce_if(f)
-            if len(bank[v])>1:model.add_hint(f,int(v in original and canon(original[v])==e))
+            if len(bank[v])>1:model.add_hint(f,int(v in hint and canon(hint[v])==e))
         if len(choices)>1:model.add(sum(choices)==pay[v])
-        model.add_hint(pay[v],int(v in original))
+        model.add_hint(pay[v],int(v in hint))
         if v in rank:model.add_hint(rank[v],positions.get(v,0))
     for v in set(p.targets)-seeds:model.add(pay[v]==1)
-    total=sum(pay.values());model.add(total<=len(tape));model.minimize(total)
+    limit=len(tape)+slack
+    if omit_old:
+        old=set(original)-set(p.targets)
+        model.add(sum(pay[v] for v in old)<=len(old)-omit_old)
+    total=sum(pay.values());model.add(total<=limit);model.minimize(total)
     solver=cp.CpSolver();solver.parameters.num_search_workers=1
     solver.parameters.random_seed=619;solver.parameters.max_deterministic_time=.35
     status=solver.solve(model);name=solver.status_name(status)
     r=dict(status=name,values=len(nodes),recipes=len(flags),cyclic_rank_vars=len(rank))
-    best=tape
+    best=None if omit_old else tape
     if status in (cp.OPTIMAL,cp.FEASIBLE):
         select={v:e for (v,e),f in flags.items() if solver.value(f)}
         graph=active_graph(p,select);r['graph']=len(graph)
-        if len(graph)<len(tape):
+        if (omit_old and len(graph)<=limit) or len(graph)<len(tape):
             ts=[schedule_like(p,tape,graph),compile_graph(p,graph,attempts=4,recompute=True,schedule_width=10)]
-            ts=[j for j in ts if j and check(p,j)<len(best)]
+            ts=[j for j in ts if j and check(p,j)<=(limit if omit_old else len(tape)-1)]
             if ts:best=min(ts,key=len)
-    r['physical']=len(best)
+    r['physical']=len(best) if best is not None else None
     return r,best
 

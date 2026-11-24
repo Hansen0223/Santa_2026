@@ -59,3 +59,7 @@ python -B benchmark.py --puzzles ../../data/puzzles.csv --lane assisted --mode r
 ## 用其他程序的值生成新算式
 
 在独立 607 道题、组合 230 道题上，对比合并原有算式，以及用相同的值枚举额外算式再求解。独立组 5 道共省 6 条，均由新增算式带来。组合组未缩短。[逐题结果和父本](full-union-results.json.gz) · [采用的独立程序](full-union-independent-wins.csv) · [求解器](full_union.py)
+
+## 先改用另一组中间数，再继续搜索
+
+用当前和历史程序的算式建立候选集合。要求新程序放弃当前程序的至少 2 个或 6 个中间值，同时最多允许多用两步，得到可以实际执行的方案后继续搜索。与同种子、同轮数的直接搜索比较。独立组 113 道，逐题取短后 12 道共省 14 条，其中 5 道胜过直接搜索。旧组合组 112 道有 98 个备选实际进入下一轮，未缩短。对新版公开改过的六道题另跑两种搜索，未进一步缩短。[逐题结果](forced-alternates-results.json.gz) · [采用的独立程序](forced-alternates-own-wins.csv) · [求解器](forced_alternates.py)
