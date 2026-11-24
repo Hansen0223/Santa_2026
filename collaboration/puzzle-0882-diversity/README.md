@@ -44,7 +44,9 @@ g++ -O3 -std=c++17 collaboration/puzzle-0882-diversity/operations.cpp -o diversi
 python -B collaboration/puzzle-0882-diversity/verify.py --puzzles data/puzzles.csv --binary ./diversity-proof --reference-binary ./diversity-reference --operations-binary ./diversity-operations --jobs 4
 ```
 
-## 仍待判定的十个分片
+## 对剩余分片的细分搜索
+
+已返回 105/240 个细分格，其中 104 个已排除，1 个达到本轮搜索上限。已完整排除 1 个额外的原分片。[本轮逐格结果](h10-open-progress.json.gz)
 
 全部 768 个分片中，757 个直接排除，一个细分后排除。本轮继续检查其余十个，每个再分为 24 格。任一 22 条程序可与现有下界相遇，只有剩余各格全部排除才能证明现有 23 条程序最短。[第一轮逐片记录](h10-first-grid.json.gz) · [剩余坐标](../evidence/active-search-20261121.json)
 
