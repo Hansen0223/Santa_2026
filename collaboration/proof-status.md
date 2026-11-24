@@ -46,3 +46,5 @@
 可避开上述网格，从逐题 CSV 筛选 `gap > 0` 的其他题复核，或为达限的具体分片提供更深的独立搜索。跨机器接手同一个编号时，应使用相同编译源、分片数和次层规则。新的外部证明会逐题与本地比较；有严格增益时，复核器会重跑对应的上游分片，核对计数后取较强下界。[外部证明的复核方法](../proofs/local/README.md)
 
 外部更新 8dd7478 新增 65 项，已按该提交的程序重跑 1,151 个分片。每个分片的结果和节点数、每题的末层候选总数均与记录相同。外部下界总和为 33,733；逐题比较后，1,000 题的合并下界仍为 36,731。复跑命令为 `python -B collaboration/evidence/replay_increment.py 8dd7478 --puzzles data/puzzles.csv --binary ./external-exact --output audit.json`，其中求解器按本仓库的证明说明编译。[逐项比较](evidence/upstream-8dd7478.json) · [编译说明](../proofs/local/README.md)
+
+第 971 题试跑了 9 个辅助值预算的 24 个分片。11 个无解，13 个达到 350 万节点上限。下界仍为 15 条，已回放的组合程序为 17 条。[分片坐标、预算和结果](evidence/0971-h9-probe.json.gz)

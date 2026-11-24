@@ -88,3 +88,9 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 临时增大寄存器容量后再恢复比赛限制
 
 对组合解中寄存器占用较高的 120 道，以及独立解的 100 道，分别在原始限制、增加 1 个和增加 4 个寄存器的条件下搜索。两组均未缩短。单独重建第 744 题的 267 步算式时，增加 6 个和 10 个寄存器的两组都得到 267 步程序，恢复到 48 个寄存器后仍未找到可用顺序。组合评分沿用 268 步。[逐题结果](relaxed-registers-results.json.gz) · [求解器](relaxed_registers.py)
+
+## 两层共享中间值和小题的候选算式
+
+从不同目标反推它们需要的中间值，再检查这些值能否从同一个新中间数出发得到。独立组 881 道，其中第 993 题 220 → 219。组合组 875 道未缩短。[逐题结果](shared-levels-results.json.gz) · [采用的程序](shared-levels-independent-wins.csv) · [求解器](shared_levels.py)
+
+另选候选解接近已证下界且长度至多 33 的 38 道题，枚举可用数的一步结果与目标的逆向算式。用 8、30、100 个备选的三组均未缩短组合解。[逐题结果](boundary-ensembles-results.json.gz) · [求解器](boundary_ensembles.py)

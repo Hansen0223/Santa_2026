@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 11:03
+
+第 993 题的独立程序由 220 条缩至 219 条，独立候选降至 **139,341 条**。组合候选为 **128,500 条**。[逐题结果](collaboration/register-search/shared-levels-results.json.gz)
+
 ## 北京时间 11 月 24 日 10:54
 
 第 363 题合计省 1 条，组合候选降至 **128,500 条**。第 882 题的 22 条预算已全部排除，23 条为最短解。全题已证下界升至 **37,988 条**，已有 **21 道题**达到最短。[第 882 题证明](collaboration/puzzle-0882-diversity/README.md) · [各题改进与来源](public-assisted/releases/portfolio.md)
