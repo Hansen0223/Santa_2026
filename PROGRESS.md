@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 24 日 13:53
+
+第 5 题和第 877 题各再提高一步下界，分别为 **25 步、27 步**。全题总下界达到 **37,999 步**。[证明记录](collaboration/evidence/small-helper-followup-20261124.json.gz)
+
 ## 北京时间 11 月 24 日 13:49
 
 第 237、584、635、701、877 题各提高一步下界，全题总下界升至 **37,997 步**。第 24 题又排除 29 个分片，仍在搜索。新尝试未缩短组合解，本地仍为 **128,491 步**。[逐题证明](collaboration/evidence/small-helper-wave-20261124.json.gz) · [缩短试验](collaboration/register-search/fanout-results.json.gz)

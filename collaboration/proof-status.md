@@ -1,6 +1,8 @@
 # 最短程序证明与分片协作
 
-1,000 题的已证总下界为 **37,997 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+1,000 题的已证总下界为 **37,999 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+
+第 5 题与第 877 题的 256 个分片均无解，两题下界分别升至 25 步与 27 步。[分片记录](evidence/small-helper-followup-20261124.json.gz) · [最新合并回执](evidence/combined-small-helper-followup-20261124.json)
 
 第 237、584、635、701、877 题的下界分别升至 22、23、19、16、26 步。640 个分片均无解。[逐题记录](evidence/small-helper-wave-20261124.json.gz) · [合并回执](evidence/combined-small-helper-wave-20261124.json)
 
@@ -66,3 +68,5 @@
 第 24 题检查 23 步可行性。384 个分片中 370 个无解、14 个达限，当时下界为 23 步。[首轮网格](evidence/0024-h10-grid.json.gz)
 
 第 24 题的 24 步可行性搜索已返回 177 / 384 个分片，其中 78 个无解、99 个达限。下界保持 24 步。[分片快照](evidence/0024-h11-checkpoint.json.gz)
+
+第 237 题继续检查 22 步可行性，快照中已有 35 个分片被排除。[分片快照](evidence/0237-h9-checkpoint.json.gz)
