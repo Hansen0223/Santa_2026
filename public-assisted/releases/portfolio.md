@@ -1,6 +1,6 @@
-# 还原 128,492 条候选
+# 还原 128,491 条候选
 
-第 106 题 210 → 209，第 170 题 207 → 206，改进均来自 Ertuğrul Özer 的公开程序。[固定笔记本](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373317540) · [逐题来源与指纹](portfolio.json) · [上一版 128,494 条候选](https://github.com/Hansen0223/Santa_2026/blob/63ff0e5/public-assisted/releases/portfolio.md)
+第 93 题由 99 步降至 98 步。Asterios Panoras 第 373 版将该程序署名为 Ertuğrul Özer。[归档来源](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/373) · [逐题来源与指纹](portfolio.json) · [上一版 128,492 条候选](https://github.com/Hansen0223/Santa_2026/blob/0838a24/public-assisted/releases/portfolio.md)
 
 将官方题目保存为 `data/puzzles.csv`，将以下原件放入 `archives/`。
 
@@ -8,6 +8,7 @@
 | --- | --- |
 | `goodpjw2008-239.zip` | [GoodPJW 第 239 版](https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/239) |
 | `ozertuu-373317540-submission.csv` | 下载固定版本的 `submission.csv` 后改名。[Ertuğrul Özer 第 373317540 次运行](https://www.kaggle.com/code/ozertuu/santa-2026-starter-notebook?scriptVersionId=373317540) |
+| `asteriospanoras-373.zip` | [Asterios Panoras 第 373 版](https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/373) |
 
 在有 Git 历史的仓库根目录运行以下命令。
 
@@ -15,4 +16,4 @@
 python -B public-assisted/releases/portfolio.py --puzzles data/puzzles.csv --archives archives --out combined
 ```
 
-输出 `combined/submission.csv` 包含 1,000 道题，SHA-256 为 `ca84df2b9f8c14d6c1b6ffa3b3fe7593e5717eea1354b09194e20c9d2c3531d6`。等长时保留清单中较早的来源。[仓库逐题署名](../origins.csv)
+输出 `combined/submission.csv` 包含 1,000 道题，SHA-256 为 `e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a`。等长时保留清单中较早的来源。[仓库逐题署名](../origins.csv)

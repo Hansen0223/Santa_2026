@@ -1,7 +1,7 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 128492,
-  "sha256": "ca84df2b9f8c14d6c1b6ffa3b3fe7593e5717eea1354b09194e20c9d2c3531d6",
+  "instructions": 128491,
+  "sha256": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
   "sources": [
     {
       "name": "repository",
@@ -29,23 +29,27 @@
       "csv_sha256": "09ecb9b46c824fa079952488216ffbbbb77a08929c75c041417f94042540fe39",
       "full": true,
       "replayed_instructions": 128492
+    },
+    {
+      "name": "asteriospanoras-373",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/373",
+      "archive": "asteriospanoras-373.zip",
+      "archive_sha256": "9aba289770f1379c7c5db03cf3349dfa612111b1f25ecdaa96eddb83e3f39f3e",
+      "member": "best_programs.csv",
+      "csv_sha256": "8ceddeb8d65cd2a096e4b80b1d3a3eef526b587796cc5dc6e3a6636912791579",
+      "full": true,
+      "replayed_instructions": 128491
     }
   ],
-  "previous_sha256": "71023d53f8e62affbc136088528de25f8378ced84c697be5ba65b132b43e313e",
+  "previous_sha256": "ca84df2b9f8c14d6c1b6ffa3b3fe7593e5717eea1354b09194e20c9d2c3531d6",
   "improved": {
-    "scored_0106": [
-      210,
-      209,
-      "ozertuu-373317540"
-    ],
-    "scored_0170": [
-      207,
-      206,
-      "ozertuu-373317540"
+    "scored_0093": [
+      99,
+      98,
+      "asteriospanoras-373"
     ]
   },
   "improved_credits": {
-    "scored_0106": "Ertuğrul Özer (ozertuu), notebook 373317540",
-    "scored_0170": "Ertuğrul Özer (ozertuu), notebook 373317540"
+    "scored_0093": "Ertuğrul Özer (ozertuu), credited in Asterios Panoras's release 373"
   }
 }
