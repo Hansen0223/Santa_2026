@@ -1,0 +1,69 @@
+--- a/solvers/graphs/crossover_lns.py
++++ b/solvers/graphs/crossover_lns.py
+@@ -120,3 +120,3 @@
+ 
+-def tree_costs(available: set[int], bank: dict[int, set[Recipe]]) -> dict[int, int]:
++def reverse_recipe_index(bank):
+     neighbors = defaultdict(list)
+@@ -127,2 +127,9 @@
+                 neighbors[right].append((output, left, False))
++    return neighbors
++
++
++def tree_costs(available: set[int], bank: dict[int, set[Recipe]],
++               neighbors=None) -> dict[int, int]:
++    if neighbors is None:
++        neighbors = reverse_recipe_index(bank)
+     todo = [(0, value) for value in available]
+@@ -135,3 +142,3 @@
+         costs[value] = cost
+-        for output, operand, same in neighbors[value]:
++        for output, operand, same in neighbors.get(value, ()):
+             if operand in costs and output not in costs:
+@@ -222,3 +229,3 @@
+ def build_model_bank(puzzle, bank, incumbent, wanted, frozen, forbidden, bridge_capacity,
+-                     maximum_recipes, deep_bridge):
++                     maximum_recipes, deep_bridge, neighbors=None):
+     available = (frozen - forbidden) | set(puzzle.seeds)
+@@ -231,3 +238,3 @@
+                        puzzle.limit, bank, bridge_capacity, len(wanted) if deep_bridge else 0)
+-    costs = tree_costs(available, bank)
++    costs = tree_costs(available, bank, None if bridge_capacity else neighbors)
+     selected = defaultdict(set)
+@@ -253,3 +260,3 @@
+         choices = sorted(
+-            (recipe for recipe in bank[output] if all(child in costs for child in recipe[1:])),
++            (recipe for recipe in bank.get(output, ()) if all(child in costs for child in recipe[1:])),
+             key=lambda recipe: (sum(costs[child] for child in set(recipe[1:])), recipe),
+@@ -346,2 +353,5 @@
+     best = program
++    # Unfiltered, non-bridged windows only read the donor recipes. The
++    # reverse edges are independent of each window's free operands.
++    neighbors = None
+     for wanted, frozen, forbidden in neighborhoods:
+@@ -350,3 +360,3 @@
+         # while also guaranteeing acyclicity.
+-        if any(set(incumbent[value][1:]) & forbidden for value in incumbent.keys() - frozen):
++        if forbidden and any(set(incumbent[value][1:]) & forbidden for value in incumbent.keys() - frozen):
+             stats["linked_roots_skipped"] += 1
+@@ -354,8 +364,15 @@
+         base_graph = {value: incumbent[value] for value in incumbent if value in frozen}
+-        local = defaultdict(set, {
+-            value: {recipe for recipe in choices if not (set(recipe[1:]) & forbidden)}
+-            for value, choices in donor_bank.items() if value not in forbidden
+-        })
++        if not forbidden and not capacity:
++            local = donor_bank
++            if neighbors is None:
++                neighbors = reverse_recipe_index(donor_bank)
++            local_neighbors = neighbors
++        else:
++            local = defaultdict(set, {
++                value: {recipe for recipe in choices if not (set(recipe[1:]) & forbidden)}
++                for value, choices in donor_bank.items() if value not in forbidden
++            })
++            local_neighbors = None
+         cut, available = build_model_bank(puzzle, local, incumbent, wanted, frozen, forbidden,
+-                                          capacity, maximum_recipes, deep_bridge)
++                                          capacity, maximum_recipes, deep_bridge, local_neighbors)
+         candidate = cp_select(puzzle, cut, available, base_graph, wanted, best, seconds, schedule, stats)
