@@ -1,0 +1,34 @@
+--- a/scc_select.py
++++ b/scc_select.py
+@@ -76,11 +76,28 @@
+     primary = active_graph(puzzle, first_recipes(puzzle, tape))
+     values = tuple(dict.fromkeys((*puzzle.seeds, *primary)))
+     ways = {v: {canonical(r)} for v, r in primary.items()}
++    # Preserve the original pair and operator order: capped buckets retain
++    # the first admitted recipes. Every value in ways already lies in range.
++    lookup = ways.get
+     for i, a in enumerate(values):
+         for b in values[:i + 1]:
+-            for v, recipe in arithmetic(a, b, puzzle.limit):
+-                if v in ways and v not in (a, b) and len(ways[v]) < 45:
+-                    ways[v].add(canonical(recipe))
++            low, high = (a, b) if a <= b else (b, a)
++            entries = lookup(low + high)
++            if entries is not None and len(entries) < 45:
++                entries.add(("+", low, high))
++            diff = high - low
++            entries = lookup(diff)
++            if entries is not None and diff != low and len(entries) < 45:
++                entries.add(("-", high, low))
++            if low != 1:
++                entries = lookup(low * high)
++                if entries is not None and len(entries) < 45:
++                    entries.add(("*", low, high))
++                q, r = divmod(high, low)
++                if not r and q != low:
++                    entries = lookup(q)
++                    if entries is not None and len(entries) < 45:
++                        entries.add(("/", high, low))
+     return primary, ways
+ 
+ 
