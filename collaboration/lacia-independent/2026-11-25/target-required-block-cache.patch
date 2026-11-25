@@ -1,0 +1,57 @@
+--- a/graph.py
++++ b/graph.py
+@@ -60,6 +60,32 @@
+     return active
+ 
+ 
++def _required_operand_blocks(groups: dict[int, int], target_count: int):
++    """Compile support masks wholly within one nibble into subset-OR lookups."""
++    fixed = groups.get(0, 0)
++    local = {}
++    cross = []
++    for pattern, inputs in groups.items():
++        if not pattern:
++            continue
++        shift = (((pattern & -pattern).bit_length() - 1) // 4) * 4
++        if pattern.bit_length() > shift + 4:
++            cross.append((pattern, inputs))
++        else:
++            if shift not in local:
++                local[shift] = [0] * (1 << min(4, target_count - shift))
++            local[shift][pattern >> shift] |= inputs
++    blocks = []
++    for shift, table in local.items():
++        for i in range(min(4, target_count - shift)):
++            bit = 1 << i
++            for mask in range(len(table)):
++                if mask & bit:
++                    table[mask] |= table[mask ^ bit]
++        blocks.append((shift, len(table) - 1, tuple(table)))
++    return fixed, tuple(blocks), tuple(cross)
++
++
+ def _target_orders(puzzle: Puzzle, graph: Graph, width: int):
+     """Keep target orders whose prefixes expose few values to unfinished work."""
+     targets = tuple(dict.fromkeys(t for t in puzzle.targets if t not in puzzle.seeds))
+@@ -86,6 +112,7 @@
+     target_specs = [(bit, closure, sum(p for member, _, p, _ in target_specs
+                                       if closure & member), value)
+                     for bit, closure, _, value in target_specs]
++    fixed_inputs, blocks, cross = _required_operand_blocks(groups, len(targets))
+     needed_cache = {}
+     beam = [(0, 0, seed_bits, (), 0)]
+     complete = []
+@@ -99,8 +126,11 @@
+                 covered = prior_covered | closure_covered
+                 needed = needed_cache.get(covered)
+                 if needed is None:
+-                    needed = 0
+-                    for pattern, inputs in groups.items():
++                    needed = fixed_inputs
++                    missing = max_mask ^ covered
++                    for shift, mask, table in blocks:
++                        needed |= table[(missing >> shift) & mask]
++                    for pattern, inputs in cross:
+                         if not pattern & covered:
+                             needed |= inputs
+                     if len(needed_cache) < 4096:
