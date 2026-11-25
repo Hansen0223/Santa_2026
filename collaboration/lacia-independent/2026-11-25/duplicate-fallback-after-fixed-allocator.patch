@@ -1,0 +1,31 @@
+--- a/graph.py
++++ b/graph.py
+@@ -375,8 +375,17 @@
+             chronological = graph
+             break
+         available.add(value)
+-    for order in (chronological, graph):
+-        program = _allocate_fixed(puzzle, order)
++    program = _allocate_fixed(puzzle, chronological)
++    if program is not None:
++        check(puzzle, program)
++        return program
++    # Both dictionaries refer to the same active recipes. Compare order only
++    # after the preferred allocation fails, so the usual path pays no cost.
++    if chronological is graph or tuple(chronological) == tuple(graph):
++        fixed_orders = (graph,)
++    else:
++        fixed_orders = (chronological, graph)
++        program = _allocate_fixed(puzzle, graph)
+         if program is not None:
+             check(puzzle, program)
+             return program
+@@ -411,7 +420,7 @@
+             return program
+     if recompute:
+         variants = [_rematerialize(puzzle, order, mode)
+-                    for order in (chronological, graph) for mode in ("literal", "static", "dynamic")]
++                    for order in fixed_orders for mode in ("literal", "static", "dynamic")]
+         variants.extend(_rematerialize(puzzle, order, "dynamic") for order in alternate)
+         program = min((candidate for candidate in variants if candidate is not None),
+                       key=len, default=None)
