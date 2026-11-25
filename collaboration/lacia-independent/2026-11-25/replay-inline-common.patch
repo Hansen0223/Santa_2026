@@ -1,0 +1,19 @@
+--- a/elf.py
++++ b/elf.py
+@@ -77,7 +77,15 @@
+         if not first or not second:
+             raise ValueError(f"{puzzle.id}: undefined operand at instruction {index}")
+         try:
+-            result = arithmetic(op, first, second)
++            # Keep the common exact integer operations in the replay loop.
++            if op == "+":
++                result = first + second
++            elif op == "-":
++                result = first - second
++            elif op == "*":
++                result = first * second
++            else:
++                result = arithmetic(op, first, second)
+         except ValueError as error:
+             raise ValueError(f"{puzzle.id}: instruction {index} has {error}") from error
+         if not 1 <= result <= limit:
