@@ -1,0 +1,60 @@
+--- a/graph.py
++++ b/graph.py
+@@ -335,14 +335,27 @@
+ 
+     def missing_cost(value):
+         missing = {value}
+-        pending = list(graph[value][1:])
++        _, left, right = graph[value]
++        pending = [left, right]
+         while pending and len(missing) < 12:
+             operand = pending.pop()
+             if operand not in binding and operand not in missing:
+                 missing.add(operand)
+-                pending.extend(graph[operand][1:])
++                _, left, right = graph[operand]
++                pending.append(left)
++                pending.append(right)
+         return len(missing)
+ 
++    def priority(candidate):
++        future = positions[candidate]
++        if not future:
++            return (1, 0, 0)
++        wait = future[0] - position + 1
++        if mode == "literal":
++            return (0, float(wait), -1)
++        effort = missing_cost(candidate) if mode == "dynamic" else costs[candidate]
++        return (0, wait / effort, -effort)
++
+     def save(value, op, left, right, pinned):
+         a, b = binding[left], binding[right]
+         if free:
+@@ -352,18 +365,6 @@
+             if not candidates:
+                 raise OverflowError
+ 
+-            def priority(candidate):
+-                if not positions[candidate]:
+-                    return (1, 0, 0)
+-                wait = positions[candidate][0] - position + 1
+-                if mode == "literal":
+-                    effort = 1
+-                elif mode == "dynamic":
+-                    effort = missing_cost(candidate)
+-                else:
+-                    effort = costs[candidate]
+-                return (0, wait / effort, -effort)
+-
+             evicted = max(candidates, key=priority)
+             destination = binding.pop(evicted)
+         instructions.append((op, a, b, destination))
+@@ -375,7 +376,7 @@
+         if value in binding:
+             return
+         op, left, right = graph[value]
+-        first, second = sorted((left, right), key=lambda operand: -costs[operand])
++        first, second = (left, right) if costs[left] >= costs[right] else (right, left)
+         require(first, pinned)
+         require(second, pinned | {first})
+         save(value, op, left, right, pinned)
