@@ -1,1295 +1,310 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 127967,
-  "sha256": "0572d0f8aaa77bdafee9f46028a74b3101c0cc0a38e38e36a396c1f8252edd0e",
+  "instructions": 127822,
+  "sha256": "6b89f554b1005dc4301331d4110ee7f3c8a46093aad30f852785e2ea195c965c",
   "sources": [
     {
-      "name": "ozertuu-667",
-      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/667",
-      "archive": "ozertuu-667.zip",
-      "archive_sha256": "3db805d33dc39cdb8728fee4a95c98e4bdc556be00417ab24f1dfb0360ce3c69",
+      "name": "ozertuu-674",
+      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/674",
+      "archive": "ozertuu-674.zip",
+      "archive_sha256": "218f8c17778cf43c61bcc19209741689c6b50bb6de4a35cd02004e09cfb8843e",
       "member": "best_programs.csv",
-      "csv_sha256": "4e7a226ee141afc80f60028ccdbc88a0fad4df178048945c464a674ca4b15fe7",
+      "csv_sha256": "60502720f82770421ded131e488ba9df9c0891f774cd8593a94e959fc74568e8",
       "full": true,
-      "replayed_instructions": 127967
+      "replayed_instructions": 127822
     }
   ],
-  "previous_sha256": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
+  "previous_sha256": "0572d0f8aaa77bdafee9f46028a74b3101c0cc0a38e38e36a396c1f8252edd0e",
   "improved": {
-    "scored_0001": [
-      223,
-      218,
-      "ozertuu-667"
-    ],
-    "scored_0002": [
-      242,
-      237,
-      "ozertuu-667"
-    ],
     "scored_0004": [
-      207,
       206,
-      "ozertuu-667"
+      204,
+      "ozertuu-674"
     ],
-    "scored_0006": [
-      108,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0007": [
-      129,
-      127,
-      "ozertuu-667"
-    ],
-    "scored_0012": [
-      171,
-      169,
-      "ozertuu-667"
-    ],
-    "scored_0020": [
-      237,
-      236,
-      "ozertuu-667"
-    ],
-    "scored_0022": [
+    "scored_0063": [
       101,
       100,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0025": [
+    "scored_0068": [
       115,
       114,
-      "ozertuu-667"
-    ],
-    "scored_0027": [
-      100,
-      99,
-      "ozertuu-667"
-    ],
-    "scored_0031": [
-      241,
-      237,
-      "ozertuu-667"
-    ],
-    "scored_0032": [
-      99,
-      97,
-      "ozertuu-667"
-    ],
-    "scored_0035": [
-      100,
-      99,
-      "ozertuu-667"
-    ],
-    "scored_0036": [
-      226,
-      223,
-      "ozertuu-667"
-    ],
-    "scored_0037": [
-      189,
-      188,
-      "ozertuu-667"
-    ],
-    "scored_0039": [
-      106,
-      105,
-      "ozertuu-667"
-    ],
-    "scored_0041": [
-      114,
-      113,
-      "ozertuu-667"
-    ],
-    "scored_0044": [
-      73,
-      72,
-      "ozertuu-667"
-    ],
-    "scored_0045": [
-      153,
-      152,
-      "ozertuu-667"
-    ],
-    "scored_0048": [
-      139,
-      138,
-      "ozertuu-667"
-    ],
-    "scored_0052": [
-      101,
-      98,
-      "ozertuu-667"
-    ],
-    "scored_0054": [
-      182,
-      181,
-      "ozertuu-667"
-    ],
-    "scored_0057": [
-      209,
-      207,
-      "ozertuu-667"
-    ],
-    "scored_0058": [
-      261,
-      254,
-      "ozertuu-667"
-    ],
-    "scored_0064": [
-      108,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0067": [
-      249,
-      248,
-      "ozertuu-667"
-    ],
-    "scored_0071": [
-      109,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0075": [
-      249,
-      248,
-      "ozertuu-667"
-    ],
-    "scored_0077": [
-      100,
-      98,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
     "scored_0078": [
-      101,
       100,
-      "ozertuu-667"
-    ],
-    "scored_0087": [
-      239,
-      236,
-      "ozertuu-667"
-    ],
-    "scored_0088": [
-      191,
-      189,
-      "ozertuu-667"
-    ],
-    "scored_0089": [
-      110,
-      109,
-      "ozertuu-667"
-    ],
-    "scored_0094": [
-      246,
-      243,
-      "ozertuu-667"
-    ],
-    "scored_0095": [
-      32,
-      31,
-      "ozertuu-667"
-    ],
-    "scored_0100": [
-      117,
-      116,
-      "ozertuu-667"
+      99,
+      "ozertuu-674"
     ],
     "scored_0101": [
-      116,
       112,
-      "ozertuu-667"
+      110,
+      "ozertuu-674"
     ],
-    "scored_0102": [
-      113,
-      112,
-      "ozertuu-667"
+    "scored_0117": [
+      185,
+      184,
+      "ozertuu-674"
     ],
-    "scored_0106": [
-      209,
-      208,
-      "ozertuu-667"
-    ],
-    "scored_0107": [
-      238,
-      236,
-      "ozertuu-667"
-    ],
-    "scored_0109": [
-      109,
+    "scored_0144": [
       108,
-      "ozertuu-667"
-    ],
-    "scored_0110": [
-      159,
-      158,
-      "ozertuu-667"
-    ],
-    "scored_0114": [
-      166,
-      161,
-      "ozertuu-667"
-    ],
-    "scored_0118": [
-      101,
-      96,
-      "ozertuu-667"
-    ],
-    "scored_0119": [
-      203,
-      201,
-      "ozertuu-667"
-    ],
-    "scored_0120": [
-      181,
-      180,
-      "ozertuu-667"
-    ],
-    "scored_0129": [
-      264,
-      262,
-      "ozertuu-667"
-    ],
-    "scored_0131": [
-      90,
-      89,
-      "ozertuu-667"
-    ],
-    "scored_0132": [
-      96,
-      93,
-      "ozertuu-667"
-    ],
-    "scored_0135": [
-      88,
-      85,
-      "ozertuu-667"
-    ],
-    "scored_0138": [
-      90,
-      88,
-      "ozertuu-667"
-    ],
-    "scored_0141": [
-      122,
-      119,
-      "ozertuu-667"
-    ],
-    "scored_0142": [
-      112,
-      109,
-      "ozertuu-667"
-    ],
-    "scored_0143": [
-      113,
-      112,
-      "ozertuu-667"
-    ],
-    "scored_0145": [
-      209,
-      208,
-      "ozertuu-667"
-    ],
-    "scored_0150": [
-      162,
-      157,
-      "ozertuu-667"
-    ],
-    "scored_0152": [
       106,
-      104,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0154": [
-      155,
-      153,
-      "ozertuu-667"
-    ],
-    "scored_0156": [
-      110,
-      109,
-      "ozertuu-667"
-    ],
-    "scored_0164": [
-      111,
-      110,
-      "ozertuu-667"
-    ],
-    "scored_0165": [
-      236,
-      233,
-      "ozertuu-667"
-    ],
-    "scored_0166": [
-      198,
-      197,
-      "ozertuu-667"
-    ],
-    "scored_0169": [
-      94,
+    "scored_0188": [
       93,
-      "ozertuu-667"
-    ],
-    "scored_0171": [
-      108,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0178": [
-      104,
-      100,
-      "ozertuu-667"
-    ],
-    "scored_0180": [
-      78,
-      77,
-      "ozertuu-667"
-    ],
-    "scored_0184": [
-      111,
-      110,
-      "ozertuu-667"
-    ],
-    "scored_0186": [
-      108,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0187": [
-      88,
-      86,
-      "ozertuu-667"
-    ],
-    "scored_0190": [
-      107,
-      106,
-      "ozertuu-667"
-    ],
-    "scored_0192": [
-      112,
-      111,
-      "ozertuu-667"
-    ],
-    "scored_0197": [
-      108,
-      107,
-      "ozertuu-667"
-    ],
-    "scored_0198": [
-      202,
-      201,
-      "ozertuu-667"
-    ],
-    "scored_0199": [
-      92,
       89,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0202": [
-      109,
-      108,
-      "ozertuu-667"
-    ],
-    "scored_0203": [
-      194,
-      193,
-      "ozertuu-667"
-    ],
-    "scored_0206": [
-      152,
-      151,
-      "ozertuu-667"
+    "scored_0205": [
+      126,
+      124,
+      "ozertuu-674"
     ],
     "scored_0207": [
-      218,
       213,
-      "ozertuu-667"
-    ],
-    "scored_0208": [
-      207,
-      206,
-      "ozertuu-667"
-    ],
-    "scored_0210": [
-      86,
-      82,
-      "ozertuu-667"
-    ],
-    "scored_0213": [
-      95,
-      94,
-      "ozertuu-667"
-    ],
-    "scored_0214": [
-      124,
-      123,
-      "ozertuu-667"
-    ],
-    "scored_0217": [
-      214,
-      213,
-      "ozertuu-667"
-    ],
-    "scored_0218": [
-      272,
-      271,
-      "ozertuu-667"
-    ],
-    "scored_0219": [
-      107,
-      106,
-      "ozertuu-667"
-    ],
-    "scored_0226": [
-      114,
-      113,
-      "ozertuu-667"
-    ],
-    "scored_0230": [
-      207,
-      202,
-      "ozertuu-667"
-    ],
-    "scored_0240": [
-      101,
-      100,
-      "ozertuu-667"
-    ],
-    "scored_0242": [
-      156,
-      154,
-      "ozertuu-667"
-    ],
-    "scored_0255": [
-      267,
-      266,
-      "ozertuu-667"
-    ],
-    "scored_0256": [
-      81,
-      78,
-      "ozertuu-667"
-    ],
-    "scored_0258": [
-      268,
-      264,
-      "ozertuu-667"
-    ],
-    "scored_0259": [
-      103,
-      102,
-      "ozertuu-667"
-    ],
-    "scored_0260": [
-      84,
-      81,
-      "ozertuu-667"
-    ],
-    "scored_0265": [
-      182,
-      181,
-      "ozertuu-667"
-    ],
-    "scored_0270": [
-      113,
-      112,
-      "ozertuu-667"
-    ],
-    "scored_0274": [
-      130,
-      129,
-      "ozertuu-667"
-    ],
-    "scored_0279": [
-      254,
-      253,
-      "ozertuu-667"
-    ],
-    "scored_0285": [
-      206,
-      204,
-      "ozertuu-667"
-    ],
-    "scored_0297": [
-      118,
-      117,
-      "ozertuu-667"
-    ],
-    "scored_0298": [
-      92,
-      91,
-      "ozertuu-667"
-    ],
-    "scored_0316": [
-      105,
-      104,
-      "ozertuu-667"
-    ],
-    "scored_0321": [
-      269,
-      262,
-      "ozertuu-667"
-    ],
-    "scored_0328": [
-      208,
-      207,
-      "ozertuu-667"
-    ],
-    "scored_0334": [
-      214,
-      213,
-      "ozertuu-667"
-    ],
-    "scored_0339": [
-      84,
-      83,
-      "ozertuu-667"
-    ],
-    "scored_0356": [
-      79,
-      77,
-      "ozertuu-667"
-    ],
-    "scored_0357": [
-      224,
-      220,
-      "ozertuu-667"
-    ],
-    "scored_0360": [
-      119,
-      117,
-      "ozertuu-667"
-    ],
-    "scored_0363": [
-      149,
-      146,
-      "ozertuu-667"
-    ],
-    "scored_0364": [
-      116,
-      115,
-      "ozertuu-667"
-    ],
-    "scored_0370": [
-      256,
-      254,
-      "ozertuu-667"
-    ],
-    "scored_0381": [
-      195,
-      190,
-      "ozertuu-667"
-    ],
-    "scored_0395": [
-      82,
-      81,
-      "ozertuu-667"
-    ],
-    "scored_0400": [
-      215,
-      213,
-      "ozertuu-667"
-    ],
-    "scored_0403": [
       210,
-      209,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0418": [
-      112,
-      111,
-      "ozertuu-667"
-    ],
-    "scored_0423": [
-      85,
-      82,
-      "ozertuu-667"
-    ],
-    "scored_0429": [
-      110,
-      109,
-      "ozertuu-667"
-    ],
-    "scored_0430": [
-      83,
-      81,
-      "ozertuu-667"
-    ],
-    "scored_0439": [
-      114,
-      113,
-      "ozertuu-667"
-    ],
-    "scored_0444": [
-      234,
-      233,
-      "ozertuu-667"
-    ],
-    "scored_0449": [
-      89,
-      88,
-      "ozertuu-667"
-    ],
-    "scored_0450": [
-      272,
-      266,
-      "ozertuu-667"
-    ],
-    "scored_0451": [
-      111,
-      110,
-      "ozertuu-667"
-    ],
-    "scored_0459": [
-      80,
-      79,
-      "ozertuu-667"
-    ],
-    "scored_0463": [
-      101,
-      97,
-      "ozertuu-667"
-    ],
-    "scored_0469": [
-      82,
-      79,
-      "ozertuu-667"
-    ],
-    "scored_0470": [
-      251,
-      247,
-      "ozertuu-667"
-    ],
-    "scored_0471": [
-      93,
-      90,
-      "ozertuu-667"
-    ],
-    "scored_0475": [
-      180,
-      179,
-      "ozertuu-667"
-    ],
-    "scored_0482": [
-      174,
-      173,
-      "ozertuu-667"
-    ],
-    "scored_0486": [
-      100,
-      96,
-      "ozertuu-667"
-    ],
-    "scored_0494": [
-      200,
-      199,
-      "ozertuu-667"
-    ],
-    "scored_0495": [
-      95,
-      94,
-      "ozertuu-667"
-    ],
-    "scored_0498": [
-      114,
-      113,
-      "ozertuu-667"
-    ],
-    "scored_0503": [
-      79,
-      77,
-      "ozertuu-667"
-    ],
-    "scored_0507": [
-      160,
-      159,
-      "ozertuu-667"
-    ],
-    "scored_0510": [
-      84,
-      83,
-      "ozertuu-667"
-    ],
-    "scored_0511": [
-      236,
-      234,
-      "ozertuu-667"
-    ],
-    "scored_0512": [
-      119,
-      118,
-      "ozertuu-667"
-    ],
-    "scored_0514": [
-      202,
-      201,
-      "ozertuu-667"
-    ],
-    "scored_0516": [
-      147,
-      145,
-      "ozertuu-667"
-    ],
-    "scored_0517": [
-      130,
-      128,
-      "ozertuu-667"
-    ],
-    "scored_0520": [
-      167,
-      166,
-      "ozertuu-667"
-    ],
-    "scored_0522": [
-      84,
-      82,
-      "ozertuu-667"
-    ],
-    "scored_0523": [
-      102,
-      101,
-      "ozertuu-667"
-    ],
-    "scored_0528": [
-      127,
-      126,
-      "ozertuu-667"
-    ],
-    "scored_0535": [
-      107,
-      106,
-      "ozertuu-667"
-    ],
-    "scored_0538": [
-      170,
-      164,
-      "ozertuu-667"
-    ],
-    "scored_0540": [
-      163,
-      162,
-      "ozertuu-667"
-    ],
-    "scored_0542": [
-      99,
-      98,
-      "ozertuu-667"
-    ],
-    "scored_0544": [
-      172,
-      169,
-      "ozertuu-667"
-    ],
-    "scored_0561": [
-      93,
-      90,
-      "ozertuu-667"
-    ],
-    "scored_0565": [
-      211,
-      208,
-      "ozertuu-667"
-    ],
-    "scored_0572": [
-      222,
-      220,
-      "ozertuu-667"
-    ],
-    "scored_0573": [
-      175,
-      174,
-      "ozertuu-667"
-    ],
-    "scored_0574": [
-      96,
-      95,
-      "ozertuu-667"
-    ],
-    "scored_0576": [
-      158,
-      155,
-      "ozertuu-667"
-    ],
-    "scored_0581": [
-      243,
-      242,
-      "ozertuu-667"
-    ],
-    "scored_0586": [
-      81,
-      79,
-      "ozertuu-667"
-    ],
-    "scored_0587": [
-      146,
-      142,
-      "ozertuu-667"
-    ],
-    "scored_0592": [
+    "scored_0223": [
       193,
       192,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0599": [
-      117,
-      116,
-      "ozertuu-667"
-    ],
-    "scored_0605": [
-      159,
-      156,
-      "ozertuu-667"
-    ],
-    "scored_0612": [
-      253,
-      251,
-      "ozertuu-667"
-    ],
-    "scored_0613": [
-      92,
-      90,
-      "ozertuu-667"
-    ],
-    "scored_0615": [
+    "scored_0245": [
+      107,
       105,
-      103,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0621": [
-      168,
-      167,
-      "ozertuu-667"
+    "scored_0285": [
+      204,
+      203,
+      "ozertuu-674"
     ],
-    "scored_0625": [
-      91,
-      87,
-      "ozertuu-667"
+    "scored_0297": [
+      117,
+      113,
+      "ozertuu-674"
     ],
-    "scored_0632": [
-      178,
-      177,
-      "ozertuu-667"
+    "scored_0329": [
+      116,
+      113,
+      "ozertuu-674"
     ],
-    "scored_0634": [
-      161,
-      158,
-      "ozertuu-667"
+    "scored_0343": [
+      105,
+      100,
+      "ozertuu-674"
     ],
-    "scored_0636": [
-      247,
-      242,
-      "ozertuu-667"
+    "scored_0369": [
+      217,
+      214,
+      "ozertuu-674"
     ],
-    "scored_0641": [
+    "scored_0400": [
+      213,
+      211,
+      "ozertuu-674"
+    ],
+    "scored_0429": [
+      109,
       106,
-      104,
-      "ozertuu-667"
+      "ozertuu-674"
+    ],
+    "scored_0433": [
+      126,
+      119,
+      "ozertuu-674"
+    ],
+    "scored_0434": [
+      102,
+      100,
+      "ozertuu-674"
+    ],
+    "scored_0449": [
+      88,
+      86,
+      "ozertuu-674"
+    ],
+    "scored_0450": [
+      266,
+      265,
+      "ozertuu-674"
+    ],
+    "scored_0458": [
+      141,
+      138,
+      "ozertuu-674"
+    ],
+    "scored_0462": [
+      110,
+      109,
+      "ozertuu-674"
+    ],
+    "scored_0466": [
+      180,
+      177,
+      "ozertuu-674"
+    ],
+    "scored_0488": [
+      131,
+      128,
+      "ozertuu-674"
+    ],
+    "scored_0507": [
+      159,
+      157,
+      "ozertuu-674"
+    ],
+    "scored_0520": [
+      166,
+      164,
+      "ozertuu-674"
+    ],
+    "scored_0522": [
+      82,
+      81,
+      "ozertuu-674"
+    ],
+    "scored_0525": [
+      101,
+      99,
+      "ozertuu-674"
+    ],
+    "scored_0539": [
+      87,
+      85,
+      "ozertuu-674"
+    ],
+    "scored_0563": [
+      101,
+      98,
+      "ozertuu-674"
+    ],
+    "scored_0572": [
+      220,
+      217,
+      "ozertuu-674"
+    ],
+    "scored_0576": [
+      155,
+      154,
+      "ozertuu-674"
+    ],
+    "scored_0591": [
+      120,
+      114,
+      "ozertuu-674"
     ],
     "scored_0642": [
-      116,
       115,
-      "ozertuu-667"
+      112,
+      "ozertuu-674"
     ],
-    "scored_0648": [
-      92,
-      91,
-      "ozertuu-667"
-    ],
-    "scored_0651": [
-      120,
-      119,
-      "ozertuu-667"
-    ],
-    "scored_0652": [
-      91,
-      88,
-      "ozertuu-667"
-    ],
-    "scored_0655": [
-      252,
-      250,
-      "ozertuu-667"
-    ],
-    "scored_0657": [
-      92,
-      88,
-      "ozertuu-667"
-    ],
-    "scored_0658": [
-      164,
-      159,
-      "ozertuu-667"
-    ],
-    "scored_0659": [
-      79,
-      78,
-      "ozertuu-667"
-    ],
-    "scored_0660": [
-      167,
-      165,
-      "ozertuu-667"
-    ],
-    "scored_0665": [
-      86,
-      85,
-      "ozertuu-667"
+    "scored_0673": [
+      158,
+      156,
+      "ozertuu-674"
     ],
     "scored_0678": [
-      157,
       154,
-      "ozertuu-667"
-    ],
-    "scored_0679": [
-      106,
-      105,
-      "ozertuu-667"
-    ],
-    "scored_0682": [
-      257,
-      252,
-      "ozertuu-667"
-    ],
-    "scored_0684": [
-      94,
-      93,
-      "ozertuu-667"
-    ],
-    "scored_0686": [
-      88,
-      87,
-      "ozertuu-667"
+      153,
+      "ozertuu-674"
     ],
     "scored_0688": [
-      159,
       155,
-      "ozertuu-667"
+      153,
+      "ozertuu-674"
     ],
-    "scored_0690": [
-      256,
-      255,
-      "ozertuu-667"
-    ],
-    "scored_0717": [
+    "scored_0704": [
+      117,
       109,
-      108,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
-    "scored_0719": [
-      244,
-      241,
-      "ozertuu-667"
-    ],
-    "scored_0722": [
-      115,
-      114,
-      "ozertuu-667"
-    ],
-    "scored_0723": [
-      91,
-      90,
-      "ozertuu-667"
-    ],
-    "scored_0725": [
-      198,
-      197,
-      "ozertuu-667"
-    ],
-    "scored_0728": [
-      251,
-      249,
-      "ozertuu-667"
-    ],
-    "scored_0735": [
-      99,
-      98,
-      "ozertuu-667"
-    ],
-    "scored_0737": [
-      106,
-      103,
-      "ozertuu-667"
-    ],
-    "scored_0742": [
-      175,
-      174,
-      "ozertuu-667"
+    "scored_0712": [
+      178,
+      177,
+      "ozertuu-674"
     ],
     "scored_0743": [
-      98,
       97,
-      "ozertuu-667"
+      96,
+      "ozertuu-674"
     ],
-    "scored_0745": [
-      178,
-      173,
-      "ozertuu-667"
-    ],
-    "scored_0747": [
-      148,
-      147,
-      "ozertuu-667"
-    ],
-    "scored_0748": [
-      222,
-      221,
-      "ozertuu-667"
-    ],
-    "scored_0750": [
-      101,
-      99,
-      "ozertuu-667"
-    ],
-    "scored_0752": [
-      91,
-      88,
-      "ozertuu-667"
-    ],
-    "scored_0762": [
-      265,
-      262,
-      "ozertuu-667"
-    ],
-    "scored_0763": [
-      88,
-      87,
-      "ozertuu-667"
-    ],
-    "scored_0771": [
-      252,
-      249,
-      "ozertuu-667"
-    ],
-    "scored_0776": [
-      216,
-      209,
-      "ozertuu-667"
-    ],
-    "scored_0783": [
-      105,
-      104,
-      "ozertuu-667"
+    "scored_0757": [
+      126,
+      121,
+      "ozertuu-674"
     ],
     "scored_0786": [
-      238,
       236,
-      "ozertuu-667"
+      235,
+      "ozertuu-674"
     ],
-    "scored_0787": [
-      92,
-      89,
-      "ozertuu-667"
+    "scored_0812": [
+      98,
+      96,
+      "ozertuu-674"
     ],
-    "scored_0791": [
-      118,
-      117,
-      "ozertuu-667"
-    ],
-    "scored_0800": [
-      72,
-      70,
-      "ozertuu-667"
-    ],
-    "scored_0801": [
-      94,
-      93,
-      "ozertuu-667"
-    ],
-    "scored_0806": [
-      86,
-      83,
-      "ozertuu-667"
-    ],
-    "scored_0816": [
-      97,
-      94,
-      "ozertuu-667"
-    ],
-    "scored_0817": [
-      156,
-      155,
-      "ozertuu-667"
-    ],
-    "scored_0820": [
-      196,
-      195,
-      "ozertuu-667"
-    ],
-    "scored_0821": [
-      92,
-      90,
-      "ozertuu-667"
-    ],
-    "scored_0823": [
+    "scored_0824": [
       122,
-      121,
-      "ozertuu-667"
+      118,
+      "ozertuu-674"
     ],
-    "scored_0826": [
-      190,
-      187,
-      "ozertuu-667"
+    "scored_0825": [
+      114,
+      112,
+      "ozertuu-674"
     ],
-    "scored_0829": [
-      165,
-      163,
-      "ozertuu-667"
+    "scored_0833": [
+      111,
+      108,
+      "ozertuu-674"
     ],
-    "scored_0834": [
-      210,
-      205,
-      "ozertuu-667"
+    "scored_0846": [
+      91,
+      90,
+      "ozertuu-674"
     ],
-    "scored_0845": [
-      206,
-      204,
-      "ozertuu-667"
-    ],
-    "scored_0847": [
-      167,
-      165,
-      "ozertuu-667"
-    ],
-    "scored_0857": [
-      202,
-      200,
-      "ozertuu-667"
-    ],
-    "scored_0859": [
-      216,
-      211,
-      "ozertuu-667"
-    ],
-    "scored_0872": [
+    "scored_0884": [
       102,
-      99,
-      "ozertuu-667"
+      98,
+      "ozertuu-674"
     ],
-    "scored_0878": [
-      149,
+    "scored_0936": [
       148,
-      "ozertuu-667"
+      143,
+      "ozertuu-674"
     ],
-    "scored_0881": [
-      82,
-      78,
-      "ozertuu-667"
-    ],
-    "scored_0889": [
-      102,
-      101,
-      "ozertuu-667"
-    ],
-    "scored_0921": [
-      162,
-      156,
-      "ozertuu-667"
-    ],
-    "scored_0932": [
-      203,
-      202,
-      "ozertuu-667"
-    ],
-    "scored_0935": [
-      157,
-      156,
-      "ozertuu-667"
-    ],
-    "scored_0939": [
-      216,
-      215,
-      "ozertuu-667"
-    ],
-    "scored_0941": [
-      228,
-      227,
-      "ozertuu-667"
-    ],
-    "scored_0943": [
+    "scored_0947": [
+      86,
       85,
-      81,
-      "ozertuu-667"
-    ],
-    "scored_0949": [
-      80,
-      78,
-      "ozertuu-667"
-    ],
-    "scored_0951": [
-      82,
-      81,
-      "ozertuu-667"
-    ],
-    "scored_0953": [
-      173,
-      172,
-      "ozertuu-667"
-    ],
-    "scored_0954": [
-      73,
-      70,
-      "ozertuu-667"
-    ],
-    "scored_0955": [
-      79,
-      78,
-      "ozertuu-667"
+      "ozertuu-674"
     ],
     "scored_0956": [
-      222,
       219,
-      "ozertuu-667"
+      218,
+      "ozertuu-674"
     ],
-    "scored_0966": [
-      81,
-      78,
-      "ozertuu-667"
+    "scored_0960": [
+      114,
+      112,
+      "ozertuu-674"
     ],
-    "scored_0972": [
-      113,
-      108,
-      "ozertuu-667"
+    "scored_0963": [
+      114,
+      111,
+      "ozertuu-674"
     ],
-    "scored_0975": [
-      103,
-      102,
-      "ozertuu-667"
+    "scored_0991": [
+      167,
+      164,
+      "ozertuu-674"
     ],
-    "scored_0978": [
-      100,
-      93,
-      "ozertuu-667"
-    ],
-    "scored_0979": [
-      168,
-      165,
-      "ozertuu-667"
-    ],
-    "scored_0980": [
-      120,
-      119,
-      "ozertuu-667"
-    ],
-    "scored_0990": [
-      174,
-      171,
-      "ozertuu-667"
-    ],
-    "scored_0992": [
-      252,
-      249,
-      "ozertuu-667"
-    ],
-    "scored_0993": [
-      199,
-      198,
-      "ozertuu-667"
-    ],
-    "scored_0997": [
-      104,
-      102,
-      "ozertuu-667"
+    "scored_0999": [
+      98,
+      95,
+      "ozertuu-674"
     ]
   }
 }

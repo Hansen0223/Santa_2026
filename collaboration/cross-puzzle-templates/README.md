@@ -39,3 +39,7 @@ python -B evaluate.py /path/to/puzzles.csv scratch ./instantiate scratch/dev-ext
 
 用 440 道题的两步加减片段建库，只在其余题上测试。缩放组在组合 130 道、独立 145 道中分别有 110、136 道获得可重搜的起点。平移组在组合 104 道、独立 115 道中分别有 93、111 道。四组逐题取短后，组合解省 0 步，独立解省 3 步。[逐题结果](scaled-fragments-results.json.gz) · [实现](scaled_fragments.py)
 第 432、613 题只在缩放组得到改进，第 462 题的改进来自整题对照。
+
+## 缩放含乘除的两步算式
+
+缩放部分或全部输入，根据加减乘除确定中间值和输出的缩放幅度。保留小常数的版本也一起测试。三道构造例分别检查连乘、整除和固定常数。新版公开归档切换前开始的试验覆盖 72 道组合题、88 道独立题，均未缩短各自的父本。[逐题结果](homogeneous-fragments-results.json.gz)

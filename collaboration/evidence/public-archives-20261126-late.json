@@ -1,0 +1,29 @@
+{
+  "parent_sha256": "0572d0f8aaa77bdafee9f46028a74b3101c0cc0a38e38e36a396c1f8252edd0e",
+  "compared": {
+    "ozertuu-674": {
+      "name": "ozertuu-674",
+      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/674",
+      "archive": "ozertuu-674.zip",
+      "archive_sha256": "218f8c17778cf43c61bcc19209741689c6b50bb6de4a35cd02004e09cfb8843e",
+      "member": "best_programs.csv",
+      "csv_sha256": "60502720f82770421ded131e488ba9df9c0891f774cd8593a94e959fc74568e8",
+      "full": true,
+      "replayed_instructions": 127822
+    },
+    "alexchilton-358": {
+      "name": "alexchilton-358",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/358",
+      "archive": "alexchilton-358.zip",
+      "archive_sha256": "05c065917325cc9a92f75f9acde7f282894a6cac61c2804a524cd7b7f31df22b",
+      "member": "rudolph_programs.csv",
+      "csv_sha256": "acb108d8c6aed207b3213c168e96df32a2ec79056fde104e8b88d95ddf7dc431",
+      "full": true,
+      "replayed_instructions": 127831
+    }
+  },
+  "adopted": "ozertuu-674",
+  "same_as_per_puzzle_minimum": true,
+  "combined_instructions": 127822,
+  "improved_rows": 58
+}

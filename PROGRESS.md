@@ -1,5 +1,11 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 21:55
+
+回放两个新公开版本后，采用 Ertuğrul Özer 第 674 版。58 道题缩短，组合解由 127,967 步降至 **127,822 步**，距北京时间 21:53 的榜首 **3,343 步**。Hiyohane 的第 781 题改进已同步，独立解降至 **139,256 步**。[公开版本对比](collaboration/evidence/public-archives-20261126-late.json) · [协作者提交](https://github.com/Hansen0223/Santa_2026/commit/c5c754765d6507a4ec998f4034fe97b7502c1a11)
+
+第 211、914 题的已证下界各提高 1 步，全题总下界升至 **38,040 步**。含乘除的跨题改写在切换公开版本前的候选上未省步。[证明回执](collaboration/evidence/combined-wide-domains-sixth-20261126.json) · [改写结果](collaboration/cross-puzzle-templates/homogeneous-fragments-results.json.gz)
+
 ## 北京时间 11 月 26 日 21:50
 
 跨题改写后，独立解本轮省 3 步，降至 **139,257 步**。组合解为 **127,967 步**，距北京时间 21:40 的榜首 **3,481 步**。[逐题结果](collaboration/cross-puzzle-templates/scaled-fragments-results.json.gz)

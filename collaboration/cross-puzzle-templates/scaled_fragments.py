@@ -124,13 +124,108 @@ def matching_translated(puzzle,graph,index,count):
                         yield patch,donor,shift,0,value
 
 
+def degree(op,left,right):
+    if op=="*":
+        return left+right
+    if op=="/":
+        return left-right
+    return left if left==right else None
+
+
+def scale_key(value,leaf,power):
+    if power>0:
+        a,b=ratio(value,leaf**power)
+    else:
+        a,b=value*leaf**(-power),1
+    return power,a,b
+
+
+def homogeneous_templates(graphs):
+    index=defaultdict(dict)
+    for identifier,graph in graphs.items():
+        for value,(outer,a,b) in graph.items():
+            for middle in {a,b} & graph.keys():
+                inner,c,d=graph[middle]
+                if inner in "+-" and outer in "+-":
+                    continue
+                leaves=tuple(sorted(({a,b}-{middle}) | {c,d}))
+                if len(leaves)<2 or value in leaves:
+                    continue
+                fragment=((middle,inner,c,d),(value,outer,a,b))
+                mobile_leaves=tuple(x for x in leaves if x>16)
+                for mobile in dict.fromkeys((leaves,mobile_leaves)):
+                    if not mobile:
+                        continue
+                    internal=degree(inner,int(c in mobile),int(d in mobile))
+                    if internal is None:
+                        continue
+                    output=degree(outer,internal if a==middle else int(a in mobile),
+                                  internal if b==middle else int(b in mobile))
+                    if output is None or output==0:
+                        continue
+                    for leaf in mobile:
+                        key=scale_key(value,leaf,output)
+                        signature=fragment,mobile
+                        index[key].setdefault(signature,(leaves,leaf,identifier,internal))
+    return index
+
+
+def matching_homogeneous(puzzle,graph,index,count):
+    known=set(puzzle.seeds)|graph.keys()
+    weights=Counter(u for _,a,b in graph.values() for u in {a,b})
+    targets=set(puzzle.targets)
+    roots=sorted(graph,key=lambda v:(v not in targets,-weights[v],v))[:count]
+    ordered=sorted(known)
+    powers=sorted({key[0] for key in index})
+    seen=set()
+    for value in roots:
+        for anchor in ordered:
+            for power in powers:
+                for (fragment,mobile),(leaves,leaf,donor,middle_degree) in index.get(scale_key(value,anchor,power),{}).items():
+                    numerator,denominator=ratio(anchor,leaf)
+                    if numerator==denominator:
+                        continue
+                    mapped={}
+                    for x in leaves:
+                        y,remainder=divmod(x*numerator,denominator) if x in mobile else (x,0)
+                        if remainder or y not in known:
+                            break
+                        mapped[x]=y
+                    else:
+                        middle,inner,c,d=fragment[0]
+                        num,den=(numerator,denominator) if middle_degree>=0 else (denominator,numerator)
+                        exponent=abs(middle_degree)
+                        result,rem=divmod(middle*num**exponent,den**exponent)
+                        if rem or not 0<result<=puzzle.limit or result in known:
+                            continue
+                        mapped[middle]=result
+                        _,outer,a,b=fragment[1]
+                        patch={result:(inner,mapped[c],mapped[d]),value:(outer,mapped[a],mapped[b])}
+                        key=frozenset(patch.items())
+                        if key not in seen:
+                            seen.add(key)
+                            yield patch,donor,numerator,denominator,value
+
+
+MATCHERS={"scale":matching,"translate":matching_translated,"homogeneous":matching_homogeneous}
+TRAINERS={"scale":templates,"translate":translated_templates,"homogeneous":homogeneous_templates}
+
+
+def transform_details(mode,scale,source_scale):
+    if mode=="translate":
+        return {"shift":scale}
+    if mode=="homogeneous":
+        return {"scale_ratio":[scale,source_scale]}
+    return {"scale":scale,"source_scale":source_scale}
+
+
 def work(item):
-    p,parent,engine,roots,rounds,translate = item
+    p,parent,engine,roots,rounds,mode = item
     graph=active_graph(p,first_recipes(p,parent))
     matches=0
     accepted=[]
     best=parent
-    match=matching_translated if translate else matching
+    match=MATCHERS[mode]
     for patch,donor,scale,source_scale,value in match(p,graph,TEMPLATES,roots):
         matches+=1
         try:
@@ -156,7 +251,7 @@ def work(item):
             best=min((best,control),key=len)
         refined=solve(engine,p,[result,parent],seed,rounds)
         best=min((best,result,refined),key=len)
-        transform={"shift":scale} if translate else {"scale":scale,"source_scale":source_scale}
+        transform=transform_details(mode,scale,source_scale)
         row["starts"].append(dict(root=value,donor=donor,raw=len(result),after=len(refined),**transform))
         if len(seen)==2:
             break
@@ -175,16 +270,22 @@ def main():
         parser.add_argument("--"+name,type=Path,required=True)
     for name,n in (("count",120),("training",360),("roots",48),("rounds",450),("jobs",5)):
         parser.add_argument("--"+name,type=int,default=n)
-    parser.add_argument("--translate",action="store_true",help="Shift the donor inputs instead of scaling them")
+    transform=parser.add_mutually_exclusive_group()
+    transform.add_argument("--translate",action="store_true",help="Shift the donor inputs instead of scaling them")
+    transform.add_argument("--homogeneous",action="store_true",help="Scale mixed multiplication and division fragments")
     args=parser.parse_args()
     puzzles=read_puzzles(args.puzzles)
+    parent_digest=sha256(args.parent)
     parent=read_submission(args.parent)
+    if sha256(args.parent)!=parent_digest:
+        raise ValueError("Parent changed while loading")
     order=sorted(puzzles,key=lambda p:hashlib.sha256(("scalable-fragments-"+p.id).encode()).digest())
     training=order[:args.training]
-    train=translated_templates if args.translate else templates
+    mode="homogeneous" if args.homogeneous else "translate" if args.translate else "scale"
+    train=TRAINERS[mode]
     index=train({p.id:active_graph(p,first_recipes(p,parent[p.id])) for p in training})
     selected=[p for p in order[args.training:] if 35<=len(parent[p.id])<=230][:args.count]
-    tasks=[(p,parent[p.id],args.engine,args.roots,args.rounds,args.translate) for p in selected]
+    tasks=[(p,parent[p.id],args.engine,args.roots,args.rounds,mode) for p in selected]
     rows,wins={},{}
     with ProcessPoolExecutor(args.jobs,initializer=initialize,initargs=(index,)) as pool:
         for pid,tape,row in pool.map(work,tasks):
@@ -194,8 +295,8 @@ def main():
                 print(pid,row["before"],row["after"],flush=True)
     args.out.mkdir(parents=True,exist_ok=True)
     write_submission(args.out/"wins.csv",[p for p in puzzles if p.id in wins],wins)
-    record=dict(parent_sha256=sha256(args.parent),puzzles_sha256=sha256(args.puzzles),engine_sha256=sha256(args.engine),
-                training=[p.id for p in training],index_buckets=len(index),
+    record=dict(parent_sha256=parent_digest,puzzles_sha256=sha256(args.puzzles),engine_sha256=sha256(args.engine),
+                training=[p.id for p in training],index_buckets=len(index),mode=mode,
                 settings={k:v for k,v in vars(args).items() if isinstance(v,int)},rows=rows)
     (args.out/"results.json.gz").write_bytes(gzip.compress(json.dumps(record,separators=(",",":")).encode(),mtime=0))
     print(len(rows),len(wins),sum(rows[i]["before"]-rows[i]["after"] for i in wins))
