@@ -1,0 +1,51 @@
+{
+  "parent_sha256": "e0a615a67ab0d8985093ae37e08b52812e8380a1ec3f16b10d742420469dd56a",
+  "compared": {
+    "asteriospanoras-409": {
+      "name": "asteriospanoras-409",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/409",
+      "archive": "asteriospanoras-409.zip",
+      "archive_sha256": "1ae66743b937224ca2de475ada6a7cde747a57eb7f9ace694f228a085fc0a898",
+      "member": "best_programs.csv",
+      "csv_sha256": "6637317d356a733b541ae7c14e12a0a3c1d71d2816a4922a2b2a47c68203ab87",
+      "full": true,
+      "replayed_instructions": 127980
+    },
+    "goodpjw2008-336": {
+      "name": "goodpjw2008-336",
+      "url": "https://www.kaggle.com/datasets/goodpjw2008/santa-2026-dag-lns-programs/versions/336",
+      "archive": "goodpjw2008-336.zip",
+      "archive_sha256": "97788c9b861b0672428c16348dc3416ecba1e457fbaccb7441edf0407e0c291b",
+      "member": "our_programs.csv",
+      "csv_sha256": "92c5e87089678d23d1a73631d1de0bea373bd65ab3306f66391a93cb447e5a64",
+      "full": true,
+      "replayed_instructions": 128095
+    },
+    "alexchilton-354": {
+      "name": "alexchilton-354",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/354",
+      "archive": "alexchilton-354.zip",
+      "archive_sha256": "3b5c29fc50c6e4a7127a91b79f1ac208adbc650b7967c9cc6e588b866a08bf7c",
+      "member": "rudolph_programs.csv",
+      "csv_sha256": "e5e9ca834004bed053f5c4756488ff14facc3bc0ceb48680d331d31d29d526b7",
+      "full": true,
+      "replayed_instructions": 127969
+    },
+    "ozertuu-667": {
+      "name": "ozertuu-667",
+      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/667",
+      "archive": "ozertuu-667.zip",
+      "archive_sha256": "3db805d33dc39cdb8728fee4a95c98e4bdc556be00417ab24f1dfb0360ce3c69",
+      "member": "best_programs.csv",
+      "csv_sha256": "4e7a226ee141afc80f60028ccdbc88a0fad4df178048945c464a674ca4b15fe7",
+      "full": true,
+      "replayed_instructions": 127967
+    }
+  },
+  "adopted": "ozertuu-667",
+  "fixture_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
+  "same_as_per_puzzle_minimum": true,
+  "combined_instructions": 127967,
+  "replayed_puzzles": 1000,
+  "improved_rows": 255
+}

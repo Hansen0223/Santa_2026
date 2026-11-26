@@ -173,3 +173,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 在下一步同时使用前一个结果和它的一个操作数
 
 从后一个结果反推共享操作数，也允许它先经一次运算再达到原值。用两道构造题确认两种形式均能生成可回放程序。组合组 120 道和独立组 140 道均未找到符合替换预算的算式，不扩大这次筛选。另对第 744 题的 292 步独立候选尝试去除一次重复计算，两种排程均未缩短。[逐题结果](output-feedback-results.json.gz) · [实现](output_feedback.py)
+
+## 将只服务于同一组目标的指令一起重搜
+
+按每条指令能抵达的目标分组，优先加入可以释放共享中间值的目标。暂停前的批次进程已退出，复跑了暂停前观察到改进的四道题。独立组第 20、183、470 题各省一步。组合组第 636 题由 247 步降到 246 步，同期公开新版已达 242 步。[复跑结果](target-support-results.json.gz) · [实现](target_support_cuts.py) · [搜索引擎来源](../../generative/wang/NOTICE.md)

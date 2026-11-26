@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 20:46
+
+回放四个新公开版本后，采用 Ertuğrul Özer 第 667 版。255 道题缩短，组合解降至 **127,967 步**，较暂停前少 524 步，距榜首 **3,473 步**。已重跑暂停前发现的四道改进。独立解三题各省一步，降至 **139,266 步**。第 636 题复现 246 步，公开新版已有 242 步。[公开版本对比](collaboration/evidence/public-archives-20261126.json) · [本地改进记录](collaboration/register-search/target-support-results.json.gz) · [榜单快照](collaboration/leaderboard.json)
+
 ## 北京时间 11 月 24 日 14:38
 
 对组合解 120 道、独立解 140 道试验了一种新的双输出改写，均未缩短。四道题新排除 283 个分片，全题已证下界仍为 **38,013 步**。组合解为 **128,491 步**，距北京时间 14:37 的榜首 **2,841 步**。[改写结果](collaboration/register-search/output-feedback-results.json.gz) · [分片记录](collaboration/evidence/two-seed-h10-pilot-20261124.json.gz) · [榜单快照](collaboration/leaderboard.json)

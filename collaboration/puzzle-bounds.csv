@@ -18,7 +18,7 @@ scored_0016,39,36,40,distinct-diamond/claims.json.gz,124,124,124,84,0
 scored_0017,38,36,40,conditional-helper-membership/block-07.json.gz,109,109,109,69,0
 scored_0018,40,37,42,conditional-helper-membership/block-04.json.gz,124,119,119,77,0
 scored_0019,13,14,14,proofs_ext,23,22,22,8,0
-scored_0020,38,35,40,distinct-diamond/conditioned-claims.json.gz,265,241,241,201,0
+scored_0020,38,35,40,distinct-diamond/conditioned-claims.json.gz,264,241,241,201,0
 scored_0021,21,16,21,evidence/two-seed-closed-grids-20261124.json.gz,41,39,39,18,0
 scored_0022,41,38,42,distinct-diamond/conditioned-claims.json.gz,102,102,102,60,0
 scored_0023,37,35,39,distinct-diamond/claims.json.gz,163,157,157,118,0
@@ -181,7 +181,7 @@ scored_0179,43,40,45,distinct-diamond/claims.json.gz,225,210,210,165,0
 scored_0180,41,39,42,distinct-diamond/claims.json.gz,85,83,83,41,0
 scored_0181,17,18,18,proofs_ext,31,29,29,11,0
 scored_0182,40,36,41,distinct-diamond/conditioned-claims.json.gz,165,143,143,102,0
-scored_0183,45,40,47,distinct-diamond/conditioned-claims.json.gz,295,274,274,227,0
+scored_0183,45,40,47,distinct-diamond/conditioned-claims.json.gz,294,274,274,227,0
 scored_0184,42,40,43,distinct-diamond/claims.json.gz,114,114,114,71,0
 scored_0185,43,40,44,distinct-diamond/claims.json.gz,143,140,140,96,0
 scored_0186,40,37,42,conditional-helper-membership/block-07.json.gz,110,108,108,66,0
@@ -468,7 +468,7 @@ scored_0466,40,36,42,distinct-diamond/claims.json.gz,196,184,184,142,0
 scored_0467,40,38,42,conditional-helper-membership/pilot.json,98,94,94,52,0
 scored_0468,40,36,41,distinct-diamond/conditioned-claims.json.gz,163,154,154,113,0
 scored_0469,37,35,38,distinct-diamond/conditioned-claims.json.gz,88,84,84,46,0
-scored_0470,41,37,43,distinct-diamond/conditioned-claims.json.gz,275,254,254,211,0
+scored_0470,41,37,43,distinct-diamond/conditioned-claims.json.gz,274,254,254,211,0
 scored_0471,37,35,38,distinct-diamond/claims.json.gz,104,98,98,60,0
 scored_0472,19,16,19,evidence/0472-h8-final-grid.json.gz,21,21,21,2,0
 scored_0473,17,15,17,helper-wave7.json,24,24,24,7,0
