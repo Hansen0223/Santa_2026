@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-26T12:51:33.6348554+00:00",
+  "checked_at": "2026-11-26T12:57:13.3445441+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
   },
-  "teams": 3181,
+  "teams": 3182,
   "top": [
     {
       "teamId": 17395013,
@@ -52,9 +52,9 @@
       "displayScore": "125654"
     },
     {
-      "teamId": 17401032,
+      "teamId": 17385452,
       "rank": 10,
-      "displayScore": "125687"
+      "displayScore": "125685"
     }
   ]
 }

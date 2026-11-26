@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 21:00
+
+重搜后，独立解 1 道题共省 1 步，降至 **139,265 步**。当前组合解为 **127,967 步**，距北京时间 20:57 的榜首 **3,473 步**。[逐题结果](collaboration/register-search/pivot-neighborhood-results.json.gz) · [榜单快照](collaboration/leaderboard.json)
+
 ## 北京时间 11 月 26 日 20:59
 
 第 181 题的已证下界提高到 **19 步**，全题已证总下界升至 **38,014 步**。[证明回执](collaboration/evidence/combined-0181-h9.json)

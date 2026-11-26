@@ -59,6 +59,70 @@ def cuts(puzzle, graph, count):
     return chosen, len(selected)
 
 
+def pivot_cuts(puzzle, graph, count):
+    """Grow regions around a computation and close dependencies between their nodes."""
+    values = list(graph)
+    indices = {v:i for i,v in enumerate(values)}
+    parents = [{indices[x] for x in set(graph[v][1:]) if x in indices} for v in values]
+    children = [set() for _ in values]
+    ancestors = [1 << i for i in range(len(values))]
+    descendants = ancestors.copy()
+    for i, sources in enumerate(parents):
+        for source in sources:
+            children[source].add(i)
+            ancestors[i] |= ancestors[source]
+    for i in reversed(range(len(values))):
+        for child in children[i]:
+            descendants[i] |= descendants[child]
+
+    def near(pivot, links):
+        current = {pivot}
+        layers = [current]
+        for _ in range(3):
+            current = current | {j for i in current for j in links[i]}
+            layers.append(current)
+        return layers
+
+    targets = set(puzzle.targets)
+    choices = {}
+    seen = set()
+    for pivot,v in enumerate(values):
+        if not parents[pivot] or len(children[pivot]) < 2:
+            continue
+        before = near(pivot, parents)
+        after = near(pivot, children)
+        for left,right in ((1,3),(2,2),(3,1),(3,3)):
+            around=before[left] | after[right]
+            x=y=0
+            for i in around:
+                x |= ancestors[i]
+                y |= descendants[i]
+            mask = x & y
+            if mask in seen or not 9 <= mask.bit_count() <= 75:
+                continue
+            seen.add(mask)
+            locations = [i for i in range(len(values)) if (mask >> i) & 1]
+            block = frozenset(values[i] for i in locations)
+            ins = {u for node in block for u in graph[node][1:]} - block
+            outs = {values[i] for i in locations
+                    if values[i] in targets or any(not (mask >> j) & 1 for j in children[i])}
+            if not 1 <= len(ins) <= puzzle.registers-4 or not 2 <= len(outs) <= 27:
+                continue
+            if not outs - targets:
+                continue
+            size = len(block)
+            ratio = (size-len(outs)) / (1 + len(ins)**.5 + len(outs)**.5)
+            choices[mask] = (-ratio, "pivot-neighborhood", pivot, size, block, ins, outs)
+    chosen = []
+    for c in sorted(choices.values(),key=lambda item:item[:4]):
+        if any(2*len(c[4] & old[4]) > len(c[4] | old[4]) for old in chosen):
+            continue
+        chosen.append(c)
+        if len(chosen)==count:
+            break
+    return chosen,len(choices)
+
+
 def joint_inputs(puzzle, graph, block, inputs, outputs, ways):
     """Prioritize extra inputs that together unlock distinct local computations."""
     fallback = available(puzzle, graph, block, inputs, outputs, ways)
@@ -96,9 +160,10 @@ def joint_inputs(puzzle, graph, block, inputs, outputs, ways):
 
 
 def work(task):
-    puzzle, parent, engine, count, rounds, joint = task
+    puzzle, parent, engine, count, rounds, joint, pivot = task
     graph = active_graph(puzzle, first_recipes(puzzle, parent))
-    blocks, eligible = cuts(puzzle, graph, count)
+    method = pivot_cuts if pivot else cuts
+    blocks, eligible = method(puzzle, graph, count)
     seed = 408683 + int(puzzle.id[-4:])
     pid, tape, result = run_cuts(puzzle, parent, engine, rounds, graph, blocks, seed,
                                  joint_inputs if joint else available)
@@ -114,6 +179,7 @@ def main():
     for key,default in (("count",135),("cuts",4),("jobs",7),("rounds",720),("offset",0)):
         parser.add_argument("--"+key,type=int,default=default)
     parser.add_argument("--joint-inputs",action="store_true")
+    parser.add_argument("--pivot-cuts",action="store_true",help="Center cuts on shared intermediate values")
     parser.add_argument("--ids",nargs="+",help="Select specific puzzle IDs in the listed order")
     args = parser.parse_args()
     puzzles = read_puzzles(args.puzzles)
@@ -128,6 +194,8 @@ def main():
                          puzzles_sha256=sha256(args.puzzles), rounds=args.rounds, cuts=args.cuts)
     if args.joint_inputs:
         configuration["joint_inputs"] = True
+    if args.pivot_cuts:
+        configuration["cut_method"] = "pivot-neighborhood"
     args.out.mkdir(parents=True,exist_ok=True)
     checkpoint_dir = args.out / "rows"
     checkpoint_dir.mkdir(exist_ok=True)
@@ -149,7 +217,7 @@ def main():
                 raise ValueError(f"Stale checkpoint for {puzzle.id}")
             collect(puzzle.id,tuple(map(tuple,saved["tape"])),saved["record"])
         else:
-            tasks.append((puzzle,parents[puzzle.id],args.engine,args.cuts,args.rounds,args.joint_inputs))
+            tasks.append((puzzle,parents[puzzle.id],args.engine,args.cuts,args.rounds,args.joint_inputs,args.pivot_cuts))
     with ProcessPoolExecutor(args.jobs) as pool:
         for future in as_completed(pool.submit(work, task) for task in tasks):
             pid,tape,record = future.result()

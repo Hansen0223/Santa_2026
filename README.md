@@ -2,7 +2,7 @@
 
 [当前分工、已完成的实验和正在搜索的题号](collaboration/STATUS.md) · [本轮进展](PROGRESS.md) · [第 649 题怎样少用一步](collaboration/exact-boundary/README.md)
 
-目前最短的本地候选为 **127,967 条**，尚未提交 Kaggle。北京时间 11 月 26 日 20:51 的榜首为 124,494 条，相差 3,473 条。仓库可直接下载的公开辅助解为 133,594 条，独立解为 139,266 条。[还原当前候选](public-assisted/releases/portfolio.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
+目前最短的本地候选为 **127,967 条**，尚未提交 Kaggle。北京时间 11 月 26 日 20:57 的榜首为 124,494 条，相差 3,473 条。仓库可直接下载的公开辅助解为 133,594 条，独立解为 139,265 条。[还原当前候选](public-assisted/releases/portfolio.md) · [公开辅助提交](public-assisted/submission.csv) · [独立提交](submission.csv) · [榜单快照](collaboration/leaderboard.json)
 
 每道题从给定的初始值出发，在 48 个寄存器中使用加、减、乘和整除生成全部目标值。程序中的值必须始终为正整数并且不超过题目上限。提交文件包含 `id` 和 `program` 两列，每题最多 4,096 条指令。总分是全部程序的指令数之和，越低越好。合并各项证明的总下界为 38,014 条，当前共有 21 题已证最短，合计 151 条。[逐题证明与运行分工](collaboration/proof-status.md)
 
