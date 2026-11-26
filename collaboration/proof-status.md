@@ -1,6 +1,8 @@
 # 最短程序证明与分片协作
 
-1,000 题的已证总下界为 **38,025 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+1,000 题的已证总下界为 **38,028 条**，其中 **21 题**的可行程序达到下界，合计 151 条。第 149 题最短为 16 条，第 882 题最短为 23 条。表中逐题保留最强证明的来源以及两个完整回放的上界。[逐题 CSV](puzzle-bounds.csv) · [证明复核](../proofs/local/README.md)
+
+第 401、419、473 题的已证下界各提高 1 步，依次达到 15、15、18 步。[完整分片](evidence/wide-domains-second-grids-20261126.json.gz) · [合并回执](evidence/combined-wide-domains-second-20261126.json)
 
 第 559、560、858 题各提高 2 步下界，依次达到 18、23、20 步。第 14、874、910、957、958 题各提高 1 步下界，依次达到 15、22、17、16、15 步。[完整分片](evidence/wide-domains-closed-grids-20261126.json.gz) · [合并回执](evidence/combined-wide-domains-20261126.json)
 

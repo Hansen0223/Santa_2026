@@ -61,3 +61,7 @@ python -B collaboration/circuit-cuts/cuts.py --repo . --puzzles data/puzzles.csv
 ## 有理函数重写
 
 将至多四个外部输入的局部算式转为有理函数，尝试约分、因式分解及不同变量序的霍纳展开，再用官方值域和整除规则构造算式。独立 920 题、组合 911 题，共得到 425,479 个通过全图依赖检查的候选改写，均未缩短整题，已结束这条路线。[逐题结果](rational-cuts-results.json.gz) · [求解器](rational_cuts.py)
+
+## 同时采用两处能共存的替换
+
+将来自不同入口的改写合并，检查新旧依赖后再重搜。组合 96 道中 28 道生成可执行的双改写，独立 112 道中 29 道生成。第 25 题的独立程序由 118 步降至 117 步，单改写和双改写的后续搜索均达到 117 步，整题对照为 118 步。组合组均未缩短。[逐题结果](concurrent-edits-results.json.gz) · [采用的程序](concurrent-edits-independent-wins.csv) · [实现](concurrent_edits.py)

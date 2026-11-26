@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 21:24
+
+第 25 题的独立程序从 118 步降到 117 步，全量回放后独立解为 **139,261 步**。三道题的已证下界各提高 1 步，总下界升至 **38,028 步**。组合解仍为 **127,967 步**，距北京时间 21:22 的榜首 **3,481 步**。[搜索结果](collaboration/circuit-cuts/concurrent-edits-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-second-20261126.json)
+
 ## 北京时间 11 月 26 日 21:20
 
 八道题的已证下界合计提高 **11 步**，全题总下界升至 **38,025 步**。本轮两种改写均未缩短候选，组合解仍为 **127,967 步**。北京时间 21:15 的榜首为 124,494 步，差 **3,473 步**。[证明回执](collaboration/evidence/combined-wide-domains-20261126.json) · [改写结果](collaboration/register-search/branched-operands-results.json.gz)

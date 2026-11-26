@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-26T13:15:19.9643943+00:00",
+  "checked_at": "2026-11-26T13:22:03.3841369+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
@@ -9,12 +9,12 @@
     {
       "teamId": 17395013,
       "rank": 1,
-      "displayScore": "124494"
+      "displayScore": "124486"
     },
     {
       "teamId": 17386277,
       "rank": 2,
-      "displayScore": "124497"
+      "displayScore": "124489"
     },
     {
       "teamId": 17409261,
