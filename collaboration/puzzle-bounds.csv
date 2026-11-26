@@ -441,7 +441,7 @@ scored_0439,42,40,43,distinct-diamond/claims.json.gz,117,117,117,74,0
 scored_0440,43,40,44,distinct-diamond/conditioned-claims.json.gz,187,185,185,141,0
 scored_0441,38,35,40,distinct-diamond/conditioned-claims.json.gz,188,177,177,137,0
 scored_0442,38,35,40,distinct-diamond/conditioned-claims.json.gz,180,172,172,132,0
-scored_0443,16,14,16,helper-wave9.json,30,28,28,12,0
+scored_0443,17,14,17,evidence/wide-domains-seventh-grids-20261126.json.gz,30,28,28,11,0
 scored_0444,37,35,39,distinct-diamond/claims.json.gz,256,237,237,198,0
 scored_0445,45,40,47,distinct-diamond/conditioned-claims.json.gz,246,230,230,183,0
 scored_0446,38,35,40,distinct-diamond/conditioned-claims.json.gz,260,243,243,203,0
@@ -485,7 +485,7 @@ scored_0483,40,36,41,distinct-diamond/conditioned-claims.json.gz,173,165,165,124
 scored_0484,41,38,42,distinct-diamond/conditioned-claims.json.gz,119,118,118,76,0
 scored_0485,2,2,2,domain-bounds.csv,2,2,2,0,1
 scored_0486,38,35,39,distinct-diamond/claims.json.gz,116,103,103,64,0
-scored_0487,15,13,15,helper-wave7.json,26,25,25,10,0
+scored_0487,16,13,16,evidence/wide-domains-seventh-grids-20261126.json.gz,26,25,25,9,0
 scored_0488,44,40,45,distinct-diamond/claims.json.gz,155,142,142,97,0
 scored_0489,40,36,41,distinct-diamond/conditioned-claims.json.gz,152,147,147,106,0
 scored_0490,4,4,4,domain-bounds.csv,4,4,4,0,1
@@ -654,7 +654,7 @@ scored_0652,40,38,42,distinct-diamond/claims.json.gz,96,93,93,51,0
 scored_0653,43,40,44,distinct-diamond/conditioned-claims.json.gz,139,131,131,87,0
 scored_0654,22,17,22,evidence/0630-0654-closed-grids.json.gz,32,30,30,8,0
 scored_0655,41,37,43,distinct-diamond/conditioned-claims.json.gz,279,256,256,213,0
-scored_0656,19,20,20,proofs_ext,31,31,31,11,0
+scored_0656,21,20,21,evidence/wide-domains-seventh-grids-20261126.json.gz,31,31,31,10,0
 scored_0657,40,38,41,distinct-helper-edges/full-certificates.json,98,95,95,54,0
 scored_0658,40,37,42,distinct-diamond/claims.json.gz,182,167,167,125,0
 scored_0659,41,39,43,distinct-diamond/conditioned-claims.json.gz,83,82,82,39,0

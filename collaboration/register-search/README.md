@@ -197,3 +197,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 同时改写两条依赖以改变计算顺序
 
 保留同一组候选数值，比较单条算式替换、两条替换和必须同时进行才能消除循环的两条替换。构造例回放了先算 9 再算 6 的两步程序。组合 104 道、独立 118 道，分别有 4 和 4 道生成可执行的依赖反转起点。两组逐题共省 0 步和 0 步。[逐题结果](reorient-values-results.json.gz) · [实现](reorient_values.py)
+
+## 从同一个被除数生成两个目标分支
+
+根据两个目标和备选偏移量找最小公倍数，再检验该数及两个除数能否从保留部分取得。构造例用共同被除数 120 在 5 步内生成 37、35。组合 136 道、独立 151 道均无改进。[试验结果](../recipe-union/asterios414-cross-results.json.gz) · [实现](shared_dividend.py)

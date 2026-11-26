@@ -1,310 +1,64 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 127822,
-  "sha256": "6b89f554b1005dc4301331d4110ee7f3c8a46093aad30f852785e2ea195c965c",
+  "instructions": 127814,
+  "sha256": "5da8e3c68a5d644a547c8aece85e8438afc757bc6d2cd29e820c653a2dd7c05c",
   "sources": [
     {
-      "name": "ozertuu-674",
-      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/674",
-      "archive": "ozertuu-674.zip",
-      "archive_sha256": "218f8c17778cf43c61bcc19209741689c6b50bb6de4a35cd02004e09cfb8843e",
+      "name": "asteriospanoras-414",
       "member": "best_programs.csv",
-      "csv_sha256": "60502720f82770421ded131e488ba9df9c0891f774cd8593a94e959fc74568e8",
+      "archive": "asteriospanoras-414.zip",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/414",
+      "archive_sha256": "dc532eb03ed8f9d6d092f5ebbe0a20df7a98109f37ca4df68c11462e261cc1b4",
+      "csv_sha256": "a60ac5f040698c4cda743407992ab9e1e8fdcc2efd265e568a27e5919f9396dd",
       "full": true,
-      "replayed_instructions": 127822
+      "replayed_instructions": 127815
+    },
+    {
+      "name": "asterios414-0678-local",
+      "path": "collaboration/recipe-union/asterios414-0678-win.csv",
+      "csv_sha256": "b935d84bf87b9983b4a54c823f05610fdfca5f92aa8864c9eca99b3cfe2ddff0",
+      "full": false
     }
   ],
-  "previous_sha256": "0572d0f8aaa77bdafee9f46028a74b3101c0cc0a38e38e36a396c1f8252edd0e",
+  "previous_sha256": "6b89f554b1005dc4301331d4110ee7f3c8a46093aad30f852785e2ea195c965c",
   "improved": {
-    "scored_0004": [
-      206,
-      204,
-      "ozertuu-674"
-    ],
-    "scored_0063": [
-      101,
-      100,
-      "ozertuu-674"
-    ],
-    "scored_0068": [
-      115,
-      114,
-      "ozertuu-674"
-    ],
-    "scored_0078": [
-      100,
-      99,
-      "ozertuu-674"
-    ],
-    "scored_0101": [
-      112,
-      110,
-      "ozertuu-674"
-    ],
-    "scored_0117": [
-      185,
-      184,
-      "ozertuu-674"
-    ],
-    "scored_0144": [
-      108,
-      106,
-      "ozertuu-674"
-    ],
-    "scored_0188": [
-      93,
-      89,
-      "ozertuu-674"
-    ],
-    "scored_0205": [
-      126,
-      124,
-      "ozertuu-674"
-    ],
-    "scored_0207": [
-      213,
-      210,
-      "ozertuu-674"
-    ],
-    "scored_0223": [
-      193,
-      192,
-      "ozertuu-674"
-    ],
-    "scored_0245": [
-      107,
-      105,
-      "ozertuu-674"
-    ],
-    "scored_0285": [
-      204,
-      203,
-      "ozertuu-674"
-    ],
-    "scored_0297": [
-      117,
-      113,
-      "ozertuu-674"
-    ],
-    "scored_0329": [
-      116,
-      113,
-      "ozertuu-674"
-    ],
-    "scored_0343": [
-      105,
-      100,
-      "ozertuu-674"
-    ],
-    "scored_0369": [
-      217,
-      214,
-      "ozertuu-674"
-    ],
-    "scored_0400": [
-      213,
-      211,
-      "ozertuu-674"
-    ],
-    "scored_0429": [
-      109,
-      106,
-      "ozertuu-674"
-    ],
-    "scored_0433": [
-      126,
-      119,
-      "ozertuu-674"
-    ],
-    "scored_0434": [
+    "scored_0259": [
       102,
-      100,
-      "ozertuu-674"
-    ],
-    "scored_0449": [
-      88,
-      86,
-      "ozertuu-674"
-    ],
-    "scored_0450": [
-      266,
-      265,
-      "ozertuu-674"
-    ],
-    "scored_0458": [
-      141,
-      138,
-      "ozertuu-674"
-    ],
-    "scored_0462": [
-      110,
-      109,
-      "ozertuu-674"
-    ],
-    "scored_0466": [
-      180,
-      177,
-      "ozertuu-674"
-    ],
-    "scored_0488": [
-      131,
-      128,
-      "ozertuu-674"
-    ],
-    "scored_0507": [
-      159,
-      157,
-      "ozertuu-674"
-    ],
-    "scored_0520": [
-      166,
-      164,
-      "ozertuu-674"
-    ],
-    "scored_0522": [
-      82,
-      81,
-      "ozertuu-674"
-    ],
-    "scored_0525": [
       101,
-      99,
-      "ozertuu-674"
+      "asteriospanoras-414"
     ],
-    "scored_0539": [
-      87,
-      85,
-      "ozertuu-674"
-    ],
-    "scored_0563": [
-      101,
-      98,
-      "ozertuu-674"
-    ],
-    "scored_0572": [
-      220,
-      217,
-      "ozertuu-674"
-    ],
-    "scored_0576": [
-      155,
-      154,
-      "ozertuu-674"
-    ],
-    "scored_0591": [
-      120,
-      114,
-      "ozertuu-674"
-    ],
-    "scored_0642": [
-      115,
-      112,
-      "ozertuu-674"
-    ],
-    "scored_0673": [
-      158,
-      156,
-      "ozertuu-674"
+    "scored_0532": [
+      73,
+      72,
+      "asteriospanoras-414"
     ],
     "scored_0678": [
-      154,
       153,
-      "ozertuu-674"
-    ],
-    "scored_0688": [
-      155,
-      153,
-      "ozertuu-674"
+      151,
+      "asterios414-0678-local"
     ],
     "scored_0704": [
-      117,
       109,
-      "ozertuu-674"
+      108,
+      "asteriospanoras-414"
     ],
     "scored_0712": [
-      178,
       177,
-      "ozertuu-674"
+      176,
+      "asteriospanoras-414"
     ],
-    "scored_0743": [
-      97,
-      96,
-      "ozertuu-674"
-    ],
-    "scored_0757": [
-      126,
-      121,
-      "ozertuu-674"
-    ],
-    "scored_0786": [
-      236,
-      235,
-      "ozertuu-674"
-    ],
-    "scored_0812": [
-      98,
-      96,
-      "ozertuu-674"
-    ],
-    "scored_0824": [
-      122,
-      118,
-      "ozertuu-674"
-    ],
-    "scored_0825": [
-      114,
-      112,
-      "ozertuu-674"
-    ],
-    "scored_0833": [
-      111,
-      108,
-      "ozertuu-674"
-    ],
-    "scored_0846": [
-      91,
-      90,
-      "ozertuu-674"
-    ],
-    "scored_0884": [
-      102,
-      98,
-      "ozertuu-674"
-    ],
-    "scored_0936": [
-      148,
-      143,
-      "ozertuu-674"
-    ],
-    "scored_0947": [
-      86,
+    "scored_0753": [
+      87,
       85,
-      "ozertuu-674"
-    ],
-    "scored_0956": [
-      219,
-      218,
-      "ozertuu-674"
-    ],
-    "scored_0960": [
-      114,
-      112,
-      "ozertuu-674"
-    ],
-    "scored_0963": [
-      114,
-      111,
-      "ozertuu-674"
-    ],
-    "scored_0991": [
-      167,
-      164,
-      "ozertuu-674"
-    ],
-    "scored_0999": [
-      98,
-      95,
-      "ozertuu-674"
+      "asteriospanoras-414"
     ]
+  },
+  "improved_credits": {
+    "scored_0259": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)",
+    "scored_0532": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)",
+    "scored_0678": "Local recombination of Asterios v414 and a separate 152-step variant",
+    "scored_0704": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)",
+    "scored_0712": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)",
+    "scored_0753": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
   }
 }

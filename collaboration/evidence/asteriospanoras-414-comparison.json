@@ -1,0 +1,43 @@
+{
+  "parent_sha256": "6b89f554b1005dc4301331d4110ee7f3c8a46093aad30f852785e2ea195c965c",
+  "name": "asteriospanoras-414",
+  "member": "best_programs.csv",
+  "archive": "asteriospanoras-414.zip",
+  "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/414",
+  "archive_sha256": "dc532eb03ed8f9d6d092f5ebbe0a20df7a98109f37ca4df68c11462e261cc1b4",
+  "csv_sha256": "a60ac5f040698c4cda743407992ab9e1e8fdcc2efd265e568a27e5919f9396dd",
+  "full": true,
+  "replayed_instructions": 127815,
+  "improved": {
+    "scored_0259": [
+      102,
+      101,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ],
+    "scored_0532": [
+      73,
+      72,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ],
+    "scored_0678": [
+      153,
+      152,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ],
+    "scored_0704": [
+      109,
+      108,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ],
+    "scored_0712": [
+      177,
+      176,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ],
+    "scored_0753": [
+      87,
+      85,
+      "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,815 (programs read from the notebook code or its own dataset)"
+    ]
+  }
+}
