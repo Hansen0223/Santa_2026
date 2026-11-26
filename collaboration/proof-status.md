@@ -4,6 +4,8 @@
 
 第 181 题的 128 个分片均无解，已证下界提高到 19 步。[完整分片](evidence/0181-h9-grid.json.gz) · [合并回执](evidence/combined-0181-h9.json)
 
+第 181 题的 19 步可行性检查排除了 64 个分片，另外 64 个达到搜索预算，当前下界为 19 步。[分片记录](evidence/0181-h10-grid.json.gz)
+
 第 409 题的 18 步可行性检查已完成首轮，128 个分片中排除 26 个，余下 102 个达到预算上限。[分片记录](evidence/0409-h9-grid.json.gz)
 
 第 21、233、863、962 题分别排除了连续两个长度预算，下界依次提高到 21、22、21、21 步。[分片结果](evidence/two-seed-closed-grids-20261124.json.gz) · [合并回执](evidence/combined-two-seed-20261124.json)
