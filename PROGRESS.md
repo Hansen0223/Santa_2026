@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 20:59
+
+第 181 题的已证下界提高到 **19 步**，全题已证总下界升至 **38,014 步**。[证明回执](collaboration/evidence/combined-0181-h9.json)
+
 ## 北京时间 11 月 26 日 20:56
 
 最长的 55 道组合题、45 道独立题及另一路 29 道组合题已重搜，均未缩短。Asterios 第 410 版也未带来更短的逐题程序。组合解仍为 **127,967 步**，距北京时间 20:51 的榜首 **3,473 步**。[逐题结果](collaboration/register-search/target-support-127967-results.json.gz) · [公开版本对比](collaboration/evidence/asteriospanoras-410-comparison.json)
