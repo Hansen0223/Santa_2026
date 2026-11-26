@@ -1,0 +1,57 @@
+--- a/graph.py
++++ b/graph.py
+@@ -209,17 +209,39 @@
+         return (max(0, 1 - freed), retained - freed,
+                 targets_first and output not in targets, -unblocked, -tie_order[output])
+ 
++    # Only two changes can alter the priority of another ready value:
++    # operand use counts 2 -> 1, or one of its children becomes unblocked.
++    heap = []
++    versions = {}
++    unique = not fixed_order and len(set(tie_order.values())) == len(tie_order)
++    if unique:
++        waiting = {v: tuple(dict.fromkeys(graph[v][1:])) for v in graph}
++        def put(v):
++            version = versions.get(v, -1) + 1
++            versions[v] = version
++            heapq.heappush(heap, (priority(v), v, version))
++        for v in ready:
++            put(v)
+     instructions = []
+     ordered = iter(graph)
+     while ready:
+-        value = next(ordered) if fixed_order else min(ready, key=priority)
++        if unique:
++            while True:
++                _, value, stamp = heapq.heappop(heap)
++                if value in ready and versions[value] == stamp:
++                    break
++        else:
++            value = next(ordered) if fixed_order else min(ready, key=priority)
+         ready.remove(value)
+         op, left, right = graph[value]
+         a, b = binding[left], binding[right]
++        changed = set() if unique else None
+         for source in {left, right}:
+             uses[source] -= 1
+             if not uses[source]:
+                 heapq.heappush(free, binding.pop(source))
++            elif unique and uses[source] == 1:
++                changed.update(v for v in successors[source] if v in ready)
+         if not free:
+             return None
+         dest = heapq.heappop(free)
+@@ -232,6 +254,13 @@
+             pending[child] -= 1
+             if not pending[child]:
+                 ready.add(child)
++                if unique:
++                    changed.add(child)
++            elif unique and pending[child] == 1:
++                changed.update(v for v in waiting[child] if v in ready)
++        if unique:
++            for v in changed:
++                put(v)
+     if len(instructions) != len(graph):
+         raise ValueError("failed to schedule complete arithmetic graph")
+     return tuple(instructions)
