@@ -1,6 +1,6 @@
 # 开发协作进度
 
-更新于 11 月 24 日北京时间 13:21。本地最好候选为 127,967 条。[还原方法](../public-assisted/releases/portfolio.md) · [逐题上下界](puzzle-bounds.csv)
+更新于 11 月 26 日北京时间 20:46。本地最好候选为 127,967 条。[还原方法](../public-assisted/releases/portfolio.md) · [逐题上下界](puzzle-bounds.csv)
 
 后续研究优先探索能缩短程序的新方法。新候选合入时统一验算，已有结果复用原记录。
 
@@ -45,7 +45,7 @@
 | 重新安排共享中间值的目标组 | 两组各 16 题已完成 | 两组均未缩短。[逐题档案](withheld-targets/frontier-beam-results.json.gz) |
 | PR #4 的六项下界 | 已合入逐题表 | 第 50、515、583、773、777、913 题各提高 1 条，合计 37,987。[合并回执](evidence/combined-1875a66.json) |
 | 从同一初稿生成多个独立程序再组合 | 25 道已完成 | 11 道独立题共省 13 条，其中 4 道也缩短了最好候选。[逐题结果](recipe-union/sibling-results.json.gz) |
-| Pardheev 的 132,997 条候选 | 已合并，三项后续试验已完成 | 419 道带来改进，最好候选 133,473 条。另在 80、24、60 道题上试了三种改写。[合并与逐题结果](../public-assisted/pardheev/) |
+| Pardheev 的 132,997 条候选 | 已合并，三项后续试验已完成 | 419 道带来改进，最好候选 132,841 条。另在 80、24、60 道题上试了三种改写。[合并与逐题结果](../public-assisted/pardheev/) |
 | 保留目标的最后几步，重建共用部分 | 已完成，144 道独立题省 6 条 | 第 670 题省 2 条。[逐题结果](withheld-targets/terminal-shell-results.json.gz) |
 | 在协作分支的 25 道题上重搜 | 已完成 | 独立解另省 129 条，两条路线按题择短后，最好候选另省 64 条。[输入与结果](recipe-union/contributor-results.json.gz) |
 | 72 个位置搜索后编回 48 个 | 已完成，两条路线各 36 道 | 未缩短，结束此方向。[逐题结果](register-search/relaxed-results.json.gz) |
