@@ -1,0 +1,70 @@
+--- a/solvers/graphs/mix.py
++++ b/solvers/graphs/mix.py
+@@ -98,6 +98,48 @@
+             stack.extend(((value, True), (left, False), (right, False)))
+         return True
+ 
++    def safety_check(self, output):
++        # The caller restores every trial replacement before the next query.
++        # Under that same graph and blocked output, each operand is either
++        # constructible or not, independently of the other queried operand.
++        good = set(self.seeds)
++        bad = {output}
++        recipes = self.recipes
++
++        def rooted(root):
++            if root in good:
++                return True
++            if root in bad:
++                return False
++            visiting = set()
++            stack = [(root, False)]
++            while stack:
++                value, ready = stack.pop()
++                if value in good:
++                    continue
++                if ready:
++                    visiting.remove(value)
++                    good.add(value)
++                    continue
++                if value in bad or value in visiting or value not in recipes:
++                    # Every unresolved ancestor on this DFS path depends on
++                    # the failure. Nodes in pending sibling paths do not.
++                    bad.update(visiting)
++                    bad.add(value)
++                    return False
++                visiting.add(value)
++                _, left, right = recipes[value]
++                stack.append((value, True))
++                stack.append((right, False))
++                if left != right:
++                    stack.append((left, False))
++            return True
++
++        def safe(_, recipe):
++            return rooted(recipe[1]) and rooted(recipe[2])
++
++        return safe
++
+     def shift(self, recipe, delta):
+         pending = [*set(recipe[1:])]
+         while pending:
+@@ -130,6 +172,7 @@
+         else:
+             initial = default
+         state = State(puzzle, initial)
++        check_safety = state.safe
+         rng = random.Random(trial)
+         for pass_number in range(passes):
+             changed = 0
+@@ -145,8 +188,9 @@
+                 start = state.recipes[output]
+                 winner = start
+                 best_count = len(state.counts)
++                safe = state.safety_check(output) if joins else check_safety
+                 for candidate in sorted(choices):
+-                    if candidate == start or not state.safe(output, candidate):
++                    if candidate == start or not safe(output, candidate):
+                         continue
+                     state.replace(output, candidate)
+                     cost = len(state.counts)
