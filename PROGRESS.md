@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 22:07
+
+第 960、991 题各省 1 步，组合解降至 **127,812 步**，距北京时间 22:05 的榜首 **3,333 步**。第 873、945 题各提高 1 步下界，全题已证总下界升至 **38,045 步**。[改进程序](collaboration/recipe-union/interleaved-orders-combined-wins.csv) · [证明回执](collaboration/evidence/combined-wide-domains-eighth-20261126.json)
+
 ## 北京时间 11 月 26 日 22:02
 
 新版候选使 6 道题缩短，组合解降至 **127,814 步**。第 678 题得到两份不同的 152 步程序。第 443、487、656 题的已证下界各提高 1 步，总下界升至 **38,043 步**。距北京时间 21:58 的榜首 **3,335 步**。[公开版本对比](collaboration/evidence/asteriospanoras-414-comparison.json) · [重组结果](collaboration/recipe-union/asterios414-cross-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-seventh-20261126.json)

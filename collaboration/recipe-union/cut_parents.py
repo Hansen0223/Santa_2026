@@ -96,7 +96,27 @@ def materialize(p, graphs, choice):
     return active_graph(p,result)
 
 
-def hybrids(p,base,donor):
+def interleaved_orders(anchors, parts, positions):
+    """Add anchor orders that can switch between the two parent dependencies."""
+    for weight in (1,2,3):
+        visited={}
+        remaining=set(anchors)
+        while remaining:
+            ready={}
+            for v in remaining:
+                permitted=sum(needed<=visited.keys() for _,needed in (part[v] for part in parts))
+                if permitted:
+                    ready[v]=permitted
+            if not ready:
+                raise ValueError("No feasible anchor can extend the order")
+            v=min(ready,key=lambda v:(-ready[v],
+                      weight*positions[0][v]+(4-weight)*positions[1][v],v))
+            visited[v]=len(visited)
+            remaining.remove(v)
+        yield visited
+
+
+def hybrids(p,base,donor,interleave=False):
     graphs = base,donor
     common = base.keys() & donor.keys()
     goals = set(p.targets)-set(p.seeds)
@@ -109,7 +129,15 @@ def hybrids(p,base,donor):
             continue
         seen.add(frozenset(anchors))
         parts = [pieces(g,anchors) for g in graphs]
-        for side,order in enumerate(positions):
+        orders = list(positions)
+        if interleave:
+            orders.extend(interleaved_orders(anchors,parts,positions))
+        seen_orders=set()
+        for side,order in enumerate(orders):
+            key=tuple(sorted(anchors,key=order.__getitem__))
+            if key in seen_orders and side>=len(positions):
+                continue
+            seen_orders.add(key)
             selected,cost = assignment(anchors,parts,order)
             g = materialize(p,graphs,selected)
             yield g,dict(boundary=label,order=side,anchors=len(anchors),donor_choices=sum(selected.values()),
@@ -121,7 +149,7 @@ def fingerprint(g):
 
 
 def work(task):
-    p,parent,donors,engine,rounds = task
+    p,parent,donors,engine,rounds,*order_modes = task
     base = active_graph(p,first_recipes(p,parent))
     base_edges = fingerprint(base)
     candidates = {}
@@ -130,7 +158,7 @@ def work(task):
         graph = active_graph(p,first_recipes(p,tape))
         donor_edges = fingerprint(graph)
         row = dict(donor=name,length=len(tape),cuts=[])
-        for g,stats in hybrids(p,base,graph):
+        for g,stats in hybrids(p,base,graph,any(order_modes)):
             key = fingerprint(g)
             stats['mixed'] = bool(key-base_edges and key-donor_edges)
             row['cuts'].append(stats)
@@ -181,9 +209,17 @@ def main():
     for name,n in [('count',90),('offset',0),('jobs',6),('pairs',3),('rounds',350)]:
         parser.add_argument('--'+name,type=int,default=n)
     parser.add_argument('--method',choices=('cut','shared-outputs'),default='cut')
+    parser.add_argument("--interleave-orders",action="store_true")
+    parser.add_argument("--rank-divergence",action="store_true")
+    parser.add_argument("--max-gap",type=int)
     args = parser.parse_args()
+    if args.interleave_orders and args.method!="cut":
+        parser.error("--interleave-orders requires --method cut")
     puzzles = read_puzzles(args.puzzles)
+    parent_digest=sha256(args.parent)
     bank = read_submission(args.parent)
+    if sha256(args.parent)!=parent_digest:
+        raise ValueError('Parent changed while loading')
     donors = {path.name:read_submission(path) for path in args.donors}
     if len(donors)!=len(args.donors):
         raise ValueError('Donors need distinct file names')
@@ -193,6 +229,7 @@ def main():
         from shared_outputs import work as worker
         salt = 'shared-outputs1-'
     jobs = []
+    priorities = {}
     for p in sorted(puzzles,key=lambda x:hashlib.sha256((salt+x.id).encode()).digest()):
         parent = bank[p.id]
         if len(parent)<20:
@@ -203,6 +240,8 @@ def main():
             tape = source.get(p.id)
             if tape is None or tape==parent or len(tape)>len(parent)*1.45+12:
                 continue
+            if args.max_gap is not None and len(tape)-len(parent)>args.max_gap:
+                continue
             edges = fingerprint(first_recipes(p,tape))
             diff = len(edges^base)
             if diff>=3:
@@ -210,7 +249,11 @@ def main():
                 options.setdefault(edges,(rank,name,tape))
         if options:
             best = sorted(options.values(),key=lambda t:(t[0],t[1]))[:args.pairs]
-            jobs.append((p,parent,[(n,t) for _,n,t in best],args.engine,args.rounds))
+            priorities[p.id]=best[0][0]
+            job=(p,parent,[(n,t) for _,n,t in best],args.engine,args.rounds)
+            jobs.append((*job, True) if args.interleave_orders else job)
+    if args.rank_divergence:
+        jobs.sort(key=lambda task:(priorities[task[0].id],task[0].id))
     wins,rows = {},{}
     with ProcessPoolExecutor(args.jobs) as pool:
         for i,t,row in pool.map(worker,jobs[args.offset:args.offset+args.count]):
@@ -219,7 +262,7 @@ def main():
                 wins[i] = t
     args.out.mkdir(exist_ok=True,parents=True)
     write_submission(args.out/'wins.csv',[p for p in puzzles if p.id in wins],wins)
-    record = dict(method=args.method,eligible=len(jobs),parent_sha256=sha256(args.parent),engine_sha256=sha256(args.engine),
+    record = dict(method=args.method,eligible=len(jobs),parent_sha256=parent_digest,engine_sha256=sha256(args.engine),
                   donors={f.name:sha256(f) for f in args.donors},
                   settings={k:v for k,v in vars(args).items() if isinstance(v,int)},rows=rows)
     (args.out/'results.json.gz').write_bytes(gzip.compress(json.dumps(record,separators=(',',':')).encode(),mtime=0))
