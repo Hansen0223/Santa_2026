@@ -1,0 +1,109 @@
+{
+  "parent_sha256": "6cfa9a18d54a1a909634bc9d68d019289fa309fdf4aaea321c6ce070e107ce29",
+  "compared": {
+    "asteriospanoras-415": {
+      "name": "asteriospanoras-415",
+      "member": "best_programs.csv",
+      "archive": "asteriospanoras-415.zip",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/415",
+      "archive_sha256": "782b024ee1f979ec3d5b9e114e59d14112591dbc6490f49cf3a9a55c7cd0d2f9",
+      "csv_sha256": "597f3ed3a55b9438c2431eb025dc849f13702a934b1ff43ddd329756260e6da1",
+      "full": true,
+      "replayed_instructions": 127799
+    },
+    "ozertuu-676": {
+      "name": "ozertuu-676",
+      "member": "best_programs.csv",
+      "archive": "ozertuu-676.zip",
+      "url": "https://www.kaggle.com/datasets/ozertuu/santa-2026-verified-programs/versions/676",
+      "archive_sha256": "186945088a261e1a14f19f1d991bdc9747b3b95bad74a7c2672b9f09ba2877bb",
+      "csv_sha256": "a0cb5f85ec33f59d0c6dad704d1475ca3311e734fed547e04dda973f6885914a",
+      "full": true,
+      "replayed_instructions": 127802
+    },
+    "alexchilton-359": {
+      "name": "alexchilton-359",
+      "member": "rudolph_programs.csv",
+      "archive": "alexchilton-359.zip",
+      "url": "https://www.kaggle.com/datasets/alexchilton/santa-2026-rudolph-programs/versions/359",
+      "archive_sha256": "87e840da5d12086fb30cbc365a357ee8842ac225f971be6338f41f022d43eec6",
+      "csv_sha256": "b58795a7c163d3d76314d0a73f92d01308d1443dd448a39526e5e9d3be2f789e",
+      "full": true,
+      "replayed_instructions": 127814
+    }
+  },
+  "adopted": "asteriospanoras-415",
+  "same_instruction_counts_as_per_puzzle_minimum": true,
+  "combined_instructions": 127798,
+  "improved": {
+    "scored_0093": [
+      98,
+      97,
+      "asteriospanoras-415"
+    ],
+    "scored_0343": [
+      100,
+      99,
+      "asteriospanoras-415"
+    ],
+    "scored_0434": [
+      100,
+      99,
+      "asteriospanoras-415"
+    ],
+    "scored_0450": [
+      265,
+      264,
+      "asteriospanoras-415"
+    ],
+    "scored_0462": [
+      109,
+      107,
+      "asteriospanoras-415"
+    ],
+    "scored_0824": [
+      118,
+      117,
+      "asteriospanoras-415"
+    ],
+    "scored_0825": [
+      112,
+      111,
+      "asteriospanoras-415"
+    ],
+    "scored_0884": [
+      98,
+      97,
+      "asteriospanoras-415"
+    ],
+    "scored_0947": [
+      85,
+      84,
+      "asteriospanoras-415"
+    ],
+    "scored_0956": [
+      218,
+      215,
+      "asteriospanoras-415"
+    ],
+    "scored_0960": [
+      111,
+      110,
+      "asteriospanoras-415"
+    ]
+  },
+  "improved_credits": {
+    "scored_0093": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0343": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0434": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0450": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0462": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0824": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0825": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0884": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0947": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0956": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,799",
+    "scored_0960": "Sargis Khachatryan, Elf Calc | Live Range Compactor"
+  },
+  "duplicate_or_inactive_reclaimable_rows": 0
+}

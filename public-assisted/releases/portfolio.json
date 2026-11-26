@@ -1,46 +1,94 @@
 {
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
-  "instructions": 127812,
-  "sha256": "6cfa9a18d54a1a909634bc9d68d019289fa309fdf4aaea321c6ce070e107ce29",
+  "instructions": 127798,
+  "sha256": "dabe2980e5b29807482d81d73568a118a28ca215ed8683599382e20a333ab9b3",
   "sources": [
     {
-      "name": "asteriospanoras-414",
+      "name": "asteriospanoras-415",
       "member": "best_programs.csv",
-      "archive": "asteriospanoras-414.zip",
-      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/414",
-      "archive_sha256": "dc532eb03ed8f9d6d092f5ebbe0a20df7a98109f37ca4df68c11462e261cc1b4",
-      "csv_sha256": "a60ac5f040698c4cda743407992ab9e1e8fdcc2efd265e568a27e5919f9396dd",
+      "archive": "asteriospanoras-415.zip",
+      "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/415",
+      "archive_sha256": "782b024ee1f979ec3d5b9e114e59d14112591dbc6490f49cf3a9a55c7cd0d2f9",
+      "csv_sha256": "597f3ed3a55b9438c2431eb025dc849f13702a934b1ff43ddd329756260e6da1",
       "full": true,
-      "replayed_instructions": 127815
+      "replayed_instructions": 127799
     },
     {
       "name": "asterios414-0678-local",
       "path": "collaboration/recipe-union/asterios414-0678-win.csv",
       "csv_sha256": "b935d84bf87b9983b4a54c823f05610fdfca5f92aa8864c9eca99b3cfe2ddff0",
       "full": false
-    },
-    {
-      "name": "interleaved-orders",
-      "path": "collaboration/recipe-union/interleaved-orders-combined-wins.csv",
-      "csv_sha256": "d5b5af6b398c1e1203b938041836d7db55ed854e43530314d769e7ffc8954dd0",
-      "full": false
     }
   ],
-  "previous_sha256": "5da8e3c68a5d644a547c8aece85e8438afc757bc6d2cd29e820c653a2dd7c05c",
+  "previous_sha256": "6cfa9a18d54a1a909634bc9d68d019289fa309fdf4aaea321c6ce070e107ce29",
   "improved": {
-    "scored_0991": [
-      164,
-      163,
-      "interleaved-orders"
+    "scored_0093": [
+      98,
+      97,
+      "asteriospanoras-415"
     ],
-    "scored_0960": [
+    "scored_0343": [
+      100,
+      99,
+      "asteriospanoras-415"
+    ],
+    "scored_0434": [
+      100,
+      99,
+      "asteriospanoras-415"
+    ],
+    "scored_0450": [
+      265,
+      264,
+      "asteriospanoras-415"
+    ],
+    "scored_0462": [
+      109,
+      107,
+      "asteriospanoras-415"
+    ],
+    "scored_0824": [
+      118,
+      117,
+      "asteriospanoras-415"
+    ],
+    "scored_0825": [
       112,
       111,
-      "interleaved-orders"
+      "asteriospanoras-415"
+    ],
+    "scored_0884": [
+      98,
+      97,
+      "asteriospanoras-415"
+    ],
+    "scored_0947": [
+      85,
+      84,
+      "asteriospanoras-415"
+    ],
+    "scored_0956": [
+      218,
+      215,
+      "asteriospanoras-415"
+    ],
+    "scored_0960": [
+      111,
+      110,
+      "asteriospanoras-415"
     ]
   },
   "improved_credits": {
-    "scored_0960": "Local combination of Asterios v414 and an earlier Ertugrul Ozer v667 program",
-    "scored_0991": "Local whole-program control search using Wang Jakie's engine"
+    "scored_0093": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0343": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0434": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0450": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0462": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0824": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0825": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0884": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0947": "Sargis Khachatryan, Elf Calc | Live Range Compactor",
+    "scored_0956": "Ross Wade, Santa 2026 | Spare-Value Annealing | 127,799",
+    "scored_0960": "Sargis Khachatryan, Elf Calc | Live Range Compactor"
   }
 }
