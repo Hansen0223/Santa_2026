@@ -27,7 +27,7 @@ scored_0025,42,38,43,distinct-diamond/claims.json.gz,117,117,117,74,0
 scored_0026,43,40,45,distinct-diamond/claims.json.gz,190,181,181,136,0
 scored_0027,42,39,43,distinct-diamond/conditioned-claims.json.gz,103,103,103,60,0
 scored_0028,42,40,43,distinct-diamond/claims.json.gz,119,117,117,74,0
-scored_0029,18,14,18,helper-wave15.json,38,35,35,17,0
+scored_0029,19,14,19,evidence/wide-domains-fifth-grids-20261126.json.gz,38,35,35,16,0
 scored_0030,43,40,45,distinct-diamond/conditioned-claims.json.gz,195,188,188,143,0
 scored_0031,38,35,40,distinct-diamond/conditioned-claims.json.gz,262,246,246,206,0
 scored_0032,39,36,40,distinct-diamond/claims.json.gz+distinct-helper-edges/conditioned-full-certificates.json,100,99,99,59,0
@@ -101,7 +101,7 @@ scored_0099,41,38,42,distinct-helper-edges/full-certificates.json,120,120,120,78
 scored_0100,41,38,43,distinct-diamond/claims.json.gz,122,120,120,77,0
 scored_0101,42,40,43,distinct-diamond/claims.json.gz,131,123,123,80,0
 scored_0102,38,35,39,distinct-diamond/claims.json.gz,117,115,115,76,0
-scored_0103,19,17,20,distinct-diamond/claims.json.gz,40,40,40,20,0
+scored_0103,21,17,21,evidence/wide-domains-fifth-grids-20261126.json.gz,40,40,40,19,0
 scored_0104,43,40,45,distinct-diamond/conditioned-claims.json.gz,242,227,227,182,0
 scored_0105,40,37,42,distinct-diamond/conditioned-claims.json.gz,155,152,152,110,0
 scored_0106,43,40,45,distinct-diamond/conditioned-claims.json.gz,232,223,223,178,0
@@ -194,7 +194,7 @@ scored_0192,42,38,43,distinct-diamond/conditioned-claims.json.gz,117,114,114,71,
 scored_0193,38,35,39,distinct-diamond/claims.json.gz,129,125,125,86,0
 scored_0194,41,37,43,distinct-diamond/claims.json.gz,160,155,155,112,0
 scored_0195,39,35,40,distinct-diamond/claims.json.gz,130,124,124,84,0
-scored_0196,15,13,15,helper-wave9.json,24,24,24,9,0
+scored_0196,16,13,16,evidence/wide-domains-fifth-grids-20261126.json.gz,24,24,24,8,0
 scored_0197,42,38,43,distinct-diamond/claims.json.gz,131,112,112,69,0
 scored_0198,41,37,43,distinct-diamond/conditioned-claims.json.gz,218,217,217,174,0
 scored_0199,37,35,39,conditional-helper-membership/extension.json,101,96,96,57,0

@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 21:43
+
+第 29、103、196 题的已证下界各提高 1 步，全题总下界升至 **38,038 步**。[证明回执](collaboration/evidence/combined-wide-domains-fifth-20261126.json)
+
 ## 北京时间 11 月 26 日 21:37
 
 4 道题的已证下界各提高 1 步，全题已证总下界升至 **38,035 步**。本轮组合解为 **127,967 步**，独立解为 **139,260 步**。距北京时间 21:33 的榜首 **3,481 步**。[证明回执](collaboration/evidence/combined-wide-domains-fourth-20261126.json) · [改写结果](collaboration/register-search/reorient-values-results.json.gz)
