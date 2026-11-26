@@ -193,3 +193,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 为一条指令重建两个彼此相关的操作数
 
 固定其他算式，对已有值逆推出两个待构造的操作数，也直接求解两个操作数相互依赖的低阶方程。两种路线均用初值 4、5 和目标 117 的构造例回放了三步。逆向枚举检查大目标值的组合 158 道、独立 170 道；直接解方程检查较小目标值的组合 240 道、独立 250 道。两种筛选均未找到可用于缩短整题的候选。[逐题结果](branched-operands-results.json.gz) · [实现](branched_operands.py)
+
+## 同时改写两条依赖以改变计算顺序
+
+保留同一组候选数值，比较单条算式替换、两条替换和必须同时进行才能消除循环的两条替换。构造例回放了先算 9 再算 6 的两步程序。组合 104 道、独立 118 道，分别有 4 和 4 道生成可执行的依赖反转起点。两组逐题共省 0 步和 0 步。[逐题结果](reorient-values-results.json.gz) · [实现](reorient_values.py)

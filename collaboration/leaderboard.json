@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-26T13:26:55.8815081+00:00",
+  "checked_at": "2026-11-26T13:33:17.5125404+00:00",
   "url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
   "request": {
     "competitionId": 177055
   },
-  "teams": 3188,
+  "teams": 3190,
   "top": [
     {
       "teamId": 17395013,

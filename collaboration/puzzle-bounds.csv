@@ -82,7 +82,7 @@ scored_0080,41,37,42,distinct-diamond/claims.json.gz,157,147,147,105,0
 scored_0081,39,36,40,distinct-diamond/claims.json.gz,128,126,126,86,0
 scored_0082,38,36,39,distinct-diamond/claims.json.gz,93,92,92,53,0
 scored_0083,42,37,44,distinct-diamond/conditioned-claims.json.gz,180,176,176,132,0
-scored_0084,19,16,19,conditioned-bounds.json,39,38,38,19,0
+scored_0084,20,16,20,evidence/wide-domains-fourth-grids-20261126.json.gz,39,38,38,18,0
 scored_0085,40,38,41,distinct-diamond/claims.json.gz,92,89,89,48,0
 scored_0086,42,38,43,distinct-diamond/conditioned-claims.json.gz,110,100,100,57,0
 scored_0087,38,35,40,distinct-diamond/conditioned-claims.json.gz,258,242,242,202,0
@@ -93,7 +93,7 @@ scored_0091,17,14,17,helper-wave9.json,24,23,23,6,0
 scored_0092,18,19,19,proofs_ext,34,34,34,15,0
 scored_0093,40,38,42,conditional-helper-membership/block-03.json.gz,107,106,106,64,0
 scored_0094,40,36,41,distinct-diamond/conditioned-claims.json.gz,265,252,252,211,0
-scored_0095,16,14,16,helper-wave7.json,35,33,33,17,0
+scored_0095,17,14,17,evidence/wide-domains-fourth-grids-20261126.json.gz,35,33,33,16,0
 scored_0096,41,37,43,distinct-diamond/conditioned-claims.json.gz,176,173,173,130,0
 scored_0097,40,37,41,distinct-diamond/conditioned-claims.json.gz,99,94,94,53,0
 scored_0098,44,40,46,distinct-diamond/conditioned-claims.json.gz,192,182,182,136,0
@@ -298,7 +298,7 @@ scored_0296,18,19,19,proofs_ext,39,39,39,20,0
 scored_0297,41,38,43,conditional-helper-membership/extension.json,130,124,124,81,0
 scored_0298,40,36,41,distinct-diamond/conditioned-claims.json.gz,101,95,95,54,0
 scored_0299,22,19,23,distinct-helper-edges/conditioned-full-certificates.json,96,92,92,69,0
-scored_0300,18,15,18,helper-wave7.json,40,40,40,22,0
+scored_0300,19,15,19,evidence/wide-domains-fourth-grids-20261126.json.gz,40,40,40,21,0
 scored_0301,4,4,4,domain-bounds.csv,4,4,4,0,1
 scored_0302,38,35,39,distinct-diamond/conditioned-claims.json.gz,118,116,116,77,0
 scored_0303,37,35,39,distinct-diamond/claims.json.gz,209,198,198,159,0
@@ -471,7 +471,7 @@ scored_0469,37,35,38,distinct-diamond/conditioned-claims.json.gz,88,84,84,46,0
 scored_0470,41,37,43,distinct-diamond/conditioned-claims.json.gz,274,254,254,211,0
 scored_0471,37,35,38,distinct-diamond/claims.json.gz,104,98,98,60,0
 scored_0472,19,16,19,evidence/0472-h8-final-grid.json.gz,21,21,21,2,0
-scored_0473,18,15,18,evidence/wide-domains-second-grids-20261126.json.gz,24,24,24,6,0
+scored_0473,19,15,19,evidence/wide-domains-fourth-grids-20261126.json.gz,24,24,24,5,0
 scored_0474,37,35,38,distinct-diamond/claims.json.gz,88,84,84,46,0
 scored_0475,42,38,43,distinct-diamond/claims.json.gz,198,195,195,152,0
 scored_0476,42,40,43,distinct-diamond/claims.json.gz,209,206,206,163,0
