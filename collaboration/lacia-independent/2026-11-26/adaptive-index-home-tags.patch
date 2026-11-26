@@ -1,0 +1,81 @@
+--- a/generative/konbu.cpp
++++ b/generative/konbu.cpp
+@@ -43,33 +43,46 @@
+     vector<int> ids, used;
+     size_t mask;
+     bool adaptive;
++    // One 64-bit signature per eight home buckets. A miss here is exact;
++    // false positives (including after staged rollback) use the normal probe.
++    vector<uint64_t> home_tags;
+     Index(int bits) : keys(1u << abs(bits)), ids(keys.size()), mask(keys.size() - 1),
+-                      adaptive(bits < 0) {}
+-    size_t slot(Int v) const {
+-        uint64_t h = uint64_t(v) * 0x9e3779b97f4a7c15ULL;
+-        h ^= h >> 31;
++                      adaptive(bits < 0), home_tags(adaptive ? (keys.size()+7)/8 : 0) {}
++    static uint64_t key_hash(Int v) {
++        const uint64_t h = uint64_t(v) * 0x9e3779b97f4a7c15ULL;
++        return h ^ (h >> 31);
++    }
++    static uint64_t key_tag(uint64_t hash) {
++        return uint64_t(1) << (hash >> 58);
++    }
++    size_t slot_with_hash(Int v, uint64_t h) const {
+         size_t i = h & mask;
+         while (keys[i] && keys[i] != v)
+             i = (i + 1) & mask;
+         return i;
+     }
++    size_t slot(Int v) const { return slot_with_hash(v,key_hash(v)); }
+     int get(Int v) const {
+-        size_t i = slot(v);
++        const uint64_t h = key_hash(v);
++        if (adaptive && !(home_tags[(h & mask)>>3] & key_tag(h))) return -1;
++        size_t i = slot_with_hash(v,h);
+         return keys[i] ? ids[i] : -1;
+     }
+     bool insert(Int v, int id) {
+-        size_t i = slot(v);
++        const uint64_t h = key_hash(v);
++        size_t i = slot_with_hash(v,h);
+         if (keys[i])
+             return false;
+         if (adaptive && used.size() * 5 >= keys.size() * 3) {
+             grow();
+-            i = slot(v);
++            i = slot_with_hash(v,h);
+         }
+         if (!adaptive && used.size() * 8 > keys.size() * 7)
+             return false;
+         used.push_back(i);
+         keys[i] = v;
+         ids[i] = id;
++        if (adaptive) home_tags[(h & mask)>>3] |= key_tag(h);
+         return true;
+     }
+     void grow() {
+@@ -81,17 +94,22 @@
+         used.clear();
+         used.reserve(previous_used.size() * 2);
+         mask = keys.size() - 1;
++        if (adaptive) home_tags.assign((keys.size()+7)/8,0);
+         for (int position : previous_used) {
+-            auto new_position = slot(previous_keys[position]);
+-            keys[new_position] = previous_keys[position];
++            const Int v = previous_keys[position];
++            const uint64_t h = key_hash(v);
++            auto new_position = slot_with_hash(v,h);
++            keys[new_position] = v;
+             ids[new_position] = previous_ids[position];
+             used.push_back(new_position);
++            if (adaptive) home_tags[(h & mask)>>3] |= key_tag(h);
+         }
+     }
+     void clear() {
+         for (int i : used)
+             keys[i] = 0;
+         used.clear();
++        if (adaptive) fill(home_tags.begin(),home_tags.end(),0);
+     }
+ };
+ 
