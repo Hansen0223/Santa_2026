@@ -114,7 +114,7 @@ def work(task):
     return run_cuts(p,parent,engine,rounds,graph,cuts,440251+int(p.id[-4:]))
 
 
-def run_cuts(p,parent,engine,rounds,graph,cuts,seed):
+def run_cuts(p,parent,engine,rounds,graph,cuts,seed,select_inputs=available):
     row = dict(before=len(parent),bands=[])
     best = parent
     if cuts:
@@ -124,7 +124,7 @@ def run_cuts(p,parent,engine,rounds,graph,cuts,seed):
         row['control'] = len(ordinary)
         patches = []
         for _,axis,start,width,block,inputs,outputs in cuts:
-            seeds = available(p,graph,block,inputs,outputs,pairs)
+            seeds = select_inputs(p,graph,block,inputs,outputs,pairs)
             inner = replace(p,seeds=seeds,targets=tuple(sorted(outputs)))
             prior = {v:r for v,r in graph.items() if v in block}
             tape = compile_graph(inner,prior,attempts=4)

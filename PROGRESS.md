@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 20:56
+
+最长的 55 道组合题、45 道独立题及另一路 29 道组合题已重搜，均未缩短。Asterios 第 410 版也未带来更短的逐题程序。组合解仍为 **127,967 步**，距北京时间 20:51 的榜首 **3,473 步**。[逐题结果](collaboration/register-search/target-support-127967-results.json.gz) · [公开版本对比](collaboration/evidence/asteriospanoras-410-comparison.json)
+
 ## 北京时间 11 月 26 日 20:46
 
 回放四个新公开版本后，采用 Ertuğrul Özer 第 667 版。255 道题缩短，组合解降至 **127,967 步**，较暂停前少 524 步，距榜首 **3,473 步**。已重跑暂停前发现的四道改进。独立解三题各省一步，降至 **139,266 步**。第 636 题复现 246 步，公开新版已有 242 步。[公开版本对比](collaboration/evidence/public-archives-20261126.json) · [本地改进记录](collaboration/register-search/target-support-results.json.gz) · [榜单快照](collaboration/leaderboard.json)

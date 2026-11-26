@@ -1,0 +1,12 @@
+{
+  "name": "asteriospanoras-410",
+  "archive": "asteriospanoras-410.zip",
+  "archive_sha256": "29a9e78c4770862260e74f48531b0910b18cc83f2550b5fd5d59909fc24f8647",
+  "csv_sha256": "31c52ff104f456434b78731b072c7e639940a4b842fc0d8356d86f92fb08e9ac",
+  "member": "best_programs.csv",
+  "url": "https://www.kaggle.com/datasets/asteriospanoras/santa-2026-elf-programs-and-experiments/versions/410",
+  "parent_sha256": "0572d0f8aaa77bdafee9f46028a74b3101c0cc0a38e38e36a396c1f8252edd0e",
+  "full": true,
+  "replayed_instructions": 127969,
+  "improved": {}
+}

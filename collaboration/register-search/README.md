@@ -177,3 +177,5 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 ## 将只服务于同一组目标的指令一起重搜
 
 按每条指令能抵达的目标分组，优先加入可以释放共享中间值的目标。暂停前的批次进程已退出，复跑了暂停前观察到改进的四道题。独立组第 20、183、470 题各省一步。组合组第 636 题由 247 步降到 246 步，同期公开新版已达 242 步。[复跑结果](target-support-results.json.gz) · [实现](target_support_cuts.py) · [搜索引擎来源](../../generative/wang/NOTICE.md)
+
+在 127,967 步的组合解上重搜最长的 55 道题，并在独立解上重搜最长的 45 道，均未缩短。另在组合组的前 35 道比较按单个输入排名与按成对运算择取输入，140 个子程序的输入集合没有变化，搜索结果相同。将最新版公开父本的不同算式混合测试 29 道题，同样未缩短。[逐题结果](target-support-127967-results.json.gz)

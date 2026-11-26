@@ -1,12 +1,12 @@
 """Search subprograms that contribute only to a chosen subset of targets."""
 import argparse
-from collections import Counter
+from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import gzip
 import json
 from pathlib import Path
 
-from interior_bands import run_cuts
+from interior_bands import available, run_cuts
 from elf import check, read_puzzles, read_submission, sha256, write_submission
 from graph import active_graph, first_recipes
 
@@ -59,12 +59,49 @@ def cuts(puzzle, graph, count):
     return chosen, len(selected)
 
 
+def joint_inputs(puzzle, graph, block, inputs, outputs, ways):
+    """Prioritize extra inputs that together unlock distinct local computations."""
+    fallback = available(puzzle, graph, block, inputs, outputs, ways)
+    reachable = set(puzzle.seeds)
+    for v, (_, a, b) in graph.items():
+        if v not in block and a in reachable and b in reachable:
+            reachable.add(v)
+    menu = {}
+    for v in block:
+        pairs = {frozenset((a,b)) for a,b in ways[v] if a in reachable and b in reachable}
+        if pairs and not any(pair <= inputs for pair in pairs):
+            menu[v] = pairs
+    extra = set()
+    capacity = puzzle.registers - len(inputs)
+    while len(extra) < capacity and menu:
+        options = defaultdict(set)
+        for v, pairs in menu.items():
+            for pair in pairs:
+                missing = pair - inputs - extra
+                if 0 < len(missing) <= capacity - len(extra):
+                    options[missing].add(v)
+        if not options:
+            break
+
+        def rank(pair):
+            values = options[pair]
+            reward = len(values) + 3 * len(values & outputs)
+            return -reward / len(pair), len(pair), tuple(sorted(pair))
+
+        extra.update(min(options, key=rank))
+        menu = {v:pairs for v,pairs in menu.items()
+                if not any(pair <= inputs | extra for pair in pairs)}
+    ordered = (*sorted(inputs), *sorted(extra))
+    return (*ordered, *(v for v in fallback if v not in inputs | extra))[:puzzle.registers]
+
+
 def work(task):
-    puzzle, parent, engine, count, rounds = task
+    puzzle, parent, engine, count, rounds, joint = task
     graph = active_graph(puzzle, first_recipes(puzzle, parent))
     blocks, eligible = cuts(puzzle, graph, count)
     seed = 408683 + int(puzzle.id[-4:])
-    pid, tape, result = run_cuts(puzzle, parent, engine, rounds, graph, blocks, seed)
+    pid, tape, result = run_cuts(puzzle, parent, engine, rounds, graph, blocks, seed,
+                                 joint_inputs if joint else available)
     result.update(after=len(tape), eligible=eligible,
                   blocks=[dict(targets=sorted(c[6]), inputs=sorted(c[5]), values=sorted(c[4])) for c in blocks])
     return pid, tape, result
@@ -76,6 +113,7 @@ def main():
         parser.add_argument("--"+key,type=Path,required=True)
     for key,default in (("count",135),("cuts",4),("jobs",7),("rounds",720),("offset",0)):
         parser.add_argument("--"+key,type=int,default=default)
+    parser.add_argument("--joint-inputs",action="store_true")
     parser.add_argument("--ids",nargs="+",help="Select specific puzzle IDs in the listed order")
     args = parser.parse_args()
     puzzles = read_puzzles(args.puzzles)
@@ -88,6 +126,8 @@ def main():
     selected = [indexed[pid] for pid in args.ids] if args.ids else ranked[args.offset:args.offset+args.count]
     configuration = dict(parent_sha256=sha256(args.parent), engine_sha256=sha256(args.engine),
                          puzzles_sha256=sha256(args.puzzles), rounds=args.rounds, cuts=args.cuts)
+    if args.joint_inputs:
+        configuration["joint_inputs"] = True
     args.out.mkdir(parents=True,exist_ok=True)
     checkpoint_dir = args.out / "rows"
     checkpoint_dir.mkdir(exist_ok=True)
@@ -109,7 +149,7 @@ def main():
                 raise ValueError(f"Stale checkpoint for {puzzle.id}")
             collect(puzzle.id,tuple(map(tuple,saved["tape"])),saved["record"])
         else:
-            tasks.append((puzzle,parents[puzzle.id],args.engine,args.cuts,args.rounds))
+            tasks.append((puzzle,parents[puzzle.id],args.engine,args.cuts,args.rounds,args.joint_inputs))
     with ProcessPoolExecutor(args.jobs) as pool:
         for future in as_completed(pool.submit(work, task) for task in tasks):
             pid,tape,record = future.result()
