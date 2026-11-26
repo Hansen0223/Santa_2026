@@ -90,11 +90,15 @@ def available(p,graph,block,inputs,outputs,ways):
     return tuple(sorted(inputs))+tuple(ranked[:p.registers-len(inputs)])
 
 
-def compile_on_parent(p,parent,whole):
+def compile_on_parent(p,parent,whole,wide=False):
     try:
         g = active_graph(p,whole)
     except (KeyError,ValueError):
         return None
+    if wide:
+        if len(g) >= len(parent):
+            return None
+        return compile_graph(p,g,attempts=48,schedule_width=52,operation_width=192)
     if len(g)>len(parent)+1:
         return None
     t = schedule_like(p,parent,g)
@@ -136,6 +140,12 @@ def run_cuts(p,parent,engine,rounds,graph,cuts,seed,select_inputs=available):
             candidate = compile_on_parent(p,parent,update|fixed)
             if candidate is None:
                 candidate = compile_on_parent(p,parent,fixed|update)
+            if len(new) < len(tape) and (candidate is None or len(candidate) >= len(parent)):
+                for merged in (update|fixed, fixed|update):
+                    recovered = compile_on_parent(p,parent,merged,wide=True)
+                    if recovered is not None:
+                        candidate = recovered
+                        break
             row['bands'].append(dict(axis=axis,start=start,width=width, inputs=len(inputs),
                                      extras=len(seeds)-len(inputs),outputs=len(outputs), before=len(tape),
                                      rebuilt=len(new),whole=None if candidate is None else len(candidate)))
