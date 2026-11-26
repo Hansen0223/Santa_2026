@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 22:29
+
+第 282、810 题各提高 1 步下界，全题已证总下界为 **38,052 步**。共享中间值试验分别检查了组合解和独立解的 420 道题，均未缩短。组合解仍为 **127,798 步**，距北京时间 22:26 的榜首 **3,327 步**。[实验记录](collaboration/register-search/two-away-centers-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-twelfth-20261126.json)
+
 ## 北京时间 11 月 26 日 22:25
 
 第 271、937 题各提高 1 步下界，全题已证总下界为 **38,050 步**。两种整段替换方法各检查 64 道题的 180 个区间，均未缩短程序。组合解仍为 **127,798 步**，距北京时间 22:19 的榜首 **3,327 步**。[整段替换试验](collaboration/register-search/physical-windows-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-eleventh-20261126.json)
