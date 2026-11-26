@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 21:12
+
+联合重搜后，独立解 2 道共省 2 步，降至 **139,262 步**。组合解为 **127,967 步**，距北京时间 21:09 的榜首 **3,473 步**。第 818 题新排除 32 个分片，总下界仍为 **38,014 步**。[试验结果](collaboration/register-search/merged-pivots-results.json.gz) · [分片记录](collaboration/evidence/0818-h9-grid.json.gz)
+
 ## 北京时间 11 月 26 日 21:05
 
 第 107 题另省一步，独立解降至 **139,264 步**，全量回放通过。组合解仍为 **127,967 步**。[采用的程序](collaboration/register-search/pivot-neighborhood-0107-win.csv)

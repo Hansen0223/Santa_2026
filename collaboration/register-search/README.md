@@ -185,3 +185,7 @@ python -B collaboration/register-search/compare.py assisted work/register-check/
 从多次被使用的中间值出发，向上游及下游选取节点，补齐依赖路径，再重搜该区域。组合组 55 道，独立组 65 道，分别省 0 步和 1 步。独立组有 1 道题的局部搜索优于同轮数的整题对照。另按目标可达性从头尝试 5 道短题，共 31 次搜索。[逐题结果](pivot-neighborhood-results.json.gz) · [实现](target_support_cuts.py)
 
 第 107 题的局部程序从 56 步降至 55 步。增加排程搜索后，整题从 261 步降到 260 步。只有局部确实缩短且原排程未得到更短整题时才追加搜索，并先检查目标所需的全部算式能否缩短。[逐题回放结果](pivot-neighborhood-0107-result.json.gz) · [采用的程序](pivot-neighborhood-0107-win.csv)
+
+## 将有依赖的两个区域合在一起重搜
+
+合并两个区域并补齐依赖路径，要求至少两个原边界输出转为内部值。组合 68 道中 68 道形成可执行的局部重搜，独立 75 道中 75 道形成。分别有 0 道和 2 道优于同轮数的整题对照。另以两份之前的公开版本为父本，对 85 道组合题尝试交叉拼接。[逐题结果及父本](merged-pivots-results.json.gz)

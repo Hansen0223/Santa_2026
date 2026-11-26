@@ -1,7 +1,7 @@
 {
   "puzzles": 1000,
-  "instructions": 139264,
-  "sha256": "1977beb7890a0df81f501e4f0a753eb2bd1fec13b155c8ed31db8e097af94cc6",
+  "instructions": 139262,
+  "sha256": "20ef0da84e5a4679a004d149c52fd647f707ed60341ea7c35b8922e4467c45f6",
   "puzzles_sha256": "b0c70d849eca078a0e1cf9a4f7b47fd40b7435663f6f84de6725f84724500428",
   "longest_program": 303,
   "arithmetic_lower_bound": 36731,
@@ -9,7 +9,7 @@
   "exact_steps": 112,
   "selected": {
     "collaboration/register-search/suffix-independent-wins.csv": 27,
-    "collaboration/register-search/quotient-chains-independent-wins.csv": 42,
+    "collaboration/register-search/quotient-chains-independent-wins.csv": 41,
     "work/creative/joint-132841/incoming.csv": 15,
     "work/gpu/walk-independent.csv": 13,
     "work/gpu/lineage-independent.csv": 20,
@@ -107,7 +107,7 @@
     "collaboration/register-search/spectral-regions-own-wins.csv": 2,
     "git/fb9fa8bfde72 (Hiyohane)": 4,
     "collaboration/recipe-union/cut-parents-independent-wins.csv": 8,
-    "collaboration/target-partition/donor-mask-independent-wins.csv": 21,
+    "collaboration/target-partition/donor-mask-independent-wins.csv": 20,
     "work/creative/transfer-133825/borrowed/own-expand-07.csv": 5,
     "work/virtual/withheld-134079/block-14-own.csv": 4,
     "work/creative/transfer-133825/borrowed/own-expand-16.csv": 2,
@@ -178,6 +178,7 @@
     "collaboration/register-search/two-sided-chains-independent-wins.csv": 2,
     "git/19e58dbdcc79 (Hiyohane)": 2,
     "work/virtual/temporary-targets-134182/holdout-own.csv": 2,
+    "collaboration/register-search/merged-pivots-independent-wins.csv": 2,
     "work/virtual/withheld-134079/block-15-own.csv": 2,
     "work/gpu/overlap-independent.csv": 2,
     "work/virtual/resume-135077/polish2-own-remaining.csv": 1,
@@ -255,7 +256,7 @@
     "independent_full_replay": true,
     "median_program": 123.0,
     "p90_program": 231,
-    "submission_bytes": 2245094,
+    "submission_bytes": 2245004,
     "kaggle_submission_status": "local_only"
   },
   "benchmarks": {
@@ -292,7 +293,7 @@
         "selected_puzzles": 1
       }
     },
-    "current_reduction_from_sample_percent": 90.6558,
+    "current_reduction_from_sample_percent": 90.6559,
     "latest_official_leaderboard": {
       "url": "https://www.kaggle.com/competitions/santa-2026/leaderboard",
       "checked_at": "2026-11-24T03:15:01.868568+00:00",
@@ -5632,6 +5633,24 @@
         "scored_0107": [
           261,
           260
+        ]
+      }
+    },
+    {
+      "utc": "2026-11-26T13:12:52+00:00",
+      "base_revision": "a6d62d5045d7f904b94eca19c6eea6023a68cb7b",
+      "previous_sha256": "1977beb7890a0df81f501e4f0a753eb2bd1fec13b155c8ed31db8e097af94cc6",
+      "observed_program_sha256": "1977beb7890a0df81f501e4f0a753eb2bd1fec13b155c8ed31db8e097af94cc6",
+      "score": 139262,
+      "sha256": "20ef0da84e5a4679a004d149c52fd647f707ed60341ea7c35b8922e4467c45f6",
+      "adopted_rows": {
+        "scored_0493": [
+          243,
+          242
+        ],
+        "scored_0844": [
+          265,
+          264
         ]
       }
     }
