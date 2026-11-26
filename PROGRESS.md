@@ -1,5 +1,9 @@
 # Santa 2026 求解进展
 
+## 北京时间 11 月 26 日 22:25
+
+第 271、937 题各提高 1 步下界，全题已证总下界为 **38,050 步**。两种整段替换方法各检查 64 道题的 180 个区间，均未缩短程序。组合解仍为 **127,798 步**，距北京时间 22:19 的榜首 **3,327 步**。[整段替换试验](collaboration/register-search/physical-windows-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-eleventh-20261126.json)
+
 ## 北京时间 11 月 26 日 22:17
 
 回放三个新版公开候选后，采用 Asterios Panoras 第 415 版并保留第 678 题的本地补丁。11 道题共缩短 14 步，组合解降至 **127,798 步**，距北京时间 22:15 的榜首 **3,319 步**。第 455 题的已证下界提高到 16 步，全题总下界升至 **38,048 步**。对 63 道题做版本间重组，未进一步缩短。[公开版本对比](collaboration/evidence/public-archives-20261126-v415.json) · [重组结果](collaboration/recipe-union/asterios415-cross-results.json.gz) · [证明回执](collaboration/evidence/combined-wide-domains-tenth-20261126.json)
