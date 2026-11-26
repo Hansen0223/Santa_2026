@@ -34,3 +34,8 @@ python -B evaluate.py /path/to/puzzles.csv scratch ./instantiate scratch/dev-ext
 ## 借用另一道题已经用过的数和算式
 
 为每题选出与它共享少见中间数的其他题，在接收题的初值和原有算式上重建借来的算式。独立组 70 题、组合组 78 题，分别产生 1,291 和 1,102 个候选片段。第 821 题的独立程序由 103 条缩到 102 条，直接搜索仍为 103 条。组合组未缩短。父程序取自 `37cfdb7` 的独立提交和该版本重建的组合提交。[求解器](foreign_circuits.py) · [来源、设置和逐题结果](foreign-circuit-results.json.gz) · [第 821 题程序](foreign-circuit-independent-wins.csv)
+
+## 对其他题的加减片段作缩放或平移
+
+用 440 道题的两步加减片段建库，只在其余题上测试。缩放组在组合 130 道、独立 145 道中分别有 110、136 道获得可重搜的起点。平移组在组合 104 道、独立 115 道中分别有 93、111 道。四组逐题取短后，组合解省 0 步，独立解省 3 步。[逐题结果](scaled-fragments-results.json.gz) · [实现](scaled_fragments.py)
+第 432、613 题只在缩放组得到改进，第 462 题的改进来自整题对照。

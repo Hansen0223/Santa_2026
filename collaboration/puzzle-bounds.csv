@@ -430,7 +430,7 @@ scored_0428,41,38,42,distinct-diamond/claims.json.gz,201,202,201,159,0
 scored_0429,42,40,43,distinct-diamond/claims.json.gz,119,112,112,69,0
 scored_0430,39,36,40,distinct-diamond/conditioned-claims.json.gz,90,88,88,48,0
 scored_0431,37,35,38,distinct-diamond/conditioned-claims.json.gz,86,82,82,44,0
-scored_0432,38,35,39,distinct-diamond/claims.json.gz,111,110,110,71,0
+scored_0432,38,35,39,distinct-diamond/claims.json.gz,110,110,110,71,0
 scored_0433,42,40,43,distinct-diamond/claims.json.gz,137,131,131,88,0
 scored_0434,39,36,40,distinct-diamond/conditioned-claims.json.gz,113,105,105,65,0
 scored_0435,39,36,40,distinct-diamond/conditioned-claims.json.gz,117,116,116,76,0
@@ -460,7 +460,7 @@ scored_0458,40,37,42,distinct-diamond/claims.json.gz,157,148,148,106,0
 scored_0459,38,36,39,distinct-diamond/claims.json.gz,84,81,81,42,0
 scored_0460,38,35,40,distinct-diamond/conditioned-claims.json.gz,171,164,164,124,0
 scored_0461,18,19,19,proofs_ext,30,28,28,9,0
-scored_0462,39,36,40,distinct-diamond/conditioned-claims.json.gz,119,117,117,77,0
+scored_0462,39,36,40,distinct-diamond/conditioned-claims.json.gz,118,117,117,77,0
 scored_0463,42,38,43,distinct-diamond/conditioned-claims.json.gz,106,105,105,62,0
 scored_0464,37,36,38,distinct-helper-edges/full-certificates.json,80,77,77,39,0
 scored_0465,38,35,39,distinct-diamond/claims.json.gz,110,110,110,71,0
@@ -611,7 +611,7 @@ scored_0609,41,37,42,distinct-diamond/claims.json.gz,162,148,148,106,0
 scored_0610,43,38,45,distinct-diamond/conditioned-claims.json.gz,289,265,265,220,0
 scored_0611,17,12,17,helper-wave9.json,29,27,27,10,0
 scored_0612,41,37,43,distinct-diamond/conditioned-claims.json.gz,279,256,256,213,0
-scored_0613,38,36,40,conditional-helper-membership/block-05.json.gz,103,101,101,61,0
+scored_0613,38,36,40,conditional-helper-membership/block-05.json.gz,102,101,101,61,0
 scored_0614,16,12,16,helper-wave5.json,20,20,20,4,0
 scored_0615,40,37,42,distinct-diamond/claims.json.gz,116,113,113,71,0
 scored_0616,38,35,39,distinct-diamond/conditioned-claims.json.gz,121,114,114,75,0
