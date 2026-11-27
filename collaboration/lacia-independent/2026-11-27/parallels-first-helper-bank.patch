@@ -1,0 +1,30 @@
+--- a/generative/parallel_solve.py
++++ b/generative/parallel_solve.py
+@@ -49,9 +49,25 @@
+         self.one={}
+         self.cache={}
+         # Early anchors have the broadest legal range in the parent schedule.
++        limit=puzzle.limit
++        known=self.known
++        one=self.one
+         for a,b in combinations_with_replacement(self.parents,2):
+-            for x,recipe in arithmetic(a,b,puzzle.limit):
+-                if x not in self.known:self.one.setdefault(x,recipe)
++            x=a+b
++            if x<=limit and x not in known and x not in one:
++                one[x]=("+",a,b)
++            if a>=b:u,v=a,b
++            else:u,v=b,a
++            x=u-v
++            if x and x not in known and x not in one:
++                one[x]=("-",u,v)
++            x=a*b
++            if x<=limit and x not in known and x not in one:
++                one[x]=("*",a,b)
++            if u%v==0:
++                x=u//v
++                if x not in known and x not in one:
++                    one[x]=("/",u,v)
+ 
+     def choices(self,x):
+         if x in self.known:return [{}]
