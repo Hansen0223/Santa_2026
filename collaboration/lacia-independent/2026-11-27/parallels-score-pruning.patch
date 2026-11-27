@@ -1,0 +1,40 @@
+--- a/generative/parallels.cpp
++++ b/generative/parallels.cpp
+@@ -1,6 +1,7 @@
+ // Rank arithmetic identities linking four different targets through a common
+ // difference. A local, scale-matched null provides an independent comparison.
+ #include <algorithm>
++#include <array>
+ #include <cmath>
+ #include <cstdint>
+ #include <iostream>
+@@ -27,6 +28,8 @@
+         vector<I> scale{1,2,3,4,5,6,7,8,9,10,11,12,13,16,20,24,25,32,48,64};
+         for(I s:seeds)if(s<=128)scale.push_back(s);
+         sort(scale.begin(),scale.end());scale.erase(unique(scale.begin(),scale.end()),scale.end());
++        array<bool,129> seed_scale{};
++        for(I x:seeds)if(1<=x&&x<=128)seed_scale[x]=true;
+         mt19937_64 rng(stoul(id.substr(id.find_last_of('_')+1))+700413);
+         for(I original:targets){
+             vector<I> queries{original};
+@@ -46,9 +49,18 @@
+                     if(predicted<1||predicted>cap)return;
+                     I residual=x-predicted,err=abs(residual);
+                     best_raw=min(best_raw,err);
+-                    double cost=(k==1?1.:2.)+.18*log2(1.+double(err));
++                    if(probe)return;  // Probe never reads Fits, only the minimum raw residual.
++                    const double base=k==1?1.:2.;
++                    const double extra=k!=1&&!seed_scale[k]?.4:0.;
++                    if(err>0 && best.size()==size_t(keep)){
++                        // 2^lg <= err. Subtract an additional log unit so that
++                        // rounding in the ordinary floating score cannot prune a tie.
++                        const int lg=63-__builtin_clzll(static_cast<unsigned long long>(err));
++                        if(base+.18*(lg-1)+extra>=best.back().priority)return;
++                    }
++                    double cost=base+.18*log2(1.+double(err));
+                     if(err==0)cost-=1.0;
+-                    if(k!=1 && find(seeds.begin(),seeds.end(),k)==seeds.end())cost+=.4;
++                    if(extra)cost+=extra;
+                     if(best.size()==size_t(keep)&&cost>=best.back().priority)return;
+                     auto eq=Rule{x,a,b,c,k,residual,int(divide)};
+                     for(auto &f:best)if(f.rule.a==a&&f.rule.b==b&&f.rule.c==c&&f.rule.k==k&&f.rule.divide==divide)return;
