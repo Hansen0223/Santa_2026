@@ -1,0 +1,126 @@
+--- a/solvers/graphs/mix.py
++++ b/solvers/graphs/mix.py
+@@ -98,48 +98,6 @@
+             stack.extend(((value, True), (left, False), (right, False)))
+         return True
+ 
+-    def safety_check(self, output):
+-        # The caller restores every trial replacement before the next query.
+-        # Under that same graph and blocked output, each operand is either
+-        # constructible or not, independently of the other queried operand.
+-        good = set(self.seeds)
+-        bad = {output}
+-        recipes = self.recipes
+-
+-        def rooted(root):
+-            if root in good:
+-                return True
+-            if root in bad:
+-                return False
+-            visiting = set()
+-            stack = [(root, False)]
+-            while stack:
+-                value, ready = stack.pop()
+-                if value in good:
+-                    continue
+-                if ready:
+-                    visiting.remove(value)
+-                    good.add(value)
+-                    continue
+-                if value in bad or value in visiting or value not in recipes:
+-                    # Every unresolved ancestor on this DFS path depends on
+-                    # the failure. Nodes in pending sibling paths do not.
+-                    bad.update(visiting)
+-                    bad.add(value)
+-                    return False
+-                visiting.add(value)
+-                _, left, right = recipes[value]
+-                stack.append((value, True))
+-                stack.append((right, False))
+-                if left != right:
+-                    stack.append((left, False))
+-            return True
+-
+-        def safe(_, recipe):
+-            return rooted(recipe[1]) and rooted(recipe[2])
+-
+-        return safe
+-
+     def shift(self, recipe, delta):
+         pending = [*set(recipe[1:])]
+         while pending:
+@@ -161,6 +119,38 @@
+         self.recipes[output] = recipe
+ 
+ 
++class RootedUseIndex:
++    """Index the reverse edges of the currently installed rooted recipes."""
++
++    def __init__(self, recipes):
++        self.users = defaultdict(set)
++        for output, (_, left, right) in recipes.items():
++            self.users[left].add(output)
++            self.users[right].add(output)
++
++    def blocked(self, output):
++        # In a rooted graph the only operands made unavailable by blocking
++        # an output are the output itself and values that depend on it.
++        users = self.users
++        blocked = {output}
++        pending = [output]
++        while pending:
++            for dependent in users.get(pending.pop(), ()):
++                if dependent not in blocked:
++                    blocked.add(dependent)
++                    pending.append(dependent)
++        return blocked
++
++    def changed(self, output, start, winner):
++        users = self.users
++        old_inputs = set(start[1:])
++        new_inputs = set(winner[1:])
++        for operand in old_inputs - new_inputs:
++            users[operand].remove(output)
++        for operand in new_inputs - old_inputs:
++            users[operand].add(output)
++
++
+ def optimize(puzzle, candidates, joins=False, trials=3, passes=4):
+     best = min(candidates, key=len)
+     bank = make_bank(puzzle, candidates, joins)
+@@ -173,6 +163,9 @@
+             initial = default
+         state = State(puzzle, initial)
+         check_safety = state.safe
++        # Tree recipes are rooted; a tape override is closed under its
++        # earlier producers. An accepted safe edit preserves this invariant.
++        use_index = RootedUseIndex(initial) if joins else None
+         rng = random.Random(trial)
+         for pass_number in range(passes):
+             changed = 0
+@@ -188,9 +181,14 @@
+                 start = state.recipes[output]
+                 winner = start
+                 best_count = len(state.counts)
+-                safe = state.safety_check(output) if joins else check_safety
++                blocked = use_index.blocked(output) if joins else None
+                 for candidate in sorted(choices):
+-                    if candidate == start or not safe(output, candidate):
++                    if candidate == start:
++                        continue
++                    if joins:
++                        if candidate[1] in blocked or candidate[2] in blocked:
++                            continue
++                    elif not check_safety(output, candidate):
+                         continue
+                     state.replace(output, candidate)
+                     cost = len(state.counts)
+@@ -199,6 +197,8 @@
+                     state.replace(output, start)
+                 if winner != start:
+                     state.replace(output, winner)
++                    if joins:
++                        use_index.changed(output, start, winner)
+                     changed += 1
+             if len(state.counts) < len(best):
+                 program = compile_graph(puzzle, state.recipes, recompute=True)
