@@ -1,0 +1,96 @@
+--- a/generative/parallel_solve.py
++++ b/generative/parallel_solve.py
+@@ -95,6 +95,62 @@
+     return best
+ 
+ 
++class CutPricing:
++    """Price single-goal overrides against exact seed-rooted whole-graph liveness."""
++    def __init__(self,p,graph):
++        self.graph=graph
++        self.puzzle=p
++        self.goals=set(p.targets)-set(p.seeds)
++        self.roots=set(p.seeds)
++        bits={v:1<<i for i,v in enumerate(graph)}
++        self.bits=bits
++        masks=dict.fromkeys(self.roots,0)
++        parents={}
++        for v,(_,a,b) in graph.items():
++            masks[v]=bits[v]|masks[a]|masks[b]
++            parents[v]=bits.get(a,0)|bits.get(b,0)
++        self.masks=masks
++        self.rev=tuple((bits[v],parents[v]) for v in reversed(graph))
++        self.required=sum(bits[v] for v in self.goals)
++        self.cuts={}
++
++    def count(self,target,patch):
++        """Return None when the graph is provably unrooted; allow full fallback."""
++        graph=self.graph
++        masks=self.masks
++        for v in patch:
++            if v!=target and (v in graph or v in self.roots):
++                return len(active_graph(self.puzzle,graph|patch))
++        bit=self.bits[target]
++        kept=self.cuts.get(target)
++        if kept is None:
++            kept=self.required
++            for take,deps in self.rev:
++                if take!=bit and kept&take:kept|=deps
++            self.cuts[target]=kept
++        hot=set()
++        fresh=set()
++        stack=[(target,False)]
++        while stack:
++            v,exit=stack.pop()
++            if exit:
++                hot.remove(v)
++                fresh.add(v)
++            elif v in fresh:
++                continue
++            elif v in hot:
++                return None
++            elif v in patch:
++                hot.add(v)
++                _,a,b=patch[v]
++                stack.extend(((v,True),(b,False),(a,False)))
++            else:
++                legs=masks.get(v)
++                if legs is None or (legs&bit):return None
++                kept|=legs
++        return kept.bit_count()+len(fresh)-1 # cut already pays for the specified goal
++
++
+ def optimize(p,incumbent,rules,rounds):
+     original=first_recipes(p,incumbent)
+     baseline=active_graph(p,original)
+@@ -116,18 +172,24 @@
+                 for v,recipe in steps:
+                     if v not in helpers.known or v==target:patch[v]=recipe
+                 if target in patch and target!=patch[target][1] and target!=patch[target][2]:
+-                    patches.append(patch)
++                    patches.append((target,patch))
+     for _ in range(rounds):
+         options=[]
+-        for patch in patches:
++        priced=CutPricing(p,graph) if len(patches)>=32 else None
++        # Keep duplicate rules and stable priority intact. Only construct the
++        # full ordered graph if the exact size made the existing top-eight cut.
++        parent=graph
++        for target,patch in patches:
+             if all(graph.get(v)==r for v,r in patch.items()):continue
+-            try:new=active_graph(p,graph|patch)
++            try:
++                n=priced.count(target,patch) if priced is not None and target in priced.goals else len(active_graph(p,parent|patch))
+             except (ValueError,KeyError):continue
+-            if len(new)<len(best):options.append((len(new),patch,new))
++            if n is not None and n<len(best):options.append((n,patch))
+         if not options:break
+         prior=len(best)
+-        for _,patch,new in sorted(options,key=lambda s:s[0])[:8]:
+-            if len(new)>=len(best):continue
++        for n,patch in sorted(options,key=lambda s:s[0])[:8]:
++            if n>=len(best):continue
++            new=active_graph(p,parent|patch)
+             tape=compile_best(p,original,new)
+             if tape is not None and len(tape)<len(best):best=tape;graph=new
+         if len(best)==prior:break
